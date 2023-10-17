@@ -1,0 +1,35 @@
+.about-us .image img{
+    width: 100% ;
+}
+.about-us{
+    margin-top: 300px;
+    padding: 30px;
+    background: radial-gradient(circle, rgba(223,169,116,0.9192927170868347) 0%, rgba(181,129,76,0.8548669467787114) 61%);
+}
+.section-title{
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color:  #000000;
+}
+
+.content-aboutus{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.btn-more{
+    background:  #dfa974;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #dfa974;
+    border-radius: 5px;
+   }
+.btn-more:hover{
+    background:  radial-gradient(circle, rgba(223,169,116,0.9192927170868347) 0%, rgba(181,129,76,0.8548669467787114) 61%);
+    color: #ffffff;
+}
+

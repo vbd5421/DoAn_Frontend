@@ -8,19 +8,32 @@ import { HomeComponent } from './modules/home/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
-
+import { RoomsHomeComponent } from './modules/home/rooms/rooms-home/rooms-home.component';
+import { BookRoomComponent } from './modules/home/booking/book-room/book-room.component';
+import { AboutusHomeComponent } from './modules/home/aboutus-home/aboutus-home/aboutus-home.component';
+import { ServicesOutHomeComponent } from './modules/home/service-our/services-out-home/services-out-home.component';
+import { TypicalImageHomeComponent } from './modules/home/typical image/typical-image-home/typical-image-home.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    RoomsHomeComponent,
+    BookRoomComponent,
+    AboutusHomeComponent,
+    ServicesOutHomeComponent,
+    TypicalImageHomeComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    CommonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
