@@ -1,0 +1,23 @@
+
+  .img-fluid{
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+  }
+  
+  .item{
+    display:inline-block;
+    /* width: 18%;
+    height: 100%; */
+  }
+  
+ .title{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 36px;
+    text-align: center;
+ }
+ .typical-img{
+    margin-top: 80px;
+    margin-bottom: 80px;
+ }

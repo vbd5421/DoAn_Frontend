@@ -1,0 +1,60 @@
+.slider-booking{
+    position: relative;
+}
+.slider-booking .slide-img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.slider-booking .book{
+    z-index: 2;
+    position: inherit;
+    top: 140px;
+    right: 0px;
+}
+.booking-form{
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 4px;
+}
+.booking-form .name-hotel{
+    text-align: center;
+}
+.booking-form .check-date , .select-option{
+    margin-bottom: 1rem;
+}
+.searchinput{
+    border-radius: 5px;
+    align-items: center;
+    background-color: #EAEFF4;
+    border: 1px solid #F6F9FC;
+    height: 30px;
+    width: 100%;
+    padding: 20px;
+    outline: unset;
+   } 
+   .cate-room{
+    padding: 10px 20px;
+    outline: unset;
+    background-color: #EAEFF4;
+    border: 1px solid #F6F9FC;
+   }
+   .form-select:focus{
+    box-shadow: unset;
+    border: unset;
+   }
+
+   .cate-room option{
+    padding: 10px 10px;
+   }
+   .btn-search{
+    background: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: 1px solid #dfa974;
+    color: #dfa974;
+    border-radius: 5px;
+   }
+   .btn-search:hover{
+    background:  #dfa974;
+    color: white;
+   }

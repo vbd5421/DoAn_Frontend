@@ -1,0 +1,12 @@
+
+::selection {
+    color: white;
+    background:  #dfa974;
+}
+
+a{
+    text-decoration: none;
+}
+*{
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+  }
