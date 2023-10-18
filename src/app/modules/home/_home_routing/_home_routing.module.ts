@@ -10,7 +10,7 @@ const routes: Routes=[
     children:[
         {path:'trang-chu' ,loadChildren:()=>import('./home/home.module').then(m=>m.HomeModule) },
        {path:'lien-he' , component:ContactHomeComponent},
-       {path:'gio-thieu' , component:AboutListComponent},
+       {path:'gioi-thieu' , component:AboutListComponent},
        {path:'phong' , component:RoomsListComponent},
 
       ]

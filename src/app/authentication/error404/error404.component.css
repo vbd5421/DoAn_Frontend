@@ -1,0 +1,19 @@
+.error{
+    background: white; 
+    height: 100vh;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.back{
+    color: #dfa974;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .back:hover{
+    cursor: pointer;
+    color: #000000;
+    margin-left: 5px;
+  }
