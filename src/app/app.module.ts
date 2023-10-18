@@ -14,6 +14,9 @@ import { AboutusHomeComponent } from './modules/home/aboutus-home/aboutus-home/a
 import { ServicesOutHomeComponent } from './modules/home/service-our/services-out-home/services-out-home.component';
 import { TypicalImageHomeComponent } from './modules/home/typical image/typical-image-home/typical-image-home.component';
 import { CommonModule } from '@angular/common';
+import { ContactHomeComponent } from './modules/home/contact/contact-home/contact-home.component';
+import { AboutListComponent } from './modules/home/aboutus-home/about-list/about-list.component';
+import { RoomsListComponent } from './modules/home/rooms/rooms-list/rooms-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,9 @@ import { CommonModule } from '@angular/common';
     AboutusHomeComponent,
     ServicesOutHomeComponent,
     TypicalImageHomeComponent,
+    ContactHomeComponent,
+    AboutListComponent,
+    RoomsListComponent,
 
   ],
   imports: [

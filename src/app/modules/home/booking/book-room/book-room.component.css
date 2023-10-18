@@ -1,17 +1,11 @@
 .slider-booking{
-    position: relative;
+	background:url('/assets/images/hero/hero-2.jpg') ;
 }
-.slider-booking .slide-img{
-    position: absolute;
-    top: 0;
-    width: 100%;
+
+.book{
+	padding-top: 120px;
 }
-.slider-booking .book{
-    z-index: 2;
-    position: inherit;
-    top: 140px;
-    right: 0px;
-}
+
 .booking-form{
     background: #ffffff;
     padding: 30px 40px;
@@ -58,3 +52,26 @@
     background:  #dfa974;
     color: white;
    }
+
+/* animation */
+/* animation */
+
+@keyframes bounceIndown { 
+    20% ,40% , 60% { 
+        opacity: 0; 
+        transform: translateY(-200px); 
+    } 
+    80% { 
+        transform: translateY(10px); 
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    } 
+  } 
+  
+  .animation { 
+    animation-name: bounceIndown; 
+    animation-duration: 1.5s;
+  }
+  
