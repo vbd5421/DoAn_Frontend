@@ -103,6 +103,32 @@
       padding-bottom: 60px;
     }
   }
+  .pb_80 {
+    padding-bottom: 80px;
+  }
+  .pt_80{
+    padding-top: 80px;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .pb_80 {
+      padding-bottom: 50px;
+    }
+    .pt_80{
+      padding-top: 50px;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .pb_80 {
+      padding-bottom: 30px;
+    }
+    .pt_80{
+      padding-top: 30px;
+    }
+    
+  }
   
   .ptb_90 {
     padding-top: 90px;

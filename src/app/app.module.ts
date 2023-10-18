@@ -17,6 +17,10 @@ import { CommonModule } from '@angular/common';
 import { ContactHomeComponent } from './modules/home/contact/contact-home/contact-home.component';
 import { AboutListComponent } from './modules/home/aboutus-home/about-list/about-list.component';
 import { RoomsListComponent } from './modules/home/rooms/rooms-list/rooms-list.component';
+import { Error404Component } from './authentication/error404/error404.component';
+import { SignUpComponent } from './authentication/sign-up/sign-up.component';
+import { LoginAdminComponent } from './authentication/login-admin/login-admin.component';
+import { LoginUserComponent } from './authentication/login-user/login-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +35,10 @@ import { RoomsListComponent } from './modules/home/rooms/rooms-list/rooms-list.c
     ContactHomeComponent,
     AboutListComponent,
     RoomsListComponent,
+    Error404Component,
+    SignUpComponent,
+    LoginAdminComponent,
+    LoginUserComponent,
 
   ],
   imports: [
