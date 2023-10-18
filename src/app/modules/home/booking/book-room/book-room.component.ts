@@ -20,4 +20,20 @@ export class BookRoomComponent {
       }
       return true;
     }
+
+        //mã ACII
+        numberOnlyPhone(event:any): boolean {
+          const charCode = (event.which) ? event.which : event.keyCode;
+          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+          }
+          const input = event.target ; // Lấy đối tượng input
+          if (input.value.length >= 10) {
+            // alert('')
+          return false;
+          }
+          return true;
+        }
+    
+
 }

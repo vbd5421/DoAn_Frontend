@@ -56,12 +56,12 @@
   .text .more-detail:hover{
     color: #dfa974;
   }
-  .room-home{
-    margin-top: 80px;
-  }
+
 .section-title{
   margin-bottom: 36px;
-    text-align: center;
+  text-align: center;
 	font-size: 28px;
-	font-weight: 500;
+}
+.section-title span{
+    color: burlywood;
 }

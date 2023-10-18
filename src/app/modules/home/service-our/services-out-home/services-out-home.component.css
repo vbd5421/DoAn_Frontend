@@ -1,15 +1,9 @@
-/*---------------------
-  Service Section
------------------------*/
 
-.services-section {
-	margin-top: 85px;
-}
 .services-section .section-title {
 	margin-bottom: 36px;
     text-align: center;
 	font-size: 28px;
-	font-weight: 500;
+    color: burlywood;
 }
 .service-item {
 	text-align: center;

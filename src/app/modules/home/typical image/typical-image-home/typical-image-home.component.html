@@ -1,19 +1,26 @@
-<div class="container">
-  <div class="typical-img">
-    <div class="title">
-      Ảnh Nổi Bật
+<div class="mt_100 mb_80  ">
+  <div class="container">
+    <div class="title ">
+      <span class="text-uppercase border-bottom pb-2 ">
+        ảnh nổi bật
+      </span>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-12 col-sm-10 wow move-up">
-        <div class="container section-space--mb_15 section-space--mt_15">
-          <div class="  ">
-            <marquee scrollamount="6" direction="left" loop="1000" class=" row ">
-              <div class=" col-2 item " *ngFor="let ct of imgTypical ;let i = index">
-                <div class="  " *ngIf="i<8">
-                  <img class="img-fluid" src="{{ct.src}}" alt="" />
+  </div>
+  
+  <div class="typical-img py-3 py-md-4    ">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 col-sm-10 wow move-up">
+          <div class="container ">
+            <div class="">
+              <marquee scrollamount="6" direction="left" loop="1000" class=" row ">
+                <div class=" col-2 item " *ngFor="let ct of imgTypical ;let i = index">
+                  <div class="  " *ngIf="i<8">
+                    <img class="img-fluid" src="{{ct.src}}" alt="" />
+                  </div>
                 </div>
-              </div>
-            </marquee>
+              </marquee>
+            </div>
           </div>
         </div>
       </div>
