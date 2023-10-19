@@ -33,6 +33,19 @@
 
 </script>
 
+<script>
+  document.addEventListener('mousemove', function () {
+      var listItems = document.querySelectorAll('.item-menu');
 
+      listItems.forEach(function (item) {
+          item.addEventListener('mousemove', function () {
+              listItems.forEach(function (i) {
+                  i.classList.remove('active');
+              });
+              this.classList.add('active');
+          });
+      });
+  });
+</script>
 </body>
 </html>
