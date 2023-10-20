@@ -6,6 +6,7 @@ import { AboutListComponent } from "../aboutus-home/about-list/about-list.compon
 import { RoomsListComponent } from "../rooms/rooms-list/rooms-list.component";
 import { SericeOurListComponent } from "../service-our/serice-our-list/serice-our-list.component";
 import { BookingRoomListComponent } from "../booking/booking-room-list/booking-room-list.component";
+import { RoomDetailComponent } from "../rooms/room-detail/room-detail.component";
 
 const routes: Routes=[
     {path:'' , title:'Sun - Hotel' ,
@@ -16,7 +17,8 @@ const routes: Routes=[
        {path:'phong' , component:RoomsListComponent},
        {path:'dich-vu' , component:SericeOurListComponent},
        {path:'tim-kiem' , component:BookingRoomListComponent},
-       
+       {path:'chi-tiet-phong' , component:RoomDetailComponent},
+
       ]
   }
 ]

@@ -19,8 +19,8 @@
 .menu-item .nav-menu .mainmenu li {
 	list-style: none;
 	display: inline-block;
-	position: relative;
-	z-index: 1;
+	/* position: relative;
+	z-index: 1; */
 }
 .menu-item .nav-menu .mainmenu li.active a:after {
 	opacity: 1;

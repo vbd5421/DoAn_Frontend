@@ -23,6 +23,7 @@ import { LoginAdminComponent } from './authentication/login-admin/login-admin.co
 import { LoginUserComponent } from './authentication/login-user/login-user.component';
 import { SericeOurListComponent } from './modules/home/service-our/serice-our-list/serice-our-list.component';
 import { BookingRoomListComponent } from './modules/home/booking/booking-room-list/booking-room-list.component';
+import { RoomDetailComponent } from './modules/home/rooms/room-detail/room-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { BookingRoomListComponent } from './modules/home/booking/booking-room-li
     LoginUserComponent,
     SericeOurListComponent,
     BookingRoomListComponent,
+    RoomDetailComponent,
 
   ],
   imports: [
