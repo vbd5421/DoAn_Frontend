@@ -21,6 +21,8 @@ import { Error404Component } from './authentication/error404/error404.component'
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
 import { LoginAdminComponent } from './authentication/login-admin/login-admin.component';
 import { LoginUserComponent } from './authentication/login-user/login-user.component';
+import { SericeOurListComponent } from './modules/home/service-our/serice-our-list/serice-our-list.component';
+import { BookingRoomListComponent } from './modules/home/booking/booking-room-list/booking-room-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,8 @@ import { LoginUserComponent } from './authentication/login-user/login-user.compo
     SignUpComponent,
     LoginAdminComponent,
     LoginUserComponent,
+    SericeOurListComponent,
+    BookingRoomListComponent,
 
   ],
   imports: [
