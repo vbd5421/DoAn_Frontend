@@ -98,10 +98,9 @@
     margin-right: 10px;
 }
 .sapxep{
-    /* display: flex; */
     align-items: center;
     background-color: #f6f8fc;
-    /* padding: 10px 12px; */
+    margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
@@ -169,4 +168,38 @@
 .icon-drop-down{
     color: white;
     font-size: 20px;
+}
+
+
+/*  */
+.filter{
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.filter .text-title{
+    padding-bottom: 10px;
+  color:   #5a5b5b ;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.filter .text-content{
+    color:   #5a5b5b ;
+    font-size: 15px;
+}
+.cate-room-filter .cate-room{
+    width:100%;
+    padding: 8px 20px;
+    outline: unset;
+    background-color: #ffffff;
+    border: 1px solid #d5d5d5;
+}
+
+.filter .box-filter:not(:last-child){
+    border-bottom: 2px solid #949595;
+    padding-bottom: 20px;
+}
+.filter .box-filter:not(:first-child){
+    padding-top: 20px;
 }

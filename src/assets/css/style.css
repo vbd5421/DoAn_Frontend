@@ -239,15 +239,15 @@
   
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .ptb_60 {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
   
   @media only screen and (max-width: 767px) {
     .ptb_60 {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
   }
   
@@ -257,13 +257,13 @@
   
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .pt_60 {
-      padding-top: 60px;
+      padding-top: 50px;
     }
   }
   
   @media only screen and (max-width: 767px) {
     .pt_60 {
-      padding-top: 60px;
+      padding-top: 30px;
     }
   }
   
@@ -273,13 +273,13 @@
   
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .pb_60 {
-      padding-bottom: 60px;
+      padding-bottom: 50px;
     }
   }
   
   @media only screen and (max-width: 767px) {
     .pb_60 {
-      padding-bottom: 60px;
+      padding-bottom: 30px;
     }
   }
   

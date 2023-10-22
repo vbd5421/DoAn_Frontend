@@ -24,6 +24,9 @@ import { LoginUserComponent } from './authentication/login-user/login-user.compo
 import { SericeOurListComponent } from './modules/home/service-our/serice-our-list/serice-our-list.component';
 import { BookingRoomListComponent } from './modules/home/booking/booking-room-list/booking-room-list.component';
 import { RoomDetailComponent } from './modules/home/rooms/room-detail/room-detail.component';
+import { RatingComponent } from './modules/home/rate/rating/rating.component';
+import { ReviewAddComponent } from './modules/home/review/review-add/review-add.component';
+import { ReviewsComponent } from './modules/home/review/reviews/reviews.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +48,9 @@ import { RoomDetailComponent } from './modules/home/rooms/room-detail/room-detai
     SericeOurListComponent,
     BookingRoomListComponent,
     RoomDetailComponent,
+    RatingComponent,
+    ReviewAddComponent,
+    ReviewsComponent,
 
   ],
   imports: [

@@ -1,0 +1,97 @@
+
+.review-add h4 {
+	color: #19191a;
+	letter-spacing: 1px;
+	margin-bottom: 45px;
+}
+.review-add .ra-form input {
+	width: 100%;
+	height: 50px;
+	border: 1px solid #e5e5e5;
+	font-size: 16px;
+	color: #000000;
+	padding-left: 20px;
+	margin-bottom: 25px;
+}
+.review-add .ra-form input::-webkit-input-placeholder {
+	color: #000000;
+}
+.review-add .ra-form input::-moz-placeholder {
+	color: #000000;
+}
+.review-add .ra-form input:-ms-input-placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form input::-ms-input-placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form input::placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form h5 {
+	font-size: 20px;
+	color: #19191a;
+	margin-bottom: 24px;
+	float: left;
+	margin-right: 10px;
+}
+.review-add .ra-form .rating {
+	padding-top: 3px;
+	display: inline-block;
+}
+.review-add .ra-form .rating i {
+	color: #f5b917;
+	font-size: 16px;
+}
+.review-add .ra-form textarea {
+	width: 100%;
+	height: 132px;
+	border: 1px solid #e5e5e5;
+	font-size: 16px;
+	color: #aaaab3;
+	padding-left: 20px;
+	padding-top: 12px;
+	margin-bottom: 24px;
+	resize: none;
+}
+.review-add .ra-form textarea::-webkit-input-placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form textarea::-moz-placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form textarea:-ms-input-placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form textarea::-ms-input-placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form textarea::placeholder {
+	color: #aaaab3;
+}
+.review-add .ra-form .btn-gui {
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+        padding: 10px 20px;
+        border: 1px solid #dfa974;
+        color: white;
+        border-radius: 5px;
+        background: #dfa974;
+}
+
+.review-add .ra-form .btn-gui:hover{
+    background:  white;
+    color: #dfa974;
+}
+
+.review-add .text-rate{
+    font-size: 18px;
+}
+
+.review-add .rate:focus{
+    box-shadow: none;
+    border: 1px solid;
+}
+

@@ -76,12 +76,105 @@
 <div class="list-room mt_120 mb_100 ">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
-        <div class="sapxep row  ">
+      <div class="col-md-9">
+        <div class="sapxep row d-none d-md-flex ">
           <p class="mb-sm-0 mb-2 fw-bold col-sm-2 ">Sắp xếp:</p>
           <button class="btn-sapxep mb-sm-0 mb-2 col-sm-3">Phù hợp nhất</button>
           <button class="btn-sapxep mb-sm-0 mb-2 col-sm-3">Giá thấp nhất</button>
           <button class="btn-sapxep mb-sm-0 mb-2 col-sm-3">Ưu đãi nóng hổi</button>
+        </div>
+        <div class="d-flex d-md-none sapxep row">
+            <a class="btn-sapxep mb-0 col-sm-3" data-bs-toggle="collapse" href="#chonloc" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa-solid fa-filter me-2"></i>  Chọn lọc
+            </a>
+        </div>
+        <div class="collapse" id="chonloc">
+          <div class="filter">
+            <div class="rating box-filter ">
+              <div class="text-title">
+                đánh giá của khách hàng
+              </div>
+              <div class="form-check"> 
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked >
+                <label class="form-check-label text-content" for="flexRadioDefault1">
+                  Trên cả tuyệt vời
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label text-content" for="flexRadioDefault1">
+                  Rất tốt
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                <label class="form-check-label text-content " for="flexRadioDefault2">
+                  Tốt
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                <label class="form-check-label text-content " for="flexRadioDefault2">
+                  Hài lòng
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                <label class="form-check-label text-content " for="flexRadioDefault2">
+                  Không hài lòng
+                </label>
+              </div>
+            </div>
+            <div class="cate-room-filter box-filter">
+              <div class="select-option item-book ">
+                <p class="text-title" >Loại phòng:</p>
+                <select class="form-select cate-room " aria-label="Default select example">
+                  <option selected>Loại phòng</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="room-amenities box-filter">
+              <div class="text-title">
+                tiện nghi phòng:
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  wifi
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  bếp
+                </label>
+              </div>
+            </div>
+            <div class="service-our box-filter">
+              <div class="text-title">
+                dịch vụ:
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                <label class="form-check-label" for="flexCheckDefault1">
+                  Default checkbox
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
+                <label class="form-check-label" for="flexCheckChecked1">
+                  Checked checkbox
+                </label>
+              </div>
+            </div>
+            <div class="box-filter d-flex justify-content-evenly ">
+              <button type="button" class="btn btn-secondary">Hủy</button>
+              <button type="button" class="btn btn-primary">Lọc</button>
+            </div> 
+          </div>
         </div>
         <div class="card w-100 item">
           <div class="row ">
@@ -116,8 +209,89 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 d-none d-md-block">
-          hihihih
+      <div class="col-md-3 d-none d-md-block">
+        <div class="filter">
+          <div class="rating box-filter ">
+            <div class="text-title">
+              đánh giá của khách hàng
+            </div>
+            <div class="form-check"> 
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked >
+              <label class="form-check-label text-content" for="flexRadioDefault1">
+                Trên cả tuyệt vời
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label text-content" for="flexRadioDefault1">
+                Rất tốt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+              <label class="form-check-label text-content " for="flexRadioDefault2">
+                Tốt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+              <label class="form-check-label text-content " for="flexRadioDefault2">
+                Hài lòng
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+              <label class="form-check-label text-content " for="flexRadioDefault2">
+                Không hài lòng
+              </label>
+            </div>
+          </div>
+          <div class="cate-room-filter box-filter">
+            <div class="select-option item-book ">
+              <p class="text-title" >Loại phòng:</p>
+              <select class="form-select cate-room " aria-label="Default select example">
+                <option selected>Loại phòng</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="room-amenities box-filter">
+            <div class="text-title">
+              tiện nghi phòng:
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                wifi
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                bếp
+              </label>
+            </div>
+          </div>
+          <div class="service-our box-filter">
+            <div class="text-title">
+              dịch vụ:
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+              <label class="form-check-label" for="flexCheckDefault1">
+                Default checkbox
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
+              <label class="form-check-label" for="flexCheckChecked1">
+                Checked checkbox
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
