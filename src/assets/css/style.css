@@ -1,6 +1,19 @@
 
+/*------------ toolbar -----------*/
 
-/*  */
+
+.toolbar{
+  height: 53px;
+  background-color: white;
+  box-shadow: 0px 20px 30px 0px rgba(82, 63, 105, 0.13);
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+
+/* -----------spacing----------- */
 
   .ptb_120 {
     padding-top: 120px;
