@@ -27,6 +27,12 @@ import { RoomDetailComponent } from './modules/home/rooms/room-detail/room-detai
 import { RatingComponent } from './modules/home/rate/rating/rating.component';
 import { ReviewAddComponent } from './modules/home/review/review-add/review-add.component';
 import { ReviewsComponent } from './modules/home/review/reviews/reviews.component';
+import { ToastrModule } from 'ngx-toastr';
+import { AdminControlComponent } from './modules/admin/admin-control/admin-control.component';
+import { CategoryRoomControlComponent } from './modules/admin/category-room/category-room-control/category-room-control.component';
+import { CategoryRoomAddComponent } from './modules/admin/category-room/category-room-add/category-room-add.component';
+import { AsideComponent } from './modules/admin/aside/aside.component';
+import { HeaderAdminComponent } from './modules/admin/header-admin/header-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +57,11 @@ import { ReviewsComponent } from './modules/home/review/reviews/reviews.componen
     RatingComponent,
     ReviewAddComponent,
     ReviewsComponent,
+    AdminControlComponent,
+    CategoryRoomControlComponent,
+    CategoryRoomAddComponent,
+    AsideComponent,
+    HeaderAdminComponent,
 
   ],
   imports: [
@@ -59,6 +70,12 @@ import { ReviewsComponent } from './modules/home/review/reviews/reviews.componen
     FormsModule,
     HttpClientModule,
     CommonModule,
+    ToastrModule.forRoot({
+      closeButton: true,
+      progressBar: false,
+      positionClass: 'toast-bottom-right' ,
+      timeOut:2000,
+    }),
     
   ],
   providers: [],
