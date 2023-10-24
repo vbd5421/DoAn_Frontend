@@ -47,6 +47,7 @@ export class LoginAdminComponent {
       err => {
         this.errorMessage = "Đăng Nhập Thất Bại";
         this.isLoginFailed = true;
+        console.log(err)
       });
   }
   getUserByid(id:number){
