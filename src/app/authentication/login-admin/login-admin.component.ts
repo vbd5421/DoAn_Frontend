@@ -12,7 +12,7 @@ import { UserService } from 'src/app/service/user/user.service';
 })
 export class LoginAdminComponent {
 
-  url: any;
+  url: string;
   form: any = {};
   id:number=0
   isLoggedIn = false;
@@ -33,7 +33,6 @@ export class LoginAdminComponent {
   }
 
   onSubmit(): void{
-
     this.authService.login(this.form).subscribe(data =>{
         this.tokenStorage.saveToken(data.token);
         this.tokenStorage.saveUser(data);
@@ -62,5 +61,4 @@ export class LoginAdminComponent {
   reloadPage(url:string): void {
     this.router.navigate(['admin'+`/${url}`]);
   }
-
 }

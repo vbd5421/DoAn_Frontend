@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenStorageService } from 'src/app/service/token-storage/token-storage.service';
 
 @Component({
   selector: 'app-aside',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./aside.component.css']
 })
 export class AsideComponent {
+
+  constructor(private tokenStorageService: TokenStorageService){}
 
   movies =[
  
@@ -15,5 +18,11 @@ export class AsideComponent {
     {title:'X-Men: Apocalypse',director:'Bryan Singer',cast:'Jennifer Lawrence, Olivia Munn, Oscar Isaac',releaseDate:'May 27, 2016'},
     {title:'Warcraft',director:'Duncan Jones',cast:'Travis Fimmel, Robert Kazinsky, Ben Foster',releaseDate:'June 10, 2016'},
   ]
+
+  logout() {
+    this.tokenStorageService.signOut();
+    window.location.reload();
+  
+}
 
 }
