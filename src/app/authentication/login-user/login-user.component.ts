@@ -22,7 +22,7 @@ export class LoginUserComponent {
     if(this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getToken().roles;
-      this.reloadPage();
+      
     }
   }
 
