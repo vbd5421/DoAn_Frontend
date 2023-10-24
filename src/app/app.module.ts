@@ -33,6 +33,11 @@ import { CategoryRoomControlComponent } from './modules/admin/category-room/cate
 import { CategoryRoomAddComponent } from './modules/admin/category-room/category-room-add/category-room-add.component';
 import { AsideComponent } from './modules/admin/aside/aside.component';
 import { HeaderAdminComponent } from './modules/admin/header-admin/header-admin.component';
+import { UserControlComponent } from './modules/admin/user/user-control/user-control.component';
+import { UserAddComponent } from './modules/admin/user/user-add/user-add.component';
+import { TagRoleComponent } from './modules/admin/user/tag-role/tag-role.component';
+import { RoleControlComponent } from './modules/admin/role/role-control/role-control.component';
+import { RoleAddComponent } from './modules/admin/role/role-add/role-add.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +67,11 @@ import { HeaderAdminComponent } from './modules/admin/header-admin/header-admin.
     CategoryRoomAddComponent,
     AsideComponent,
     HeaderAdminComponent,
+    UserControlComponent,
+    UserAddComponent,
+    TagRoleComponent,
+    RoleControlComponent,
+    RoleAddComponent,
 
   ],
   imports: [
@@ -76,7 +86,7 @@ import { HeaderAdminComponent } from './modules/admin/header-admin/header-admin.
       positionClass: 'toast-bottom-right' ,
       timeOut:2000,
     }),
-    
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
