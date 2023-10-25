@@ -8,8 +8,9 @@ const routes: Routes =[
   {path:'' , title:'Admin - Sun Hotel' , component: AdminControlComponent,
 
   children:[
-    {path: 'category-room' , title:'Admin-Ecoit' , loadChildren:()=>import('./category-room/category-room.module').then(m=>m.CategoryRoomModule)},
-    
+    {path: 'category-room' , title:'Admin-Loại phòng' , loadChildren:()=>import('./category-room/category-room.module').then(m=>m.CategoryRoomModule)},
+    {path:'dich-vu' , title:'Admin-Dịch vụ' , loadChildren:()=>import('./service-our/service-our.module').then(m=>m.ServiceOurModule) },
+     
     ]},
 ]
 

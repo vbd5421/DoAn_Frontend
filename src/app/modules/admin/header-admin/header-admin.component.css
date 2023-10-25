@@ -1,0 +1,30 @@
+
+.text-headeradmin{
+
+    border-radius: 5px ;
+  
+    color: #34831a;
+  }
+  .header-left-headeradmin{
+    font-size: 23px;
+    color: black;
+  }
+  .header-admin{
+     position: fixed;
+     top: 0;
+     right: 0;
+     z-index: 5;
+    background: white;
+  }
+  @media only screen and (max-width:991px) {
+    .header-admin{
+     left: 50px;
+    }
+  }
+  @media only screen and (min-width:992px) {
+    .header-admin{
+      left: 228px;
+    }
+  }
+  
+  
