@@ -22,3 +22,20 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
+
+// password show , hide
+function password_show_hide() {
+    var password = document.getElementById("password");
+    var show = document.getElementById("show_eye");
+    var hide = document.getElementById("hide_eye");
+    hide_eye.classList.remove("d-none");
+    if (password.type === "password") {
+      password.type = "text";
+      show.style.display = "none";
+      hide.style.display = "block";
+    } else {
+      password.type = "password";
+      show.style.display = "block";
+      hide.style.display = "none";
+    }
+  }

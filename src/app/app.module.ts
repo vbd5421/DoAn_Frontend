@@ -38,6 +38,9 @@ import { UserAddComponent } from './modules/admin/user/user-add/user-add.compone
 import { TagRoleComponent } from './modules/admin/user/tag-role/tag-role.component';
 import { RoleControlComponent } from './modules/admin/role/role-control/role-control.component';
 import { RoleAddComponent } from './modules/admin/role/role-add/role-add.component';
+import { AppPageSizeComponent } from './modules/another/app-page-size/app-page-size.component';
+import { ServiceOurControlComponent } from './modules/admin/service-our/service-our-control/service-our-control.component';
+import { ServiceOurAddComponent } from './modules/admin/service-our/service-our-add/service-our-add.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +75,9 @@ import { RoleAddComponent } from './modules/admin/role/role-add/role-add.compone
     TagRoleComponent,
     RoleControlComponent,
     RoleAddComponent,
+    AppPageSizeComponent,
+    ServiceOurControlComponent,
+    ServiceOurAddComponent,
 
   ],
   imports: [

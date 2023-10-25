@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AdminControlComponent {
 
+  isTouch:boolean
+  onchangeisTouch(isTouch:boolean){
+    this.isTouch = isTouch
+  }
 }

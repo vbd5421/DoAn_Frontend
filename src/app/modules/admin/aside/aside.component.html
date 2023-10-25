@@ -1,1 +1,118 @@
-<p>aside works!</p>
+<!-- mobile -->
+<div class="d-block d-lg-none">
+    <div class="px-3 pt-2 pb-0 icon-menu  " data-bs-toggle="collapse" href="#collapseExampleMenu" aria-expanded="false"
+      aria-controls="collapseExample">
+      <i style="font-size: 22px;" class="fa fa-bars"></i>
+    </div>
+  
+    <aside id="collapseExampleMenu" [ngClass]="{'sidebar2':isTouch,'left-sidebar':!isTouch,'collapse':true,'sidebar-mobile':true}"> 
+      <div style="">
+        <div class="brand-logo-mobile bg-primary  mb-0  ">
+          <a href="#" target="_blank" class="text-nowrap logo-img d-flex ">
+            <img class="w-50 mx-auto " src="assets/images/footer-logo.png" />
+          </a>
+        </div>
+  
+        <nav class="w-auto h-100 sidebar-nav scroll-sidebar nav-mobile " data-simplebar="">
+          <ul id="sidebarnav" class="ps-0">
+            <li class="my-2">
+              <span class=" font-weight-bold ">Sun - Hotel</span>
+            </li>
+            <li class="sidebar-item mb-1 " *ngFor="let module of modules ;">
+              <a class="sidebar-link " style="padding: 10px 40px 10px 10px;" routerLink="{{module.url}}"
+                routerLinkActive="active" aria-expanded="false">
+                <span class="">
+                  <i class="icon {{module.icon}}"></i>
+                </span>
+                <span class="hide-menu text-capitalize ">{{module.name}}</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" (click)="logout()" aria-expanded="false">
+                <span>
+                  <i class="fa fa-sign-out" style="font-size: 18px;"></i>
+                </span>
+                <span class="hide-menu text-logout ">Đăng Xuất</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+  </div>
+  
+  
+  
+  <!-- side bar  -->
+  <aside [ngClass]="{'sidebar2':isTouch,'left-sidebar':!isTouch,'d-none':true,'d-lg-block':true}">
+    <!-- Sidebar scroll-->
+    <div class="logo-sidebar">
+      <div class="brand-logo  mb-3 bg-primary  ">
+        <div></div>
+        <a href="#" target="_blank" class="text-nowrap logo-img">
+          <img src="assets/images/footer-logo.png" width="100px" alt="" />
+        </a>
+        <div
+        id="kt_aside_toggle" [ngClass]="{'rotate-180':!isTouch}"
+        class="btn btn-icon w-auto px-0 btn-active-color-primary" (click)="changeisTouch()">
+        <span class="svg-icon svg-icon-1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="black"/>
+          <path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="black"/>
+          </svg></span>
+      </div>
+      </div>
+      <!-- Sidebar navigation-->
+      <nav class="sidebar-nav scroll-sidebar px-2 " data-simplebar="">
+        <ul id="sidebarnav" class="ps-0">
+          <li class="my-2 text-center accout">
+            <div class="d-flex w-100 flex-column">
+              <div class="d-flex name-accout ">
+                <span class=" me-1 me-md-2"><strong>Tài Khoản:</strong></span>
+                <span class="text-uppercase accout-item" >{{userName}}</span>
+              </div>
+              <div class="d-flex name-accout ">
+                <span class=" me-1 me-md-2 "><strong>Quyền:</strong></span>
+                <span class="accout-item">{{roleName}}</span>
+              </div>
+            </div>
+          </li>
+          <li class="sidebar-item mb-1 " *ngFor="let module of modules ;">
+            <a class="sidebar-link " routerLink="{{module.url}}" routerLinkActive="active" aria-expanded="false">
+              <span class="">
+                <i class="icon {{module.icon}}"></i>
+              </span>
+              <span class="hide-menu text-capitalize aside_hide">{{module.name}}</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link"  data-bs-toggle="modal" data-bs-target="#logout" >
+              <span>
+                <i style="font-size: 18px;" class="fa fa-sign-out"></i>
+              </span>
+              <span class="hide-menu text-logout ">Đăng Xuất</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+  
+  
+  <div class="modal fade " id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Thông báo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn có muốn đăng xuất không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" (click)="logout()" class="btn btn-primary">Đăng xuất</button>
+        </div>
+      </div>
+    </div>
+  </div>
