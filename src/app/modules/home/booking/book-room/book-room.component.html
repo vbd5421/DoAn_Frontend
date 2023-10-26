@@ -3,7 +3,7 @@
         <div class="row justify-content-end ">
             <div class="col-md-6 text-start">
                 <div class="booking-form">
-                    <h3 class="name-hotel">Sun Hotel</h3>
+                    <h3 class="name-hotel">Book-Easy</h3>
                     <p class="mb-1">Xin Chào: <span>tên user</span></p>
                     <p>Mời Bạn Đặt phòng </p>
                     <form action="#">
@@ -13,6 +13,8 @@
                                     <p>Từ ngày:</p>
                                     <input type="date" class="searchinput "  name="startTime">
                                 </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="check-date">
                                     <p>Đến ngày:</p>
                                     <input type="date" class="searchinput "  name="startTime">
@@ -28,9 +30,12 @@
                                         <option value="3">Three</option>
                                     </select>
                                 </div>
-                                <div class="select-option">
-                                    <p >Số lượng phòng:</p>
-                                    <input class="searchinput " (keypress)="numberOnly($event)" type="number" min="1" max="9" placeholder="Nhập số lượng phòng " >
+                            </div>
+                            <div class="col-md-6">
+                                <div class="select-option search-where ">
+                                    <p>Địa điểm:</p>
+                                    <input class="searchinput " type="text" placeholder="Tìm kiếm " >
+                                    <i class="fa-solid fa-magnifying-glass icon-search "></i>
                                 </div>
                             </div>
                         </div>

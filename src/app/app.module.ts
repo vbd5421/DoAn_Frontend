@@ -41,6 +41,7 @@ import { RoleAddComponent } from './modules/admin/role/role-add/role-add.compone
 import { AppPageSizeComponent } from './modules/another/app-page-size/app-page-size.component';
 import { ServiceOurControlComponent } from './modules/admin/service-our/service-our-control/service-our-control.component';
 import { ServiceOurAddComponent } from './modules/admin/service-our/service-our-add/service-our-add.component';
+import { WhyChooseComponent } from './modules/home/why-choose/why-choose.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +79,7 @@ import { ServiceOurAddComponent } from './modules/admin/service-our/service-our-
     AppPageSizeComponent,
     ServiceOurControlComponent,
     ServiceOurAddComponent,
+    WhyChooseComponent,
 
   ],
   imports: [

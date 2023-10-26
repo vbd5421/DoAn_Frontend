@@ -75,3 +75,14 @@
     animation-duration: 1.5s;
   }
   
+.search-where{
+    position: relative;
+}
+.search-where .icon-search{
+    position: absolute;
+    right: 10px;
+    top: 45px;
+}
+.check-date p , .select-option p{
+    margin-bottom: 5px;
+}

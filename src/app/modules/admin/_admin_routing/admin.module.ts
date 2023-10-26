@@ -5,7 +5,7 @@ import { AdminControlComponent } from "../admin-control/admin-control.component"
 
 const routes: Routes =[
 
-  {path:'' , title:'Admin - Sun Hotel' , component: AdminControlComponent,
+  {path:'' , title:'Admin - Book-Easy' , component: AdminControlComponent,
 
   children:[
     {path: 'category-room' , title:'Admin-Loại phòng' , loadChildren:()=>import('./category-room/category-room.module').then(m=>m.CategoryRoomModule)},
