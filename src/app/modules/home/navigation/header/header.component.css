@@ -35,7 +35,7 @@
 }
 .menu-item .nav-menu .mainmenu li a {
 	font-size: 16px;
-	color: #ffffff;
+	color: #000000;
 	font-weight: 500;
 	display: inline-block;
 	padding: 0px 0;
@@ -116,24 +116,24 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
     z-index: 50;
     -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-color: #000000a8;
+    background-color: #fffffff0;
   }
 .header-right{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
 }
 .header-left{
-height: 80%;
+
 display: flex;
 margin-top: auto;
 margin-bottom: auto;
 }
 .header-left .logo img{
-    width: 200px !important;
+   
 }
 .header-label {
     color: #ffffff;
@@ -153,17 +153,17 @@ margin-bottom: auto;
     text-decoration: underline;
     color: #b1875d;
 }
-.header-right_top .btn-login{
+ .btn-login{
+    padding: 10px;
+    border-radius: 20px;
     background-color: #dfa974;
     border-color: #dfa974;
-    border-radius: 4px;
     vertical-align: inherit;
-    color: rgb(255, 255, 255) ;
-    font-family: 'Tahoma' ,'sans-serif';
+    color: rgb(0, 0, 0) ;
     font-size: 12px ;
     font-weight: 700;
 }
-.header-right_top .btn-login:hover{
+.btn-login:hover{ 
   color: black;
 }
 .btn-login:focus{
@@ -176,8 +176,8 @@ margin-bottom: auto;
 }
 .mobile .header-right #main{
     font-size: 25px;
-    color: white;
-    border: 1px solid white;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(119, 119, 119);
     padding: 0px  5px;
     border-radius: 3px;
 }

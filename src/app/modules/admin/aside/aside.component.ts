@@ -67,7 +67,6 @@ export class AsideComponent {
   logout() {
       this.tokenStorageService.signOut();
       window.location.reload();
-    
   }
   changeisTouch(){
     this.isTouch2.emit(this.isTouch)

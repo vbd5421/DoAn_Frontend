@@ -534,7 +534,7 @@
 
 
 
-
+/* max-line */
 .max-3line{
   display: -webkit-box;
   -webkit-line-clamp: 3;

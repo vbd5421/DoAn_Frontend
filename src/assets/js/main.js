@@ -39,3 +39,4 @@ function password_show_hide() {
       hide.style.display = "none";
     }
   }
+
