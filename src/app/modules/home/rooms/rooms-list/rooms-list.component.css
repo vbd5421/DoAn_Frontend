@@ -10,5 +10,80 @@
 } 
 
 .room-list{ 
-	height: 300px; 
+	
 } 
+/* table */
+tr{
+    text-align: center;
+}
+.img-room{
+    width: 100%;
+    max-width: 350px;
+    max-height: 220px;
+}
+tr th:not(:last-child){
+    border-right: 1px solid #c1c0c0;
+}
+tr td:not(:last-child){
+    border-right: 1px solid #c1c0c0;
+}
+.header-table th{
+    font-weight: normal;
+}
+.header-table{
+    background: #282727;
+    color: white;
+}
+.room-td{
+    list-style: none;
+    padding-left: 3%;
+}
+
+.like-room{
+    background-color:  #fff;
+    color: #dfa974 ;
+    border: 1px solid #dfa974;
+    padding: 5px 5px;
+    border-radius: 7px;
+    text-transform: capitalize;
+}
+.like-room:hover{
+    background-color:  #dfa974;
+    color: white ;
+    border: 1px solid #dfa974;
+}
+.btn-love-book{
+    display: flex;
+    flex-direction: column;
+}
+.btn-love-book p{
+    color: red;
+    background: #f2ce844f;
+}
+.btn-book-room{
+    background-color:  #dfa974;
+    text-transform: capitalize;
+    color: #fff ;
+    border: 1px solid #dfa974;
+    padding: 5px 5px;
+    border-radius: 7px;
+}
+.btn-book-room:hover{
+    background-color: rgb(226, 132, 0);
+    color: #ffffff;
+}
+.price{
+    font-size: 20px;
+    color: rgb(255 83 0);
+    font-weight: 600;
+}
+.price span{
+    color: #c1c0c0;
+    border-bottom: 1px solid #c1c0c0;
+}
+
+/* mobile */
+
+.tiennghi-mobile{
+    list-style: none;
+}
