@@ -154,6 +154,7 @@ margin-bottom: auto;
     color: #b1875d;
 }
  .btn-login{
+    text-transform: uppercase;
     padding: 10px;
     border-radius: 20px;
     background-color: #dfa974;
@@ -166,8 +167,23 @@ margin-bottom: auto;
 .btn-login:hover{ 
   color: rgb(255, 255, 255);
 }
-.btn-login:focus{
+.btn-login:focus , .btn-signup:focus{
     box-shadow: unset;
+}
+.btn-signup{
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border-color: #dfa974;
+    vertical-align: inherit;
+    color: #dfa974;
+    font-size: 12px ;
+    font-weight: 700;
+}
+.btn-signup:hover{
+    background-color: #dfa974;
+    color: rgb(255, 255, 255);
 }
 /* mobile */
 

@@ -1,13 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/service/auth/auth.service';
+import { TokenStorageService } from 'src/app/service/token-storage/token-storage.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent  {
+export class HeaderComponent implements OnInit {
 
+  isLoggedIn = false;
+  roles: string[] = [];
  
- 
+  constructor(private authService: AuthService , private tokenStorage: TokenStorageService, private router:Router) { }
+  ngOnInit(): void {
+    if(this.tokenStorage.getToken()) {
+      this.isLoggedIn = true;
+      this.roles = this.tokenStorage.getToken().roles;
+      
+    }
+  }
+  logout() {
+    this.tokenStorage.signOut();
+    window.location.reload();
+}
 }

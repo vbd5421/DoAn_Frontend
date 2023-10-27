@@ -25,6 +25,8 @@
 .room-details-item .rd-text .rd-title h3 {
 	color: #19191a;
 	float: left;
+	font-weight: 600;
+
 }
 
 .room-details-item .rd-text h2 {

@@ -8,14 +8,12 @@ import { HomeComponent } from './modules/home/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
-import { RoomsHomeComponent } from './modules/home/rooms/rooms-home/rooms-home.component';
 import { BookRoomComponent } from './modules/home/booking/book-room/book-room.component';
 import { AboutusHomeComponent } from './modules/home/aboutus-home/aboutus-home/aboutus-home.component';
 import { ServicesOutHomeComponent } from './modules/home/service-our/services-out-home/services-out-home.component';
 import { TypicalImageHomeComponent } from './modules/home/typical image/typical-image-home/typical-image-home.component';
 import { CommonModule } from '@angular/common';
 import { ContactHomeComponent } from './modules/home/contact/contact-home/contact-home.component';
-import { AboutListComponent } from './modules/home/aboutus-home/about-list/about-list.component';
 import { RoomsListComponent } from './modules/home/rooms/rooms-list/rooms-list.component';
 import { Error404Component } from './authentication/error404/error404.component';
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
@@ -42,19 +40,23 @@ import { AppPageSizeComponent } from './modules/another/app-page-size/app-page-s
 import { ServiceOurControlComponent } from './modules/admin/service-our/service-our-control/service-our-control.component';
 import { ServiceOurAddComponent } from './modules/admin/service-our/service-our-add/service-our-add.component';
 import { WhyChooseComponent } from './modules/home/why-choose/why-choose.component';
+import { QuestionAnswersComponent } from './modules/another/question-answers/question-answers.component';
+import { HotelDetailComponent } from './modules/home/hotel/hotel-detail/hotel-detail.component';
+import { HotelListHomeComponent } from './modules/home/hotel/hotel-list-home/hotel-list-home.component';
+import { PopularLocationHomeComponent } from './modules/home/popular-location/popular-location-home/popular-location-home.component';
+import { AccommodationCateHomeComponent } from './modules/home/accommodation-category/accommodation-cate-home/accommodation-cate-home.component';
+import { AmenitiesComponent } from './modules/home/hotel/amenities/amenities.component';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    RoomsHomeComponent,
     BookRoomComponent,
     AboutusHomeComponent,
     ServicesOutHomeComponent,
     TypicalImageHomeComponent,
     ContactHomeComponent,
-    AboutListComponent,
     RoomsListComponent,
     Error404Component,
     SignUpComponent,
@@ -80,6 +82,12 @@ import { WhyChooseComponent } from './modules/home/why-choose/why-choose.compone
     ServiceOurControlComponent,
     ServiceOurAddComponent,
     WhyChooseComponent,
+    QuestionAnswersComponent,
+    HotelDetailComponent,
+    HotelListHomeComponent,
+    PopularLocationHomeComponent,
+    AccommodationCateHomeComponent,
+    AmenitiesComponent,
 
   ],
   imports: [

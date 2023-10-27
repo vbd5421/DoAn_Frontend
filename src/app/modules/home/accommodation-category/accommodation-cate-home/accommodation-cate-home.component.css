@@ -1,0 +1,48 @@
+
+.item-home-cate{
+    width: 100%;
+    border: 1px solid rgb(205, 205, 205) ;
+    display: flex;
+    flex-direction: column;
+}
+.zoom-img {
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+}
+  .zoom-img  img {
+    width: 100%;
+    transition: all .5s ease-in-out;
+  }
+  .zoom-img img:hover   {
+    transform: scale(1.2);
+  }
+.name-cate{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: rgb(42, 42, 46);
+    
+}
+.name-cate:hover{
+    text-decoration: underline;
+}
+.infor-cate-home{
+    margin: 10px;
+}
+.sochonghi{
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(115, 115, 115);
+}
+.section-title{
+    margin-bottom: 36px;
+    text-align: center;
+      font-size: 28px;
+  }
+  .section-title span{
+      color: burlywood;
+  }
