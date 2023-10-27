@@ -118,6 +118,8 @@
 }
 .item .body-item{
     border-right: 1px solid #dddddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 991px) {
@@ -154,15 +156,11 @@
     border: 1px solid #696c71;
 }
 .body-item p{
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
-.body-item .more{
-    color: black;
-    border-bottom: 2px solid #ab7727;
-}
-
-.body-item .more:hover{
-    color: #4287f7;
+.card-title{
+    font-size: 16px;
+    font-weight: 600;
 }
 /* mobile */
 .icon-drop-down{
@@ -185,6 +183,7 @@
     text-transform: capitalize;
 }
 .filter .text-content{
+    text-transform: capitalize;
     color:   #5a5b5b ;
     font-size: 15px;
 }
@@ -202,4 +201,12 @@
 }
 .filter .box-filter:not(:first-child){
     padding-top: 20px;
+}
+
+.back{
+    cursor: pointer;
+    color: white;
+}
+.back:hover{
+    color: #000000;
 }

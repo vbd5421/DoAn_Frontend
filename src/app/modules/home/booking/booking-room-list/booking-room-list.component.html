@@ -1,7 +1,7 @@
 <div id="navbar">
   <div class="container">
     <div class="main-menu d-lg-flex d-none ">
-      <a href=""> <i class=" icon-back fa-solid fa-arrow-left"></i> Quay lại</a>
+      <span class="back" (click)="goback()"> <i class=" icon-back fa-solid fa-arrow-left"></i> Quay lại</span>
       <div class="d-flex">
         <div class="check-date item-book">
           <p>Từ ngày:</p>
@@ -21,16 +21,16 @@
           </select>
         </div>
         <div class="select-option item-book ">
-          <p>Số lượng phòng:</p>
-          <input class="searchinput " (keypress)="numberOnly($event)" type="number" min="1" max="9"
-            placeholder="Nhập số lượng phòng ">
+          <p>Địa điểm:</p>
+          <input class="searchinput " type="text"
+            placeholder="Nhập địa điểm ">
         </div>
       </div>
       <button class="btn-seacrh btn btn-warning">Tìm</button>
     </div>
     <!-- mobile -->
     <div class="d-lg-none d-flex main-menu ">
-      <a href=""> <i class=" icon-back fa-solid fa-arrow-left"></i> Quay lại</a>
+      <span class="back"> <i class=" icon-back fa-solid fa-arrow-left"></i> Quay lại</span>
       <div class="btn-group dropstart">
         <div class="dropdown-toggle icon-drop-down " data-bs-toggle="dropdown" aria-expanded="false"  >
           <i class="fa fa-bars" aria-hidden="true"></i>
@@ -61,9 +61,9 @@
           </li>
           <li class="p-2 border">
             <div class="select-option  ">
-              <p class="text-dark">Số lượng phòng:</p>
-              <input class="searchinput " (keypress)="numberOnly($event)" type="number" min="1" max="9"
-                placeholder="Nhập số lượng  ">
+              <p>Địa điểm:</p>
+                <input class="searchinput " type="text"
+                  placeholder="Nhập địa điểm ">
             </div>
           </li>
         </ul>
@@ -182,8 +182,8 @@
               <img class="h-100 img-item w-100" src="assets/images/room/room-1.jpg" alt="">
             </div>
             <div class="col-7 col-lg-6 body-item ">
-                <div class="card-title">
-                  The Lakeview
+                <div class="card-title max-2line ">
+                  Inside Park Bike Tour and Space Center Houston Admissi Bike Tour and Space Center Houston Admission
                 </div>
                 <div class="cate-room-item">
                   <p>Loại phòng: <span>phòng đôi</span></p>
@@ -195,12 +195,12 @@
                 </div>
                 <div class="cate-service">
                   <p>
-                    Phòng có: <span>giường, </span><span>wifi, </span><span>nóng lạnh, </span><span>tivi,..</span>
+                    Phòng có: <span>giường, </span><span>wifi, </span><span>nóng lạnh, </span><span>tivi,.(mô tả).</span>
                   </p>
                 </div>
-                <a class="more" href="chi-tiet-phong">
-                  Xem thêm
-                </a>
+                <div class="address">
+                  <i class="fa-solid fa-location-dot me-2"></i> <span>Tên địa chỉ</span>
+                </div>
             </div>
             <div class="col-lg-2 mt-2 mt-lg-0 more-item  ">
                <button (click)="roomDetail()"  class="view-room-item me-lg-3 mb-3 mb-md-0 ">Xem phòng</button>
@@ -259,18 +259,18 @@
           </div>
           <div class="room-amenities box-filter">
             <div class="text-title">
-              tiện nghi phòng:
+              địa điểm:
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                wifi
+              <label class="form-check-label text-capitalize" for="flexCheckDefault">
+                hà nội
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-              <label class="form-check-label" for="flexCheckChecked">
-                bếp
+              <label class="form-check-label text-capitalize  " for="flexCheckChecked">
+                đà nẵng
               </label>
             </div>
           </div>
@@ -280,13 +280,13 @@
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-              <label class="form-check-label" for="flexCheckDefault1">
+              <label class="form-check-label text-capitalize " for="flexCheckDefault1">
                 Default checkbox
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
-              <label class="form-check-label" for="flexCheckChecked1">
+              <label class="form-check-label text-capitalize " for="flexCheckChecked1">
                 Checked checkbox
               </label>
             </div>

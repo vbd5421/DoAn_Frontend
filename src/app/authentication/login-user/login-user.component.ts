@@ -45,5 +45,8 @@ export class LoginUserComponent {
     this.router.navigate(['trang-chu']);
   }
 
+  goback():void{
+    window.history.back();
+  }
 
 }
