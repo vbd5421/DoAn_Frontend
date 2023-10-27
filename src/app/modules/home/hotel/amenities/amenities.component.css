@@ -1,0 +1,49 @@
+.title{
+    font-size: 24px;
+    margin: 0px;
+    text-transform: capitalize;
+}
+.item-amenities{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.item-amenities img{
+max-width: 32px ;
+max-height: 32px;
+}
+.item-amenities  .des{
+    font-size: 15px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.item-hightline:not(:last-child){
+    border-right: 1px solid #d3d3d3;
+}
+/* tiện nghi */
+.list-taxonomy li{
+    list-style: none;
+    font-size: 15px;
+
+}
+
+
+.list-taxonomy li:not(:last-child){
+    margin-bottom: 15px;
+}
+  .icon-check{
+    background: rgba(99, 176, 111, 0.1);
+    color: #63B06F;
+    padding: 4px 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  @media (min-width:768px) {
+    .list-taxonomy li {
+        width: 50%;
+    }
+  }
+  

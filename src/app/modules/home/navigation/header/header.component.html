@@ -17,8 +17,9 @@
                             <nav class="mainmenu">
                                 <ul>
                                     <li class=" item-menu " >
-                                        <a  href="/" >Trang chủ</a></li>
-                                    <li class="item-menu" >
+                                        <a  href="/" >Trang chủ</a>
+                                    </li>
+                                    <!-- <li class="item-menu" >
                                         <a href="/phong" >Phòng nghỉ</a>
                                     </li>
                                     <li class="item-menu" >
@@ -26,7 +27,7 @@
                                     </li>
                                     <li class="item-menu" >
                                         <a href="dich-vu">dịch vụ</a>
-                                    </li>
+                                    </li> -->
                                     <li class="item-menu" >
                                         <a href="lien-he">liên hệ</a>
                                     </li>
@@ -36,15 +37,40 @@
                                 </ul>
                             </nav>
                         </div>
-                        <a href="/login"  >
-                            <button  class="h-100 btn btn-login ms-3" >
-                                ĐĂNG NHẬP
+                        <a  *ngIf="isLoggedIn; else elseBlock"  data-bs-toggle="modal" data-bs-target="#logout"  >
+                            <button  class="h-100 btn btn-signup ms-3" >
+                                ĐĂNG xuất
                             </button>
                         </a>
+                        <ng-template #elseBlock>
+                            <a href="/login">
+                                <button  class="h-100 btn btn-login ms-3" >
+                                    đăng nhập
+                                </button>
+                            </a>
+                        </ng-template>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade " id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Thông báo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Bạn có muốn đăng xuất không?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+              <button type="button" (click)="logout()" class="btn btn-primary">Đăng xuất</button>
+            </div>
+          </div>
+        </div>
+      </div>
  
     <div class="header-section d-block d-lg-none mobile " >
         <div class="container h-100">

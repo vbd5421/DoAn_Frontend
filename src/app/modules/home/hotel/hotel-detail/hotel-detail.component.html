@@ -4,20 +4,21 @@
     <img  src="assets/images/room/room-detail.jpg" alt="">
 </div>
 
-
 <!-- Room Details Section Begin -->
 <section class="room-details-section spad mt_60 mb_60  ">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <div class="room-details-item">
+                <div class="room-details-item mb_40 ">
                     <div class="rd-text">
                         <div class="rd-title">
-                            <h3>Premium King Room</h3>
-                            
+                            <div class="name-hotel" >Premium King hotel</div>
+                            <p>
+                                <i class="fa-solid fa-location-dot me-2"></i> <span>Tên địa chỉ</span>
+                            </p>
                         </div>
-                        <h2>159$<span>/Pernight</span></h2>
-                        <table>
+                        <h2> <span class="fs-4 icon-money " ><i class="fa-solid fa-hand-holding-dollar"></i></span>159 ₫</h2>
+                        <!-- <table>
                             <tbody>
                                 <tr>
                                     <td class="r-o">Size:</td>
@@ -36,7 +37,7 @@
                                     <td>Wifi, Television, Bathroom,...</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table> -->
                         <p class="f-para">Motorhome or Trailer that is the question for you. Here are some of the
                             advantages and disadvantages of both, so you will be confident when purchasing an RV.
                             When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
@@ -51,9 +52,7 @@
                         </p>
                     </div>
                 </div>
-                <app-question-answers></app-question-answers>
-                <app-reviews></app-reviews>
-                <app-review-add></app-review-add>
+                <app-amenities></app-amenities>
             </div>
             <div class="col-lg-4">
                 <div class="room-booking mt-5 mt-lg-0 ">
@@ -78,6 +77,14 @@
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <app-rooms-list></app-rooms-list>
+                <app-question-answers></app-question-answers>
+                <app-reviews></app-reviews>
+                <app-review-add></app-review-add>
             </div>
         </div>
     </div>

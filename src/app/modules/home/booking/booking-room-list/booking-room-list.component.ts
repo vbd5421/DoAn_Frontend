@@ -15,7 +15,7 @@ export class BookingRoomListComponent {
     this.router.navigate(['/tim-kiem']);
   }
   roomDetail(){
-    this.router.navigate(['/chi-tiet-phong'])
+    this.router.navigate(['/chi-tiet-khach-san'])
   }
   goback():void{
     window.history.back();

@@ -167,7 +167,20 @@
     color: white;
     font-size: 20px;
 }
+.price span{
 
+}
+.price{
+    text-align: start;
+    margin-bottom: 10px;
+    color:   #ff8e00;
+}
+@media (min-width:992px) {
+    .price{
+        text-align: start;
+        margin-bottom: 0px;
+    }
+}
 
 /*  */
 .filter{
