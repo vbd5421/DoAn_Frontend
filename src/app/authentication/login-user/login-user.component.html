@@ -2,7 +2,7 @@
 <section class="pt_100 pb_60">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-6 text-center mb-5">
+        <div class="col-md-6 text-center mb-3  mb-md-5">
           <h2 class="heading-section">Đăng Nhập</h2>
         </div>
       </div>
@@ -37,7 +37,8 @@
                   <button type="submit" class="form-control btn btn-primary btn-login submit px-3">Đăng Nhập</button>
                 </div>
                 <div class="form-group d-md-flex">
-                  <div class="w-50 text-left">
+                  <div class="w-100 remember-back">
+                    <span (click)="goback()" class="back"> <i class=" icon-back fa-solid fa-arrow-left"></i> Quay lại</span>
                     <label class="checkbox-wrap checkbox-primary mb-0" >Ghi nhớ
                       <input type="checkbox" name="remember-me" [(ngModel)]="form.remember" checked>
                       <!-- <span class="checkmark"></span> -->

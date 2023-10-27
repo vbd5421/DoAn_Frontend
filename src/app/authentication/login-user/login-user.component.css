@@ -193,3 +193,21 @@ button:focus {
   color: #dfa974; }
 .checkbox-primary input:checked ~ .checkmark:after {
   color: #dfa974; }
+
+
+  /* quay lại */
+  .back{
+    color: #000000;
+    font-size: 14px;
+    transition: .3s linear;
+    position: absolute;
+    left: 1px;
+  }
+  .back:hover{
+    cursor: pointer;
+    color: #dfa974;
+  }
+  .remember-back{
+    position: relative;
+    text-align: center;
+  }
