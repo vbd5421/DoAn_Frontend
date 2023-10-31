@@ -111,79 +111,92 @@
 	display: none;
 }
 /*  */
-.header , .header-section{
+#navbar {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
+    background: #192a56;
+    display: block;
+    transition: top 0.3s;
     z-index: 50;
-    -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-color: #fffffff0;
-  }
-.header-right{
-    display: flex;
-    align-items: center;
-    padding: 10px 0px;
 }
-.header-left{
 
-display: flex;
-margin-top: auto;
-margin-bottom: auto;
+
+/* header2 */
+.header-top{
+    height: 115px;
 }
-.header-left .logo img{
-   
-}
-.header-label {
-    color: #ffffff;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 25px;
-}
-.contact-title{
-    color: #ffff;
-    font-size: 15px;
-}
- .info{
-    color: #dfa974;
-    font-size: 15px;
-}
- .info:hover{
-    text-decoration: underline;
-    color: #b1875d;
-}
- .btn-login{
+.name-web{
+    text-align: center;
+    width: 100%;
     text-transform: uppercase;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #dfa974;
-    border-color: #dfa974;
-    vertical-align: inherit;
-    color: rgb(0, 0, 0) ;
-    font-size: 12px ;
-    font-weight: 700;
 }
-.btn-login:hover{ 
-  color: rgb(255, 255, 255);
+.name-viet{
+    margin-bottom: 5px;
 }
-.btn-login:focus , .btn-signup:focus{
-    box-shadow: unset;
+
+
+/*** Navbar ***/
+.sticky-top {
+    top: -150px;
+    transition: .5s;
 }
-.btn-signup{
-    text-transform: uppercase;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    border-color: #dfa974;
-    vertical-align: inherit;
-    color: #dfa974;
-    font-size: 12px ;
-    font-weight: 700;
+
+.navbar {
+    padding: 0 !important;
 }
-.btn-signup:hover{
-    background-color: #dfa974;
-    color: rgb(255, 255, 255);
+
+.navbar .navbar-nav .nav-link {
+    padding: 16px 10px;
+    color: rgba(255, 255, 255, .7);
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.nav-item:not(:last-child){
+    margin-right: 35px;
+}
+.nav-item{
+    text-transform: capitalize;
+}
+.item-cus{
+    border-radius: 0px !important;
+    padding: 10px 10px;
+}
+.item-cus:hover{
+    background-color: #5e88ec;
+    color: white;
+}
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
 }
 /* mobile */
 

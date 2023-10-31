@@ -1,0 +1,40 @@
+
+.about-img {
+    position: relative;
+    max-height: 500px;
+}
+
+.about-img::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('/assets/images/utc-uav-ai/bg-about-img.png') top left no-repeat;
+    background-size: cover;
+}
+
+.img-about{
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+}
+.title-about-us{
+    text-transform: uppercase;
+    color:#192a56 ;
+    font-size: 30px;
+    font-weight: 700;
+}
+.see-more{
+    text-transform: capitalize;
+    color: white;
+    background-color: #192a56;
+    padding: 10px  20px ;
+    border-radius: 25px;
+}
+.see-more:hover{
+    color: #192a56;
+    background: rgb(255, 255, 255);
+    border: 1px solid #192a56;
+}

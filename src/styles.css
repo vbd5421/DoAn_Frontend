@@ -1,12 +1,12 @@
 
 ::selection {
     color: white;
-    background:  #dfa974;
+    background:  #192a56;
 }
 
 a{
     text-decoration: none;
 }
 *{
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Helvetica, Tahoma, Geneva, Verdana, sans-serif;
   }
