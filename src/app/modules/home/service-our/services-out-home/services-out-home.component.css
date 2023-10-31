@@ -1,48 +1,102 @@
-
-.services-section .section-title {
-	margin-bottom: 36px;
-    text-align: center;
-	font-size: 28px;
-    color: burlywood;
+.service-our{
+	background: #f4f7fe !important;
 }
 .service-item {
-	text-align: center;
-	padding: 30px 35px 18px;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    position: relative;
+    padding: 45px 30px;
+    background: #FFFFFF;
+    transition: .5s;
 }
+
 .service-item:hover {
-	background: #dfa974;
+    background: #192a56;
 }
-.service-item:hover i {
-	color: #ffffff;
+
+.service-item .service-icon {
+    margin: 0 auto 20px auto;
+    width: 90px;
+    height: 90px;
+    color: #192a56;
+    background: #F4F7FE;
+    transition: .5s;
 }
-.service-item:hover h4 {
-	color: #ffffff;
+
+.service-item:hover .service-icon {
+    background: #FFFFFF;
 }
-.service-item:hover p {
-	color: #ffffff;
-}
-.service-item i {
-	display: inline-block;
-	color: #dfa974;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-}
-.service-item h4 {
-	color: #19191a;
-	font-size: 22px;
-	margin-bottom: 15px;
-	margin-top: 10px;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-}
+
+.service-item h5,
 .service-item p {
-	color: #707079;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    transition: .5s;
+}
+
+.service-item:hover h5,
+.service-item:hover p {
+    color: #FFFFFF;
+}
+
+.service-item a.btn {
+    position: relative;
+    display: flex;
+    color: #192a56;
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item:hover a.btn {
+    color: #192a56;
+}
+
+.service-item a.btn::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item:hover a.btn::before {
+    width: 100%;
+    background: #F4F7FE;
+}
+
+/*  */
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50px;
+}
+
+.see-more{
+    text-transform: capitalize;
+    color: white;
+    background-color: #192a56;
+    padding: 10px  20px ;
+    border-radius: 25px;
+}
+.see-more:hover{
+    color: #192a56;
+    background: rgb(255, 255, 255);
+    border: 1px solid #192a56;
+}
+
+.title-service{
+	text-transform: uppercase;
+    color:#192a56 ;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.see-more-item{
+	font-size: 18px;
+	color: #4c7fff !important;
 }

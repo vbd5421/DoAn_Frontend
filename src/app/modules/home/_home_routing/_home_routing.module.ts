@@ -12,7 +12,7 @@ import { LoginAdminComponent } from "src/app/authentication/login-admin/login-ad
 import { HotelDetailComponent } from "../hotel/hotel-detail/hotel-detail.component";
 
 const routes: Routes=[
-    {path:'' , title:'Book-Easy' ,
+    {path:'' , title:'UAV-AI' ,
     children:[
       {path:'trang-chu' ,loadChildren:()=>import('./home/home.module').then(m=>m.HomeModule) },
        {path:'lien-he' , component:ContactHomeComponent},

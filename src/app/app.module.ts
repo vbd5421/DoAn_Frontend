@@ -46,6 +46,9 @@ import { HotelListHomeComponent } from './modules/home/hotel/hotel-list-home/hot
 import { PopularLocationHomeComponent } from './modules/home/popular-location/popular-location-home/popular-location-home.component';
 import { AccommodationCateHomeComponent } from './modules/home/accommodation-category/accommodation-cate-home/accommodation-cate-home.component';
 import { AmenitiesComponent } from './modules/home/hotel/amenities/amenities.component';
+import { SliderHomeComponent } from './modules/home/slider/slider-home/slider-home.component';
+import { TypicalNumberHomeComponent } from './modules/home/typical-number/typical-number-home/typical-number-home.component';
+import { AnimationDigitComponent } from './modules/another/animation-digit/animation-digit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,6 +91,9 @@ import { AmenitiesComponent } from './modules/home/hotel/amenities/amenities.com
     PopularLocationHomeComponent,
     AccommodationCateHomeComponent,
     AmenitiesComponent,
+    SliderHomeComponent,
+    TypicalNumberHomeComponent,
+    AnimationDigitComponent,
 
   ],
   imports: [

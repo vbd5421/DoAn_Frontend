@@ -1,83 +1,126 @@
- 
-
 <header>
-    <div class="header-section d-lg-block d-none ">
-        <div class="container h-100">
-            <div class="menu-item">
-                <div class="header-left ">
-                    <div class="logo w-100 h-100 ">
-                        <a href="#" class="w-100 h-100 d-block "  >
-                            <img class="w-100 h-100 " src="assets/images/logo.png" alt="">
-                        </a>
+    <div id="navbar">
+        <div class="header-section d-lg-block d-none ">
+            <!-- <div class="container h-100">
+                <div class="menu-item">
+                    <div class="header-left ">
+                        <div class="logo w-100 h-100 ">
+                            <a href="#" class="w-100 h-100 d-block ">
+                                <img class="w-100 h-100 " src="assets/images/logo.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="header-right  ">
+                    <div class="header-right  ">
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class=" item-menu " >
-                                        <a  href="/" >Trang chủ</a>
+                                    <li class=" item-menu ">
+                                        <a href="/">Trang chủ</a>
                                     </li>
-                                    <!-- <li class="item-menu" >
-                                        <a href="/phong" >Phòng nghỉ</a>
+                                    <li class="item-menu">
+                                        <a href="/phong">Phòng nghỉ</a>
                                     </li>
-                                    <li class="item-menu" >
+                                    <li class="item-menu">
                                         <a href="gioi-thieu">Giới thiệu</a>
                                     </li>
-                                    <li class="item-menu" >
+                                    <li class="item-menu">
                                         <a href="dich-vu">dịch vụ</a>
-                                    </li> -->
-                                    <li class="item-menu" >
+                                    </li>
+                                    <li class="item-menu">
                                         <a href="lien-he">liên hệ</a>
                                     </li>
-                                    <!-- <li class="item-menu">
-                                        <a href="tim-kiem">đặt phòng ngay</a>
-                                    </li> -->
+
                                 </ul>
                             </nav>
                         </div>
-                        <a  *ngIf="isLoggedIn; else elseBlock"  data-bs-toggle="modal" data-bs-target="#logout"  >
-                            <button  class="h-100 btn btn-signup ms-3" >
+                        <a *ngIf="isLoggedIn; else elseBlock" data-bs-toggle="modal" data-bs-target="#logout">
+                            <button class="h-100 btn btn-signup ms-3">
                                 ĐĂNG xuất
                             </button>
                         </a>
                         <ng-template #elseBlock>
                             <a href="/login">
-                                <button  class="h-100 btn btn-login ms-3" >
+                                <button class="h-100 btn btn-login ms-3">
                                     đăng nhập
                                 </button>
                             </a>
                         </ng-template>
+                    </div>
+                </div>
+            </div> -->
+            <div class="header-top">
+                <div class="container h-100 ">
+                    <div class="row h-100 ">
+                        <div class="col-md-3 h-100  ">
+                            <a href="#" class="w-100 h-100 d-flex  align-content-center flex-wrap ">
+                                <img class="w-100  " src="assets/images/utc-uav-ai/logo_gvt_1.png" alt="logo-utc">
+                            </a>
+                        </div>
+                        <div class="col-md-7  h-100  d-flex flex-column justify-content-center flex-wrap ">
+                            <div class="name-web text-white ">
+                                <p class="name-viet fs-2  fw-bold ">phòng thí nghiệm về uva-ai</p>
+                                <p class="name-eng fs-4 mb-0">uva-ai lab</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 h-100  ">
+                            <a href="" class="h-100 d-lg-block">
+                                <img class="w-100 h-100" src="assets/images/utc-uav-ai/uav-logo.jpg" alt="uav-lgo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                        <div class="navbar-nav">
+                            <a href="index.html" class="nav-item nav-link active">trang chủ</a>
+                            <a href="project.html" class="nav-item nav-link">dự án</a>
+                            <a href="project.html" class="nav-item nav-link">sản phẩm</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">giới thiệu</a>
+                                <div class="dropdown-menu bg-light py-0 ">
+                                    <a href="feature.html" class="dropdown-item item-cus ">giới thiệu chung</a>
+                                    <a href="feature.html" class="dropdown-item item-cus ">Công nghệ UAV</a>
+                                    <a href="team.html" class="dropdown-item item-cus ">Đội ngũ nghiên cứu</a>
+                                    <a href="404.html" class="dropdown-item item-cus ">404 Page</a>
+                                </div>
+                            </div>
+                            <a href="service.html" class="nav-item nav-link">Tin tức và sự kiện</a>
+                            <a href="contact.html" class="nav-item nav-link">liên hệ</a>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade " id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade " id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Thông báo</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Thông báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có muốn đăng xuất không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" (click)="logout()" class="btn btn-primary">Đăng xuất</button>
+                </div>
             </div>
-            <div class="modal-body">
-              Bạn có muốn đăng xuất không?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-              <button type="button" (click)="logout()" class="btn btn-primary">Đăng xuất</button>
-            </div>
-          </div>
         </div>
-      </div>
- 
-    <div class="header-section d-block d-lg-none mobile " >
+    </div>
+
+    <div class="header-section d-block d-lg-none mobile ">
         <div class="container h-100">
             <div class="menu-item">
                 <div class="header-left ">
                     <div class="logo w-100 h-100 ">
-                        <a href="#" class="w-100 h-100 d-block " target="_blank" >
+                        <a href="#" class="w-100 h-100 d-block " target="_blank">
                             <img class="w-100 h-100 " src="assets/images/logo.png" alt="">
                         </a>
                     </div>
@@ -85,7 +128,7 @@
 
                 <div class="header-right my-auto  ">
                     <div id="main">
-                        <a  onclick="openNav()"><i class="fas fa-bars"></i></a>
+                        <a onclick="openNav()"><i class="fas fa-bars"></i></a>
                     </div>
                 </div>
             </div>
@@ -96,29 +139,29 @@
 
 <div id="mySidenav" class="sidenav">
     <div class="text-end sidenav-close ">
-            <a href="javascript:void(0)" class="closebtn " onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn " onclick="closeNav()">&times;</a>
     </div>
     <ul class="p-0 menu-items mobile-menu">
-        <li class=" item-menu active" >
-            <a  href="/" >Trang chủ</a></li>
-        <li class="item-menu" >
-            <a href="/phong" >Phòng nghỉ</a>
+        <li class=" item-menu active">
+            <a href="/">Trang chủ</a>
         </li>
-        <li class="item-menu" >
+        <li class="item-menu">
+            <a href="/phong">Phòng nghỉ</a>
+        </li>
+        <li class="item-menu">
             <a href="gioi-thieu">Giới thiệu</a>
         </li>
-        <li class="item-menu" >
+        <li class="item-menu">
             <a href="dich-vu">dịch vụ</a>
         </li>
-        <li class="item-menu" >
+        <li class="item-menu">
             <a href="lien-he">liên hệ</a>
         </li>
         <!-- <li class="item-menu">
             <a href="tim-kiem">đặt phòng ngay</a>
         </li> -->
-        <li class="item-menu" >
-           <a href="">đăng nhập</a>
+        <li class="item-menu">
+            <a href="">đăng nhập</a>
         </li>
     </ul>
 </div>
-
