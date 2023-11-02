@@ -43,12 +43,13 @@ import { WhyChooseComponent } from './modules/home/why-choose/why-choose.compone
 import { QuestionAnswersComponent } from './modules/another/question-answers/question-answers.component';
 import { HotelDetailComponent } from './modules/home/hotel/hotel-detail/hotel-detail.component';
 import { HotelListHomeComponent } from './modules/home/hotel/hotel-list-home/hotel-list-home.component';
-import { PopularLocationHomeComponent } from './modules/home/popular-location/popular-location-home/popular-location-home.component';
 import { AccommodationCateHomeComponent } from './modules/home/accommodation-category/accommodation-cate-home/accommodation-cate-home.component';
 import { AmenitiesComponent } from './modules/home/hotel/amenities/amenities.component';
 import { SliderHomeComponent } from './modules/home/slider/slider-home/slider-home.component';
 import { TypicalNumberHomeComponent } from './modules/home/typical-number/typical-number-home/typical-number-home.component';
 import { AnimationDigitComponent } from './modules/another/animation-digit/animation-digit.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ProductHomeComponent } from './modules/home/product/product-home/product-home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,12 +89,12 @@ import { AnimationDigitComponent } from './modules/another/animation-digit/anima
     QuestionAnswersComponent,
     HotelDetailComponent,
     HotelListHomeComponent,
-    PopularLocationHomeComponent,
     AccommodationCateHomeComponent,
     AmenitiesComponent,
     SliderHomeComponent,
     TypicalNumberHomeComponent,
     AnimationDigitComponent,
+    ProductHomeComponent,
 
   ],
   imports: [
@@ -108,7 +109,7 @@ import { AnimationDigitComponent } from './modules/another/animation-digit/anima
       positionClass: 'toast-bottom-right' ,
       timeOut:2000,
     }),
-  
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

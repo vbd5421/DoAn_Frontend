@@ -1,6 +1,5 @@
 .error{
-    background: white; 
-    height: 100vh;
+    background: #f7f7f7; 
 }
 
 .logo{
@@ -8,7 +7,7 @@
     justify-content: center;
 }
 .back{
-    color: #dfa974;
+    color: #192a56;
     font-weight: bold;
     font-size: 20px;
     transition: .3s linear;
@@ -19,3 +18,8 @@
     margin-left: 10px;
 
   }
+  @media (min-width:992px) {
+    .error{
+        margin-top: 165px;
+    }
+}
