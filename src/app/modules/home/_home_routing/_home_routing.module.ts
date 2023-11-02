@@ -10,11 +10,14 @@ import { LoginUserComponent } from "src/app/authentication/login-user/login-user
 import { SignUpComponent } from "src/app/authentication/sign-up/sign-up.component";
 import { LoginAdminComponent } from "src/app/authentication/login-admin/login-admin.component";
 import { HotelDetailComponent } from "../hotel/hotel-detail/hotel-detail.component";
+import { NewsListComponent } from "../news/news-list/news-list.component";
 
 const routes: Routes=[
-    {path:'' , title:'UAV-AI' ,
+    {path:'' , title:'UAV-AI',
     children:[
       {path:'trang-chu' ,loadChildren:()=>import('./home/home.module').then(m=>m.HomeModule) },
+      {path:'tin-tuc' , loadChildren:()=>import('./news/news.module').then(m=>m.NewsModule)},
+      {path:'gioi-thieu' , loadChildren:()=>import('./about/about.module').then(m=>m.AboutModule)},
        {path:'lien-he' , component:ContactHomeComponent},
        {path:'phong' , component:RoomsListComponent},
        {path:'dich-vu' , component:SericeOurListComponent},

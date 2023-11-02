@@ -50,6 +50,10 @@ import { TypicalNumberHomeComponent } from './modules/home/typical-number/typica
 import { AnimationDigitComponent } from './modules/another/animation-digit/animation-digit.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductHomeComponent } from './modules/home/product/product-home/product-home.component';
+import { NewsListComponent } from './modules/home/news/news-list/news-list.component';
+import { NewsDetailComponent } from './modules/home/news/news-detail/news-detail.component';
+import { MemberListComponent } from './modules/home/member/member-list/member-list.component';
+import { MemberDetailComponent } from './modules/home/member/member-detail/member-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,6 +99,10 @@ import { ProductHomeComponent } from './modules/home/product/product-home/produc
     TypicalNumberHomeComponent,
     AnimationDigitComponent,
     ProductHomeComponent,
+    NewsListComponent,
+    NewsDetailComponent,
+    MemberListComponent,
+    MemberDetailComponent,
 
   ],
   imports: [
