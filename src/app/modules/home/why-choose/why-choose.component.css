@@ -3,7 +3,7 @@
 	margin-bottom: 36px;
     text-align: center;
 	font-size: 28px;
-    color: burlywood;
+    color: #192a56;
 }
 .service-item {
 	text-align: center;
@@ -13,7 +13,7 @@
 	transition: all 0.3s;
 }
 .service-item:hover {
-	background: #dfa974;
+	background: #192a56;
 }
 .service-item:hover i {
 	color: #ffffff;
@@ -26,7 +26,7 @@
 }
 .service-item i {
 	display: inline-block;
-	color: #dfa974;
+	color: #192a56;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
@@ -46,4 +46,9 @@
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
     text-align: justify;
+}
+.service-item img{
+	width: 60px;
+	height: 60px;
+	background: white;
 }

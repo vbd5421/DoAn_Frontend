@@ -12,7 +12,7 @@
     height: 45px;
     width: 45px;
     color: #ffffff;
-    border: 1px solid #5A4D48;
+    border: 1px solid #b4b4b4;
     border-radius: 50%;
     transition: all 0.3s;
     display: inline-grid;
@@ -23,7 +23,7 @@
     margin-right: 15px;
 }
 .icon a:hover{
-    background-color: #dfa974;
+    background-color: #2c4583;
 }
 .icon a i{
     font-size: 20px;
