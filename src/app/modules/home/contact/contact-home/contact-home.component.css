@@ -3,7 +3,7 @@
 -----------------------*/
 
 .contact-section {
-	padding-top: 80px;
+	padding-top: 0px;
 	padding-bottom: 80px;
 }
 .contact-text h2 {
@@ -98,18 +98,25 @@
    } 
    /* input */
 .searchinput:focus{
-    border: 1px solid #dfa974 !important;
+    border: 1px solid #192a56 !important;
 }
 
 .btn-search{
-    border: 1px solid #dfa974;
+    border: 1px solid #192a56;
     padding: 10px 20px;
-    background:  #dfa974;
+    background:  #192a56;
     color: white;
     border-radius: 5px;
 
    }
    .btn-search:hover{
     background: rgb(255, 255, 255);
-    color: #dfa974;
+    color: #192a56;
    }
+
+   @media (min-width:992px) {
+	.contact-section {
+		padding-top: 100px;
+		padding-bottom: 80px;
+	}
+}
