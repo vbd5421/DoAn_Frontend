@@ -11,6 +11,7 @@
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+	height: 260px;
 }
 .service-item:hover {
 	background: #192a56;

@@ -55,6 +55,8 @@ import { NewsDetailComponent } from './modules/home/news/news-detail/news-detail
 import { MemberListComponent } from './modules/home/member/member-list/member-list.component';
 import { MemberDetailComponent } from './modules/home/member/member-detail/member-detail.component';
 import { NewsMoreComponent } from './modules/home/news/news-more/news-more.component';
+import { MemberHomeComponent } from './modules/home/member/member-home/member-home.component';
+import { LinkWebHomeComponent } from './modules/home/link-web/link-web-home/link-web-home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -105,6 +107,8 @@ import { NewsMoreComponent } from './modules/home/news/news-more/news-more.compo
     MemberListComponent,
     MemberDetailComponent,
     NewsMoreComponent,
+    MemberHomeComponent,
+    LinkWebHomeComponent,
 
   ],
   imports: [

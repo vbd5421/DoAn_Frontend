@@ -11,7 +11,6 @@ const routes: Routes=[
     {path:'admin' , redirectTo:'admin/category-room' , pathMatch:'full'},
     {path:'admin' ,canActivate:[AuthenticateService] , loadChildren:()=> import('./modules/admin/_admin_routing/admin.module').then(m=>m.AdminModule) },
     
-    
     { path: '**', redirectTo: '/404' },
     {path: '404' , component:Error404Component},
 ]
