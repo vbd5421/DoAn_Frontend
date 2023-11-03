@@ -1,0 +1,67 @@
+
+  
+  @media only screen and (min-width: 1922px) and (max-width: 3800px) {
+    .banner {
+      height: 550px;
+    }
+  }
+  @media only screen and (min-width: 1368px) and (max-width: 1921px) {
+    .banner {
+      height: 300px;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1367px) {
+    .banner {
+      height: 250px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+    .banner {
+      height: 220px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .banner{
+        height: 180px;
+    }
+}
+
+
+  .share .icon-share {
+  }
+  .icon-share:not(:last-child){
+    margin-right: 20px;
+  }
+  .icon-share i{
+    font-size: 35px ;
+  }
+  .icon-share .fb{
+    color: #3b5898;
+  }
+  .icon-share .tw{
+   color: black;
+  }
+  .icon-share i:hover{
+    color: rgb(66, 113, 255);
+  }
+  .post-meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-news{
+    text-align: start;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #192a56;
+  }
+  .post-date{
+    font-size: 17px;
+  }
+  .post-content{
+    text-align: justify;
+  }

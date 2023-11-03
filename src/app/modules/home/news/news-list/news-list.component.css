@@ -1,6 +1,6 @@
 
 .post-title{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 18px;
     color: #192a56;
     font-weight: bold;
@@ -8,14 +8,16 @@
   }
   
   .post-excerpt{
-    font-size: 14px;
+    font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 25px;
     -webkit-line-clamp: 3;
-    height: 75px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+  }
+  .post-excerpt p{
+    margin-bottom: 0;
   }
   .chuyenmuc{
     font-size: 30px;

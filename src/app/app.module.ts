@@ -54,6 +54,7 @@ import { NewsListComponent } from './modules/home/news/news-list/news-list.compo
 import { NewsDetailComponent } from './modules/home/news/news-detail/news-detail.component';
 import { MemberListComponent } from './modules/home/member/member-list/member-list.component';
 import { MemberDetailComponent } from './modules/home/member/member-detail/member-detail.component';
+import { NewsMoreComponent } from './modules/home/news/news-more/news-more.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,6 +104,7 @@ import { MemberDetailComponent } from './modules/home/member/member-detail/membe
     NewsDetailComponent,
     MemberListComponent,
     MemberDetailComponent,
+    NewsMoreComponent,
 
   ],
   imports: [
