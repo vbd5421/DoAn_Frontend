@@ -1,0 +1,34 @@
+.news-more{
+    background:#f3f1ee;
+    padding: 25px;
+}
+.title-blog{
+    font-size: 1.25em;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    line-height: 1.2em;
+    border-bottom: 1px dashed #1c4382 !important;
+}
+.item-post{
+    display: flex;
+}
+.img img{
+    max-height: 90px;
+   max-width: 120px;
+}
+.title-item-post{
+    margin-bottom: 0 !important;
+    color: black;
+    
+}
+.title-item-post:hover{
+    text-decoration: underline;
+}
+.item-post:not(:last-child){
+    border-bottom: 1px dashed #1c4382 !important;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
