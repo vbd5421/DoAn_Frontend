@@ -1,0 +1,41 @@
+.title{
+    text-align: start;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #192a56;
+    text-transform: uppercase;
+}
+
+.image{
+    width: 100%;
+}
+.title-info{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+tr{
+    line-height: 1.6;
+}
+
+@media (max-width:767.98px) {
+    .image img{
+        max-height: 260px;
+    }
+ .table-info{
+    width: 100%;
+ }
+ .image{
+    text-align: center;
+    margin-bottom: 20px;
+ }
+}
+@media screen and (min-width:768px) {
+    .table-info{
+        width: 50%;
+    }
+    .image img{
+        max-height: 210px;
+    }
+}
