@@ -57,6 +57,8 @@ import { MemberDetailComponent } from './modules/home/member/member-detail/membe
 import { NewsMoreComponent } from './modules/home/news/news-more/news-more.component';
 import { MemberHomeComponent } from './modules/home/member/member-home/member-home.component';
 import { LinkWebHomeComponent } from './modules/home/link-web/link-web-home/link-web-home.component';
+import { ProductListComponent } from './modules/home/product/product-list/product-list.component';
+import { ProductDetailComponent } from './modules/home/product/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,6 +111,8 @@ import { LinkWebHomeComponent } from './modules/home/link-web/link-web-home/link
     NewsMoreComponent,
     MemberHomeComponent,
     LinkWebHomeComponent,
+    ProductListComponent,
+    ProductDetailComponent,
 
   ],
   imports: [
