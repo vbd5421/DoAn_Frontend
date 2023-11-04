@@ -18,6 +18,7 @@ const routes: Routes=[
       {path:'trang-chu' ,loadChildren:()=>import('./home/home.module').then(m=>m.HomeModule) },
       {path:'tin-tuc' , loadChildren:()=>import('./news/news.module').then(m=>m.NewsModule)},
       {path:'gioi-thieu' , loadChildren:()=>import('./about/about.module').then(m=>m.AboutModule)},
+      {path:'san-pham' , loadChildren:()=>import('./product/product.module').then(m=>m.ProductModule)},
        {path:'lien-he' , component:ContactHomeComponent},
        {path:'phong' , component:RoomsListComponent},
        {path:'dich-vu' , component:SericeOurListComponent},
