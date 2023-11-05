@@ -29,7 +29,7 @@
             </div>
             <div class="collapse" id="chonloc">
                 <div class="filter">
-                    <div class="rating box-filter ">
+                    <div class=" box-filter d-flex ">
                         <button class="btn-sapxep mb-sm-0 mb-2 col-sm-3">Giá thấp nhất</button>
                         <button class="btn-sapxep mb-sm-0 mb-2 col-sm-3">Giá cao nhất</button>
                     </div>
@@ -61,43 +61,53 @@
                             <span class="text-black-50 fs-5">₫</span>
                         </div>
                     </div>
-                    <div class="col-lg-2 mt-2 mt-lg-0 more-item ">
-                        <a href="san-pham/chi-tiet">
-                            <button class="view-room-item me-lg-3 mb-3 mb-md-0 ">xem thêm</button>
+                    <div class="col-lg-2 mt-2 mt-lg-0 ps-lg-0  more-item flex-lg-column ">
+                        <a href="san-pham/chi-tiet" class="view-room-item mx-2 mb-3 mb-md-0 text-center " >
+                            xem thêm
                         </a>
-                        <button type="button" class="btn btn-primary me-lg-3 mb-3 mb-md-0 btn-buy " data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary mx-2 mb-3 mb-md-0 btn-buy " data-bs-toggle="modal"
                             data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">mua ngay</button>
 
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
-                            <div class="modal-dialog  modal-dialog-scrollable ">
+                            <div class="modal-dialog  modal-dialog-scrollable w-modal ">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                        <div>
+                                            <h5 class="modal-title me-2 " id="exampleModalLabel">Quý khách hàng vui lòng điền thông tin dưới đây để đặt hàng ! </h5>
+                                            <h5 class="mb-0" ><strong>Tên sản phẩm: </strong> Sản phẩm 1</h5>
+                                        </div>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form>
                                             <div class="mb-3">
-                                                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
+                                                <label for="recipient-name" class="col-form-label label-info ">họ và tên:</label>
+                                                <input type="text" class="form-control form-info " id="recipient-name">
                                             </div>
                                             <div class="mb-3">
-                                                <label for="message-text" class="col-form-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
+                                                <label for="message-text" class="col-form-label label-info ">số điện thoại:</label>
+                                                <input type="text" class="form-control form-info " id="recipient-name">
                                             </div>
                                             <div class="mb-3">
-                                                <label for="message-text" class="col-form-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
+                                                <label for="message-text" class="col-form-label label-info ">email:</label>
+                                                <input type="text" class="form-control form-info " id="recipient-name">
                                             </div>
-
+                                            <div class="mb-3">
+                                                <label for="message-text" class="col-form-label label-info ">địa chỉ nhận hàng:</label>
+                                                <input type="text" class="form-control form-info " id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="message-text" class="col-form-label label-info  ">lưu ý:</label>
+                                                <textarea class="form-control form-info " id="message-text"></textarea>
+                                            </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Send message</button>
+                                            data-bs-dismiss="modal">Thoát</button>
+                                        <button type="button" class="btn btn-primary">Gửi</button>
                                     </div>
                                 </div>
                             </div>

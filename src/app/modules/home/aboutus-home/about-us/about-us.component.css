@@ -1,5 +1,5 @@
 
-  .icon-share:not(:last-child){
+.icon-share:not(:last-child){
     margin-right: 20px;
   }
   .icon-share i{
@@ -21,11 +21,12 @@
   }
 
   .title-news{
-    text-align: start;
+    text-align: center;
     font-size: 28px;
     font-weight: 700;
     line-height: 1.2em;
     color: #192a56;
+    text-transform: uppercase;
   }
   .post-date{
     font-size: 17px;

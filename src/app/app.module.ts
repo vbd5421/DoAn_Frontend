@@ -8,9 +8,7 @@ import { HomeComponent } from './modules/home/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
-import { BookRoomComponent } from './modules/home/booking/book-room/book-room.component';
 import { AboutusHomeComponent } from './modules/home/aboutus-home/aboutus-home/aboutus-home.component';
-import { ServicesOutHomeComponent } from './modules/home/service-our/services-out-home/services-out-home.component';
 import { TypicalImageHomeComponent } from './modules/home/typical image/typical-image-home/typical-image-home.component';
 import { CommonModule } from '@angular/common';
 import { ContactHomeComponent } from './modules/home/contact/contact-home/contact-home.component';
@@ -19,8 +17,6 @@ import { Error404Component } from './authentication/error404/error404.component'
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
 import { LoginAdminComponent } from './authentication/login-admin/login-admin.component';
 import { LoginUserComponent } from './authentication/login-user/login-user.component';
-import { SericeOurListComponent } from './modules/home/service-our/serice-our-list/serice-our-list.component';
-import { BookingRoomListComponent } from './modules/home/booking/booking-room-list/booking-room-list.component';
 import { RoomDetailComponent } from './modules/home/rooms/room-detail/room-detail.component';
 import { RatingComponent } from './modules/home/rate/rating/rating.component';
 import { ReviewAddComponent } from './modules/home/review/review-add/review-add.component';
@@ -41,10 +37,7 @@ import { ServiceOurControlComponent } from './modules/admin/service-our/service-
 import { ServiceOurAddComponent } from './modules/admin/service-our/service-our-add/service-our-add.component';
 import { WhyChooseComponent } from './modules/home/why-choose/why-choose.component';
 import { QuestionAnswersComponent } from './modules/another/question-answers/question-answers.component';
-import { HotelDetailComponent } from './modules/home/hotel/hotel-detail/hotel-detail.component';
-import { HotelListHomeComponent } from './modules/home/hotel/hotel-list-home/hotel-list-home.component';
 import { AccommodationCateHomeComponent } from './modules/home/accommodation-category/accommodation-cate-home/accommodation-cate-home.component';
-import { AmenitiesComponent } from './modules/home/hotel/amenities/amenities.component';
 import { SliderHomeComponent } from './modules/home/slider/slider-home/slider-home.component';
 import { TypicalNumberHomeComponent } from './modules/home/typical-number/typical-number-home/typical-number-home.component';
 import { AnimationDigitComponent } from './modules/another/animation-digit/animation-digit.component';
@@ -59,15 +52,18 @@ import { MemberHomeComponent } from './modules/home/member/member-home/member-ho
 import { LinkWebHomeComponent } from './modules/home/link-web/link-web-home/link-web-home.component';
 import { ProductListComponent } from './modules/home/product/product-list/product-list.component';
 import { ProductDetailComponent } from './modules/home/product/product-detail/product-detail.component';
+import { AboutUsComponent } from './modules/home/aboutus-home/about-us/about-us.component';
+import { AboutUsUavComponent } from './modules/home/aboutus-home/about-us-uav/about-us-uav.component';
+import { ProjectHomeComponent } from './modules/home/project/project-home/project-home.component';
+import { ProjectListComponent } from './modules/home/project/project-list/project-list.component';
+import { ProjectDetailComponent } from './modules/home/project/project-detail/project-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    BookRoomComponent,
     AboutusHomeComponent,
-    ServicesOutHomeComponent,
     TypicalImageHomeComponent,
     ContactHomeComponent,
     RoomsListComponent,
@@ -75,8 +71,6 @@ import { ProductDetailComponent } from './modules/home/product/product-detail/pr
     SignUpComponent,
     LoginAdminComponent,
     LoginUserComponent,
-    SericeOurListComponent,
-    BookingRoomListComponent,
     RoomDetailComponent,
     RatingComponent,
     ReviewAddComponent,
@@ -96,10 +90,7 @@ import { ProductDetailComponent } from './modules/home/product/product-detail/pr
     ServiceOurAddComponent,
     WhyChooseComponent,
     QuestionAnswersComponent,
-    HotelDetailComponent,
-    HotelListHomeComponent,
     AccommodationCateHomeComponent,
-    AmenitiesComponent,
     SliderHomeComponent,
     TypicalNumberHomeComponent,
     AnimationDigitComponent,
@@ -113,6 +104,11 @@ import { ProductDetailComponent } from './modules/home/product/product-detail/pr
     LinkWebHomeComponent,
     ProductListComponent,
     ProductDetailComponent,
+    AboutUsComponent,
+    AboutUsUavComponent,
+    ProjectHomeComponent,
+    ProjectListComponent,
+    ProjectDetailComponent,
 
   ],
   imports: [
