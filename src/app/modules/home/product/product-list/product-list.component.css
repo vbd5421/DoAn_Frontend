@@ -74,7 +74,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
 }
 .view-room-item{
@@ -83,7 +82,7 @@
     border: 1px solid #192a56;
     padding: 10px 10px;
     border-radius: 5px;
-    width: 100px;
+   text-transform: capitalize;
 }
 .view-room-item:hover{
     background-color: #ffffff;
@@ -133,7 +132,7 @@
 .btn-buy{
     padding: 10px;
     border-radius: 5px;
-    width: 100px;
+    text-transform: capitalize;
 }
 .btn-buy:focus{
     box-shadow: unset;
@@ -142,4 +141,14 @@
     border: 1px solid #4287f7;
     color: #4287f7;
     background-color: white;
+}
+.w-modal{
+   max-width: fit-content !important;
+}
+.label-info{
+    text-transform: capitalize;
+}
+.form-info:focus{
+    border: 1px solid #192a56;
+    box-shadow: unset;
 }

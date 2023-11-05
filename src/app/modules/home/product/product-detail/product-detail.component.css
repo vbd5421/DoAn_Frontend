@@ -1,0 +1,36 @@
+
+.icon-share:not(:last-child){
+    margin-right: 20px;
+  }
+  .icon-share i{
+    font-size: 35px ;
+  }
+  .icon-share .fb{
+    color: #3b5898;
+  }
+  .icon-share .tw{
+   color: black;
+  }
+  .icon-share i:hover{
+    color: rgb(66, 113, 255);
+  }
+  .post-meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-news{
+    text-align: start;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #192a56;
+    text-transform: uppercase;
+  }
+  .post-date{
+    font-size: 17px;
+  }
+  .post-content{
+    text-align: justify;
+  }
