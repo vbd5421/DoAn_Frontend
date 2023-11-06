@@ -30,6 +30,12 @@ export class AsideComponent {
       //   "icon":"far fa-handshake"
       // },
     },
+    {
+      id:12,
+      name: "Tài khoản",
+      url: "user",
+      icon:"far fa-user"
+    }
    
   ]
   // modules: Module[]=[];

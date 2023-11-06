@@ -8,7 +8,7 @@ const routes: Routes=[
     {path:'' , redirectTo:'/trang-chu', pathMatch:'full'},
     {path:'' ,loadChildren:()=>import('./modules/home/_home_routing/_home_routing.module').then(m=>m.HomeRouting)},
     //admin
-    {path:'admin' , redirectTo:'admin/category-room' , pathMatch:'full'},
+    {path:'admin' , redirectTo:'admin/user' , pathMatch:'full'},
     {path:'admin' ,canActivate:[AuthenticateService] , loadChildren:()=> import('./modules/admin/_admin_routing/admin.module').then(m=>m.AdminModule) },
     
     { path: '**', redirectTo: '/404' },

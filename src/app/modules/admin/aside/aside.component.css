@@ -9,7 +9,7 @@
     overflow-y:auto;
   }
   .sidebar-nav{
-    margin-top: -23px;
+    /* margin-top: -23px; */
   }
   .scroll-sidebar::-webkit-scrollbar {
     width: 6px;
@@ -142,3 +142,8 @@
     background-color: #a2a2a2;
   }
   
+  /*  */
+  .aside-menu-mobile{
+    margin-top: 34px;
+    background: white;
+  }
