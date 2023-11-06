@@ -1,6 +1,9 @@
 
 .login{
     text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow:1px 0px 34px 1px rgba(0, 0, 0, 0.24);
   }
   
   .input{
@@ -8,24 +11,14 @@
     height: auto;
     text-align: center;
   }
-  
   .text{
     text-align: center;
-    color:#dfa974;
+    color:#192a56;
     font-weight: bolder;
     font-size: 26px;
     text-transform: capitalize;
   }
-  img{
-    width: 100%;
-    height: 100vh;
-  }
-  .body{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(/assets/images/bglogin.jpg);
-    opacity: 0.8;
-  }
+
   input:focus{
     border: none ;
     box-shadow: none;
@@ -36,6 +29,55 @@
     box-shadow: none;
     outline: unset;
   }
-  .input-username:focus{
-    border: 1px solid #ced4da;
+  .form-outline{
+    text-align: left;
   }
+  .input-username:focus{
+    border: 1px solid #0f253c;
+  }
+  .input-username{
+    height: 48px;
+    border-radius: 5px;
+  }
+  .password-form{
+    position: relative;
+  }
+  .password-form .input-group-addon{
+    position: absolute;
+    right: 1px;
+    top: 74%;
+ }
+ .label-username , .label-password{
+  font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0.5rem; 
+  }
+ .save-pass{
+  position: relative;
+ }
+ .back{
+  position: absolute;
+  left: 1px;
+  transition: ease-in-out .5s;
+ }
+ .back:hover{
+  cursor: pointer;
+  padding-left: 20px;
+ }
+ .save-pass-container{
+  color:#192a56 ;
+ }
+ .btn-login{
+  height: 48px;
+  border-radius: 5px;
+  color: white;
+  background-color: #192a56;
+  border: 1px solid #192a56;
+ }
+.btn-login:hover{
+  color: #192a56;
+  background: white;
+}

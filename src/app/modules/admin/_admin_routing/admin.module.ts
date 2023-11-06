@@ -5,12 +5,13 @@ import { AdminControlComponent } from "../admin-control/admin-control.component"
 
 const routes: Routes =[
 
-  {path:'' , title:'Admin - Book-Easy' , component: AdminControlComponent,
+  {path:'' , title:'Admin - Phòng thí nghiệm UAV-AI' , component: AdminControlComponent,
 
   children:[
-    {path: 'category-room' , title:'Admin-Loại phòng' , loadChildren:()=>import('./category-room/category-room.module').then(m=>m.CategoryRoomModule)},
-    {path:'dich-vu' , title:'Admin-Dịch vụ' , loadChildren:()=>import('./service-our/service-our.module').then(m=>m.ServiceOurModule) },
-     
+    {path:'user' , loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)},
+    {path:'typical-number' , loadChildren:()=>import('./typical-number/typical-number.module').then(m=>m.TypicalNumberModule)},
+    // {path:'typical-image'}
+
     ]},
 ]
 
