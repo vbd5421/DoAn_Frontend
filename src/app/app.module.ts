@@ -56,8 +56,6 @@ import { ProjectDetailComponent } from './modules/home/project/project-detail/pr
 import { TypicalNumControlComponent } from './modules/admin/typical-number/typical-num-control/typical-num-control.component';
 import { TypicalNumAddComponent } from './modules/admin/typical-number/typical-num-add/typical-num-add.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -125,8 +123,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     }),
     SlickCarouselModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
