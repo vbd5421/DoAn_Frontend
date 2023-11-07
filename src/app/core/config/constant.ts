@@ -29,4 +29,12 @@ export class Constant {
         DELETE_ROLE: `${Domain.ROLE}/delete`,
         UPDATE_ROLE: `${Domain.ROLE}/updateRole`
     }
+    public static TYPICAL_NUMBER ={
+        GET_LIST_ALL_PAGE : `${Domain.TYPICAL_NUMBER}`,
+        GET_ALL_NUMBER : `${Domain.TYPICAL_NUMBER}/home`,
+        GET_NUMBER_BY_ID: `${Domain.TYPICAL_NUMBER}`,
+        ADD_NUMBER: `${Domain.TYPICAL_NUMBER}/add`,
+        UPDATE_NUMBER: `${Domain.TYPICAL_NUMBER}/update`,
+        DELETE_NUMBER: `${Domain.TYPICAL_NUMBER}/delete`,
+      }
 }

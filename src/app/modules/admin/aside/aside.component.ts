@@ -14,8 +14,8 @@ export class AsideComponent {
   modules =[
     {
       id:1,
-      name:"Loại phòng",
-      url: "category-room",
+      name:"con số tiêu biểu",
+      url: "typical-number",
       icon:"fa fa-bar-chart"
     },
     {
@@ -44,8 +44,8 @@ export class AsideComponent {
   userName:string;
   roleName:string;
 
-  
   id:number
+
   @Input() isTouch =true;
   @Output() isTouch2 = new EventEmitter<boolean>()
   constructor(private tokenStorageService: TokenStorageService, private userService:UserService) { }
@@ -55,6 +55,7 @@ export class AsideComponent {
       if(this.tokenStorageService.getToken()){
         this.userName = this.tokenStorageService.getUser().username;
         this.roleName = this.tokenStorageService.getUser().roles;
+      
       }
       // this.getModlue()
   }
@@ -62,6 +63,7 @@ export class AsideComponent {
     this.userService.getUserById(id).subscribe(data=>{
       this.userById = data
       this.roleByUser=data.role
+      //console.log(data)
       // this.modules=this.roleByUser.moduleList
     })
   }

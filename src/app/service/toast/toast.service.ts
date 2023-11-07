@@ -12,12 +12,9 @@ export class ToastService {
     this.toast.success('Bạn đã lưu thành công');
   }
   showUpdate() {
-    this.toast.info('Cập nhật thành công');
+    this.toast.info('Bạn đã cập nhật thành công');
   }
   showWarning(error: any) {
-      this.toast.warning(error);
-  }
-  showBooking(){
-    this.toast.success('Bạn đã đặt phòng thành công')
+      this.toast.warning('error')
   }
 }

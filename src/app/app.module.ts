@@ -7,7 +7,7 @@ import { FooterComponent } from './modules/home/navigation/footer/footer.compone
 import { HeaderComponent } from './modules/home/navigation/header/header.component';
 import { HomeComponent } from './modules/home/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import { AboutusHomeComponent } from './modules/home/aboutus-home/aboutus-home/aboutus-home.component';
 import { TypicalImageHomeComponent } from './modules/home/typical image/typical-image-home/typical-image-home.component';
@@ -53,6 +53,11 @@ import { AboutUsUavComponent } from './modules/home/aboutus-home/about-us-uav/ab
 import { ProjectHomeComponent } from './modules/home/project/project-home/project-home.component';
 import { ProjectListComponent } from './modules/home/project/project-list/project-list.component';
 import { ProjectDetailComponent } from './modules/home/project/project-detail/project-detail.component';
+import { TypicalNumControlComponent } from './modules/admin/typical-number/typical-num-control/typical-num-control.component';
+import { TypicalNumAddComponent } from './modules/admin/typical-number/typical-num-add/typical-num-add.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -100,12 +105,15 @@ import { ProjectDetailComponent } from './modules/home/project/project-detail/pr
     ProjectHomeComponent,
     ProjectListComponent,
     ProjectDetailComponent,
+    TypicalNumControlComponent,
+    TypicalNumAddComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
     NgxPaginationModule,
@@ -116,6 +124,9 @@ import { ProjectDetailComponent } from './modules/home/project/project-detail/pr
       timeOut:2000,
     }),
     SlickCarouselModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

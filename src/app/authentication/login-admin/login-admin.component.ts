@@ -60,7 +60,7 @@ export class LoginAdminComponent {
     )
   }
   reloadPage(url:string): void {
-    this.router.navigate(['admin'+`/`]);
+    this.router.navigate(['admin'+`/${url}`]);
   }
   goback():void{
     window.history.back();
