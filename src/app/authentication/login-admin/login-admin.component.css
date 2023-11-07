@@ -81,3 +81,6 @@
   color: #192a56;
   background: white;
 }
+.btn-login:focus{
+  box-shadow: unset;
+}

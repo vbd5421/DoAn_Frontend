@@ -6,23 +6,24 @@ const USER_KEY = 'auth-user';
   providedIn: 'root'
 })
 export class TokenStorageService {
-
   constructor() { }
-  signOut():void{
+  signOut(): void {
     localStorage.clear();
   }
-
-  public saveToken(token:string):void{
+  public saveToken(token: string): void{
+    // localStorage.removeItem(TOKEN_KEY);
     let now = new Date();
-    const item={
-      value:token,
-      expiry: now.getTime()+(1000 * 60 * 60 * 12),
-    }
 
-    localStorage.setItem(TOKEN_KEY , JSON.stringify(item))
+    const item = {
+      value: token,
+      expiry: now.getTime() + (1000 * 60 * 60 * 12),
+    }
+    localStorage.setItem(TOKEN_KEY, JSON.stringify(item));
+    // localStorage.setItem(TOKEN_KEY, token);
   }
 
-  
+
+
   public getToken(): any{
     const itemStr = localStorage.getItem(TOKEN_KEY)
     if (!itemStr) {
@@ -37,7 +38,7 @@ export class TokenStorageService {
     }
     return item.value
   }
-  
+
   public saveUser(user: Object): void{
     localStorage.removeItem(USER_KEY);
     localStorage.setItem(USER_KEY, JSON.stringify(user));
@@ -47,5 +48,4 @@ export class TokenStorageService {
     // @ts-ignore
     return JSON.parse(localStorage.getItem(USER_KEY));
   }
-
 }

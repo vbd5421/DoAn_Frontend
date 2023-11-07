@@ -6,8 +6,7 @@ import { TokenStorageService } from '../service/token-storage/token-storage.serv
   providedIn: 'root'
 })
 export class AuthenticateService implements CanActivate {
-
-  username: any;
+  username: string;
   roles :string[]=[];
   constructor(private tokenStorageService: TokenStorageService,
               private router: Router) {
