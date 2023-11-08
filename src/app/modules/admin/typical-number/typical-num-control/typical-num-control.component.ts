@@ -68,11 +68,9 @@ handlePageSizeChange(event: any): void {
   this.getAllNumber();
 }
 
-  addTypicalNum(){
-    this.router.navigate(['/typical-number/add']);
-  }
+
   updateTypicalNum(id : number){
-   this.router.navigate([`typical-number/edit/${id}`]);
+   this.router.navigate([`admin/typical-number/edit/${id}`]);
 }
  deleteTypicalNum(id: number){
    let cf = confirm("Dữ liệu sẽ bị xóa . Bạn có mốn tiếp tục ");

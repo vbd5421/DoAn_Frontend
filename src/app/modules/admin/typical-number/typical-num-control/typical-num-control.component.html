@@ -5,7 +5,14 @@
         <h3 class="card-title align-items-start flex-column">
             <span class="card-label fw-bolder fs-6 mb-1">NHỮNG CON SỐ TIÊU BIỂU</span>
         </h3>
-        <div class="card-toolbar text-end ">
+        <div class="card-toolbar justify-content-between d-flex ">
+            <form (ngSubmit)="search()" class="d-flex">
+                <input class="search input-search" type="text" [(ngModel)]="searchInput" name="searchInput"
+                  placeholder="Tìm kiếm ">
+                <div class="input-group-append inputt">
+                  <button type="submit" class="input-group-text border-0 h-100 "><i class="fa fa-search"></i></button>
+                </div>
+              </form>
             <a routerLink="add" class="btn2 btn-sm btn-light-primary">
                 <span class="svg-icon2 svg-icon-3 " ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
                     <span>&#43;</span>
