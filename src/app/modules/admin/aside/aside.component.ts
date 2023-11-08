@@ -20,15 +20,15 @@ export class AsideComponent {
     },
     {
       id:2,
-      name:"dịch vụ",
-      url: "dich-vu",
-      icon:"fa-solid fa-utensils"
-      // {
-      //   "id":4,
-      //   "name":"Khách hàng",
-      //   "url": "customer",
-      //   "icon":"far fa-handshake"
-      // },
+      name:"dự án",
+      url: "project",
+      icon:"fa-brands fa-wpforms"
+    },
+    {
+      id:3,
+      name:"sản phẩm",
+      url: "product",
+      icon:"fa fa-box"
     },
     {
       id:12,
@@ -55,7 +55,6 @@ export class AsideComponent {
       if(this.tokenStorageService.getToken()){
         this.userName = this.tokenStorageService.getUser().username;
         this.roleName = this.tokenStorageService.getUser().roles;
-      
       }
       // this.getModlue()
   }
@@ -67,11 +66,7 @@ export class AsideComponent {
       // this.modules=this.roleByUser.moduleList
     })
   }
-  // getModlue(){
-  //   this.moduleService.getaside('aside.json').subscribe(data=>{
-  //     this.modules=data
-  //   })
-  // }
+
   logout() {
       this.tokenStorageService.signOut();
       window.location.reload();

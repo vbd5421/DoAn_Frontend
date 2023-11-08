@@ -10,7 +10,12 @@ const routes: Routes =[
   children:[
     {path:'user' , loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)},
     {path:'typical-number' , loadChildren:()=>import('./typical-number/typical-number.module').then(m=>m.TypicalNumberModule)},
-    // {path:'typical-image'}
+    {path:'typical-image' , loadChildren:()=>import('./typical-image/typical-image.module').then(m=>m.TypicalImageModule)},
+    {path:'project' , loadChildren:()=>import('./project/project.module').then(m=>m.ProjectModule)},
+    {path:'product' , loadChildren:()=>import('./product/product.module').then(m=>m.ProductModule)},
+    {path:'member', loadChildren:()=>import('./member/member.module').then(m=>m.MemberModule)},
+    {path:'news' , loadChildren:()=>import('./news/news.module').then(m=>m.NewsModule)},
+    {path:'about-us' , loadChildren:()=>import('./about-us/about-us.module').then(m=>m.AboutUsModule)},
 
     ]},
 ]

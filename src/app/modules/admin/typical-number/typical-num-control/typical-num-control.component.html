@@ -1,4 +1,6 @@
-<app-page-size></app-page-size>
+<app-page-size (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
+              [(pageSize)]="paging.size">
+            </app-page-size>
 
 <div class="card mb-5 mb-xl-8 mt_30 mx-4">
     <div class="card-header border-0 pt-3">
@@ -46,7 +48,7 @@
                             {{num.description}}
                         </div>
                     <td>
-                        <a class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
+                        <a title="Sửa thông tin"  class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                             (click)="updateTypicalNum(num.id)">
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -60,7 +62,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
+                        <a title="Xóa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
                             (click)="deleteTypicalNum(num.id)">
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/g">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"

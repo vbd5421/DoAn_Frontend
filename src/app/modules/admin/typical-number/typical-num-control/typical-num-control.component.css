@@ -15,6 +15,9 @@
     align-items: center;
     justify-content: center;
   }
+  .btn-icon:hover{
+    background-color: #cacaca;
+  }
   
   .btn2:hover{
     color: #FFFFFF;

@@ -56,6 +56,10 @@ import { ProjectDetailComponent } from './modules/home/project/project-detail/pr
 import { TypicalNumControlComponent } from './modules/admin/typical-number/typical-num-control/typical-num-control.component';
 import { TypicalNumAddComponent } from './modules/admin/typical-number/typical-num-add/typical-num-add.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProjectAddComponent } from './modules/admin/project/project-add/project-add.component';
+import { ProjectControlComponent } from './modules/admin/project/project-control/project-control.component';
+import { ProductAddComponent } from './modules/admin/product/product-add/product-add.component';
+import { ProductControlComponent } from './modules/admin/product/product-control/product-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -105,6 +109,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjectDetailComponent,
     TypicalNumControlComponent,
     TypicalNumAddComponent,
+    ProjectAddComponent,
+    ProjectControlComponent,
+    ProductAddComponent,
+    ProductControlComponent,
 
   ],
   imports: [

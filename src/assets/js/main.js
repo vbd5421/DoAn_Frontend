@@ -40,3 +40,24 @@ function password_show_hide() {
     }
   }
 
+// số tiêu biểu
+// function animateNumber(finalNumber, delay, startNumber = 0, callback) {
+//     let currentNumber = startNumber
+//     const interval = window.setInterval(updateNumber, delay)
+//     function updateNumber() {
+//       if (currentNumber >= finalNumber) {
+//         clearInterval(interval)
+//       } else {
+//         currentNumber++
+//         callback(currentNumber)
+//       }
+//     }
+//   }
+  
+//   document.addEventListener('DOMContentLoaded', function () {
+//     animateNumber(200, 1, 0, function (number) {
+//       const formattedNumber = number.toLocaleString()
+//       document.getElementById('transaction-count').innerText = formattedNumber
+//     })
+    
+//   })

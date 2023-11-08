@@ -3,5 +3,4 @@ export class Role {
     name : any;
     description:any;
     selected = false;
-   
 }
