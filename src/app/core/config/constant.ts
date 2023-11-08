@@ -36,5 +36,17 @@ export class Constant {
         ADD_NUMBER: `${Domain.TYPICAL_NUMBER}/add`,
         UPDATE_NUMBER: `${Domain.TYPICAL_NUMBER}/update`,
         DELETE_NUMBER: `${Domain.TYPICAL_NUMBER}/delete`,
-      }
+    }
+    public static PROJECT={
+        GET_LIST_ALL_WITH_PAGE:`${Domain.PROJECT}`,
+        ADD_PROJECT:`${Domain.PROJECT}/add`,
+        UPDATE_PROJECT: `${Domain.PROJECT}/update`,
+        DELETE_PROJECT: `${Domain.PROJECT}/delete`,
+    }
+    public static PRODUCT={
+        GET_LIST_ALL_WITH_PAGE:`${Domain.PRODUCT}`,
+        ADD_PRODUCT:`${Domain.PRODUCT}/add`,
+        UPDATE_PRODUCT: `${Domain.PRODUCT}/update`,
+        DELETE_PRODUCT: `${Domain.PRODUCT}/delete`,
+    }
 }
