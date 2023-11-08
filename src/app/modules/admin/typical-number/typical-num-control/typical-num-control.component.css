@@ -97,3 +97,22 @@
  .icon-item:hover{
    color: black;
  }
+ 
+
+ .search{
+  border-radius: 5px;
+  height: 30px;
+ 
+  align-items: center;
+  background-color: #EAEFF4;
+  border: 1px solid rgb(230, 231, 232);
+  padding: 15px;
+}
+
+.input-search:focus{
+  color: black;
+  border: 1px solid rgb(164, 164, 164);
+}
+.input-search:focus-visible{
+  border: 1px solid rgb(164, 164, 164) !important;
+}

@@ -4,36 +4,18 @@
             <span class="border-bottom pb-2">con số tiêu biểu</span>
         </div>
         <div class="row mt-4 mt-md-5 justify-content-between ">
-            <div class="col-md-3 item-number ">
+            <div class="col-md-3 item-number " *ngFor="let num of number | paginate:{
+                id:'number',
+                itemsPerPage: paging.size,
+                currentPage: paging.page,
+                totalItems: paging.totalRecord  } ">
                 <div class="row rounded py-3" style="background: rgba(256, 256, 256, 0.1);">
                     <div class="col-md-4 d-flex justify-content-center align-items-center ">
-                        <i class=" fa fa-users  text-white icon-num"></i>
+                        <i class=" {{num.icon}} text-white icon-num"></i>
                     </div>
                     <div class=" col-md-8 text-md-start text-center ">
-                        <app-animation-digit [digit]="100" ></app-animation-digit>
-                        <p class="text-white mb-0">Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 item-number ">
-                <div class="row rounded py-3" style="background: rgba(256, 256, 256, 0.1);">
-                    <div class="col-md-4 d-flex justify-content-center align-items-center ">
-                        <i class=" fa fa-users  text-white icon-num"></i>
-                    </div>
-                    <div class=" col-md-8 text-md-start text-center ">
-                        <app-animation-digit [digit]="100" ></app-animation-digit>
-                        <p class="text-white mb-0">Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 item-number ">
-                <div class="row rounded py-3" style="background: rgba(256, 256, 256, 0.1);">
-                    <div class="col-md-4 d-flex justify-content-center align-items-center ">
-                        <i class=" fa fa-users  text-white icon-num"></i>
-                    </div>
-                    <div class=" col-md-8 text-md-start text-center ">
-                        <app-animation-digit [digit]="100" ></app-animation-digit>
-                        <p class="text-white mb-0">Happy Clients</p>
+                        <app-animation-digit [digit]="num.num"></app-animation-digit>
+                        <p class="text-white mb-0">{{num.description}}</p>
                     </div>
                 </div>
             </div>
