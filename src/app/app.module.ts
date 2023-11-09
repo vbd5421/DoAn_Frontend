@@ -13,12 +13,10 @@ import { AboutusHomeComponent } from './modules/home/aboutus-home/aboutus-home/a
 import { TypicalImageHomeComponent } from './modules/home/typical image/typical-image-home/typical-image-home.component';
 import { CommonModule } from '@angular/common';
 import { ContactHomeComponent } from './modules/home/contact/contact-home/contact-home.component';
-import { RoomsListComponent } from './modules/home/rooms/rooms-list/rooms-list.component';
 import { Error404Component } from './authentication/error404/error404.component';
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
 import { LoginAdminComponent } from './authentication/login-admin/login-admin.component';
 import { LoginUserComponent } from './authentication/login-user/login-user.component';
-import { RoomDetailComponent } from './modules/home/rooms/room-detail/room-detail.component';
 import { RatingComponent } from './modules/home/rate/rating/rating.component';
 import { ReviewAddComponent } from './modules/home/review/review-add/review-add.component';
 import { ReviewsComponent } from './modules/home/review/reviews/reviews.component';
@@ -37,7 +35,6 @@ import { QuestionAnswersComponent } from './modules/another/question-answers/que
 import { SliderHomeComponent } from './modules/home/slider/slider-home/slider-home.component';
 import { TypicalNumberHomeComponent } from './modules/home/typical-number/typical-number-home/typical-number-home.component';
 import { AnimationDigitComponent } from './modules/another/animation-digit/animation-digit.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductHomeComponent } from './modules/home/product/product-home/product-home.component';
 import { NewsListComponent } from './modules/home/news/news-list/news-list.component';
 import { NewsDetailComponent } from './modules/home/news/news-detail/news-detail.component';
@@ -60,6 +57,7 @@ import { ProjectAddComponent } from './modules/admin/project/project-add/project
 import { ProjectControlComponent } from './modules/admin/project/project-control/project-control.component';
 import { ProductAddComponent } from './modules/admin/product/product-add/product-add.component';
 import { ProductControlComponent } from './modules/admin/product/product-control/product-control.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,12 +67,10 @@ import { ProductControlComponent } from './modules/admin/product/product-control
     AboutusHomeComponent,
     TypicalImageHomeComponent,
     ContactHomeComponent,
-    RoomsListComponent,
     Error404Component,
     SignUpComponent,
     LoginAdminComponent,
     LoginUserComponent,
-    RoomDetailComponent,
     RatingComponent,
     ReviewAddComponent,
     ReviewsComponent,
@@ -129,8 +125,8 @@ import { ProductControlComponent } from './modules/admin/product/product-control
       positionClass: 'toast-bottom-right' ,
       timeOut:2000,
     }),
-    SlickCarouselModule,
     BrowserAnimationsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
