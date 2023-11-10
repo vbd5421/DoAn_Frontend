@@ -3,7 +3,5 @@ export class Image {
     name:any;
     pathFile: any;
     pathUrl:any;
-    type:any;
     active:boolean;
-    originalFileName:any;
 }

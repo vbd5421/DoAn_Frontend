@@ -1,24 +1,54 @@
-<div class="typical-img mt_100 ">
-  <div class="container">
-    <div class=" title-about-us mb_30 text-center mt-md-0  "><span class="border-bottom pb-2">hình ảnh nổi bật</span>
-    </div>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade w-100" data-bs-ride="carousel">
-      <div class="carousel-inner w-100">
-        <div class="carousel-item w-100 item-slide " [class]="i == 0 ? 'active' : '' " data-bs-interval="1500"
-          *ngFor="let item of imgTypical ; let i = index ">
-          <img src="{{item.src}}" class="d-block w-100 h-100" alt="ảnh nổi bật">
-          <p class="title-img translate-middle ">{{item.title}}</p>
-          <div class="bg"></div>
-        </div>
+
+<div class="d-none d-xl-block ">
+  <div class="typical-img mt_100 ">
+    <div class="container">
+      <div class=" title-about-us mb_30 text-center mt-md-0  "><span class="border-bottom pb-2">hình ảnh nổi bật</span>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade w-100" data-bs-ride="carousel" [@myAnimation]="animationState"  >
+        <div class="carousel-inner w-100">
+          <div class="carousel-item w-100 item-slide " [class]="i == 0 ? 'active' : '' " data-bs-interval="1500"
+            *ngFor="let item of imgTypical ; let i = index ">
+            <img src="{{item.src}}" class="d-block w-100 h-100" alt="ảnh nổi bật">
+            <p class="title-img translate-middle ">{{item.title}}</p>
+            <div class="bg"></div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-xl-none d-block ">
+  <div class="typical-img mt_100 ">
+    <div class="container">
+      <div class=" title-about-us mb_30 text-center mt-md-0  "><span class="border-bottom pb-2">hình ảnh nổi bật</span>
+      </div>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade w-100" data-bs-ride="carousel"  >
+        <div class="carousel-inner w-100">
+          <div class="carousel-item w-100 item-slide " [class]="i == 0 ? 'active' : '' " data-bs-interval="1500"
+            *ngFor="let item of imgTypical ; let i = index ">
+            <img src="{{item.src}}" class="d-block w-100 h-100" alt="ảnh nổi bật">
+            <p class="title-img translate-middle ">{{item.title}}</p>
+            <div class="bg"></div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
