@@ -7,6 +7,12 @@ import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular
 })
 export class AnimationDigitComponent implements AfterViewInit {
   
+  ngAfterViewInit(): void {
+    if (this.digit) {
+      this.animateCount();
+    }
+  }
+
   @Input() digit: any;
   @ViewChild("animatedDigit") animatedDigit: ElementRef | undefined;
 
@@ -16,12 +22,6 @@ export class AnimationDigitComponent implements AfterViewInit {
     }
   }
 
-  ngAfterViewInit(): void {
-    if (this.digit) {
-      this.animateCount();
-    } }
-
-    
   counterFunc(endValue: number, element: any) {
     const steps = 10;
     const durationMs = Math.floor((Math.random()*1000)+2500);  //thời gian này được chọn ngẫu nhiên trong khoảng từ 2000ms đến 3000ms (2 đến 3 giây).
@@ -49,5 +49,4 @@ export class AnimationDigitComponent implements AfterViewInit {
 
     step();
   }
-
 }
