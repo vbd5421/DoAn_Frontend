@@ -537,9 +537,10 @@
 /* max-line */
 .max-3line{
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 .max-2line{
   display: -webkit-box;
@@ -562,14 +563,8 @@
   visibility: visible;
   opacity: 1;
 } 
-/* back-to-top */
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 45px;
-  bottom: 45px;
-  z-index: 99;
-}
+
+
 .mt-header{
   margin-top: auto;
 }

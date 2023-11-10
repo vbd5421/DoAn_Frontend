@@ -2,23 +2,26 @@
               [(pageSize)]="paging.size">
             </app-page-size>
 
-<div class="card mb-5 mb-xl-8 mt_30 mx-4">
+<div class="card mb-5 mt_30 mx-4">
     <div class="card-header border-0 pt-3">
         <h3 class="card-title align-items-start flex-column">
-            <span class="card-label fw-bolder fs-6 mb-1">NHỮNG CON SỐ TIÊU BIỂU</span>
+            <span class="card-label fw-bolder fs-6 mb-1 text-uppercase  ">những con số tiêu biểu</span>
         </h3>
-        <div class="card-toolbar justify-content-between d-flex ">
-            <form (ngSubmit)="search()" class="d-flex">
-                <input class="search input-search" type="text" [(ngModel)]="searchInput" name="searchInput"
-                  placeholder="Tìm kiếm ">
-                <div class="input-group-append inputt">
-                  <button type="submit" class="input-group-text border-0 h-100 "><i class="fa fa-search"></i></button>
-                </div>
-              </form>
-            <a routerLink="add" class="btn2 btn-sm btn-light-primary">
-                <span class="svg-icon2 svg-icon-3 " ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
-                    <span>&#43;</span>
-                </span>" Thêm Con Số Tiêu Biểu "</a>
+        <div class="card-toolbar justify-content-between row">
+            <div class="col-lg-2">
+                <form (ngSubmit)="search()" class="form-search">
+                    <input class="search input-search" type="text" [(ngModel)]="searchInput" name="searchInput"
+                      placeholder="Tìm kiếm ">
+                    <div class="input-group-append  icon-search">
+                      <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 text-center text-lg-end">
+                <a routerLink="add" class="btn-add btn-sm btn-light-primary">
+                    <span class="me-1"></span>" Thêm Con Số Tiêu Biểu "
+                </a>
+            </div>
         </div>
     </div>
     <div class="card-body py-3">
@@ -44,9 +47,10 @@
                         <div class="counter-number text-capitalize h6 mt-2">+{{num.num}}</div>
                     </td>
                     <td class="text-center">
-                        <div class="des mt-2">
+                        <div class="des mt-2 max-3line " data-bs-toggle="tooltip" data-bs-placement="top" title="{{num.description}}" >
                             {{num.description}}
                         </div>
+                    </td>
                     <td>
                         <a title="Sửa thông tin"  class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                             (click)="updateTypicalNum(num.id)">
@@ -80,6 +84,7 @@
                             </span>
                         </a>
                     </td>
+                </tr>
             </tbody>
         </table>
     </div>
