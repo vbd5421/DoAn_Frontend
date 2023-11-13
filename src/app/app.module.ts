@@ -57,7 +57,7 @@ import { ProjectAddComponent } from './modules/admin/project/project-add/project
 import { ProjectControlComponent } from './modules/admin/project/project-control/project-control.component';
 import { ProductAddComponent } from './modules/admin/product/product-add/product-add.component';
 import { ProductControlComponent } from './modules/admin/product/product-control/product-control.component';
-
+import { QuillModule } from 'ngx-quill'
 @NgModule({
   declarations: [
     AppComponent,
@@ -126,6 +126,7 @@ import { ProductControlComponent } from './modules/admin/product/product-control
       timeOut:2000,
     }),
     BrowserAnimationsModule,
+    QuillModule.forRoot() ,
    
   ],
   providers: [],

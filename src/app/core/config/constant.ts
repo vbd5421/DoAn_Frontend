@@ -39,13 +39,15 @@ export class Constant {
     }
     public static PROJECT={
         GET_LIST_ALL_WITH_PAGE:`${Domain.PROJECT}`,
-        ADD_PROJECT:`${Domain.PROJECT}/add`,
+        GET_ID:`${Domain.PROJECT}`,
+        ADD_PROJECT:`${Domain.PROJECT}/create`,
         UPDATE_PROJECT: `${Domain.PROJECT}/update`,
         DELETE_PROJECT: `${Domain.PROJECT}/delete`,
     }
     public static PRODUCT={
         GET_LIST_ALL_WITH_PAGE:`${Domain.PRODUCT}`,
-        ADD_PRODUCT:`${Domain.PRODUCT}/add`,
+        GET_ID:`${Domain.PRODUCT}`,
+        ADD_PRODUCT:`${Domain.PRODUCT}/create`,
         UPDATE_PRODUCT: `${Domain.PRODUCT}/update`,
         DELETE_PRODUCT: `${Domain.PRODUCT}/delete`,
     }

@@ -30,12 +30,14 @@
     background-color: #8d8d8d5c;
   }
   .brand-logo{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 19px;
+    padding-bottom: 19px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    align-items:center;
     flex-direction: row;
+    background:  rgba(93,135,255,1) 
   }
   .sidebar-link:hover{
    text-decoration: none;
@@ -146,4 +148,12 @@
   .aside-menu-mobile{
     margin-top: 34px;
     background: white;
+  }
+
+  .logo-text{
+    font-size: 32px;
+    color: white;
+  }
+  .logo-text:hover{
+    color: #c5c5c5;
   }

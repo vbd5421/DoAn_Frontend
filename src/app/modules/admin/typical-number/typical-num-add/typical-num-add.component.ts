@@ -18,7 +18,6 @@ export class TypicalNumAddComponent {
   });
   tNumber: TypicalNumber =new TypicalNumber()
   id: any;
-  checkinput = true;
   allIcon: any;
 
   constructor(

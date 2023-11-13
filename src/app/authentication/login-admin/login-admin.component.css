@@ -84,3 +84,7 @@
 .btn-login:focus{
   box-shadow: unset;
 }
+.show-hide_pass i{
+  cursor: pointer;
+  color: #000;
+}
