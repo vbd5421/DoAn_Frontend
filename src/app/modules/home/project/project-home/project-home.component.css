@@ -21,6 +21,10 @@
     transition: .5s;
 }
 
+.service-icon img{
+    width: 40px;
+}
+
 .service-item:hover .service-icon {
     background: #FFFFFF;
 }
