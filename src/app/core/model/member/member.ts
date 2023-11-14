@@ -6,4 +6,6 @@ export class Member {
     position:any;
     degree:any;
     linkInfo:any;
+    selected:false;
+    active:boolean;
 }

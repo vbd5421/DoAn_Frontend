@@ -25,8 +25,7 @@ export class TypicalNumAddComponent {
     private route: ActivatedRoute,
     private router: Router,
     private toast: ToastService,
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];

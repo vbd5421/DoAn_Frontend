@@ -14,11 +14,11 @@ export class ProductService {
     return this.apiHelper.get( Constant.PRODUCT.GET_LIST_ALL_WITH_PAGE , {params})
   }
   
-  addProduct(product: Product): Observable<any>{
+  addProduct(product: any): Observable<any>{
     return this.apiHelper.post(Constant.PRODUCT.ADD_PRODUCT, product);
   }
 
-  updateProduct(id: number, product: Product): Observable<any>{
+  updateProduct(id: number, product: any): Observable<any>{
     return this.apiHelper.post( Constant.PRODUCT.UPDATE_PRODUCT + `/${id}`, product);
   }
 

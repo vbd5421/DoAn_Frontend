@@ -3,9 +3,9 @@
 <div class="bg-light mt-header mb-3 mb-md-4">
     <nav aria-label="breadcrumb " class="py-3 py-2 container ">
         <ol class="breadcrumb mb-0 text-capitalize ">
-          <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-          <li class="breadcrumb-item"><a href="gioi-thieu/thanh-vien">đội ngũ nghiên cứu</a></li>
-          <li class="breadcrumb-item active" aria-current="page">tên thành viên</li>
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="gioi-thieu/thanh-vien">đội ngũ nghiên cứu</a></li>
+            <li class="breadcrumb-item active" aria-current="page">tên thành viên</li>
         </ol>
     </nav>
 </div>
@@ -13,17 +13,17 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-            <div class="title mb-2 mb-md-3 ">
-                thông tin cơ bản
+            <div class="title mb-3 mb-md-4 ">
+                <span >thông tin cơ bản</span>
             </div>
-            <div class="row mb_60 ">
+            <div class="row mb_30 ">
                 <div class="col-sm-3">
                     <div class="image">
-                        <img class="w-100 h-100" src="assets/images/team-1.jpg" alt="">
+                        <img class="w-100 h-100 rounded " src="assets/images/team-1.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-sm-9">
-                    <table class="table-info " >
+                    <table class="table-info ">
                         <tbody>
                             <tr>
                                 <td class="r-o  title-info ">học và tên</td>
@@ -55,6 +55,39 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    
+                </div>
+            </div>
+            <div class="row mb_60 ">
+                <div class="title mb-3 mb-md-4 ">
+                    <span>dự án</span>
+                </div>
+                <ul class="ms-1 ms-md-4 " >
+                    <li >dự án 1</li>
+                    <li>Đánh giá, đảm bảo độ tin cậy,
+                        an toàn các hệ thốn• Đánh giá, đảm bảo độ
+                        tin cậy, an toàn các hệ thống điều khiển giao thông.g điều khiển giao thông.</li>
+                    <li data-bs-toggle="collapse" class="edit-project mt-2 " href="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">thêm dự án</li>
+                </ul>
+                <div class="collapse" id="collapseExample">
+                    <ng-template #login>
+                        <div class="card card-body">
+                            <a href="login">Vui lòng đăng nhập để chỉnh sửa !</a>
+                        </div>
+                    </ng-template>
+                    <div *ngIf="username;else login">
+                        <div class="card-body p-2">
+                            <div class="form-outline mb-0">
+                                <textarea placeholder="Chỉnh sửa dự án của bạn tại đây..." name="project"
+                                    class="form-control addproject " rows="3" id="textAreaExample"></textarea>
+                            </div>
+                            <div class=" text-center text-md-start mt-1 mt-md-2" >
+                                <button type="button" class="btn btn-addproject w-25">Lưu</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
