@@ -30,21 +30,25 @@
                     <th style="width: 15%;" scope="col">Ảnh</th>
                     <th style="width:15%" scope="col">Tên</th>
                     <th scope="col" class="w-25  text-center">Mô tả</th>
-                    <th  style="width: 15%;" >Bắt đầu</th>
+                    <th  style="width: 15%;"  >Bắt đầu</th>
                     <th style="width: 15%;" >Hoàn thành</th>
                     <th style="width: 15%;" scope="col">Thao tác</th>
                 </tr>
             </thead>
             <tbody class="text-center">
-                <tr>
+                <tr  *ngFor="let pro of project | paginate:{
+                    id:'number',
+                    itemsPerPage: paging.size,
+                    currentPage: paging.page,
+                    totalItems: paging.totalRecord  } , let i = index" >
                     <th class="image" > 
                         <img class="w-100" src="../../../../../assets/images/about/about-p1.jpg" alt="">
                     </th>
-                    <th>
-                        i sc sics icsics iv
+                    <th  class="text-center " >
+                        sasaas
                     </th>
-                    <th>
-                        i sc sics icsics iv
+                    <th  class="text-center "  >
+                        âsas
                     </th>
                     <th>
                         i sc sics icsics iv
@@ -53,7 +57,8 @@
                         i sc sics icsics iv
                     </th>
                     <td>
-                        <a title="Sửa thông tin"  class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                        <a title="Sửa thông tin"  class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"  
+                        (click)="updateTypicalNum(pro.id)">
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +71,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a title="Xóa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <a title="Xóa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm" (click)="deleteTypicalNum(pro.id)" >
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/g">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

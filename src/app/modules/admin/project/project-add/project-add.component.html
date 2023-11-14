@@ -1,6 +1,4 @@
-<div class="toolbar">
-
-</div>
+<div class="toolbar"></div>
 
 <form [formGroup]="formProject" (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate class="mt_30">
   <div class="container mb_60">
@@ -26,7 +24,15 @@
                       value="select" (change)="imageChange($event)">
                   </div>
                 </div>
-                <div class="box update_box ">
+                <div class="listmember mt-3 mt-md-4 mx-md-0 mx-4 ">
+                  <label class="form-label">Thành viên trong dự án</label>
+                  <div *ngFor="let member of listMember">
+                    <input class="me-md-2 me-1" type="checkbox" [value]="member.selected" [checked]="member.selected"
+                      (change)="onCheckChangeProduct($event, member)" id="member{{member.id}}">
+                    <label for="member{{member.id}}">{{member.fullName}}</label>
+                  </div>
+                </div>
+                <!-- <div class="box update_box ">
                   <label class="form-label"><span class="validateText">*</span>thời gian bắt đầu</label>
                   <input class=" input-custom   w-100" type="month"
                     [class.borderError]="!formProject.controls.ngayHoanThanh.valid&&!formProject.controls.ngayHoanThanh.untouched"
@@ -43,7 +49,7 @@
                     formControlName="ngayKetThuc" name="endtDate" placeholder="Hãy nhập tiêu đề">
                   <p *ngIf="!formProject.controls.ngayKetThuc.valid&&!formProject.controls.ngayKetThuc.untouched"
                     class="validateText">Thông tin không thể bỏ trống</p>
-                </div>
+                </div> -->
               </div>
               <div class="col-md-8">
                 <div class="mt-3 mt-lg-0 mx-md-0 mx-4 ">
@@ -66,7 +72,8 @@
                 </div>
                 <div class="mt-3 mt-md-4 mx-md-0 mx-4 editor-quill ">
                   <label class="form-label"><span class="validateText">*</span>nội dung</label>
-                  <quill-editor [(ngModel)]="project.content" placeholder="Enter Text" [modules]="quillConfig"></quill-editor>
+                  <quill-editor [(ngModel)]="project.content" [modules]="quillConfig"
+                    [ngModelOptions]="{standalone: true}"></quill-editor>
                 </div>
               </div>
               <div class="col-lg-4 col-md-5 col-8 col-ms-6 mt-4 mb_30 mx-auto">

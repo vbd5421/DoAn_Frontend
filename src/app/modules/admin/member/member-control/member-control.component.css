@@ -1,0 +1,94 @@
+.card{
+    border: 1px solid rgb(226 226 226);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.06);
+  }
+  .btn{
+    border-color: #F5F8FA;
+    background-color: #F5F8FA;
+  }
+  .btn-add{
+    border-color: #F5F8FA;
+    background-color: #F5F8FA;
+    text-transform: capitalize;
+  }
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-icon:hover{
+    background-color: #cacaca;
+  }
+  
+  .btn-add:hover{
+    color: #FFFFFF;
+    border-color: #5D87FF;
+    background-color: #5D87FF;
+    .svg-icon2 [fill]{
+      fill: #ffffff;
+    }
+  } 
+  
+  .btn-light-primary {
+    color: #5D87FF;
+    border-color: #F1FAFF;
+    background-color: #F1FAFF;
+  }
+  
+  .btn-icon  svg {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .btn-icon   .svg-icon2 [fill]{
+    fill: #009EF7;
+  }
+  .btn-icon  .svg-icon [fill]{
+    fill: #181c32;
+  }
+  
+  .des{
+  }
+  
+  .btn-add span::before {
+  content: "\002B";
+  }
+  /* tìm kiếm */
+  .search{
+  border-radius: 5px;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+  background-color: #EAEFF4;
+  border: 1px solid rgb(230, 231, 232);
+  padding: 15px;
+  }
+  
+  .input-search:focus{
+  color: black;
+  border: 1px solid rgb(164, 164, 164);
+  }
+  .input-search:focus-visible{
+  border: 1px solid rgb(164, 164, 164) !important;
+  }
+  
+  .form-search{
+  position: relative;
+  }
+  .icon-search{
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  transform: translateY(-50%);
+  }
+  .icon-search button{
+  background-color: unset;
+  }
+  
+  /* thêm */
+  .image img{
+    max-height: 200px;
+  }
+  .w-15{
+    width: 15% !important;
+   
+  }

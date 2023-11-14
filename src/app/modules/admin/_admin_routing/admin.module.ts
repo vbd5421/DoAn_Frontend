@@ -16,7 +16,8 @@ const routes: Routes =[
     {path:'member', loadChildren:()=>import('./member/member.module').then(m=>m.MemberModule)},
     {path:'news' , loadChildren:()=>import('./news/news.module').then(m=>m.NewsModule)},
     {path:'about-us' , loadChildren:()=>import('./about-us/about-us.module').then(m=>m.AboutUsModule)},
-
+    {path:'slider' , loadChildren:()=>import('./slider/slider.module').then(m=>m.SliderModule)},
+    
     ]},
 ]
 

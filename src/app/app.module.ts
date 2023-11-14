@@ -57,7 +57,19 @@ import { ProjectAddComponent } from './modules/admin/project/project-add/project
 import { ProjectControlComponent } from './modules/admin/project/project-control/project-control.component';
 import { ProductAddComponent } from './modules/admin/product/product-add/product-add.component';
 import { ProductControlComponent } from './modules/admin/product/product-control/product-control.component';
-import { QuillModule } from 'ngx-quill'
+import { QuillModule } from 'ngx-quill';
+import { MemberAddComponent } from './modules/admin/member/member-add/member-add.component';
+import { MemberControlComponent } from './modules/admin/member/member-control/member-control.component';
+import { NewsAddComponent } from './modules/admin/news/news-add/news-add.component';
+import { SliderAddComponent } from './modules/admin/slider/slider-add/slider-add.component';
+import { SliderControlComponent } from './modules/admin/slider/slider-control/slider-control.component';
+import { AboutControlComponent } from './modules/admin/about/about-control/about-control.component';
+import { AboutAddressComponent } from './modules/admin/about/about-address/about-address.component';
+import { TypicalImageAddComponent } from './modules/admin/typical-image/typical-image-add/typical-image-add.component';
+import { TypicalImageControlComponent } from './modules/admin/typical-image/typical-image-control/typical-image-control.component'
+import { NgbTooltipModule  } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSummernoteModule } from 'ngx-summernote';
+import { NewsControlComponent } from './modules/admin/news/news-control/news-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -109,6 +121,16 @@ import { QuillModule } from 'ngx-quill'
     ProjectControlComponent,
     ProductAddComponent,
     ProductControlComponent,
+    MemberAddComponent,
+    MemberControlComponent,
+    NewsAddComponent,
+    SliderAddComponent,
+    SliderControlComponent,
+    AboutControlComponent,
+    AboutAddressComponent,
+    TypicalImageAddComponent,
+    TypicalImageControlComponent,
+    NewsControlComponent,
 
   ],
   imports: [
@@ -127,7 +149,8 @@ import { QuillModule } from 'ngx-quill'
     }),
     BrowserAnimationsModule,
     QuillModule.forRoot() ,
-   
+    NgbTooltipModule ,
+    NgxSummernoteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,13 +14,13 @@ export class ProjectService {
     return this.apiHelper.get( Constant.PROJECT.GET_LIST_ALL_WITH_PAGE , {params})
   }
 
-  addProject(project: Project): Observable<any>{
+  addProject(project: any): Observable<any>{
     return this.apiHelper.post(Constant.PROJECT.ADD_PROJECT, project);
   }
   getId(id:number): Observable<Project>{
     return this.apiHelper.get(Constant.PROJECT.GET_ID+`/${id}`)
   }
-  updateProject(id: number, project: Project): Observable<any>{
+  updateProject(id: number, project: any): Observable<any>{
     return this.apiHelper.post( Constant.PROJECT.UPDATE_PROJECT + `/${id}`, project);
   }
 

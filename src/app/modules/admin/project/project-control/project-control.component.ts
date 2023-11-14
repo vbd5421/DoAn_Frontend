@@ -35,7 +35,7 @@ export class ProjectControlComponent {
     }
 
     if (search) {
-      params[`search`] = search;
+      params[`name`] = search;
     }
     return params;
   }

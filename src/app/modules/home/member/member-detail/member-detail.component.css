@@ -6,7 +6,10 @@
     color: #192a56;
     text-transform: uppercase;
 }
-
+.title span{
+    border-bottom: 2px solid #192a56;
+    padding-bottom: 5px;
+}
 .image{
     width: 100%;
 }
@@ -22,6 +25,7 @@ tr{
 @media (max-width:767.98px) {
     .image img{
         max-height: 260px;
+        max-width: 180px;
     }
  .table-info{
     width: 100%;
@@ -33,9 +37,38 @@ tr{
 }
 @media screen and (min-width:768px) {
     .table-info{
-        width: 50%;
+        width: 100%;
     }
     .image img{
         max-height: 210px;
     }
 }
+
+.edit-project{
+    text-decoration: underline;
+    color: #284dac;
+    text-transform: capitalize;
+    list-style: none;
+}
+.edit-project:hover{
+    color: #192a56;
+    text-decoration: none;
+    cursor: pointer;
+}
+.addproject:focus{
+    box-shadow: 0px 0px 2px 1px #4d4f55;
+}
+.btn-addproject{
+    height: 48px;
+    border-radius: 5px;
+    color: white;
+    background-color: #192a56;
+    border: 1px solid #192a56;
+   }
+  .btn-addproject:hover{
+    color: #192a56;
+    background: white;
+  }
+  .btn-addproject:focus{
+    box-shadow: unset;
+  }

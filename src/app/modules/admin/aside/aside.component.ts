@@ -31,6 +31,36 @@ export class AsideComponent {
       icon:"fa fa-box"
     },
     {
+      id:4,
+      name:"thành viên",
+      url: "member",
+      icon:"fa-solid fa-users-line"
+    },
+    {
+      id:5,
+      name:"tin tức",
+      url: "news",
+      icon:"fa-solid fa-newspaper"
+    },
+    {
+      id:5,
+      name:"trình chiếu",
+      url: "slider",
+      icon:"fa-solid fa-table-columns"
+    },
+    {
+      id:6,
+      name:"ảnh nổi bật",
+      url: "typical-image",
+      icon:"fa-solid fa-image"
+    },
+    {
+      id:7,
+      name:"giới thiệu",
+      url: "about-us",
+      icon:"fa-regular fa-address-card"
+    },
+    {
       id:12,
       name: "Tài khoản",
       url: "user",
