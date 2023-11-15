@@ -36,11 +36,8 @@ import { SliderHomeComponent } from './modules/home/slider/slider-home/slider-ho
 import { TypicalNumberHomeComponent } from './modules/home/typical-number/typical-number-home/typical-number-home.component';
 import { AnimationDigitComponent } from './modules/another/animation-digit/animation-digit.component';
 import { ProductHomeComponent } from './modules/home/product/product-home/product-home.component';
-import { NewsListComponent } from './modules/home/news/news-list/news-list.component';
-import { NewsDetailComponent } from './modules/home/news/news-detail/news-detail.component';
 import { MemberListComponent } from './modules/home/member/member-list/member-list.component';
 import { MemberDetailComponent } from './modules/home/member/member-detail/member-detail.component';
-import { NewsMoreComponent } from './modules/home/news/news-more/news-more.component';
 import { MemberHomeComponent } from './modules/home/member/member-home/member-home.component';
 import { LinkWebHomeComponent } from './modules/home/link-web/link-web-home/link-web-home.component';
 import { ProductListComponent } from './modules/home/product/product-list/product-list.component';
@@ -60,7 +57,6 @@ import { ProductControlComponent } from './modules/admin/product/product-control
 import { QuillModule } from 'ngx-quill';
 import { MemberAddComponent } from './modules/admin/member/member-add/member-add.component';
 import { MemberControlComponent } from './modules/admin/member/member-control/member-control.component';
-import { NewsAddComponent } from './modules/admin/news/news-add/news-add.component';
 import { SliderAddComponent } from './modules/admin/slider/slider-add/slider-add.component';
 import { SliderControlComponent } from './modules/admin/slider/slider-control/slider-control.component';
 import { AboutControlComponent } from './modules/admin/about/about-control/about-control.component';
@@ -69,7 +65,11 @@ import { TypicalImageAddComponent } from './modules/admin/typical-image/typical-
 import { TypicalImageControlComponent } from './modules/admin/typical-image/typical-image-control/typical-image-control.component'
 import { NgbTooltipModule  } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSummernoteModule } from 'ngx-summernote';
-import { NewsControlComponent } from './modules/admin/news/news-control/news-control.component';
+import { PostsListComponent } from './modules/home/posts/posts-list/posts-list.component';
+import { PostsMoreComponent } from './modules/home/posts/posts-more/posts-more.component';
+import { PostsDetailComponent } from './modules/home/posts/posts-detail/posts-detail.component';
+import { PostAddComponent } from './modules/admin/posts/post-add/post-add.component';
+import { PostControlComponent } from './modules/admin/posts/post-control/post-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,11 +101,8 @@ import { NewsControlComponent } from './modules/admin/news/news-control/news-con
     TypicalNumberHomeComponent,
     AnimationDigitComponent,
     ProductHomeComponent,
-    NewsListComponent,
-    NewsDetailComponent,
     MemberListComponent,
     MemberDetailComponent,
-    NewsMoreComponent,
     MemberHomeComponent,
     LinkWebHomeComponent,
     ProductListComponent,
@@ -123,14 +120,17 @@ import { NewsControlComponent } from './modules/admin/news/news-control/news-con
     ProductControlComponent,
     MemberAddComponent,
     MemberControlComponent,
-    NewsAddComponent,
     SliderAddComponent,
     SliderControlComponent,
     AboutControlComponent,
     AboutAddressComponent,
     TypicalImageAddComponent,
     TypicalImageControlComponent,
-    NewsControlComponent,
+    PostsListComponent,
+    PostsMoreComponent,
+    PostsDetailComponent,
+    PostAddComponent,
+    PostControlComponent,
 
   ],
   imports: [

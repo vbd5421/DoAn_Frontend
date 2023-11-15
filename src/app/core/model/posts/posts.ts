@@ -1,4 +1,4 @@
-export class News {
+export class Posts {
     id: any;
     image: any;
     title: any;

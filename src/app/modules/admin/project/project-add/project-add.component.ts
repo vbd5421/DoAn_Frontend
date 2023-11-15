@@ -25,12 +25,13 @@ export class ProjectAddComponent implements OnInit {
   listMember: Member[] = [];
   id: any;
   url: any;
-  ckeConfig: any;
   baseURL = Constant.BASE_URL;
   projectURL = Domain.PROJECT;
   imageURL: any;
   disabled = false;
   fileToUpload: string[] = [];
+  selectedFile: File;
+  fileName: any;
   formProject = new FormGroup({
     moTa: new FormControl('', Validators.required),
     tieuDe: new FormControl('', Validators.required),
@@ -44,17 +45,18 @@ export class ProjectAddComponent implements OnInit {
     private route: ActivatedRoute,
     private projectService: ProjectService,
     private toastService: ToastService,
-    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
+    window.sessionStorage.removeItem('redirect');
     this.id = this.route.snapshot.params['id'];
     if (this.id) {
       this.projectService.getId(this.id).subscribe((data) => {
         this.project = data;
         console.log(this.project);
         this.url = this.project.image?.pathUrl;
-        this.imageURL = `${this.baseURL}/${this.projectURL}/image/${this.id}`;
+        this.imageURL = `${this.baseURL}/${this.projectURL}/image/${this.project.id}`;
+        this.memberUpdate(this.project)
         this.formProject.controls['moTa'].setValue(this.project.description);
         this.formProject.controls['tieuDe'].setValue(this.project.name);
         //this.formProject.controls['noiDung'].setValue(this.project.content);
@@ -62,7 +64,10 @@ export class ProjectAddComponent implements OnInit {
         // this.formProject.controls['ngayKetThuc'].setValue(this.project.endDate);
       });
     }
+    
     this.listAllMember()
+    
+   
   }
   quillConfig = {
     //toolbar: '.toolbar',
@@ -88,7 +93,6 @@ export class ProjectAddComponent implements OnInit {
 
   }
 
-
   onSubmit() {
     this.project.name = this.formProject.controls['tieuDe'].value;
     this.project.description = this.formProject.controls['moTa'].value;
@@ -104,7 +108,7 @@ export class ProjectAddComponent implements OnInit {
 
   prepareFormData(project: Project): FormData {
     const formData = new FormData();
-    formData.append('listMember',
+    formData.append('project',
       new Blob([JSON.stringify(project)], { type: 'application/json' })
     );
     console.log(formData);
@@ -135,7 +139,6 @@ export class ProjectAddComponent implements OnInit {
 
   addProject(){
     const projectFormData = this.prepareFormData(this.project);
-    //const projectFormData = this.paramAdd(this.listMember)
     this.projectService.addProject(projectFormData).subscribe(
       () => {
         this.toastService.showSuccess();
@@ -163,6 +166,19 @@ export class ProjectAddComponent implements OnInit {
     this.router.navigate(['/admin/project']);
   }
   // member
+  memberUpdate(pro:Project){
+    this.memberService.getListAllPage().subscribe((data) => {
+      this.listMember = data;
+      if (pro.members != null) {
+        const sid = pro.members.map((item) => item.id);
+        for (let i = 0; i < sid.length; i++) {
+          this.listMember.find((e) => {
+            if (e.id === sid[i]) e.selected = true;
+          });
+        }
+      }
+    });
+  }
   listAllMember(){
     this.memberService.getListAllPage().subscribe(data=>{
       this.listMember=data.content
@@ -173,13 +189,13 @@ export class ProjectAddComponent implements OnInit {
   onCheckChangeProduct(event: any, memberr: Member) {
     memberr.selected = event.currentTarget.checked;
     if (memberr.selected) {
-      this.project.member.push(memberr);
-      console.log(this.project.member) 
+      this.project.members.push(memberr);
+      console.log(this.project.members) 
     } else {
-      this.project.member.forEach((item) => {
+      this.project.members.forEach((item) => {
         if (item.id === memberr.id) {
-          if (this.project.member) {
-            this.project.member = this.project.member.filter(
+          if (this.project.members) {
+            this.project.members = this.project.members.filter(
               (i) => i !== item 
             );
           }

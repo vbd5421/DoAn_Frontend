@@ -54,8 +54,15 @@ export class Constant {
     public static MEMBER={
         GET_ID:`${Domain.MEMBER}`,
         GET_LIST_ALL_WITH_PAGE:`${Domain.MEMBER}`,
-        ADD_MEMBER:`${Domain.PRODUCT}/create`,
-        UPDATE_MEMBER: `${Domain.PRODUCT}/update`,
-        DELETE_MEMBER: `${Domain.PRODUCT}/delete`,
+        ADD_MEMBER:`${Domain.MEMBER}/create`,
+        UPDATE_MEMBER: `${Domain.MEMBER}/update`,
+        DELETE_MEMBER: `${Domain.MEMBER}/delete`,
+    }
+    public static POSTS={
+        GET_ID:`${Domain.POSTS}`,
+        GET_LIST_ALL_WITH_PAGE:`${Domain.POSTS}`,
+        ADD_POST:`${Domain.POSTS}/create`,
+        UPDATE_POST: `${Domain.POSTS}/update`,
+        DELETE_POST: `${Domain.POSTS}/delete`,
     }
 }

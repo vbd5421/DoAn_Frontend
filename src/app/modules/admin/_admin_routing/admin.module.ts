@@ -14,7 +14,7 @@ const routes: Routes =[
     {path:'project' , loadChildren:()=>import('./project/project.module').then(m=>m.ProjectModule)},
     {path:'product' , loadChildren:()=>import('./product/product.module').then(m=>m.ProductModule)},
     {path:'member', loadChildren:()=>import('./member/member.module').then(m=>m.MemberModule)},
-    {path:'news' , loadChildren:()=>import('./news/news.module').then(m=>m.NewsModule)},
+    {path:'posts' , loadChildren:()=>import('./posts/posts.module').then(m=>m.PostsModule) },
     {path:'about-us' , loadChildren:()=>import('./about-us/about-us.module').then(m=>m.AboutUsModule)},
     {path:'slider' , loadChildren:()=>import('./slider/slider.module').then(m=>m.SliderModule)},
     

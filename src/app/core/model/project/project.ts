@@ -12,5 +12,5 @@ export class Project {
     endDate:any;
     //0, đang triển khai;1 đã hoàn thành
     status:boolean;
-    member : Member[]=[];
+    members : Member[]=[];
 }

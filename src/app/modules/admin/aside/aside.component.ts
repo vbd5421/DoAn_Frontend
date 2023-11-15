@@ -39,7 +39,7 @@ export class AsideComponent {
     {
       id:5,
       name:"tin tức",
-      url: "news",
+      url: "posts",
       icon:"fa-solid fa-newspaper"
     },
     {
