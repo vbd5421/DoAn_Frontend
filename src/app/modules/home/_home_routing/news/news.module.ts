@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { NewsListComponent } from '../../news/news-list/news-list.component';
-import { NewsDetailComponent } from '../../news/news-detail/news-detail.component';
+import { PostsListComponent } from '../../posts/posts-list/posts-list.component';
+import { PostsDetailComponent } from '../../posts/posts-detail/posts-detail.component';
 
 
 const routes: Routes=[
-  {path:'' ,component:NewsListComponent },
-  {path:'chi-tiet' , component:NewsDetailComponent}
+  {path:'' ,component:PostsListComponent },
+  {path:'chi-tiet' , component:PostsDetailComponent}
 ]
 
 @NgModule({
