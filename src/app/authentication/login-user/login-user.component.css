@@ -1,6 +1,6 @@
 .heading-section {
   font-size: 28px;
-  color: #764b20;
+  color: #004a90;
   font-weight:700;
 }
 
@@ -19,15 +19,15 @@
 }
 
 .text-wrap {
-  background: #f75959;
-  background: -moz-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
+  /* background: #f75959; */
+  background: -moz-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
 
-  background: -webkit-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -o-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -ms-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -webkit-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -o-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -o-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -ms-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -webkit-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -o-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f75959', endColorstr='#f35587', GradientType=1 );
   color: #fff; }
 .login-wrap {
@@ -158,41 +158,46 @@ button:focus {
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #dfa974;
-    border: 1px solid #dfa974;
+    background: #192a56;
+    border: 1px solid #4194d6;
     color: #fff;
-    background: -moz-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-    background: -webkit-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-    background: -o-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-    background: -ms-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-    background: -webkit-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-    background: -o-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-    background: linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
+    background: -moz-linear-gradient(135deg, rgba(141, 195, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+    background: -webkit-linear-gradient(135deg, rgba(141, 195, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+    background: -o-linear-gradient(135deg, rgba(141, 195, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+    background: -ms-linear-gradient(135deg, rgba(141, 195, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+    background: -webkit-linear-gradient(135deg, rgba(141, 195, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+    background: -o-linear-gradient(135deg, rgba(141, 195, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+    background: linear-gradient(135deg, rgba(141, 195, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f75959', endColorstr='#f35587', GradientType=1 ); }
   .btn.btn-primary.btn-login:hover {
-    border: 1px solid #dfa974;
+    border: 1px solid rgb(25, 63, 86);
     background: white;
-    color: #dfa974; }
+    color: #192a56; }
   .btn.btn-primary.btn-outline-primary {
-    border: 1px solid #dfa974;
+    border: 1px solid #192a56;
     background: transparent;
-    color: #dfa974; }
+    color: #192a56; }
   .btn.btn-primary.btn-outline-primary:hover {
     border: 1px solid transparent;
-    background: #dfa974;
+    background: #192a56;
     color: #fff; }
     /* Show the checkmark when checked */
 .checkbox-wrap input:checked ~ .checkmark:after {
-  display: block;
+  display: inline-block;
   content: "\f14a";
   font-family: "FontAwesome";
-  color: rgba(0, 0, 0, 0.2); }
-
+  color: rgba(0, 0, 0, 0.2); 
+  position: absolute;
+  right: 1px;
+}
+.checkbox-wrap{
+  position: relative;
+}
 /* Style the checkmark/indicator */
 .checkbox-primary {
-  color: #dfa974; }
+  color: #192a56; }
 .checkbox-primary input:checked ~ .checkmark:after {
-  color: #dfa974; }
+  color: #192a56; }
 
 
   /* quay lại */
@@ -205,9 +210,14 @@ button:focus {
   }
   .back:hover{
     cursor: pointer;
-    color: #dfa974;
+    color: #192a56;
   }
   .remember-back{
     position: relative;
     text-align: center;
+  }
+  .bg-login{
+    background: url('../../../assets/images/bg-login.jpg') no-repeat ;
+    background-size: cover;
+    height: 100vh;
   }

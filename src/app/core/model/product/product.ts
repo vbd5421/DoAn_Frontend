@@ -9,5 +9,5 @@ export class Product {
     image:any;
     url:any;
     active:boolean;
-    member: Member[]=[];
+    members: Member[]=[];
 }

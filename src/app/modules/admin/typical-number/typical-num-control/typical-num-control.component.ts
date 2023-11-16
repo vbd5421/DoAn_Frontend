@@ -45,6 +45,7 @@ getAllNumber(){
   this.numberService.getListAllPage(params).subscribe(data=>{
         this.number = data.content;
         this.paging.totalRecord= data.totalElements;
+        console.log('con số' , this.number)
   },
    error=>{
     console.error(error)

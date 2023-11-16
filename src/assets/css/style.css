@@ -572,4 +572,15 @@ text-overflow: ellipsis;
   .mt-header{
       margin-top: 172px;
   }
+  .ql-editor{
+    height: 450px !important;
+  }
 }
+@media (max-width:991.98px) {
+  .ql-editor{
+    height: 300px !important;
+  }
+}
+
+/* quill editor */
+

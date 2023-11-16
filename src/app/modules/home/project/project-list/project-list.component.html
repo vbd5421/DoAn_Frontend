@@ -20,8 +20,7 @@
                     <div class="single-blog-item blog-grid item-news ">
                         <div class="post-feature blog-thumbnail">
                             <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 "
-                                    src="assets/images/room/room-2.jpg">
+                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
                             </a>
                         </div>
                         <div class="post-info lg-blog-post-info">
@@ -39,8 +38,7 @@
                     <div class="single-blog-item blog-grid item-news ">
                         <div class="post-feature blog-thumbnail">
                             <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 "
-                                    src="assets/images/room/room-2.jpg">
+                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
                             </a>
                         </div>
                         <div class="post-info lg-blog-post-info">
@@ -58,8 +56,7 @@
                     <div class="single-blog-item blog-grid item-news ">
                         <div class="post-feature blog-thumbnail">
                             <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 "
-                                    src="assets/images/room/room-2.jpg">
+                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
                             </a>
                         </div>
                         <div class="post-info lg-blog-post-info">
@@ -77,8 +74,7 @@
                     <div class="single-blog-item blog-grid item-news ">
                         <div class="post-feature blog-thumbnail">
                             <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 "
-                                    src="assets/images/room/room-2.jpg">
+                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
                             </a>
                         </div>
                         <div class="post-info lg-blog-post-info">
@@ -102,6 +98,30 @@
             </div>
         </div>
         <div class="col-md-4">
+            <label class="select">
+                <select class="w-100">
+                    <option value="1">Pure CSS Select</option>
+                    <option value="2">With wrapper</option>
+                    <option value="3">No JS!</option>
+                </select>
+            </label>
+            <div class="input-group date my-5 " id="datepicker-project">
+                <input type="text" placeholder="aa" class="form-control" id="month" />
+                <span class="input-group-append">
+                    <span class="input-group-text bg-light d-block">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </span>
+                </span>
+            </div>
+            <script>
+                $(function () {
+                    $('#datepicker-project').datepicker({
+                        format: "yyyy",
+                        startView: "years",
+                        minViewMode: "years"
+                    });
+                });
+            </script>
             <app-link-web-home></app-link-web-home>
             <div class="my-5"></div>
             <img class="w-100" src="assets/images/utc-uav-ai/img-project.jpg" alt="">

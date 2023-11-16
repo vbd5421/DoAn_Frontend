@@ -48,26 +48,27 @@ export class ProjectAddComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    window.sessionStorage.removeItem('redirect');
     this.id = this.route.snapshot.params['id'];
     if (this.id) {
-      this.projectService.getId(this.id).subscribe((data) => {
-        this.project = data;
-        console.log(this.project);
-        this.url = this.project.image?.pathUrl;
-        this.imageURL = `${this.baseURL}/${this.projectURL}/image/${this.project.id}`;
-        this.memberUpdate(this.project)
-        this.formProject.controls['moTa'].setValue(this.project.description);
-        this.formProject.controls['tieuDe'].setValue(this.project.name);
-        //this.formProject.controls['noiDung'].setValue(this.project.content);
-        // this.formProject.controls['ngayHoanThanh'].setValue(this.project.startDate);
-        // this.formProject.controls['ngayKetThuc'].setValue(this.project.endDate);
-      });
+      this.getProjectById(this.id)
     }
-    
-    this.listAllMember()
-    
-   
+    else{
+      this.listAllMember()
+    }
+  }
+  getProjectById(id:number){
+    this.projectService.getId(id).subscribe((data) => {
+      this.project = data;
+      console.log(this.project);
+      this.url = this.project.image?.pathUrl;
+      this.imageURL = `${this.baseURL}/${this.projectURL}/image/${this.project.id}`;
+      this.memberUpdate(this.project)
+      this.formProject.controls['moTa'].setValue(this.project.description);
+      this.formProject.controls['tieuDe'].setValue(this.project.name);
+      //this.formProject.controls['noiDung'].setValue(this.project.content);
+      // this.formProject.controls['ngayHoanThanh'].setValue(this.project.startDate);
+      // this.formProject.controls['ngayKetThuc'].setValue(this.project.endDate);
+    })
   }
   quillConfig = {
     //toolbar: '.toolbar',
@@ -168,7 +169,7 @@ export class ProjectAddComponent implements OnInit {
   // member
   memberUpdate(pro:Project){
     this.memberService.getListAllPage().subscribe((data) => {
-      this.listMember = data;
+      this.listMember = data.content;
       if (pro.members != null) {
         const sid = pro.members.map((item) => item.id);
         for (let i = 0; i < sid.length; i++) {
@@ -186,7 +187,7 @@ export class ProjectAddComponent implements OnInit {
     })
   }
 
-  onCheckChangeProduct(event: any, memberr: Member) {
+  onCheckChangeMember(event: any, memberr: Member) {
     memberr.selected = event.currentTarget.checked;
     if (memberr.selected) {
       this.project.members.push(memberr);

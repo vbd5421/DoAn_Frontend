@@ -88,3 +88,10 @@
 .image img{
     max-height: 200px;
 }
+tbody th{
+  font-weight: 400;
+}
+
+.ten-thanh-vien:not(:last-child)::after{
+  content: " , ";
+}

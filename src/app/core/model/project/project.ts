@@ -3,9 +3,9 @@ import { Member } from "../member/member";
 export class Project {
     id:number;
     name:any;
-    description:any
-    image:any;
+    description:any;
     content:any;
+    image:any;
     url:any;
     createDate:any;
     startDate:any;
