@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Constant } from 'src/app/core/config/constant';
+import { Domain } from 'src/app/core/domain/domain';
 import { Project } from 'src/app/core/model/project/project';
 import { ProjectService } from 'src/app/service/project/project.service';
 
@@ -10,7 +12,9 @@ import { ProjectService } from 'src/app/service/project/project.service';
 })
 export class ProjectControlComponent {
   project: Project[] = []
-  searchInput = '';
+  name = '';
+  baseURL = Constant.BASE_URL;
+  projectURL = Domain.PROJECT;
   paging = {
     page: 1,
     size: 5,
@@ -41,10 +45,11 @@ export class ProjectControlComponent {
   }
 
   getAllWithPageProject() {
-    const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput)
+    const params = this.getRequestParams(this.paging.page, this.paging.size, this.name)
     this.projectService.getListAllPage(params).subscribe(data => {
-      this.project = data.content;
-      this.paging.totalRecord = data.totalElements;
+    this.project = data.content;
+    this.paging.totalRecord = data.totalElements;
+     console.log('dự án ' , this.project)
     },
       error => {
         console.error(error)
@@ -68,10 +73,10 @@ export class ProjectControlComponent {
     this.getAllWithPageProject();
   }
 
-  updateTypicalNum(id: number) {
+  updateProject(id: number) {
     this.router.navigate([`admin/project/edit/${id}`]);
   }
-  deleteTypicalNum(id: number) {
+  deleteProject(id: number) {
     let cf = confirm("Dữ liệu sẽ bị xóa . Bạn có mốn tiếp tục ");
     if (cf) {
       this.projectService.deleteProject(id).subscribe(() => {

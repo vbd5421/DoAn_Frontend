@@ -17,6 +17,9 @@ export class ProductService {
   addProduct(product: any): Observable<any>{
     return this.apiHelper.post(Constant.PRODUCT.ADD_PRODUCT, product);
   }
+  getProductById(id:number): Observable<any>{
+    return this.apiHelper.get( Constant.PRODUCT.GET_ID + `/${id}`);
+  }
 
   updateProduct(id: number, product: any): Observable<any>{
     return this.apiHelper.post( Constant.PRODUCT.UPDATE_PRODUCT + `/${id}`, product);

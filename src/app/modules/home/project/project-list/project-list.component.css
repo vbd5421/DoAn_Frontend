@@ -99,3 +99,61 @@
     max-height: 550px;
   }
 }
+
+/* select */
+select {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: inherit;
+  box-shadow: none;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background:  linear-gradient(to left, #97999c 3rem, #a0a8af 3rem);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  &:hover::after {
+    color: #192a56;
+    animation: bounce 0.5s infinite;
+  }
+}
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  right: 1rem;
+  color: #fff;
+  top: 1rem;
+  transition: 0.25s all ease;
+  pointer-events: none; 
+}
+select {
+  color: #fff;
+  flex: 1;
+  padding: 1em;
+  cursor: pointer;
+}
+option{
+  color: #000000;
+  padding: 15px;
+}
+@keyframes bounce {
+  25% {
+    transform: translatey(5px);
+  }
+  75% {
+    transform: translatey(-5px);
+  }
+}
+
+/* custom input year */
+.input-group-append {
+  cursor: pointer;
+}

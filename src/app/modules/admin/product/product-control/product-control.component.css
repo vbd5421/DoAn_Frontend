@@ -88,3 +88,6 @@ background-color: unset;
 .image img{
   max-height: 200px;
 }
+tbody th{
+  font-weight: 400;
+}

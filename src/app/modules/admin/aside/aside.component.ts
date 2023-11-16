@@ -81,21 +81,13 @@ export class AsideComponent {
   constructor(private tokenStorageService: TokenStorageService, private userService:UserService) { }
   ngOnInit(): void {
       this.id=this.tokenStorageService.getUser().id
-      this.getUserByid(this.id)
       if(this.tokenStorageService.getToken()){
         this.userName = this.tokenStorageService.getUser().username;
         this.roleName = this.tokenStorageService.getUser().roles;
       }
       // this.getModlue()
   }
-  getUserByid(id:number){
-    this.userService.getUserById(id).subscribe(data=>{
-      this.userById = data
-      this.roleByUser=data.role
-      //console.log(data)
-      // this.modules=this.roleByUser.moduleList
-    })
-  }
+
 
   logout() {
       this.tokenStorageService.signOut();

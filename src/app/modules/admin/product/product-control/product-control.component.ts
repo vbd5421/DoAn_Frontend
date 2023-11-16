@@ -13,7 +13,6 @@ import { ProductService } from 'src/app/service/product/product.service';
 })
 export class ProductControlComponent {
   products: Product[] = [];
-  currentIndex = -1;
   totalPages: number;
   searchInput = '';
   baseURL = Constant.BASE_URL;
@@ -30,16 +29,52 @@ export class ProductControlComponent {
   ngOnInit(): void {
     this.getProductListAllwithPage();
   }
+  getRequestParams(page: number, pageSize: number, search: string): any {
+    let params: any = {};
 
+    if (page) {
+      params[`pageNo`] = page;
+    }
+
+    if (pageSize) {
+      params[`pageSize`] = pageSize;
+    }
+
+    if (search) {
+      params[`name`] = search;
+    }
+    return params;
+  }
   getProductListAllwithPage(){
-    
+    const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput)
+    this.productService.getListAllPage(params).subscribe(data => {
+      this.products = data.content;
+      this.paging.totalRecord = data.totalElements;
+      this.totalPages = data.totalPages;
+      console.log('sản phẩm' , this.products)
+    },
+      error => {
+        console.log(error);
+      }
+    )
   }
   search(): void {
     this.paging.page = 1;
     this.getProductListAllwithPage();
   }
+  handlePageChange(event: number): void {
+    console.log(event);
+    this.paging.page = event;
+    this.getProductListAllwithPage();
+  }
+  handlePageSizeChange(event: any): void {
+    this.paging.size = event;
+    this.paging.page = 1;
+    console.log(event, this.paging.size)
+    this.getProductListAllwithPage();
+  }
   updateProduct(id: number) {
-    return this.router.navigate(['admin/product/update', id]);
+    return this.router.navigate([`admin/product/edit/${id}`]);
   }
   deleteProduct(id: number) {
     let option = confirm("Bạn có chắc chắn xóa khách hàng này?");
