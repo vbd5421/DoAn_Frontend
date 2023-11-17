@@ -1,4 +1,5 @@
-<app-page-size></app-page-size>
+<app-page-size (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
+[(pageSize)]="paging.size"  ></app-page-size>
 
 
 <div class="card mb-5 mt_30 mx-4">
@@ -9,7 +10,7 @@
         <div class="card-toolbar justify-content-between row">
             <div class="col-lg-2">
                 <form (ngSubmit)="search()" class="form-search">
-                    <input class="search input-search" type="text" [(ngModel)]="searchInput" name="searchInput"
+                    <input class="search input-search" type="text" [(ngModel)]="searchInput.name" name="searchInput.name"
                         placeholder="Tìm kiếm ">
                     <div class="input-group-append  icon-search">
                         <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
@@ -31,31 +32,36 @@
                     <th style="width: 20%;" scope="col">Tên</th>
                     <th class="w-15" scope="col">Chức vụ</th>
                     <th class="w-15" scope="col">Học vị</th>
-                    <th class="w-15" scope="col">SĐT</th>
+                    <th class="w-15" scope="col">Email</th>
                     <th class="w-15" scope="col">Thao tác</th>
                 </tr>
             </thead>
             <tbody class="text-center">
-                <tr>
+                <tr *ngFor="let member of listMember | paginate:{
+                    id:'member',
+                    itemsPerPage: paging.size,
+                    currentPage: paging.page,
+                    totalItems: paging.totalRecord  } , let i = index" >
                     <th class="image">
-                        <img class="w-100" src="../../../../../assets/images/about/about-p1.jpg" alt="">
+                        <img class="w-100" src="{{baseURL}}/{{memberURL}}/image/{{member.id}}"  alt="img product">
                     </th>
                     <th class="text-center">
-                        sasaas
+                        <p>{{member.fullName}}</p>
                     </th>
-                    <th class="text-center  cursor-pointer "  >
-                        <a  style=" color: #337ab9;"   >
-                            aadadv s
-                        </a>
+                    <th class="text-center "  >
+                        <p>{{member.position}}</p>
                     </th>
                     <th class="text-center ">
-                        âsas
+                        <p>
+                            {{member.degree}}
+                        </p>
                     </th>
                     <th>
-                        i sc sics icsics iv
+                       {{member.email}}
                     </th>
                     <td>
-                        <a title="Sửa thông tin" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                        <a placement="top" ngbTooltip="Sửa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1" 
+                        (click)="updateMember(member.id)" >
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +74,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a title="Xóa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <a placement="top" ngbTooltip="Xóa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm" (click)="deleteMember(member.id)" >
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/g">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -89,8 +95,8 @@
             </tbody>
         </table>
     </div>
-    <!-- <div *ngIf="paging.totalRecord>0" class="col-8 mt-1 mx-auto">
-        <pagination-controls [id]="'number'" previousLabel="<" nextLabel=">" (pageChange)="handlePageChange($event)"
+    <div *ngIf="paging.totalRecord>0" class="col-8 mt-1 mx-auto">
+        <pagination-controls [id]="'member'" previousLabel="<" nextLabel=">" (pageChange)="handlePageChange($event)"
             [maxSize]="paging.totalRecord"></pagination-controls>
-    </div> -->
+    </div>
 </div>

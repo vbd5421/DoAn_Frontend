@@ -14,7 +14,7 @@ export class MemberService {
     return this.apiHelper.get( Constant.MEMBER.GET_LIST_ALL_WITH_PAGE , {params})
   }
   getId(id:number):Observable<any>{
-    return this.apiHelper.get(Constant.MEMBER.GET_ID + `${id}`)
+    return this.apiHelper.get(Constant.MEMBER.GET_ID + `/${id}`);
   }
   addMember(member: any): Observable<any>{
     return this.apiHelper.post(Constant.MEMBER.ADD_MEMBER, member);

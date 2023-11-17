@@ -45,15 +45,15 @@
                         <img class="w-100" src="{{baseURL}}/{{productURL}}/image/{{itempro.id}}"  alt="img product">
                     </th>
                     <th class="text-center ">
-                        <p class="max-2line cursor-pointer " placement="top" ngbTooltip="{{itempro.title}}" >{{itempro.title}}</p>
+                        <p class="max-2line cursor-pointer m-0 " placement="top" ngbTooltip="{{itempro.title}}" >{{itempro.title}}</p>
                     </th>
                     <th class="text-center ">
-                        <p class="max-2line cursor-pointer" placement="top" ngbTooltip="{{itempro.description}}"  >
+                        <p class="max-2line cursor-pointer m-0 " placement="top" ngbTooltip="{{itempro.description}}"  >
                             {{itempro.description}}
-                          </p>
+                        </p>
                     </th>
                     <th>
-                        <p class="">{{itempro.date}}</p>
+                        {{itempro.date | date: 'dd/MM/yyyy' }}
                     </th>
                     <td>
                         <a placement="top" ngbTooltip="Sửa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1" 
@@ -92,8 +92,8 @@
             </tbody>
         </table>
     </div>
-    <!-- <div *ngIf="paging.totalRecord>0" class="col-8 mt-1 mx-auto">
-        <pagination-controls [id]="'number'" previousLabel="<" nextLabel=">" (pageChange)="handlePageChange($event)"
+    <div *ngIf="paging.totalRecord>0" class="col-8 mt-1 mx-auto">
+        <pagination-controls [id]="'product'" previousLabel="<" nextLabel=">" (pageChange)="handlePageChange($event)"
             [maxSize]="paging.totalRecord"></pagination-controls>
-    </div> -->
+    </div>
 </div>

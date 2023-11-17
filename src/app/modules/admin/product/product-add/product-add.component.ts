@@ -66,9 +66,7 @@ export class ProductAddComponent {
         [{'color':[]}],
         ['link', 'image', 'video']
       ],
-
     },
-
   }
   imageChange(e: any) {
     const files = e.target.files;
@@ -107,7 +105,7 @@ export class ProductAddComponent {
         this.backToProductList();
       },
       (error) => {
-        this.toast.showWarning(error.error);
+        //this.toast.showWarning(error.error);
         console.log(error);
       }
     );
