@@ -20,48 +20,44 @@ export class UserControlComponent {
 
   constructor(private userS: UserService, private router: Router) {}
 
-  // ngOnInit(): void {
-  //   this.getAllUser();
-  // }
+  ngOnInit(): void {
+    this.getAllUser();
+  }
 
-  // getrequestparams(page: number, pageSize: number, search: string) {
-  //   let params: any = {};
+  getrequestparams( search: string) {
+    let params: any = {};
 
-  //   if (page) {
-  //     params[`pageNo`] = page;
-  //   }
+    // if (page) {
+    //   params[`pageNo`] = page;
+    // }
 
-  //   if (pageSize) {
-  //     params[`pageSize`] = pageSize;
-  //   }
+    // if (pageSize) {
+    //   params[`pageSize`] = pageSize;
+    // }
 
-  //   if (search) {
-  //     params[`search`] = search;
-  //   }
-  //   return params;
-  // }
+    if (search) {
+      params[`search`] = search;
+    }
+    return params;
+  }
 
-  // getAllUser() {
-  //   const params = this.getrequestparams(
-  //     this.paging.page,
-  //     this.paging.size,
-  //     this.searchInput
-  //   );
-  //   this.userS.getListAllwithpageUser(params).subscribe(
-  //     (data) => {
-  //       this.users = data.content;
-  //       this.paging.totalRecord = data.totalElements;
-  //     },
-  //     (error) => {
-  //       console.log(error);
-  //     }
-  //   );
-  // }
+  getAllUser() {
+    const params = this.getrequestparams( this.searchInput);
+    this.userS.getListAllwithpageUser(params).subscribe(data => {
+        this.users = data;
+        // this.paging.totalRecord = data.totalElements;
+        console.log(this.userS + 'tk')
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
 
-  // search(): void {
-  //   this.paging.page = 1;
-  //   this.getAllUser();
-  // }
+  search(): void {
+    this.paging.page = 1;
+    this.getAllUser();
+  }
 
   // handlepagechange(event: number): void {
   //   console.log(event);
@@ -75,18 +71,18 @@ export class UserControlComponent {
   //   this.getAllUser();
   //   console.log(this.paging.size);
   // }
-  // updateUser(id: number) {
-  //   return this.router.navigate([`admin/user/update/${id}`]);
-  // }
+  updateUser(id: number) {
+    return this.router.navigate([`admin/user/update/${id}`]);
+  }
 
 
-  // deleteUser(id: number) {
-  //   let option = confirm('Bạn có chắc chắn xóa người dùng này?');
+  deleteUser(id: number) {
+    let option = confirm('Bạn có chắc chắn xóa người dùng này?');
 
-  //   if (option) {
-  //     this.userS.deleteUser(id).subscribe(() => {
-  //       this.getAllUser();
-  //     });
-  //   }
-  // }
+    if (option) {
+      this.userS.deleteUser(id).subscribe(() => {
+        this.getAllUser();
+      });
+    }
+  }
 }

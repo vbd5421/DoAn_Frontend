@@ -12,7 +12,7 @@ export class PostService {
   getListAllPage(params?:Params):Observable<any>{
     return this.apiHelper.get( Constant.POSTS.GET_LIST_ALL_WITH_PAGE, {params})
   }
-  getId(id:number):Observable<any>{
+  getPostById(id:number):Observable<any>{
     return this.apiHelper.get(Constant.POSTS.GET_ID + `${id}`)
   }
   addPosts(posts: any): Observable<any>{

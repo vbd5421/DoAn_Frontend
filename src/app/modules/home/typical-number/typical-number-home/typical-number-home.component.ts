@@ -9,7 +9,7 @@ import { TypicalNumberService } from 'src/app/service/typical-number/typical-num
   styleUrls: ['./typical-number-home.component.css'],
   animations: [
     trigger('myAnimation', [
-      state('inactive', style({  transform: 'translateY(200%)',  opacity:0  })),
+      state('inactive', style({  transform: 'translateY(100%)',  opacity:0  })),
       state('active', style({ transform:'translateY(0)' , opacity:1 })),
       transition('inactive => active', animate('500ms ease-in')),
       transition('active => inactive', animate('500ms ease-out'))

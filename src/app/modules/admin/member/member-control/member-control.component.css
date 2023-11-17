@@ -92,3 +92,7 @@
     width: 15% !important;
    
   }
+
+  tbody th , tbody td{
+    font-weight: 400;
+  }

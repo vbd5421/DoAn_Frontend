@@ -1,1 +1,66 @@
-<p>post-add works!</p>
+<div class="toolbar">
+</div>
+<form [formGroup]="formPost" (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate class="mt_30">
+  <div class="container mb_60">
+      <div class="boder">
+        <div class="title">
+          <p class="text-title fs-5">tin tức & sự kiện</p>
+        </div>
+        <div class="mt_80">
+          <div class="row justify-content-center">
+            <div class="col-md-10 ">
+              <div class="row">
+                <div class="col-md-4 ">
+                  <div class="box update_box ">
+                    <label class="form-label">hình ảnh</label>
+                    <div class="w-100">
+                      <div class="image borderInput p-0">
+                        <img src="{{imageURL}}" alt="" appHideMissing *ngIf="imageURL ; else elseBlock ">
+                        <ng-template #elseBlock>
+                          <img src="../../../../../assets/images/placeholder.png" alt="">
+                        </ng-template>
+                      </div>
+                      <input class="p-1 p-md-2 w-100 text-input "  accept="image/png, image/jpeg" type="file"
+                        value="select" (change)="imageChange($event)">
+                    </div>
+                  </div>
+                  <div class="mt-3 mt-md-4 mx-md-0 mx-4 ">
+                      <label class="form-label"><span class="validateText">*</span>tên bài viết</label>
+                      <input  class="input-custom  w-100 " placeholder="Nhập tên sản phẩm" type="text"  name="title"
+                      [class.borderError]="!formPost.controls.title.valid&&!formPost.controls.title.untouched"
+                      [class.text-input]="formPost.controls.title.valid||formPost.controls.title.untouched"
+                      formControlName="title" required>
+                      <p *ngIf="!formPost.controls.title.valid&&!formPost.controls.title.untouched" class="validateText">
+                        Tên không thể bỏ trống</p>
+                  </div>
+                  <div class="mt-3 mt-md-4 mx-md-0 mx-4">
+                      <label class="form-label"><span class="validateText">*</span>mô tả</label>
+                      <textarea class="input-custom   w-100  " placeholder="Nhập mô tả" style="height: 120px" 
+                      [class.borderError]="!formPost.controls.moTa.valid&&!formPost.controls.moTa.untouched"
+                      [class.text-input]="formPost.controls.moTa.valid||formPost.controls.moTa.untouched" id="moTa" type="text"
+                      formControlName="moTa" name="description"></textarea>
+                      <p *ngIf="!formPost.controls.moTa.valid&&!formPost.controls.moTa.untouched"
+                        class="validateText">Mô tả không thể bỏ trống</p>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="mt-3 mt-md-0 mx-md-0 mx-4 editor-quill ">
+                    <label class="form-label"><span class="validateText">*</span>nội dung</label>
+                    <quill-editor placeholder="Nhập nội dung" 
+                    class="border"  [modules]="quillConfig" [(ngModel)]="post.content"
+                    [ngModelOptions]="{standalone: true}"></quill-editor>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-8 col-ms-6 mt-4 mb_30 mx-auto text-center ">
+                  <button type="submit" class=" mt-2 mt-sm-0 btn btn-primary btn-lg btnn"
+                  [disabled]="!formPost.valid">Lưu</button>
+                  <button type="button" class=" mt-2 mt-sm-0 btn btn-secondary btn-lg  cancel"
+                  (click)="goToPostList()">Hủy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>

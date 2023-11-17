@@ -122,6 +122,7 @@ select,option{
 .form-label{
   text-transform: capitalize;
   font-size: 16px;
+  font-weight: 600;
 }
 
 .editor-quill::ng-deep .ql-snow .ql-editor h1 {
