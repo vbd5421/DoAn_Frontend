@@ -13,4 +13,5 @@ public static IMAGE = `api/image`;
 public static ABOUT_US = `api/about`;
 public static POSTS = `api/post`;
 public static SLIDERS = `api/sliders`;
+public static CATE_PROJECT=`api/cateproject`;
 }

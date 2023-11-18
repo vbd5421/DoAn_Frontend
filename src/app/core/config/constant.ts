@@ -65,4 +65,12 @@ export class Constant {
         UPDATE_POST: `${Domain.POSTS}/update`,
         DELETE_POST: `${Domain.POSTS}/delete`,
     }
+    public static CATE_PROJECT={
+        LIST_PAGE_SIZE:`${Domain.CATE_PROJECT}`,
+        LIST:`${Domain.CATE_PROJECT}/list`,
+        GET_BY_ID :`${Domain.CATE_PROJECT}`,
+        CREATE:`${Domain.CATE_PROJECT}/create`,
+        DELETE :`${Domain.CATE_PROJECT}/delete`,
+        UPDATE :`${Domain.CATE_PROJECT}/update`,
+    }
 }
