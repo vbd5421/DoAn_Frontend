@@ -1,5 +1,10 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import { Constant } from 'src/app/core/config/constant';
+import { Domain } from 'src/app/core/domain/domain';
+import { Project } from 'src/app/core/model/project/project';
+import { ProjectService } from 'src/app/service/project/project.service';
 
 @Component({
   selector: 'app-project-home',
@@ -31,6 +36,52 @@ onWindowScroll(event: Event) {
   } else {
     this.animationState = 'inactive';
   }
+}
+
+
+project: Project[] = []
+name = '';
+baseURL = Constant.BASE_URL;
+projectURL = Domain.PROJECT;
+paging = {
+  page: 1,
+  size: 4,
+  totalRecord: 0
+}
+
+constructor(private projectService: ProjectService,
+  private router: Router) {
+}
+ngOnInit(): void {
+  this.getAllWithPageProject();
+}
+
+getRequestParams(page: number, pageSize: number, search: string): any {
+  let params: any = {};
+  if (page) {
+    params[`pageNo`] = page;
+  }
+
+  if (pageSize) {
+    params[`pageSize`] = pageSize;
+  }
+
+  if (search) {
+    params[`name`] = search;
+  }
+  return params;
+}
+
+getAllWithPageProject() {
+  const params = this.getRequestParams(this.paging.page, this.paging.size, this.name)
+  this.projectService.getListAllPage(params).subscribe(data => {
+  this.project = data.content;
+  this.paging.totalRecord = data.totalElements;
+   console.log('dự án ' , this.project)
+  },
+    error => {
+      console.error(error)
+    })
 }
 
 }

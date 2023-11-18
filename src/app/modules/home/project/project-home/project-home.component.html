@@ -5,10 +5,10 @@
                 <div class="col-lg-5" [@myAnimation]="animationState"   >
                     <div class=" border-bottom  mb-3 title-service ">dự án</div>
                     <h1 class="mb-4">Phòng thí nghiệm về UAV-AI</h1>
-                    <p class="mb-4">Phòng thí nghiệm về UAV cung cấp các dịch vụ chuyên nghiệp và chất lượng 
-                        cao liên quan đến máy bay không người lái. Với sự chuyên môn và kinh nghiệm trong lĩnh vực này,
-                         phòng thí nghiệm hiểu rõ về yêu cầu và nhu cầu của khách hàng. Dưới đây là mô tả về 
-                         các dịch vụ mà phòng thí nghiệm cung cấp:</p>
+                    <p class="mb-4">Phòng thí nghiệm UAV - AI là một dự án thú vị kết hợp giữa công nghệ UAV 
+                        (Unmanned Aerial Vehicle - máy bay không người lái) và trí tuệ nhân tạo (Artificial Intelligence - AI). 
+                        Dự án này tập trung vào nghiên cứu, phát triển và ứng dụng các công nghệ UAV và AI để tạo ra các giải pháp tiên 
+                        tiến trong lĩnh vực bay không người lái.</p>
                     <div class="text-center text-lg-start mt_30 " >
                         <a class=" see-more " href="du-an">xem thêm</a>
                     </div>
@@ -17,52 +17,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row mt-md-0 mt-4 ">
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class=" mb-4 col-sm-6 "  *ngFor="let pro of project  , let i = index"  >
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
                                             <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
                                         </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
-                                    </div>
-                                </div>
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
-                                        </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
-                                    </div>
-                                </div>
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
-                                        </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
-                                    </div>
-                                </div>
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
-                                        </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
+                                        <h5 class="mb-3 max-2line ">{{pro.name}}</h5>
+                                        <p class="max-2line" >{{pro.description}}</p>
+                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="du-an/chi-tiet">xem thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -81,10 +43,10 @@
                 <div class="col-lg-5">
                     <div class=" border-bottom  mb-3 title-service ">dự án</div>
                     <h1 class="mb-4">Phòng thí nghiệm về UAV-AI</h1>
-                    <p class="mb-4">Phòng thí nghiệm về UAV cung cấp các dịch vụ chuyên nghiệp và chất lượng 
-                        cao liên quan đến máy bay không người lái. Với sự chuyên môn và kinh nghiệm trong lĩnh vực này,
-                         phòng thí nghiệm hiểu rõ về yêu cầu và nhu cầu của khách hàng. Dưới đây là mô tả về 
-                         các dịch vụ mà phòng thí nghiệm cung cấp:</p>
+                    <p class="mb-4">Phòng thí nghiệm UAV - AI là một dự án thú vị kết hợp giữa công nghệ UAV 
+                        (Unmanned Aerial Vehicle - máy bay không người lái) và trí tuệ nhân tạo (Artificial Intelligence - AI). 
+                        Dự án này tập trung vào nghiên cứu, phát triển và ứng dụng các công nghệ UAV và AI để tạo ra các giải pháp tiên 
+                        tiến trong lĩnh vực bay không người lái.</p>
                     <div class="text-center text-lg-start mt_30 " >
                         <a class=" see-more " href="du-an">xem thêm</a>
                     </div>
@@ -93,52 +55,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row mt-md-0 mt-4 ">
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class=" mb-4 col-sm-6 "  *ngFor="let pro of project  , let i = index"  >
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
                                             <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
                                         </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
-                                    </div>
-                                </div>
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
-                                        </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
-                                    </div>
-                                </div>
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
-                                        </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
-                                    </div>
-                                </div>
-                                <div class=" mb-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                        <div class="service-icon btn-square">
-                                            <img src="../../../../../assets/images/icon/iconproject2.png" alt="">
-                                        </div>
-                                        <h5 class="mb-3 max-2line ">Nghiên cứu và phát triển UAV</h5>
-                                        <p class="max-2line" >Phòng thí nghiệm thường tiến hành nghiên cứu về thiết kế, hiệu suất và ứng dụng của UAV.
-                                             Có thể tạo ra các mô hình drone mới, nâng cao khả năng bay và 
-                                             tích hợp công nghệ tiên tiến.</p>
-                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="">xem thêm</a>
+                                        <h5 class="mb-3 max-2line ">{{pro.name}}</h5>
+                                        <p class="max-2line" >{{pro.description}}</p>
+                                        <a class="btn px-md-3 px-0 mt-auto mx-auto text-capitalize see-more-item " href="du-an/chi-tiet">xem thêm</a>
                                     </div>
                                 </div>
                             </div>
