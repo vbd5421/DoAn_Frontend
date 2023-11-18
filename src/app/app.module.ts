@@ -70,6 +70,8 @@ import { PostsMoreComponent } from './modules/home/posts/posts-more/posts-more.c
 import { PostsDetailComponent } from './modules/home/posts/posts-detail/posts-detail.component';
 import { PostAddComponent } from './modules/admin/posts/post-add/post-add.component';
 import { PostControlComponent } from './modules/admin/posts/post-control/post-control.component';
+import { CateProjectAddComponent } from './modules/admin/cate-project/cate-project-add/cate-project-add.component';
+import { CateProjectControlComponent } from './modules/admin/cate-project/cate-project-control/cate-project-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -131,6 +133,8 @@ import { PostControlComponent } from './modules/admin/posts/post-control/post-co
     PostsDetailComponent,
     PostAddComponent,
     PostControlComponent,
+    CateProjectAddComponent,
+    CateProjectControlComponent,
 
   ],
   imports: [

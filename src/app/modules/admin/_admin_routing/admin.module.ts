@@ -17,7 +17,7 @@ const routes: Routes =[
     {path:'posts' , loadChildren:()=>import('./posts/posts.module').then(m=>m.PostsModule) },
     {path:'about-us' , loadChildren:()=>import('./about-us/about-us.module').then(m=>m.AboutUsModule)},
     {path:'slider' , loadChildren:()=>import('./slider/slider.module').then(m=>m.SliderModule)},
-    
+    {path:'cate-project' , loadChildren:()=>import('./cate-project/cate-project.module').then(m=>m.CateProjectModule)},
     ]},
 ]
 

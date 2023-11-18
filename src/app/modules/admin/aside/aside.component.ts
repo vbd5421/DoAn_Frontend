@@ -16,6 +16,12 @@ export class AsideComponent {
       id:1,
       name:"con số tiêu biểu",
       url: "typical-number",
+      icon:"fa-solid fa-list-ol"
+    },
+    {
+      id:8,
+      name:"chuyên mục dự án",
+      url: "cate-project",
       icon:"fa fa-bar-chart"
     },
     {
