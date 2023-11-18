@@ -12,6 +12,8 @@
     width: 100%;
     height: auto;
     border-radius: 5px;
+    max-height: 300px;
+    object-fit: contain;
   }
   .item-img {
     position: relative;
@@ -78,8 +80,8 @@
 
   @media (max-width:767.98px) {
     .col2{
-      flex: calc(100% / 3);
-      max-width: calc(100% / 3);
+      flex: calc(100% / 2);
+      max-width: calc(100% / 2);
     }
     .item-img{
       margin-top: 10px;
@@ -87,8 +89,8 @@
 }
 @media  (min-width:768px) and (max-width:991.98px) {
   .col2{
-    flex: calc(100% / 4);
-    max-width: calc(100% /4);
+    flex: calc(100% / 3);
+    max-width: calc(100% /3);
   }
   .item-img{
     margin-top: 10px;
