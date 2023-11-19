@@ -1,7 +1,10 @@
 export class Image {
-    id :number;
+    id :any;
     name:any;
     pathFile: any;
     pathUrl:any;
-    active:boolean;
+    type:any;
+    active:any;
+    target: any;
+    originalFileName:any;
 }

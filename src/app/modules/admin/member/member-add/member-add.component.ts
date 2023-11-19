@@ -61,11 +61,11 @@ export class MemberAddComponent {
     if (this.id) {
       this.getMemberById(this.id)
     }
-   console.log(this.member)
   }
   getMemberById(id:number){
     this.memberService.getId(id).subscribe((data) => {
       this.member = data;
+      console.log(this.member)
       this.url = this.member.image?.pathUrl;
       this.imageURL = `${this.baseURL}/${this.membertURL}/image/${this.id}`;
       this.formMember.controls['ten'].setValue(this.member.fullName);

@@ -564,10 +564,11 @@ text-overflow: ellipsis;
   opacity: 1;
 } 
 
-
+/*  */
 .mt-header{
   margin-top: auto;
 }
+/* quill editor */
 @media (min-width:992px) {
   .mt-header{
       margin-top: 172px;
@@ -583,4 +584,22 @@ text-overflow: ellipsis;
 }
 
 /* quill editor */
-
+/* phân trang css */
+.ngx-pagination li.current{
+  background: #192a56;
+}
+.ngx-pagination li{
+  border: 1px solid #cecece;
+  border-radius: 5px !important;
+}
+.ngx-pagination li:not(:last-child){
+  margin-right: 8px !important;
+}
+.ngx-pagination .pagination-next a::after ,
+.ngx-pagination .pagination-next.disabled::after{
+  display: none !important;
+}
+.ngx-pagination .pagination-previous a:before, .ngx-pagination .pagination-previous.disabled:before{
+  display: none !important;
+}
+/* hết */

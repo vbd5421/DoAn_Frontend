@@ -67,6 +67,12 @@ export class AsideComponent {
       icon:"fa-regular fa-address-card"
     },
     {
+      id:9,
+      name:"trang liên kết",
+      url:"link-web",
+      icon:"fa-solid fa-link"
+    },
+    {
       id:12,
       name: "Tài khoản",
       url: "user",
