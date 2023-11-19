@@ -18,6 +18,7 @@ const routes: Routes =[
     {path:'about-us' , loadChildren:()=>import('./about-us/about-us.module').then(m=>m.AboutUsModule)},
     {path:'slider' , loadChildren:()=>import('./slider/slider.module').then(m=>m.SliderModule)},
     {path:'cate-project' , loadChildren:()=>import('./cate-project/cate-project.module').then(m=>m.CateProjectModule)},
+    {path:'link-web', loadChildren:()=>import('./link-web/link-web.module').then(m=>m.LinkWebModule)},
     ]},
 ]
 

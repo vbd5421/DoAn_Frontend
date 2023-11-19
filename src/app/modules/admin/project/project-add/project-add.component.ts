@@ -55,6 +55,7 @@ export class ProjectAddComponent implements OnInit {
     else{
       this.listAllMember()
     }
+    console.log(this.listMember , 'member')
   }
   getProjectById(id:number){
     this.projectService.getId(id).subscribe((data) => {
@@ -112,7 +113,6 @@ export class ProjectAddComponent implements OnInit {
     formData.append('project',
       new Blob([JSON.stringify(project)], { type: 'application/json' })
     );
-    console.log(formData);
    // formData.append('imageFile', this.fileToUpload, this.fileToUpload.name);
    for (let i = 0; i < this.fileToUpload.length; i++) {
     formData.append(
@@ -169,7 +169,7 @@ export class ProjectAddComponent implements OnInit {
   // member
   memberUpdate(pro:Project){
     this.memberService.getListAllPage().subscribe((data) => {
-      this.listMember = data.content;
+      this.listMember = data; //.content
       if (pro.members != null) {
         const sid = pro.members.map((item) => item.id);
         for (let i = 0; i < sid.length; i++) {
@@ -182,8 +182,8 @@ export class ProjectAddComponent implements OnInit {
   }
   listAllMember(){
     this.memberService.getListAllPage().subscribe(data=>{
-      this.listMember=data.content
-      console.log(this.listMember)
+      this.listMember=data; //.content
+      console.log(this.listMember , 'member')
     })
   }
 

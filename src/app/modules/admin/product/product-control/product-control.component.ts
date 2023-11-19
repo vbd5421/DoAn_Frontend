@@ -13,7 +13,6 @@ import { ProductService } from 'src/app/service/product/product.service';
 })
 export class ProductControlComponent {
   products: Product[] = [];
-  totalPages: number;
   searchInput = '';
   baseURL = Constant.BASE_URL;
   productURL = Domain.PRODUCT;
@@ -23,7 +22,6 @@ export class ProductControlComponent {
     totalRecord: 0
   }
   constructor(private router: Router,
-    private auth: AuthService, 
     private productService: ProductService) {
   }
   ngOnInit(): void {
@@ -50,7 +48,6 @@ export class ProductControlComponent {
     this.productService.getListAllPage(params).subscribe(data => {
       this.products = data.content;
       this.paging.totalRecord = data.totalElements;
-      this.totalPages = data.totalPages;
       console.log('sản phẩm' , this.products)
     },
       error => {

@@ -9,9 +9,10 @@ public static PRODUCT = `api/product`;
 public static PROJECT = `api/project`;
 public static MEMBER=`api/member`;
 public static ADDRESS = `api/address`;
-public static IMAGE = `api/image`;
+public static IMAGE = `s/file`;
 public static ABOUT_US = `api/about`;
 public static POSTS = `api/post`;
 public static SLIDERS = `api/sliders`;
 public static CATE_PROJECT=`api/cateproject`;
+public static LINK_WEB = `api/link`;
 }

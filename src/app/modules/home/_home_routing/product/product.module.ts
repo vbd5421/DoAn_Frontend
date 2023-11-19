@@ -6,7 +6,7 @@ import { ProductDetailComponent } from '../../product/product-detail/product-det
 
 const routes: Routes=[
   {path:'' ,component:ProductListComponent },
-  {path:'chi-tiet' , component:ProductDetailComponent}
+  {path:':url' , component:ProductDetailComponent}
 ]
 
 

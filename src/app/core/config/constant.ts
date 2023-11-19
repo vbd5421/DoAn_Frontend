@@ -50,6 +50,7 @@ export class Constant {
         ADD_PRODUCT:`${Domain.PRODUCT}/create`,
         UPDATE_PRODUCT: `${Domain.PRODUCT}/update`,
         DELETE_PRODUCT: `${Domain.PRODUCT}/delete`,
+        GET_PRODUCT_BY_URL:`${Domain.PRODUCT}`,
     }
     public static MEMBER={
         GET_ID:`${Domain.MEMBER}`,
@@ -73,4 +74,14 @@ export class Constant {
         DELETE :`${Domain.CATE_PROJECT}/delete`,
         UPDATE :`${Domain.CATE_PROJECT}/update`,
     }
+    public static IMAGE={
+        DOWNLOAD_FILE : `${Domain.IMAGE}/downloadFile`,
+        ADD_IMAGE: `${Domain.IMAGE}/add`,
+        DELETE_FILE: `${Domain.IMAGE}/deleteFile`,
+        GET_FILE_BY_ID: `${Domain.IMAGE}`,
+        GET_ALL_IMAGE: `${Domain.IMAGE}/image/all`,
+        UPDATE_IMAGE: `${Domain.IMAGE}/image/update`,
+        GET_LISTALL_WITH_PAGE: `${Domain.IMAGE}/image`,
+        GET_LIST_ALL: `${Domain.IMAGE}/image/all`,
+      }
 }

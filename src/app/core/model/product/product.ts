@@ -7,7 +7,7 @@ export class Product {
     content:any;
     date:any;
     image:any;
-    url:any;
+    url:string;
     active:boolean;
     //members: Member[]=[];
 }

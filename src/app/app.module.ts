@@ -72,6 +72,8 @@ import { PostAddComponent } from './modules/admin/posts/post-add/post-add.compon
 import { PostControlComponent } from './modules/admin/posts/post-control/post-control.component';
 import { CateProjectAddComponent } from './modules/admin/cate-project/cate-project-add/cate-project-add.component';
 import { CateProjectControlComponent } from './modules/admin/cate-project/cate-project-control/cate-project-control.component';
+import { LinkWebAddComponent } from './modules/admin/link-web/link-web-add/link-web-add.component';
+import { LinkWebControlComponent } from './modules/admin/link-web/link-web-control/link-web-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -135,6 +137,8 @@ import { CateProjectControlComponent } from './modules/admin/cate-project/cate-p
     PostControlComponent,
     CateProjectAddComponent,
     CateProjectControlComponent,
+    LinkWebAddComponent,
+    LinkWebControlComponent,
 
   ],
   imports: [

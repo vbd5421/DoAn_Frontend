@@ -21,15 +21,17 @@
   }
 
   .text-input{
-    border: 1px solid #212529;
+    border: 1px solid #d5d6d7;
     color: black;
   }
   .input-custom{
-    
     padding: 10px;
-    border: 1px solid #212529;
+    border: 1px solid #d5d6d7;
     color: rgb(9, 9, 9);
     border-radius: 5px;
+  }
+  .input-custom:focus-visible{
+    border: 1px solid #414141;
   }
   .input-select-icon{
     margin-top: 0px;
