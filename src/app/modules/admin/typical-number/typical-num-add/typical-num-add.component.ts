@@ -67,7 +67,7 @@ export class TypicalNumAddComponent {
 
   update(id: number, tNumber: TypicalNumber) {
     this.numService.updateNumber(tNumber, id).subscribe(() => {
-        this.toast.showSuccess();
+        this.toast.showUpdate()
         this.rollbackToList();
       },
       (error) => {

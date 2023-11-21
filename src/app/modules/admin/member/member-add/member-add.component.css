@@ -1,15 +1,4 @@
-.box-icon{
-    background-color: #009dff;
-    color: whitesmoke;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    font-size: 48px;
-    line-height: 100px;
-    text-align: center;
-    border-radius: 50%;
-    transition: background-color 0.3s ease 0s;
-  }
+
   .box{
     display: flex;
     align-content: space-around;
@@ -123,6 +112,7 @@
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 600;
+    margin-bottom: 5px;
   }
   
   .editor-quill::ng-deep .ql-snow .ql-editor h1 {
@@ -176,5 +166,81 @@
     margin: 0 3px;
   }
   .box-input:not(:last-child){
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
+
+  
+  /* input css */
+
+.label-custom{
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.custom-field {
+  position: relative;
+  margin-bottom: 10px;
+  display: inline-block;
+  --field-padding: 12px;
+}
+
+.custom-field .input-field {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: 0px;
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* top: 22px; */
+  top: -15px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  /* color: #aaa; */
+  color: #222;
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.custom-field .input-field.dirty + .placeholder,
+.custom-field .input-field:focus + .placeholder,
+.custom-field .input-field:not(:placeholder-shown) + .placeholder  {
+  /* top: -10px; */
+  font-weight: 700;
+  color: #222;
+  left: 0px;
+}
+
+/* TWO */
+.custom-field.two .input-field {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.custom-field.two .input-field.dirty,
+.custom-field.two .input-field:not(:placeholder-shown),
+.custom-field.two .input-field:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}

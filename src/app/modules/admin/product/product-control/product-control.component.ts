@@ -5,6 +5,7 @@ import { Domain } from 'src/app/core/domain/domain';
 import { Product } from 'src/app/core/model/product/product';
 import { AuthService } from 'src/app/service/auth/auth.service';
 import { ProductService } from 'src/app/service/product/product.service';
+import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
   selector: 'app-product-control',
@@ -22,7 +23,8 @@ export class ProductControlComponent {
     totalRecord: 0
   }
   constructor(private router: Router,
-    private productService: ProductService) {
+    private productService: ProductService ,
+      private toastr:ToastService) {
   }
   ngOnInit(): void {
     this.getProductListAllwithPage();
@@ -78,6 +80,7 @@ export class ProductControlComponent {
     if (option) {
       this.productService.deleteProduct(id).subscribe(data => {
         this.getProductListAllwithPage();
+        this.toastr.showDelete();
       })
     }
   }

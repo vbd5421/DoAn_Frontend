@@ -1,1 +1,54 @@
-<p>link-web-add works!</p>
+<div class="toolbar"></div>
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="formLink" enctype="multipart/form-data" novalidate
+        class="form-cate-add mt_30">
+        <div class=" mb_60">
+            <div class="title">
+                <p class="cate-name fs-5">CHUYÊN MỤC</p>
+            </div>
+            <div class="mt_80">
+                <div class="row justify-content-center ">
+                    <div class="col-md-8 ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mx-4 mx-md-0 ">
+                                    <label class="custom-field two w-100">
+                                        <input placeholder="&nbsp;" class=" input-field" type="text"
+                                            formControlName="name" name="name"
+                                            [class.borderError]="!formLink.controls.name.valid&&!formLink.controls.name.untouched"
+                                            [class.text-input]="formLink.controls.name.valid||formLink.controls.name.untouched" />
+                                        <span class="placeholder label-custom lh-base "><span
+                                                class="validateText">*</span>tên trang liên kết</span>
+                                    </label>
+                                    <p *ngIf="!formLink.controls.name.valid&&!formLink.controls.name.untouched"
+                                        class="validateText">Thông tin không thể bỏ trống</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-5 mt-md-0 ">
+                                <div class="mx-4 mx-md-0 ">
+                                    <label class="custom-field two w-100">
+                                        <input placeholder="&nbsp;" class="input-field" type="text"
+                                            formControlName="linkUrl" name="linkUrl"
+                                            [class.borderError]="!formLink.controls.linkUrl.valid&&!formLink.controls.linkUrl.untouched"
+                                            [class.text-input]="formLink.controls.linkUrl.valid||formLink.controls.linkUrl.untouched" />
+                                        <span class="placeholder label-custom lh-base "><span
+                                                class="validateText">*</span>đường dẫn trang liên kết</span>
+                                    </label>
+                                    <p *ngIf="!formLink.controls.linkUrl.valid&&!formLink.controls.linkUrl.untouched"
+                                        class="validateText">Thông tin không thể bỏ trống</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-button mt_15 mb-4 text-center mt_60 ">
+                            <button type="submit" class="btn btn-primary btn-lg me-3 "
+                                [disabled]="!formLink.valid">Lưu</button>
+                            <button type="button" class="btn btn-secondary btn-lg  cancel"
+                                (click)="cancel()">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

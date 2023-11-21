@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CateProject } from 'src/app/core/model/cate-project/cate-project';
@@ -10,11 +10,10 @@ import { ToastService } from 'src/app/service/toast/toast.service';
   templateUrl: './cate-project-add.component.html',
   styleUrls: ['./cate-project-add.component.css']
 })
-export class CateProjectAddComponent {
+export class CateProjectAddComponent implements OnInit {
   cateProject: CateProject = new CateProject();
   message = '';
   id: number;
-  formData: any;
   catogaryControl = new FormControl('', Validators.required);
 
   constructor(
@@ -44,7 +43,7 @@ export class CateProjectAddComponent {
   }
 
   cancel() {
-    this.router.navigate(['/admin/category']);
+    window.history.back()
   }
 
   update(id: number, category: CateProject) {

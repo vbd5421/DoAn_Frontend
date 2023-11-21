@@ -2,6 +2,7 @@ import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {RouterModule, Routes} from "@angular/router";
 import { AdminControlComponent } from "../admin-control/admin-control.component";
+import { ContactControlComponent } from "../contact-control/contact-control.component";
 
 const routes: Routes =[
 
@@ -19,6 +20,7 @@ const routes: Routes =[
     {path:'slider' , loadChildren:()=>import('./slider/slider.module').then(m=>m.SliderModule)},
     {path:'cate-project' , loadChildren:()=>import('./cate-project/cate-project.module').then(m=>m.CateProjectModule)},
     {path:'link-web', loadChildren:()=>import('./link-web/link-web.module').then(m=>m.LinkWebModule)},
+    {path:'contact' , component:ContactControlComponent},
     ]},
 ]
 

@@ -4,79 +4,6 @@
     box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.06);
   }
 
-  .label-custom{
-    font-size: 16px;
-    text-transform: uppercase;
-    color: black;
-    margin-bottom: 5px;
-    font-weight: 700;
-  }
-  .custom-field {
-    position: relative;
-    font-size: 14px;
-    border-top: 20px solid transparent;
-    margin-bottom: 10px;
-    display: inline-block;
-    --field-padding: 12px;
-  }
-  
-.custom-field input {
-    border: none;
-    -webkit-appearance: none;
-    -ms-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #f2f2f2;
-    padding: var(--field-padding);
-    border-radius: 3px;
-    width: 250px;
-    outline: none;
-    font-size: 14px;
-  }
-  
-.custom-field .placeholder {
-    position: absolute;
-    left: var(--field-padding);
-    width: calc(100% - (var(--field-padding) * 2));
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    top: 22px;
-    line-height: 100%;
-    transform: translateY(-50%);
-    color: #aaa;
-    transition: 
-      top 0.3s ease,
-      color 0.3s ease,
-      font-size 0.3s ease;
-  }
-  
-  .custom-field input.dirty + .placeholder,
-  .custom-field input:focus + .placeholder,
-  .custom-field input:not(:placeholder-shown) + .placeholder {
-    top: -10px;
-    font-weight: 700;
-    color: #222;
-    left: 0px;
-  }
-
-/* TWO */
-.custom-field.two input {
-    border-radius: 0;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background:
-      linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
-      linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
-      linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
-    transition: background-size 0.3s ease;
-  }
-  
-  .custom-field.two input.dirty,
-  .custom-field.two input:not(:placeholder-shown),
-  .custom-field.two input:focus {
-    background-size: 100% 0.15em, 100% 0.1em, 100%;
-  }
   .address{
     background: #e9e9e9;
     border-radius: 5px;
@@ -102,3 +29,97 @@
   .w-40{
     width: 40% !important;
   }
+  .nhungvideo:hover{
+    text-decoration: underline;
+  }
+  .box-input{
+    margin-bottom: 30px;
+  }
+  @media only screen and (max-width: 767.8px) {
+    
+    .box-input{
+      margin-left: 1.5rem !important ;
+      margin-right: 1.5rem !important;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .box-input{
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+    /* input css */
+
+.label-custom{
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.custom-field {
+  position: relative;
+  margin-bottom: 10px;
+  display: inline-block;
+  --field-padding: 12px;
+}
+
+.custom-field .input-field {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: 0px;
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* top: 22px; */
+  top: -15px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  /* color: #aaa; */
+  color: #222;
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.custom-field .input-field.dirty + .placeholder,
+.custom-field .input-field:focus + .placeholder,
+.custom-field .input-field:not(:placeholder-shown) + .placeholder  {
+  /* top: -10px; */
+  font-weight: 700;
+  color: #222;
+  left: 0px;
+}
+
+/* TWO */
+.custom-field.two .input-field {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.custom-field.two .input-field.dirty,
+.custom-field.two .input-field:not(:placeholder-shown),
+.custom-field.two .input-field:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}

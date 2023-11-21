@@ -4,3 +4,6 @@
     line-height: 1.2;
     color: white;
 }
+.counter-number::before{
+    content: "+";
+}

@@ -7,7 +7,8 @@ export class User {
     password:any;
     firstName:any;
     lastName:any;
-    active:any;
-    role:Role;
+    active=false;
+    //role:Role;
     token: any;
+    roles:Role[]=[]
 }

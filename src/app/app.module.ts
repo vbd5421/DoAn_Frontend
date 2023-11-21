@@ -74,6 +74,7 @@ import { CateProjectAddComponent } from './modules/admin/cate-project/cate-proje
 import { CateProjectControlComponent } from './modules/admin/cate-project/cate-project-control/cate-project-control.component';
 import { LinkWebAddComponent } from './modules/admin/link-web/link-web-add/link-web-add.component';
 import { LinkWebControlComponent } from './modules/admin/link-web/link-web-control/link-web-control.component';
+import { ContactControlComponent } from './modules/admin/contact-control/contact-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -139,6 +140,7 @@ import { LinkWebControlComponent } from './modules/admin/link-web/link-web-contr
     CateProjectControlComponent,
     LinkWebAddComponent,
     LinkWebControlComponent,
+    ContactControlComponent,
 
   ],
   imports: [

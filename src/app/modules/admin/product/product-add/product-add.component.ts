@@ -100,7 +100,7 @@ export class ProductAddComponent {
     const proFormData = this.prepareFormData(this.products);
     this.productService.updateProduct(id, proFormData).subscribe(
       (data) => {
-        this.toast.showSuccess();
+        this.toast.showUpdate();
         console.log(data);
         this.backToProductList();
       },

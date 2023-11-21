@@ -73,6 +73,12 @@ export class AsideComponent {
       icon:"fa-solid fa-link"
     },
     {
+      id:10,
+      name:"danh sách liên hệ",
+      url:"contact",
+      icon:"fa-regular fa-rectangle-list"
+    },
+    {
       id:12,
       name: "Tài khoản",
       url: "user",

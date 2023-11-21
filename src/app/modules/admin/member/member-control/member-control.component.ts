@@ -5,6 +5,7 @@ import { Domain } from 'src/app/core/domain/domain';
 import { Member } from 'src/app/core/model/member/member';
 import { AuthService } from 'src/app/service/auth/auth.service';
 import { MemberService } from 'src/app/service/member/member.service';
+import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
   selector: 'app-member-control',
@@ -31,7 +32,8 @@ export class MemberControlComponent {
   }
   constructor(private router: Router,
     private auth: AuthService, 
-    private memberService: MemberService) {
+    private memberService: MemberService,
+    private toast:ToastService) {
   }
   ngOnInit(): void {
     this.getMemberListAllwithPage();
@@ -93,6 +95,7 @@ export class MemberControlComponent {
     if (option) {
       this.memberService.deleteMember(id).subscribe(() => {
         this.getMemberListAllwithPage();
+        this.toast.showDelete()
       })
     }
   }

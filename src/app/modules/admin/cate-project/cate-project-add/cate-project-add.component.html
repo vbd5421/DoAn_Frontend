@@ -1,23 +1,34 @@
 <div class="toolbar"></div>
 
-
-<div class="category-add contact-inner ">
-    <form (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate class="form-cate-add">
-        <div class="title">
-            <p class="cate-name fs-5">CHUYÊN MỤC</p>
-        </div>
-        <label for="name">
-            <input type="text" name="typeName" id="typeName" [formControl]="catogaryControl"
-                placeholder="Nhập tên chuyên mục " class="input-custom  w-100 "
-                [class.borderError]="!catogaryControl.valid&&!catogaryControl.untouched"
-                [class.text-input]="catogaryControl.valid||catogaryControl.untouched" required>
-            <p *ngIf="!catogaryControl.valid&&!catogaryControl.untouched" class="validateText">Tên chuyên mục không thể
-                bỏ trống</p>
-
-        </label>
-        <div class="submit-button" class="section-space--mt_15 mb-4">
-            <button type="submit" class="btn btn-primary btn-lg btnn" [disabled]="!catogaryControl.valid">Lưu</button>
-            <button type="button" class="btn btn-secondary btn-lg btnn cancel" (click)="cancel()">Hủy</button>
+<div class="container">
+    <form (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate class="form-cate-add mt_30">
+        <div class=" mb_60">
+            <div class="title">
+                <p class="cate-name fs-5">CHUYÊN MỤC</p>
+            </div>
+            <div class="mt-5">
+                <div class="row justify-content-center ">
+                    <div class="col-sm-8 text-center ">
+                        <label class="custom-field two w-100">
+                            <input placeholder="&nbsp;" class=" input-field" type="text" name="typeName"
+                                [formControl]="catogaryControl"
+                                [class.borderError]="!catogaryControl.valid&&!catogaryControl.untouched"
+                                [class.text-input]="catogaryControl.valid||catogaryControl.untouched" required />
+                            <span class="placeholder label-custom lh-base "><span class="validateText">*</span>tên
+                                chuyên mục dự án</span>
+                        </label>
+                        <p *ngIf="!catogaryControl.valid&&!catogaryControl.untouched" class="validateText">Tên chuyên
+                            mục không thể
+                            bỏ trống</p>
+                        <div class="submit-button" class="mt_15 mb-4">
+                            <button type="submit" class="btn btn-primary btn-lg me-3 "
+                                [disabled]="!catogaryControl.valid">Lưu</button>
+                            <button type="button" class="btn btn-secondary btn-lg  cancel"
+                                (click)="cancel()">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 </div>

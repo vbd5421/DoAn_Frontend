@@ -32,25 +32,27 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="mt-3 mt-lg-0 mx-md-0 mx-4 ">
-                  <label class="form-label"><span class="validateText">*</span>Số</label>
-                  <input class=" input-custom   w-100   "
-                    [class.borderError]="!formNumber.controls.numberic.valid&&!formNumber.controls.numberic.untouched"
-                    [class.text-input]="formNumber.controls.numberic.valid||formNumber.controls.numberic.untouched"
-                    id="typeNumber" type="number" formControlName="numberic" name="number"
-                    placeholder="Hãy nhập ký tự số">
+                <div class="mt-5 mt-lg-0 mx-md-0 mx-4 ">
+                  <label class="custom-field two w-100">
+                    <input placeholder="&nbsp;" class="w-100 input-field" name="number"
+                      [class.borderError]="!formNumber.controls.numberic.valid&&!formNumber.controls.numberic.untouched"
+                      [class.text-input]="formNumber.controls.numberic.valid||formNumber.controls.numberic.untouched"
+                      id="typeNumber" type="number" formControlName="numberic" />
+                    <span class="placeholder label-custom lh-base "><span class="validateText">*</span>số</span>
+                  </label>
                   <p *ngIf="!formNumber.controls.numberic.valid&&!formNumber.controls.numberic.untouched"
-                    class="validateText">Thông tin không thể bỏ trống</p>
+                    class="validateText mb-0">Thông tin không thể bỏ trống</p>
                 </div>
-                <div class="mt-3 mt-md-4 mx-md-0 mx-4 ">
-                  <label class="form-label"><span class="validateText">*</span>Mô tả</label>
-                  <textarea class="input-custom w-100    "
-                    [class.borderError]="!formNumber.controls.description.valid&&!formNumber.controls.description.untouched"
-                    [class.text-input]="formNumber.controls.description.valid||formNumber.controls.description.untouched"
-                    formControlName="description" id="description" name="description"
-                    placeholder="Nhập mô tả"></textarea>
+                <div class="mt-4 mt-md-4 mx-md-0 mx-4 ">
+                    <label class="custom-field two w-100 mb-0 ">
+                      <textarea placeholder="&nbsp;" class="w-100 input-field " style="height: 150px;"
+                      [class.borderError]="!formNumber.controls.description.valid&&!formNumber.controls.description.untouched"
+                      [class.text-input]="formNumber.controls.description.valid||formNumber.controls.description.untouched"
+                      formControlName="description" id="description" name="description"></textarea>
+                      <span class="placeholder label-custom lh-base "><span class="validateText">*</span>mô tả</span>
+                    </label>
                   <p *ngIf="!formNumber.controls.description.valid&&!formNumber.controls.description.untouched"
-                    class="validateText">Thông tin không thể bỏ trống</p>
+                    class="validateText mb-0">Thông tin không thể bỏ trống</p>
                 </div>
               </div>
               <div class="col-lg-4 col-md-5 col-8 col-ms-6 mt-4 mb_30 mx-auto">

@@ -14,6 +14,9 @@ export class ToastService {
   showUpdate() {
     this.toast.info('Bạn đã cập nhật thành công');
   }
+  showDelete(){
+    this.toast.success('Bạn đã xóa thành công');
+  }
   showWarning(error: any) {
       this.toast.warning('error')
   }
