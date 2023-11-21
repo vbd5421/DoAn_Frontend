@@ -10,9 +10,10 @@
 .image {
     display: block;
     width: 100%;
-    height: auto;
+    height: 280px;
     border-radius: 5px;
-    max-height: 300px;
+    /* max-height: 300px;
+    min-height: 280px; */
     object-fit: contain;
   }
   .item-img {

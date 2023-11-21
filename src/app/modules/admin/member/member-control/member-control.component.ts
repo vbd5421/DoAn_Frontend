@@ -63,6 +63,7 @@ export class MemberControlComponent {
   getMemberListAllwithPage(){
     const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput.name ,  this.searchInput.position,this.searchInput.degree )
     this.memberService.getListAllPage(params).subscribe(data => {
+      console.log(data)
       this.listMember = data.content;
       this.paging.totalRecord = data.totalElements;
       console.log('thành viên' , this.listMember)

@@ -168,7 +168,7 @@ export class ProjectAddComponent implements OnInit {
   // member
   memberUpdate(pro:Project){
     this.memberService.getListAllPage().subscribe((data) => {
-      this.listMember = data; //.content
+      this.listMember = data.content; //.content
       if (pro.members != null) {
         const sid = pro.members.map((item) => item.id);
         for (let i = 0; i < sid.length; i++) {
@@ -181,7 +181,8 @@ export class ProjectAddComponent implements OnInit {
   }
   listAllMember(){
     this.memberService.getListAllPage().subscribe(data=>{
-      this.listMember=data; //.content
+      console.log(data)
+      this.listMember=data.content; //.content
       console.log(this.listMember , 'member')
     })
   }
