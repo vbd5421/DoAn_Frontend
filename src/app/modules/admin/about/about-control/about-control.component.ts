@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AboutUs } from 'src/app/core/model/about-us/about-us';
 import { Address } from 'src/app/core/model/address/address';
+import { AboutUsService } from 'src/app/service/about-us/about-us.service';
+import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
   selector: 'app-about-control',
@@ -10,17 +13,15 @@ import { Address } from 'src/app/core/model/address/address';
 export class AboutControlComponent {
   addressList: Address[] = [];
   about: AboutUs = new AboutUs();
-  // about : About[]=[];
-  ckeConfig: any;
-
+  
   constructor(
-    // private about_usService: ,
+    private aboutService: AboutUsService,
     // private addressService: AddressService,
-    // private router: Router,
-    // public toast: ToastrService,
-    // private toastService: ToastService
+    private router: Router,
+    private toastService: ToastService
   ) {}
   ngOnInit(): void {
+    this.addAbout_us();
     this.getistAllInformation();
     this.getListAddress();
   }
@@ -47,23 +48,26 @@ export class AboutControlComponent {
     },
   }
   addAbout_us() {
-    // this.about_usService.createInformation(this.about).subscribe(
-    //   () => {
-    //     this.toastService.showSuccess();
-    //   },
-    //   (error) => {
-    //     this.toastService.showWarning(error.error);
-    //     console.log(error.error);
-    //   }
-    // );
+    this.aboutService.createInformation(this.about).subscribe(() => {
+        this.toastService.showSuccess();
+        setTimeout(() => {
+          location.reload()
+         }, 800);
+      },
+      error => {
+        // this.toastService.showWarning(error.error);
+        console.log(error);
+      }
+    );
   }
 
   getistAllInformation() {
-    // this.about_usService.getAllInformation().subscribe((res) => {
-    //   if (res != null) {
-    //     this.about = res;
-    //   }
-    // });
+    this.aboutService.getAllInformation().subscribe((res) => {
+      if (res != null) {
+        this.about = res;
+      }
+      console.log(res)
+    });
   }
 
   getListAddress() {

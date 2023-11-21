@@ -4,6 +4,7 @@ import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
 import { Project } from 'src/app/core/model/project/project';
 import { ProjectService } from 'src/app/service/project/project.service';
+import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
   selector: 'app-project-control',
@@ -22,7 +23,8 @@ export class ProjectControlComponent {
   }
 
   constructor(private projectService: ProjectService,
-    private router: Router) {
+    private router: Router ,
+    private toastService: ToastService) {
   }
   ngOnInit(): void {
     this.getAllWithPageProject();
@@ -81,6 +83,7 @@ export class ProjectControlComponent {
     if (cf) {
       this.projectService.deleteProject(id).subscribe(() => {
         this.getAllWithPageProject();
+        this.toastService.showDelete()
       })
     }
   }

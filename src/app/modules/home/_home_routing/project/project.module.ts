@@ -6,8 +6,8 @@ import { ProjectDetailComponent } from '../../project/project-detail/project-det
 import { Error404Component } from 'src/app/authentication/error404/error404.component';
 
 const routes: Routes=[
-  {path:'' ,component:Error404Component},
-  {path:'danh-sach' ,component:ProjectListComponent },
+  //{path:'' ,component:Error404Component},
+  {path:'' ,component:ProjectListComponent },
   {path:'chi-tiet' , component:ProjectDetailComponent}
 ]
 

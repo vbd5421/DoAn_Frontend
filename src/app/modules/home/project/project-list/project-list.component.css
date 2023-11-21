@@ -144,6 +144,7 @@ option{
   color: #000000;
   padding: 15px;
 }
+
 @keyframes bounce {
   25% {
     transform: translatey(5px);

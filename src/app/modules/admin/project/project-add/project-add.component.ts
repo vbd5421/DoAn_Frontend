@@ -55,7 +55,6 @@ export class ProjectAddComponent implements OnInit {
     else{
       this.listAllMember()
     }
-    console.log(this.listMember , 'member')
   }
   getProjectById(id:number){
     this.projectService.getId(id).subscribe((data) => {
@@ -128,7 +127,7 @@ export class ProjectAddComponent implements OnInit {
     const projectFormData = this.prepareFormData(this.project);
     this.projectService.updateProject(id, projectFormData).subscribe(
       (data) => {
-        this.toastService.showSuccess();
+        this.toastService.showUpdate();
         this.goToBack();
       },
       (error) => {

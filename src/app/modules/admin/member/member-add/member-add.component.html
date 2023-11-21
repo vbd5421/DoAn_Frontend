@@ -27,79 +27,106 @@
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <div class=" mx-md-0 mx-4 box-input ">
-                                    <label class="form-label"><span class="validateText">*</span>tên thành viên</label>
-                                    <input class="input-custom  w-100 " placeholder="Nhập tên thành viên" type="text"
-                                        formControlName="ten" name="fullName"
-                                        [class.borderError]="!formMember.controls.ten.valid&&!formMember.controls.ten.untouched"
-                                        [class.text-input]="formMember.controls.ten.valid||formMember.controls.ten.untouched">
+                                <div class=" mt_30 mx-md-0 mx-4 box-input ">
+                                    <label class="custom-field two w-100">
+                                        <input placeholder="&nbsp;" class="w-100 input-field" type="text"
+                                            formControlName="ten" name="fullName"
+                                            [class.borderError]="!formMember.controls.ten.valid&&!formMember.controls.ten.untouched"
+                                            [class.text-input]="formMember.controls.ten.valid||formMember.controls.ten.untouched" />
+                                        <span class="placeholder label-custom lh-base "><span
+                                                class="validateText">*</span>tên thành viên</span>
+                                    </label>
                                     <p *ngIf="!formMember.controls.ten.valid&&!formMember.controls.ten.untouched"
                                         class="validateText">
-                                        Tên không thể bỏ trống</p>
+                                        Thông tin không thể bỏ trống</p>
                                 </div>
                                 <div class=" mx-md-0 mx-4 box-input ">
-                                    <label class="form-label"><span class="validateText">*</span>chức vụ</label>
-                                    <input class="input-custom  w-100 " placeholder="Nhập chức vụ thành viên"
-                                        type="text" formControlName="chucVu" name="position"
-                                        [class.borderError]="!formMember.controls.chucVu.valid&&!formMember.controls.chucVu.untouched"
-                                        [class.text-input]="formMember.controls.chucVu.valid||formMember.controls.chucVu.untouched">
+                                    <label class="custom-field two w-100">
+                                        <input placeholder="&nbsp;" class="w-100 input-field" type="text"
+                                            formControlName="chucVu" name="position"
+                                            [class.borderError]="!formMember.controls.chucVu.valid&&!formMember.controls.chucVu.untouched"
+                                            [class.text-input]="formMember.controls.chucVu.valid||formMember.controls.chucVu.untouched" />
+                                        <span class="placeholder label-custom lh-base "><span
+                                                class="validateText">*</span>chức vụ</span>
+                                    </label>
                                     <p *ngIf="!formMember.controls.chucVu.valid&&!formMember.controls.chucVu.untouched"
                                         class="validateText">
-                                        Chức vụ không thể bỏ trống</p>
+                                        Thông tin không thể bỏ trống</p>
                                 </div>
                                 <div class=" mx-md-0 mx-4 box-input ">
-                                    <label class="form-label">học vị</label>
-                                    <input class="input-custom  w-100 " placeholder="Nhập tên thành viên" type="text"
-                                        name="degree" [ngModelOptions]="{standalone: true}" [(ngModel)]="member.degree">
-
+                                    <label class="custom-field two w-100">
+                                        <input placeholder="&nbsp;" class="w-100 input-field" type="text" name="degree"
+                                            [ngModelOptions]="{standalone: true}" [(ngModel)]="member.degree" />
+                                        <span class="placeholder label-custom lh-base ">học vị
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-12 mt-md-4 mt-3 ">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class=" mx-md-0 mx-4 box-input ">
-                                            <label class="form-label"><span class="validateText">*</span>năm tham gia</label>
-                                            <input class="input-custom  w-100 " placeholder="Nhập năm tham gia"
-                                                type="date" formControlName="namThamgGia" name="timeJoin"
-                                                [class.borderError]="!formMember.controls.namThamgGia.valid&&!formMember.controls.namThamgGia.untouched"
-                                                [class.text-input]="formMember.controls.namThamgGia.valid||formMember.controls.namThamgGia.untouched">
+                                        <div class=" mx-md-0 mx-4 box-input mt_30 ">
+                                            <label class="custom-field two w-100">
+                                                <input placeholder="&nbsp;" class="w-100 input-field" type="date"
+                                                    formControlName="namThamgGia" name="timeJoin"
+                                                    [class.borderError]="!formMember.controls.namThamgGia.valid&&!formMember.controls.namThamgGia.untouched"
+                                                    [class.text-input]="formMember.controls.namThamgGia.valid||formMember.controls.namThamgGia.untouched" />
+                                                <span class="placeholder label-custom lh-base "><span
+                                                        class="validateText">*</span>năm tham
+                                                    gia</span>
+                                            </label>
                                             <p *ngIf="!formMember.controls.namThamgGia.valid&&!formMember.controls.namThamgGia.untouched"
                                                 class="validateText">
-                                                Năm tham gia không thể bỏ trống</p>
+                                                Thông tin không thể bỏ trống</p>
                                         </div>
                                         <div class=" mx-md-0 mx-4 box-input ">
-                                            <label class="form-label">năm sinh</label>
-                                            <input class="input-custom  w-100 " placeholder="Nhập tên thành viên"
-                                                type="date" name="birthDate" [ngModelOptions]="{standalone: true}" [(ngModel)]="member.birthDate">
+                                            <label class="custom-field two w-100">
+                                                <input placeholder="&nbsp;" class="w-100 input-field" type="date"
+                                                    name="birthDate" [ngModelOptions]="{standalone: true}"
+                                                    [(ngModel)]="member.birthDate" />
+                                                <span class="placeholder label-custom lh-base ">năm sinh
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mt-md-0 mt-3 ">
-                                        <div class=" mx-md-0 mx-4 box-input ">
-                                            <label class="form-label"><span class="validateText">*</span>email liên
-                                                hệ</label>
-                                            <input class="input-custom  w-100 " placeholder="Nhập email thành viên"
-                                                type="text" formControlName="email" name="email"
-                                                [class.borderError]="!formMember.controls.email.valid&&!formMember.controls.email.untouched"
-                                                [class.text-input]="formMember.controls.email.valid||formMember.controls.email.untouched">
+                                    <div class="col-md-6  ">
+                                        <div class=" mx-md-0 mx-4 box-input mt_30 ">
+                                            <label class="custom-field two w-100">
+                                                <input placeholder="&nbsp;" class="w-100 input-field" type="text"
+                                                    formControlName="email" name="email"
+                                                    [class.borderError]="!formMember.controls.email.valid&&!formMember.controls.email.untouched"
+                                                    [class.text-input]="formMember.controls.email.valid||formMember.controls.email.untouched" />
+                                                <span class="placeholder label-custom lh-base "><span
+                                                        class="validateText">*</span>email liên
+                                                    hệ</span>
+                                            </label>
                                             <p *ngIf="!formMember.controls.email.valid&&!formMember.controls.email.untouched"
                                                 class="validateText">
-                                                Email không thể bỏ trống</p>
+                                                Thông tin không thể bỏ trống</p>
                                         </div>
                                         <div class=" mx-md-0 mx-4 box-input ">
-                                            <label class="form-label">số điện thoại</label>
-                                            <input class="input-custom  w-100 " placeholder="Nhập tên thành viên" (keypress)="numberOnly($event)"
-                                                type="text" name="phone" [ngModelOptions]="{standalone: true}" [(ngModel)]="member.phone">
+                                            <label class="custom-field two w-100">
+                                                <input placeholder="&nbsp;" class="w-100 input-field"
+                                                    (keypress)="numberOnly($event)" type="text" name="phone"
+                                                    [ngModelOptions]="{standalone: true}" [(ngModel)]="member.phone" />
+                                                <span class="placeholder label-custom lh-base ">số điện thoại
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-md-4 mt-3 ">
+                                <div class="row  ">
                                     <div class="col-md-12 ">
-                                        <div class="mx-md-0 mx-4 ">
-                                            <label class="form-label">mô tả thành viên</label>
-                                            <textarea class="input-custom   w-100  " placeholder="Nhập mô tả"
-                                                style="height: 120px" name="description " [ngModelOptions]="{standalone: true}" [(ngModel)]="member.description" ></textarea>
+                                        <div class="mx-md-0 mx-4 mt_30 ">
+                                            <label class="custom-field two w-100">
+                                                <textarea placeholder="&nbsp;" class="w-100 input-field"
+                                                    style="height: 120px" name="description "
+                                                    [ngModelOptions]="{standalone: true}"
+                                                    [(ngModel)]="member.description"></textarea>
+                                                <span class="placeholder label-custom lh-base ">mô tả thành viên
+                                                </span>
+                                            </label>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

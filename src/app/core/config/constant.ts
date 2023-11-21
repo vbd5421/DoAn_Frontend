@@ -84,4 +84,22 @@ export class Constant {
         GET_LISTALL_WITH_PAGE: `${Domain.IMAGE}/image`,
         GET_LIST_ALL: `${Domain.IMAGE}/image/all`,
       }
+      public static   ABOUT ={
+        CREATE : `${Domain.ABOUT}/create`,
+        UPDATE :`${Domain.ABOUT}/update`,
+        GETID : `${Domain.ABOUT}`,
+        LIST : `${Domain.ABOUT}`
+      }
+
+      public static CONTACT={
+        LIST_ALL_SIZE_PAGE : `${Domain.CONTACT}/number`,
+        LIST_ALL_CONTACT : `${Domain.CONTACT}/user`,
+        ADD_CONTACT : `${Domain.CONTACT}/add`,
+        DELETE : `${Domain.CONTACT}/delete`,
+        CONTACTED : `${Domain.CONTACT}/show`,
+        NOTCONTACT : `${Domain.CONTACT}/hide`,
+        GET_PENDING : `${Domain.CONTACT}/pending`,
+        GET_PROCESS : `${Domain.CONTACT}/process`,
+    }
+    
 }

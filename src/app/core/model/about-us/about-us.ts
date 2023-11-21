@@ -2,7 +2,7 @@
 
 export class AboutUs {
     id: number;
-    contentIntro: any;
+    content: any;
     contentUav:any;
     description: any;
     videoLINK: any;
