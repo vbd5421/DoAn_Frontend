@@ -21,8 +21,8 @@
 }
 .item .img-item{
     border-radius: 10px;
-    object-fit: cover;
-    max-height: 200px;
+    object-fit: fill;
+    height: 170px;
 }
 
 .date{

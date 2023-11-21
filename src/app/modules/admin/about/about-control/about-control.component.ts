@@ -21,7 +21,6 @@ export class AboutControlComponent {
     private toastService: ToastService
   ) {}
   ngOnInit(): void {
-    this.addAbout_us();
     this.getistAllInformation();
     this.getListAddress();
   }
