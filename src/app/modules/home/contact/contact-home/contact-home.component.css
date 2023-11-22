@@ -117,3 +117,12 @@
    @media (min-width:992px) {
 	
 }
+.address{
+	list-style: none;
+}
+.contact-box{
+	color: #19191a;
+}
+.contact-box:hover{
+	text-decoration: underline;
+}

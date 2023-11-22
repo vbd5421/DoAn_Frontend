@@ -1,5 +1,8 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { AboutUs } from 'src/app/core/model/about-us/about-us';
+import { AboutUsService } from 'src/app/service/about-us/about-us.service';
 
 @Component({
   selector: 'app-aboutus-home',
@@ -14,7 +17,7 @@ import { Component, HostListener } from '@angular/core';
     ])
   ]
 })
-export class AboutusHomeComponent {
+export class AboutusHomeComponent implements OnInit {
  
   animationState: string = 'inactive';
 
@@ -29,4 +32,21 @@ export class AboutusHomeComponent {
     }
   }
 
+    about : AboutUs= new AboutUs();
+    des:any;
+    linkVideo:any;
+    constructor(private aboutService:AboutUsService,
+                private sanitizer: DomSanitizer,
+      ){}
+      ngOnInit(): void {
+        this.getInformation()
+      }
+
+      getInformation(){
+        this.aboutService.getAllInformation().subscribe(res=>{
+          this.about = res ;
+          this.des = this.sanitizer.bypassSecurityTrustHtml(this.about.description);
+        this.linkVideo = this.sanitizer.bypassSecurityTrustHtml(this.about.videoLINK)
+        })
+      }
 }

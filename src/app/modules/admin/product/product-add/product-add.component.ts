@@ -48,6 +48,7 @@ export class ProductAddComponent {
   }
   quillConfig = {
     //toolbar: '.toolbar',
+    blotFormatter: {},
     toolbar: {
       container: [
         ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
