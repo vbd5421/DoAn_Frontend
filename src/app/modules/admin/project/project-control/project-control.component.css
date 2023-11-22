@@ -46,9 +46,6 @@
     fill: #181c32;
   }
 
- .des{
- }
-
  .btn-add span::before {
   content: "\002B";
 }
@@ -86,7 +83,7 @@
 
 /* thêm */
 .image img{
-    max-height: 200px;
+    max-height: 180px;
 }
 tbody th{
   font-weight: 400;

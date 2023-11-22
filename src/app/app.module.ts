@@ -75,6 +75,9 @@ import { CateProjectControlComponent } from './modules/admin/cate-project/cate-p
 import { LinkWebAddComponent } from './modules/admin/link-web/link-web-add/link-web-add.component';
 import { LinkWebControlComponent } from './modules/admin/link-web/link-web-control/link-web-control.component';
 import { ContactControlComponent } from './modules/admin/contact-control/contact-control.component';
+import BlotFormatter from 'quill-blot-formatter';
+import Quill from 'quill'
+Quill.register('modules/blotFormatter', BlotFormatter);
 @NgModule({
   declarations: [
     AppComponent,
@@ -161,6 +164,7 @@ import { ContactControlComponent } from './modules/admin/contact-control/contact
     QuillModule.forRoot() ,
     NgbTooltipModule ,
     NgxSummernoteModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

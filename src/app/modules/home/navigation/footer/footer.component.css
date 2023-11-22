@@ -41,6 +41,10 @@
 }
 .contact p span{
     margin-right: 5px;
+    color: #aaaab3 ;
+}
+.contact p span:hover{
+    text-decoration: underline;
 }
 .banquyen{
     color: #aaaab3 ;

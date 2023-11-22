@@ -39,3 +39,11 @@
     border: 1px solid #192a56;
     
 }
+.des-about-us{
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

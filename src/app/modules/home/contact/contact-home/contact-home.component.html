@@ -21,19 +21,27 @@
                         <tbody>
                             <tr>
                                 <td class="c-o">Địa chỉ:</td>
-                                <td>856 Cordia Extension Apt. 356, Lake, US</td>
+                                <td>
+                                    <li class="address" >ddadad</li>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="c-o">SĐT:</td>
-                                <td>(+84) 627 500 464</td>
+                                <td>
+                                    <a class="contact-box" href="tel:{{telephone}}" [innerHTML]="telephone"></a>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="c-o">Email:</td>
-                                <td>info.colorlib@gmail.com</td>
+                                <td>
+                                    <a class="contact-box" href="mailto:{{email}}" [innerHTML]="email" ></a>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="c-o">Fax:</td>
-                                <td>(024) 345 67890</td>
+                                <td>
+                                    <a class="contact-box" href="tel:{{fax}}" [innerHTML]="fax" ></a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -68,7 +76,6 @@
             <div class="gmap_canvas">
                 <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                     src="https://maps.google.com/maps?width=817&amp;height=300&amp;hl=en&amp;q=trường đại học giao thông vận tải Số 3 cầu giấy&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-
                 </iframe>
                 <a href="https://connectionsgame.org/">Connections Puzzle</a>
             </div>
@@ -88,7 +95,8 @@
                 }
 
                 .gmap_iframe {
-                    height: 300px !important;
+                    width: 100% !important;
+                    height: 330px !important;
                 }
             </style>
         </div>

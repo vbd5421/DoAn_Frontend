@@ -32,10 +32,21 @@
                 </div>
                 <div class="contact px-2 px-md-0 ">
                     <p>
-                       <span><i class="fa-solid fa-phone" ></i></span> (12) 345 67890
+                        <a href="tel:{{telephone}}">
+                            <span><i class="fa-solid fa-phone" ></i></span> <span [innerHTML]="telephone"></span>
+                        </a>
                     </p>
                     <p>
-                       <span><i class="fas fa-envelope" ></i></span> info.colorlib  gmail.com
+                        <a href="tel:{{fax}}">
+                            <span>
+                                <i class="fa-solid fa-fax"></i>
+                            </span> <span [innerHTML]="fax" ></span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:{{email}}">
+                            <span><i class="fas fa-envelope" ></i></span> <span [innerHTML]="email" ></span>
+                        </a>
                     </p>
                     <p>
                        <span><i class="fa-solid fa-location-dot"></i></span>  856 Cordia Extension Apt. 356, Lake, United State
