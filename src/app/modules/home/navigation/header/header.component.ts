@@ -12,23 +12,93 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn = false;
   roles: string[] = [];
-  searchInput=""
-  constructor(private authService: AuthService , private tokenStorage: TokenStorageService, private router:Router) { }
+  searchInput = ""
+  constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router: Router) { }
   ngOnInit(): void {
-    if(this.tokenStorage.getToken()) {
+    if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getToken().roles;
-      
+
     }
   }
   logout() {
     this.tokenStorage.signOut();
     window.location.reload();
-}
-goToSearch(input:any){
-  this.router.navigate(['/tim-kiem'])
-  // const queryParams  = {input : input}
-  //   this.router.navigate(['/tim-kiem'],{queryParams});
-  //   console.log(this.searchInput);
-}
+  }
+  goToSearch(input: any) {
+    this.router.navigate(['/tim-kiem'])
+    // const queryParams  = {input : input}
+    //   this.router.navigate(['/tim-kiem'],{queryParams});
+    //   console.log(this.searchInput);
+  }
+// navigation
+  nav = [
+    {
+      id: 1,
+      name: "trang chủ",
+      url: "trang-chu",
+      navChild:[]
+    },
+    {
+      id: 2,
+      name: "dự án",
+      url: "du-an",
+      navChild: [
+        // {
+        //   name: 'cấp trường',
+        //   url: 'danh-sach',
+        // },
+        // {
+        //   name: 'cấp bộ',
+        //   url: 'danh-sach',
+        // },
+        // {
+        //   name: 'cấp thành phố',
+        //   url: 'danh-sach',
+        // },
+        // {
+        //   name: 'cấp nhà nước',
+        //   url: 'danh-sach',
+        // },
+      ]
+    },
+    {
+      id: 2,
+      name: "sản phẩm",
+      url: "san-pham",
+      navChild:[]
+    },
+    {
+      id: 3,
+      name: "giới thiệu",
+      url: "gioi-thieu",
+      navChild:[
+        {
+          name: "giới thiệu chung",
+          url: "gioi-thieu-chung",
+        },
+        {
+          name: "công nghệ UAV",
+          url: "uav",
+        },
+        {
+          name: "đội ngũ nghiên cứu",
+          url: "thanh-vien",
+        }
+      ]
+    },
+    {
+      id: 4,
+      name: "Tin tức và sự kiện",
+      url: "tin-tuc",
+      navChild:[]
+    },
+    {
+      id: 5,
+      name: "liên hệ",
+      url: "lien-he",
+      navChild:[]
+    }
+  ]
+
 }
