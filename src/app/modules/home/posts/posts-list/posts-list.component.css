@@ -44,7 +44,9 @@
     color: black;
   }
   .blog-thumbnail{
-    height: 50%;
+    /* height: 50%; */
+    max-height: 220px;
+    min-height: 190px;
   }
   
   .share .icon-share {
@@ -79,36 +81,6 @@
     min-height: 220px;
   }
 
-  
-  
-  @media only screen and (min-width: 1922px) and (max-width: 3800px) {
-    .banner {
-      height: 550px;
-    }
-  }
-  @media only screen and (min-width: 1368px) and (max-width: 1921px) {
-    .banner {
-      height: 300px;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1367px) {
-    .banner {
-      height: 250px;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
-    .banner {
-      height: 220px;
-    }
-  }
-  @media screen and (max-width: 420px) {
-    .banner{
-        height: 180px;
-    }
-  }
-
   /* thêm */
   .single-blog-item.blog-grid {
     height: 100%;
@@ -138,6 +110,7 @@
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .5s ease-in-out;
+    object-fit: fill;
   }
   .item-img-news{
     overflow: hidden;
@@ -163,12 +136,12 @@
    .post-info{
     padding-bottom: 25px;
    }
-   .item-news{
+   /* .item-news{
     max-height: 400px;
-  }
+  } */
 }
 @media screen and (min-width: 768px) {
-  .item-news{
+  /* .item-news{
     max-height: 550px;
-  }
+  } */
 }

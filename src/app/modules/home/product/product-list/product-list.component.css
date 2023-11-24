@@ -22,7 +22,7 @@
 .item .img-item{
     border-radius: 10px;
     object-fit: fill;
-    height: 170px;
+
 }
 
 .date{
@@ -60,4 +60,15 @@
 }
 .title-item a:hover{
     color: #3b68da;
+}
+
+@media (max-width:767.98px) {
+    .item .img-item{
+        height: 200px;
+    }
+}
+@media screen and (min-width:768px) {
+     .item .img-item{
+        height: 170px;
+    }
 }

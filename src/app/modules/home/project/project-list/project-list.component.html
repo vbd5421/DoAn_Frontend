@@ -4,108 +4,100 @@
     <nav aria-label="breadcrumb " class="py-3 py-2 container ">
         <ol class="breadcrumb mb-0 text-capitalize ">
             <li class="breadcrumb-item"><a class="text-primary" href="/">Trang chủ</a></li>
-            <li class="breadcrumb-item active" aria-current="page">dự án cấp ...</li>
+            <li class="breadcrumb-item active" aria-current="page">dự án</li>
         </ol>
     </nav>
 </div>
 
 <div class="container">
-    <div class="title mb-4 ">
-        dự án cấp ...
+    <div class="title mb-3 mb-md-5 ">
+        dự án
+    </div>
+    <div class="d-md-none d-block ">
+        <label class="custom-field one w-100">
+            <form action="" (ngSubmit)="search()" >
+                <input type="text" placeholder=" " [(ngModel)]="name" name="name" />
+                <span class="placeholder">Tìm kiếm dự án</span>
+                <button type="submit" class="btn-icon-search" >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </label>
+        <label class="select mb-4 ">
+            <select class="w-100">
+                <option value="1">Chuyên mục dự án</option>
+                <option value="2">With wrapper</option>
+                <option value="3">No JS!</option>
+            </select>
+        </label>
+        <label class="select mb-4 ">
+            <select class="w-100">
+                <option value="1">Năm triển khai</option>
+                <option value="2">With wrapper</option>
+                <option value="3">No JS!</option>
+            </select>
+        </label>
     </div>
     <div class="row mb_60 ">
         <div class="col-md-8">
             <div class="row justify-content-center ">
-                <div class="col-md-6 col-sm-6 col-12 mb_30">
+                <div class="col-md-6 col-sm-6 col-12 mb_30" *ngFor="let pro of project | paginate:{
+                    id:'project',
+                    itemsPerPage: paging.size,
+                    currentPage: paging.page,
+                    totalItems: paging.totalRecord  }  ">
                     <div class="single-blog-item blog-grid item-news ">
                         <div class="post-feature blog-thumbnail">
                             <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
+                                <img class=" w-100 " src="{{baseURL}}/{{projectURL}}/image/{{pro.id}}">
                             </a>
                         </div>
                         <div class="post-info lg-blog-post-info">
                             <h5 class="post-title mb-3 font-weight--bold">
-
-                                <a class="p-title" href="du-an/chi-tiet">tiêu đề tin tức sự kiện</a>
+                                <a class="p-title" href="du-an/chi-tiet">{{pro.name}}</a>
                             </h5>
-                            <div class="post-excerpt my-3 mb-md-3 ">
-                                <p>mô tả tin tức sự kiện</p>
+                            <div class="max-3line my-3 mb-md-3 ">
+                                <p>{{pro.description}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb_30">
-                    <div class="single-blog-item blog-grid item-news ">
-                        <div class="post-feature blog-thumbnail">
-                            <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
-                            </a>
-                        </div>
-                        <div class="post-info lg-blog-post-info">
-                            <h5 class="post-title mb-3 font-weight--bold">
-
-                                <a class="p-title" href="du-an/chi-tiet">tiêu đề tin tức sự kiện</a>
-                            </h5>
-                            <div class="post-excerpt my-3 mb-md-3 ">
-                                <p>mô tả tin tức sự kiện</p>
-                            </div>
-                        </div>
+                <div class="col-md-12 text-center " *ngIf="paging.totalRecord >0">
+                    <div class="mt_30 ">
+                        <pagination-controls previousLabel="<" nextLabel=">" [id]="'project'"
+                            (pageChange)="handlePageChange($event)"
+                            [maxSize]="paging.totalRecord"></pagination-controls>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6 col-12 mb_30">
-                    <div class="single-blog-item blog-grid item-news ">
-                        <div class="post-feature blog-thumbnail">
-                            <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
-                            </a>
-                        </div>
-                        <div class="post-info lg-blog-post-info">
-                            <h5 class="post-title mb-3 font-weight--bold">
-
-                                <a class="p-title" href="du-an/chi-tiet">tiêu đề tin tức sự kiện</a>
-                            </h5>
-                            <div class="post-excerpt my-3 mb-md-3 ">
-                                <p>mô tả tin tức sự kiện</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12 mb_30">
-                    <div class="single-blog-item blog-grid item-news ">
-                        <div class="post-feature blog-thumbnail">
-                            <a class="item-img-news" href="du-an/chi-tiet">
-                                <img class="img-fluid h-100 w-100 " src="assets/images/room/room-2.jpg">
-                            </a>
-                        </div>
-                        <div class="post-info lg-blog-post-info">
-                            <h5 class="post-title mb-3 font-weight--bold">
-
-                                <a class="p-title" href="du-an/chi-tiet">tiêu đề tin tức sự kiện</a>
-                            </h5>
-                            <div class="post-excerpt my-3 mb-md-3 ">
-                                <p>mô tả tin tức sự kiện</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-12 text-center " *ngIf="paging.totalRecord >0">
-<div class="mt-30 row justify-content-center">
-<pagination-controls previousLabel="<" nextLabel=">" [id]="'post'"
-  (pageChange)="handlePageChange($event)"
-  [maxSize]="paging.totalRecord"></pagination-controls>
-</div>
-</div> -->
             </div>
         </div>
         <div class="col-md-4">
-            <label class="select mb-4 ">
-                <select class="w-100">
-                    <option value="1">Chuyên mục dự án</option>
-                    <option value="2">With wrapper</option>
-                    <option value="3">No JS!</option>
-                </select>
-            </label>
-            
+            <div class="d-none d-md-block ">
+                <label class="custom-field one w-100">
+                    <form action="" (ngSubmit)="search()" >
+                        <input type="text" placeholder=" " [(ngModel)]="name" name="name" />
+                        <span class="placeholder">Tìm kiếm dự án</span>
+                        <button type="submit" class="btn-icon-search" >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </label>
+                <label class="select mb-4 ">
+                    <select class="w-100">
+                        <option value="1">Chuyên mục dự án</option>
+                        <option value="2">With wrapper</option>
+                        <option value="3">No JS!</option>
+                    </select>
+                </label>
+                <label class="select mb-4 ">
+                    <select class="w-100">
+                        <option value="1">Năm triển khai</option>
+                        <option value="2">With wrapper</option>
+                        <option value="3">No JS!</option>
+                    </select>
+                </label>
+            </div>
+
             <app-link-web-home></app-link-web-home>
             <div class="my-5"></div>
             <img class="w-100" src="assets/images/utc-uav-ai/img-project.jpg" alt="">

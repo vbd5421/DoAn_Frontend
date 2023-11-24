@@ -27,7 +27,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-lg  p-0">
                         <div class="navbar-nav">
-                            <a href="/"  class="nav-item nav-link "  >trang chủ</a>
+                            <a href="/" class="nav-item nav-link ">trang chủ</a>
                             <!-- <div class="nav-item dropdown">
                                 <a href="du-an" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">dự án</a>
                                 <div class="dropdown-menu bg-light py-0 ">
@@ -37,19 +37,38 @@
                                     <a href="du-an/danh-sach" class="dropdown-item item-cus ">cấp nhà nước</a>
                                 </div>
                             </div> -->
-                            <a href="du-an" class="nav-item nav-link"  >dự án</a>
-                            <a href="san-pham" class="nav-item nav-link"  >sản phẩm</a>
+                            <a href="du-an" class="nav-item nav-link">dự án</a>
+                            <a href="san-pham" class="nav-item nav-link">sản phẩm</a>
                             <div class="nav-item dropdown">
-                                <a href="gioi-thieu" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">giới
+                                <a href="gioi-thieu" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">giới
                                     thiệu</a>
                                 <div class="dropdown-menu bg-light py-0 ">
-                                    <a href="gioi-thieu/gioi-thieu-chung" class="dropdown-item item-cus ">giới thiệu chung</a>
+                                    <a href="gioi-thieu/gioi-thieu-chung" class="dropdown-item item-cus ">giới thiệu
+                                        chung</a>
                                     <a href="gioi-thieu/uav" class="dropdown-item item-cus ">Công nghệ UAV</a>
-                                    <a href="gioi-thieu/thanh-vien" class="dropdown-item item-cus ">Đội ngũ nghiên cứu</a>
+                                    <a href="gioi-thieu/thanh-vien" class="dropdown-item item-cus ">Đội ngũ nghiên
+                                        cứu</a>
                                 </div>
                             </div>
-                            <a href="tin-tuc" class="nav-item nav-link"  >Tin tức và sự kiện</a>
-                            <a href="lien-he" class="nav-item nav-link"  >liên hệ</a>
+                            <a href="tin-tuc" class="nav-item nav-link">Tin tức và sự kiện</a>
+                            <a href="lien-he" class="nav-item nav-link">liên hệ</a>
+
+                            <i class="icon-search fa-solid fa-magnifying-glass cur " id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <div class="dropdown-menu py-0 drop-custom " aria-labelledby="dropdownMenuButton1">
+                                <form action="" (ngSubmit)="goToSearch(searchInput)" class="box-input-custom">
+                                    <input type="text" class="custom-input " placeholder="Tìm kiếm...">
+                                    <button class="" type="submit">
+                                        <i class=" fa-solid fa-magnifying-glass fa-fade"></i>
+                                    </button>
+                                </form>
+                                <!-- <div class="box-input-custom">
+                                    <input type="text" class="custom-input " placeholder="Tìm kiếm...">
+                                    <button class="" type="submit" (click)="goToSearch(searchInput)">
+                                        <i class=" fa-solid fa-magnifying-glass fa-fade"></i>
+                                    </button>
+                                </div> -->
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -57,26 +76,27 @@
         </div>
     </div>
 
-<!-- mobile -->
-<div id="nav-home-mobile">
-    <div class="header-section d-block d-lg-none mobile ">
-        <div class="container h-100">
-            <div class="menu-item">
-                <div class="header-left ">
+    <!-- mobile -->
+    <div id="nav-home-mobile">
+        <div class="header-section d-block d-lg-none mobile ">
+            <div class="container h-100">
+                <div class="menu-item">
+                    <div class="header-left ">
                         <a href="#" class="w-100 h-100 d-block  " target="_blank">
-                            <img class="img-logo-mobile my-2 " src="../../../../../assets/images/logo-mobile.png" alt="">
+                            <img class="img-logo-mobile my-2 " src="../../../../../assets/images/logo-mobile.png"
+                                alt="">
                         </a>
-                </div>
+                    </div>
 
-                <div class="header-right my-auto  ">
-                    <div id="main">
-                        <a onclick="openNav()"><i class="fas fa-bars text-white "></i></a>
+                    <div class="header-right my-auto  ">
+                        <div id="main">
+                            <a onclick="openNav()"><i class="fas fa-bars text-white "></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </header>
 
 
@@ -112,18 +132,19 @@
         <div class="accordion accordion-flush item-child-mobile border-mobile " id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed  btn-item-question p-0  btn-item-menu-mobile  " type="button"
-                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-                        aria-controls="flush-collapseOne">
+                    <button class="accordion-button collapsed  btn-item-question p-0  btn-item-menu-mobile  "
+                        type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne">
                         giới thiệu
                     </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body menu-child-mobile">
-                        <a href="gioi-thieu/gioi-thieu-chung" class="dropdown-item item-cus-mobile ">giới thiệu chung</a>
+                        <a href="gioi-thieu/gioi-thieu-chung" class="dropdown-item item-cus-mobile ">giới thiệu
+                            chung</a>
                         <a href="gioi-thieu/uav" class="dropdown-item item-cus-mobile ">Công nghệ UAV</a>
-                        <a  href="gioi-thieu/thanh-vien" class="dropdown-item item-cus-mobile ">Đội ngũ nghiên cứu</a>
+                        <a href="gioi-thieu/thanh-vien" class="dropdown-item item-cus-mobile ">Đội ngũ nghiên cứu</a>
                     </div>
                 </div>
             </div>
