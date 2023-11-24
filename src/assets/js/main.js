@@ -1,12 +1,12 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "300px";
+    document.getElementById("icon-bar-header-mobile").style.opacity = "0";
     document.getElementById("mySidenav").style.border="2px solid #192a56";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("icon-bar-header-mobile").style.opacity = "1";
     document.getElementById("mySidenav").style.border="none";
 }
 
