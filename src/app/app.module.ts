@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FooterComponent } from './modules/home/navigation/footer/footer.component';
@@ -17,9 +17,6 @@ import { Error404Component } from './authentication/error404/error404.component'
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
 import { LoginAdminComponent } from './authentication/login-admin/login-admin.component';
 import { LoginUserComponent } from './authentication/login-user/login-user.component';
-import { RatingComponent } from './modules/home/rate/rating/rating.component';
-import { ReviewAddComponent } from './modules/home/review/review-add/review-add.component';
-import { ReviewsComponent } from './modules/home/review/reviews/reviews.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminControlComponent } from './modules/admin/admin-control/admin-control.component';
 import { AsideComponent } from './modules/admin/aside/aside.component';
@@ -76,7 +73,8 @@ import { LinkWebAddComponent } from './modules/admin/link-web/link-web-add/link-
 import { LinkWebControlComponent } from './modules/admin/link-web/link-web-control/link-web-control.component';
 import { ContactControlComponent } from './modules/admin/contact-control/contact-control.component';
 import BlotFormatter from 'quill-blot-formatter';
-import Quill from 'quill'
+import Quill from 'quill';
+import { SearchComponent } from './modules/another/search/search.component'
 Quill.register('modules/blotFormatter', BlotFormatter);
 @NgModule({
   declarations: [
@@ -91,9 +89,6 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     SignUpComponent,
     LoginAdminComponent,
     LoginUserComponent,
-    RatingComponent,
-    ReviewAddComponent,
-    ReviewsComponent,
     AdminControlComponent,
     AsideComponent,
     HeaderAdminComponent,
@@ -144,6 +139,7 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     LinkWebAddComponent,
     LinkWebControlComponent,
     ContactControlComponent,
+    SearchComponent,
 
   ],
   imports: [

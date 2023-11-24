@@ -5,7 +5,7 @@ import { AuthenticateService } from "./authentication/authenticate.service";
 
 const routes: Routes=[
     //home
-    {path:'' , redirectTo:'/trang-chu', pathMatch:'full'},
+    //{path:'' , redirectTo:'/trang-chu', pathMatch:'full'},
     {path:'' ,loadChildren:()=>import('./modules/home/_home_routing/_home_routing.module').then(m=>m.HomeRouting)},
     //admin
     {path:'admin' , redirectTo:'admin/user' , pathMatch:'full'},

@@ -38,7 +38,7 @@ export class MemberControlComponent {
   ngOnInit(): void {
     this.getMemberListAllwithPage();
   }
-  getRequestParams(page: number, pageSize: number, name: string , position:string , degree:any): any {
+  getRequestParams(page: number, pageSize: number, name: string ): any {
     let params: any = {};
 
     if (page) {
@@ -51,17 +51,19 @@ export class MemberControlComponent {
 
     if (name) {
       params[`name`] = name;
+      // params[`position`] = name;
+      // params[`degree`] = name;
     }
-    if(position){
-      params[`position`] = position;
-    }
-    if(degree){
-      params[`degree`] = degree;
-    }
+    // if(position){
+    //   params[`position`] = position;
+    // }
+    // if(degree){
+    //   params[`degree`] = degree;
+    // }
     return params;
   }
   getMemberListAllwithPage(){
-    const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput.name ,  this.searchInput.position,this.searchInput.degree )
+    const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput.name  )
     this.memberService.getListAllPage(params).subscribe(data => {
       console.log(data)
       this.listMember = data.content;
