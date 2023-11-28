@@ -47,6 +47,7 @@ export class TypicalNumAddComponent {
   getListIcon() {
     this.numService.getListIconJson('icon.json').subscribe((data) => {
       this.allIcon = data;
+      console.log(this.allIcon , 'icon')
     });
   }
 

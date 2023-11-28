@@ -48,6 +48,12 @@
     max-height: 220px;
     min-height: 190px;
   }
+  .share{
+    position: absolute;
+    transform: translate(-50% , -50%);
+    bottom: 20px;
+    left: 15%;
+  }
   
   .share .icon-share {
     font-size: 14px;
@@ -64,6 +70,9 @@
   }
   .icon-share i:hover{
     fill: black;
+  }
+  .p-title.h-81{
+    /* height: 81px; */
   }
   .p-title{
     display: -webkit-box;
@@ -98,6 +107,7 @@
     -webkit-box-flex: 1;
     flex-grow: 1;
     padding: 0px 28px 25px;
+    position: relative;
 }
 
 

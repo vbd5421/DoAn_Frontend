@@ -1,1 +1,67 @@
-<p>about-address works!</p>
+<div class="toolbar"></div>
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate class="form-cate-add mt_30">
+        <div class=" mb_60">
+            <div class="title">
+                <p class="cate-name fs-5">địa chỉ</p>
+            </div>
+            <div class="mt-5">
+                <div class="row justify-content-center ">
+                    <div class="col-sm-10 text-center ">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="box-address mx-4 mx-sm-0 mt_30 ">
+                                    <label class="label-custom" for="province">Tỉnh/Thành:</label>
+                                    <select id="province" [(ngModel)]="address.citi" (change)="selectProvince($event)"
+                                        [ngModelOptions]="{standalone: true}">
+                                        <option selected disabled >--Chọn--</option>
+                                        <option *ngFor="let province of provinces" [value]="province.name">{{
+                                            province.name
+                                            }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box-address mx-4 mx-sm-0 mt_30 ">
+                                    <label class="label-custom" for="districts">Quận/Huyện:</label>
+                                    <select id="districts" [(ngModel)]="address.districts"
+                                        (change)="selectDistricts($event)" [ngModelOptions]="{standalone: true}">
+                                        <option selected disabled >--Chọn--</option>
+                                        <option *ngFor="let district of districts" [value]="district.name">
+                                            {{district.name
+                                            }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box-address mx-4 mx-sm-0 mt_30 ">
+                                    <label class="label-custom" for="wards">Phường/Xã:</label>
+                                    <select id="wards" [(ngModel)]="address.wards"
+                                        [ngModelOptions]="{standalone: true}">
+                                        <option selected disabled >--Chọn--</option>
+                                        <option *ngFor="let itemwWard of wards" [value]="itemwWard.name">
+                                            {{itemwWard.name }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="mx-4 mx-sm-0 mt_60 ">
+                                    <label class="custom-field two w-100 ">
+                                        <input placeholder="&nbsp;" class=" input-field" type="text" name="address"
+                                            [(ngModel)]="address.address" />
+                                        <span class="placeholder label-custom lh-base ">địa chỉ</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-button" class="mt_15 mb-4">
+                            <button type="submit" class="btn btn-primary btn-lg me-3 ">Lưu</button>
+                            <button type="button" class="btn btn-secondary btn-lg  cancel">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

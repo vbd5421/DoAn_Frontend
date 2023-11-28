@@ -9,12 +9,16 @@
         </h3>
         <div class="card-toolbar justify-content-between row">
             <div class="col-lg-2">
-                <form (change)="search()" class="form-search">
-                    <input class="search input-search" type="text" [(ngModel)]="name" name="name"
+                <form (change)="search()" class="form-search" >
+                    <input class="search input-search" type="text" [(ngModel)]="searchInput.name" name="searchInput.name"
                       placeholder="Tìm kiếm ">
                     <div class="input-group-append  icon-search">
                       <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
                     </div>
+                    <select [(ngModel)]="searchInput.cate" name="searchInput.cate" class=" searchinput px-2 ">
+                        <option value="" [selected]="true">Chuyên mục</option>
+                        <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
+                      </select>
                 </form>
             </div>
             <div class="col-lg-3 text-center text-lg-end">
@@ -32,7 +36,7 @@
                     <th style="width:20%" scope="col">Tên</th>
                     <th scope="col" style="width:15%" class=" text-center">Thành viên</th>
                     <th style="width: 15%;" >Triển khai</th>
-                    <th style="width: 15%;" >Hoàn thành</th>
+                    <th style="width: 15%;" >Chuyên mục</th>
                     <th style="width: 15%;" scope="col">Thao tác</th>
                 </tr>
             </thead>
@@ -41,7 +45,8 @@
                     id:'project',
                     itemsPerPage: paging.size,
                     currentPage: paging.page,
-                    totalItems: paging.totalRecord  } , let i = index" >
+                    totalItems: paging.totalRecord  } , let i = index"  >
+                    
                     <th style="width: 15%;" class="image" > 
                         <img class="w-100" src="{{baseURL}}/{{projectURL}}/image/{{pro.id}}" alt="image">
                     </th>
@@ -59,7 +64,7 @@
                         {{pro.createDate | date:'dd/MM/yyy'}}
                     </th>
                     <th>
-                        {{pro.createDate | date:'dd/MM/yyy'}}
+                        {{pro.cateProject.typeName}}
                     </th>
                     <td>
                         <a placement="top" ngbTooltip="Sửa"  class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"  

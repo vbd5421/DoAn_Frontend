@@ -10,8 +10,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
+import { CateProject } from 'src/app/core/model/cate-project/cate-project';
 import { Member } from 'src/app/core/model/member/member';
 import { Project } from 'src/app/core/model/project/project';
+import { CateProjectService } from 'src/app/service/cate-project/cate-project.service';
 import { MemberService } from 'src/app/service/member/member.service';
 import { ProjectService } from 'src/app/service/project/project.service';
 import { ToastService } from 'src/app/service/toast/toast.service';
@@ -23,6 +25,7 @@ import { ToastService } from 'src/app/service/toast/toast.service';
 export class ProjectAddComponent implements OnInit {
   project: Project = new Project();
   listMember: Member[] = [];
+  cateProject: CateProject[]=[];
   id: any;
   url: any;
   baseURL = Constant.BASE_URL;
@@ -35,6 +38,7 @@ export class ProjectAddComponent implements OnInit {
   formProject = new FormGroup({
     moTa: new FormControl('', Validators.required),
     tieuDe: new FormControl('', Validators.required),
+    //chuyenMuc: new FormControl('', Validators.required),
     //noiDung: new FormControl('' , Validators.required),
     // ngayHoanThanh: new FormControl('', Validators.required),
     // ngayKetThuc: new FormControl('', Validators.required),
@@ -45,15 +49,19 @@ export class ProjectAddComponent implements OnInit {
     private route: ActivatedRoute,
     private projectService: ProjectService,
     private toastService: ToastService,
+    private cateProjectService:CateProjectService
   ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
+    this.listAllMember()
+    this.listAllCateProject()
     if (this.id) {
       this.getProjectById(this.id)
     }
     else{
-      this.listAllMember()
+      
+      
     }
   }
   getProjectById(id:number){
@@ -65,6 +73,7 @@ export class ProjectAddComponent implements OnInit {
       this.memberUpdate(this.project)
       this.formProject.controls['moTa'].setValue(this.project.description);
       this.formProject.controls['tieuDe'].setValue(this.project.name);
+      //this.formProject.controls['chuyenMuc'].setValue(this.project.cateProject.id.toString());
       //this.formProject.controls['noiDung'].setValue(this.project.content);
       // this.formProject.controls['ngayHoanThanh'].setValue(this.project.startDate);
       // this.formProject.controls['ngayKetThuc'].setValue(this.project.endDate);
@@ -99,15 +108,17 @@ export class ProjectAddComponent implements OnInit {
   onSubmit() {
     this.project.name = this.formProject.controls['tieuDe'].value;
     this.project.description = this.formProject.controls['moTa'].value;
+    // this.project.cateProject.typeName = this.formProject.controls['chuyenMuc'].value;
     //this.project.content =this.formProject.controls['noiDung'].value;
     // this.project.startDate = this.formProject.controls['ngayHoanThanh'].value;
     // this.project.endDate = this.formProject.controls['ngayKetThuc'].value;
     if (this.id) {
-      this.updateDataToForm(this.id  );
+      this.updateProject(this.id  );
     } else {
       this.addProject();
     }
   }
+  
 
   prepareFormData(project: Project): FormData {
     const formData = new FormData();
@@ -125,7 +136,7 @@ export class ProjectAddComponent implements OnInit {
     return formData;
   }
 
-  updateDataToForm(id: number  ){
+  updateProject(id: number  ){
     const projectFormData = this.prepareFormData(this.project);
     this.projectService.updateProject(id, projectFormData).subscribe(
       (data) => {
@@ -206,5 +217,14 @@ export class ProjectAddComponent implements OnInit {
       });
     }
   }
+
+  // chuyên mục dự án
+  listAllCateProject(){
+    this.cateProjectService.listAllCate().subscribe(res=>{
+      this.cateProject = res;
+      console.log(this.cateProject , "dự án")
+    })
+  }
+
 
 }

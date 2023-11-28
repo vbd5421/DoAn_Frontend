@@ -11,9 +11,9 @@ public static MEMBER=`api/member`;
 public static ADDRESS = `api/address`;
 public static IMAGE = `s/file`;
 public static ABOUT = `api/about`;
-public static POSTS = `api/post`;
+public static POSTS = `api/bpost`;
 public static SLIDERS = `api/sliders`;
-public static CATE_PROJECT=`api/cateproject`;
+public static CATE_PROJECT=`api/cate-project`;
 public static LINK_WEB = `api/link`;
-public static CONTACT = `contact`;
+public static CONTACT = `api/contact`;
 }

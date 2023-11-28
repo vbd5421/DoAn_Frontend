@@ -40,7 +40,7 @@
 
 select,option{
   width: 100%;
-  font-family: fontAwesome
+  
 }
 .borderError{
   border: 1px solid red;

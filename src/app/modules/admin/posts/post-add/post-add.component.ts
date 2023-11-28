@@ -22,16 +22,10 @@ export class PostAddComponent {
   });
   url: any;
   id: any;
-  ckeConfig: any;
   baseURL = Constant.BASE_URL;
   postURL = Domain.POSTS;
   imageURL: any;
 
-  selectedFile: File;
-  fileName: any;
-
-  currentPage: any;
-  pageSize: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -43,16 +37,18 @@ export class PostAddComponent {
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
     if (this.id) {
-      this.postService.getPostById(this.id).subscribe((data) => {
+      this.getById(this.id)
+    }
+  }
+  getById(id:number){
+        this.postService.getPostById(id).subscribe((data) => {
         this.post = data;
-        console.log(this.post);
+        
         this.url = this.post.image?.pathUrl;
         this.imageURL = `${this.baseURL}/${this.postURL}/image/${this.id}`;
         this.formPost.controls['moTa'].setValue(this.post.description);
         this.formPost.controls['title'].setValue(this.post.title);
       });
-    }
-
   }
   quillConfig = {
     //toolbar: '.toolbar',
@@ -90,13 +86,11 @@ export class PostAddComponent {
 
 
   prepareFormData(post: Posts): FormData {
-    console.log(post);
     const formData = new FormData();
     formData.append(
       'postDTO',
       new Blob([JSON.stringify(post)], { type: 'application/json' })
     );
-    console.log(formData);
     // formData.append('imageFile', this.fileToUpload, this.fileToUpload.name);
     for (let i = 0; i < this.fileToUpload.length; i++) {
       formData.append(
@@ -110,14 +104,13 @@ export class PostAddComponent {
 
   addPosts() {
     const postFormData = this.prepareFormData(this.post);
-    this.postService.addPosts(postFormData).subscribe(
-      () => {
+    this.postService.addPosts(postFormData).subscribe(() => {
         this.toastService.showSuccess();
         this.goToPostList();
       },
       (error) => {
-        this.toastService.showWarning(error.error);
-        console.log(error.error);
+        // this.toastService.showWarning(error.error);
+        console.log(error);
       }
     );
   }
@@ -130,12 +123,12 @@ export class PostAddComponent {
     const postFormData = this.prepareFormData(this.post);
     this.postService.updatePosts(id, postFormData).subscribe(
       (data) => {
-        this.toastService.showSuccess();
+        this.toastService.showUpdate();
         this.goToPostList();
       },
       (error) => {
-        this.toastService.showWarning(error.error);
-        console.log(error.error);
+        // this.toastService.showWarning(error.error);
+        console.log(error);
       }
     );
   }

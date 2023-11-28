@@ -54,12 +54,6 @@ export class MemberControlComponent {
       // params[`position`] = name;
       // params[`degree`] = name;
     }
-    // if(position){
-    //   params[`position`] = position;
-    // }
-    // if(degree){
-    //   params[`degree`] = degree;
-    // }
     return params;
   }
   getMemberListAllwithPage(){

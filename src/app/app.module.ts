@@ -74,7 +74,8 @@ import { LinkWebControlComponent } from './modules/admin/link-web/link-web-contr
 import { ContactControlComponent } from './modules/admin/contact-control/contact-control.component';
 import BlotFormatter from 'quill-blot-formatter';
 import Quill from 'quill';
-import { SearchComponent } from './modules/another/search/search.component'
+import { SearchComponent } from './modules/another/search/search.component';
+import { PostsHomeComponent } from './modules/home/posts/posts-home/posts-home.component'
 Quill.register('modules/blotFormatter', BlotFormatter);
 @NgModule({
   declarations: [
@@ -140,6 +141,7 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     LinkWebControlComponent,
     ContactControlComponent,
     SearchComponent,
+    PostsHomeComponent,
 
   ],
   imports: [
