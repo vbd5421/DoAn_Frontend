@@ -1,4 +1,5 @@
-<app-page-size></app-page-size>
+<app-page-size (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
+[(pageSize)]="paging.size"  ></app-page-size>
 
 
 <div class="card mb-5 mt_30 mx-4">
@@ -9,7 +10,7 @@
         <div class="card-toolbar justify-content-between row">
             <div class="col-lg-2">
                 <form (ngSubmit)="search()" class="form-search">
-                    <input class="search input-search" type="text" [(ngModel)]="searchInput" name="searchInput"
+                    <input class="search input-search" type="text" [(ngModel)]="searchInput.name" name="searchInput.name"
                         placeholder="Tìm kiếm ">
                     <div class="input-group-append  icon-search">
                         <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
@@ -33,16 +34,20 @@
                 </tr>
             </thead>
             <tbody class="text-center">
-                <tr>
+                <tr *ngFor="let ct of listCateProject |  paginate:{
+                    id:'cate',
+                    itemsPerPage: paging.size,
+                    currentPage: paging.page,
+                    totalItems: paging.totalRecord } ; let i = index " >
                     <td>
-                        <span>1</span>
+                        <span>{{i+1}}</span>
                     </td>
                     <td>
-                        <p class="mb-0">aa a a</p>
+                        <p class="mb-0">{{ct.typeName}}</p>
                     </td>
                     <td>
                         <a placement="top" ngbTooltip="Sửa"
-                            class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                            class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1" (click)="updateCateProject(ct.id)" >
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +60,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a placement="top" ngbTooltip="Xóa"
+                        <a placement="top" ngbTooltip="Xóa" (click)="deleteCateProject(ct.id)"
                             class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/g">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -77,8 +82,8 @@
             </tbody>
         </table>
     </div>
-    <!-- <div *ngIf="paging.totalRecord>0" class="col-8 mt-1 mx-auto">
-        <pagination-controls [id]="'member'" previousLabel="<" nextLabel=">" (pageChange)="handlePageChange($event)"
+    <div *ngIf="paging.totalRecord>0" class="col-8 mt-1 mx-auto">
+        <pagination-controls [id]="'cate'" previousLabel="<" nextLabel=">" (pageChange)="handlePageChange($event)"
             [maxSize]="paging.totalRecord"></pagination-controls>
-    </div> -->
+    </div>
 </div>

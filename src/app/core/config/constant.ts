@@ -61,15 +61,18 @@ export class Constant {
     }
     public static POSTS={
         GET_ID:`${Domain.POSTS}`,
+        SEARCH: `${Domain.POSTS}/tim-kiem` ,
+        GET_POST_BY_URL: `${Domain.POSTS}/home` ,
+        LIST_ALL: `${Domain.POSTS}/list` ,
         GET_LIST_ALL_WITH_PAGE:`${Domain.POSTS}`,
-        ADD_POST:`${Domain.POSTS}/create`,
+        ADD_POST:`${Domain.POSTS}/add`,
         UPDATE_POST: `${Domain.POSTS}/update`,
         DELETE_POST: `${Domain.POSTS}/delete`,
     }
     public static CATE_PROJECT={
         LIST_PAGE_SIZE:`${Domain.CATE_PROJECT}`,
-        LIST:`${Domain.CATE_PROJECT}/list`,
         GET_BY_ID :`${Domain.CATE_PROJECT}`,
+        LIST_ALL:`${Domain.CATE_PROJECT}/all`,
         CREATE:`${Domain.CATE_PROJECT}/create`,
         DELETE :`${Domain.CATE_PROJECT}/delete`,
         UPDATE :`${Domain.CATE_PROJECT}/update`,
@@ -83,7 +86,7 @@ export class Constant {
         UPDATE_IMAGE: `${Domain.IMAGE}/image/update`,
         GET_LISTALL_WITH_PAGE: `${Domain.IMAGE}/image`,
         GET_LIST_ALL: `${Domain.IMAGE}/image/all`,
-      }
+    }
       public static   ABOUT ={
         CREATE : `${Domain.ABOUT}/create`,
         UPDATE :`${Domain.ABOUT}/update`,
@@ -100,6 +103,13 @@ export class Constant {
         NOTCONTACT : `${Domain.CONTACT}/hide`,
         GET_PENDING : `${Domain.CONTACT}/pending`,
         GET_PROCESS : `${Domain.CONTACT}/process`,
+    }
+
+    public static ADDRESS ={
+        CREATE : `${Domain.ADDRESS}/create`,
+        UPDATE :`${Domain.ADDRESS}/update`,
+        DELETE : `${Domain.ADDRESS}/delete`,
+        LIST : `${Domain.ADDRESS}`
     }
     
 }

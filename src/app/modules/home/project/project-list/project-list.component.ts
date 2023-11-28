@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
 import { Project } from 'src/app/core/model/project/project';
 import { ProjectService } from 'src/app/service/project/project.service';
-import { ToastService } from 'src/app/service/toast/toast.service';
+
 
 @Component({
   selector: 'app-project-list',
@@ -23,7 +24,8 @@ export class ProjectListComponent {
     totalRecord: 0
   }
 
-  constructor(private projectService: ProjectService) {
+  constructor(private projectService: ProjectService ,
+        private toast:ToastrService) {
   }
   ngOnInit(): void {
     this.getAllWithPageProject();

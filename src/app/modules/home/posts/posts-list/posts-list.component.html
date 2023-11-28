@@ -4,8 +4,8 @@
 <div class="bg-light mt-header mb-3">
     <nav aria-label="breadcrumb " class="py-3 py-2 container ">
         <ol class="breadcrumb mb-0 text-capitalize ">
-          <li class="breadcrumb-item"><a class="text-primary" href="/">Trang chủ</a></li>
-          <li class="breadcrumb-item active" aria-current="page">tin tức và sự kiện</li>
+            <li class="breadcrumb-item"><a class="text-primary" href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">tin tức và sự kiện</li>
         </ol>
     </nav>
 </div>
@@ -20,93 +20,36 @@
                             <h2 class="chuyenmuc">tin tức & sự kiện</h2>
                         </div>
                     </div>
-                </div>    
                 </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="main-blog-wrap">
-                        <!-- Post Feature Start -->
+
                         <div class="col-md-12 mb_20 ">
                             <div id="carouselExampleInterval3" class="carousel slide" data-bs-ride="carousel">
-                                <!-- <div class="carousel-inner">
-                  <div class="carousel-item " [class]="s == 0 ? 'active' : '' "
-                    *ngFor="let post of postList ;let s = index" data-bs-interval="3000">
-                    <div >
-                      <div class="row justify-content-center ">
-                        <div class="col-md-6 col-sm-4 col-11  first-blog">
-                          <a href="/tin-tuc/{{post.url}}" class="w-100">
-                            <img class="img-fluid img-slide w-100 " src="{{baseURL}}/{{postURL}}/image/{{post.id}}"
-                              alt=" Images">
-                          </a>
-                        </div>
-                        <div class="col-md-6 col-sm-5 col-11 ">
-                          <div class="post-info lg-blog-post-info">
-                            <h4 class="post-title font-weight--light">
-
-                              <a class="p-title" href="/tin-tuc/{{post.url}}">{{post.title}}</a>
-                            </h4>
-                            <div class="post-excerpt mb_15 ">
-                              <p>{{post.description}}</p>
-                            </div>
-                            <div class="post-read-more ">
-                              <a href="/tin-tuc/{{post.url}}" class=" ht-btn-sm"
-                                style="background-color: #192a56;">
-                                <span class="btn-text text-white ">Xem thêm </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active " data-bs-interval="2000">
+                                    <div class="carousel-item " [class]="s == 0 ? 'active' : '' "
+                                        *ngFor="let post of postList ;let s = index" data-bs-interval="1500">
                                         <div class="row justify-content-center ">
                                             <div class="col-md-6 col-sm-6 col-11  first-blog">
-                                                <a href="/tin-tuc/chi-tiet" class="w-100">
+                                                <a href="/tin-tuc/{{post.url}}" class="w-100">
                                                     <img class="img-fluid img-slide w-100 "
-                                                        src="assets/images/room/room-1.jpg" alt="Images">
+                                                        src="{{baseURL}}/{{postURL}}/image/{{post.id}}" alt="Images">
                                                 </a>
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-11 ">
                                                 <div class="post-info lg-blog-post-info">
                                                     <h4 class="post-title font-weight--light">
-                                                        <a class="p-title" href="/tin-tuc/chi-tiet">tiêu đề tin tức và
-                                                            sự kiện</a>
+                                                        <a class="p-title"
+                                                            href="/tin-tuc/{{post.url}}">{{post.title}}</a>
                                                     </h4>
                                                     <div class="post-excerpt mb_15 ">
-                                                        <p>mô tả tin tức sự kiẹn</p>
+                                                        <p>{{post.description}}</p>
                                                     </div>
                                                     <div class="post-read-more ">
-                                                        <a href="/tin-tuc/chi-tiet" class=" see-more " >
+                                                        <a href="/tin-tuc/{{post.url}}" class=" see-more ">
                                                             <span class="btn-text">Xem thêm </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  " data-bs-interval="2000">
-                                        <div class="row justify-content-center ">
-                                            <div class="col-md-6 col-sm-6 col-11  first-blog">
-                                                <a href="/tin-tuc/chi-tiet" class="w-100">
-                                                    <img class="img-fluid img-slide w-100 "
-                                                        src="assets/images/room/room-2.jpg" alt="Images">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 col-11 ">
-                                                <div class="post-info lg-blog-post-info">
-                                                    <h4 class="post-title font-weight--light">
-                                                        <a class="p-title" href="/tin-tuc/chi-tiet">tiêu đề tin tức và
-                                                            sự kiện</a>
-                                                    </h4>
-                                                    <div class="post-excerpt mb_15 ">
-                                                        <p>mô tả tin tức sự kiẹn</p>
-                                                    </div>
-                                                    <div class="post-read-more ">
-                                                        <a href="/tin-tuc/chi-tiet" class=" see-more " >
-                                                            <span class="btn-text  ">Xem thêm </span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -118,30 +61,31 @@
                             <div class="pb_60 pt_60  ">
                                 <div class="">
                                     <div class="row justify-content-center ">
-                                        <div class="col-md-4 col-sm-6 col-12 mb_30">
+                                        <div class="col-md-4 col-sm-6 col-12 mb_30" *ngFor="let post of postList | paginate: { id: 'post',
+                                        itemsPerPage: paging.size,
+                                         currentPage: paging.page,
+                                        totalItems: paging.totalRecord } ;let i = index">
                                             <div class="single-blog-item blog-grid item-news ">
                                                 <div class="post-feature blog-thumbnail">
-                                                    <a class="item-img-news" href="/tin-tuc/chi-tiet">
+                                                    <a class="item-img-news" href="tin-tuc/{{post.url}}">
                                                         <img class="img-fluid h-100 w-100 "
-                                                            src="assets/images/room/room-2.jpg">
+                                                        src="{{baseURL}}/{{postURL}}/image/{{post.id}}" alt="image">
                                                     </a>
                                                 </div>
                                                 <div class="post-info lg-blog-post-info">
                                                     <h5 class="post-title mb-3 font-weight--bold">
-
-                                                        <a class="p-title" href="/tin-tuc/chi-tiet">tiêu đề tin tức sự kiện</a>
+                                                        <a class="p-title h-81"
+                                                        href="/tin-tuc/{{post.url}}">{{post.title}}</a>
                                                     </h5>
-                                                    <div class="post-excerpt my-3 mb-md-3 ">
-                                                        <p>mô tả tin tức sự kiện</p>
+                                                    <div class="post-excerpt mt-3 mb-5">
+                                                        <p>{{post.description}}</p>
                                                     </div>
                                                     <div class="share text-right mt-2 ">
-                                                        <a target="_blank"
-                                                            href="https://www.facebook.com/"
+                                                        <a target="_blank" href="https://www.facebook.com/dialog/share?app_id={{post.id}}&href={{baseURL}}/tin-tuc/{{post.url}}&display=popup"
                                                             class="icon-share  " title="Chia sẻ Facebook">
                                                             <i class="fa-brands fa-square-facebook"></i>
                                                         </a>
-                                                        <a target="_blank"
-                                                            href="https://twitter.com/"
+                                                        <a target="_blank" href="https://twitter.com/intent/tweet?text={{post.title}}-UAV-AI&url={{baseURL}}/tin-tuc/{{post.url}}"
                                                             class="icon-share">
                                                             <i class="fa-brands fa-square-x-twitter"></i>
                                                         </a>
@@ -149,108 +93,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 col-sm-6 col-12 mb_30">
-                                            <div class="single-blog-item blog-grid item-news ">
-                                                <div class="post-feature blog-thumbnail">
-                                                    <a class="item-img-news" href="/tin-tuc/chi-tiet">
-                                                        <img class="img-fluid h-100 w-100 "
-                                                            src="../../../../../assets/images/hero/hero-1.jpg">
-                                                    </a>
-                                                </div>
-                                                <div class="post-info lg-blog-post-info">
-                                                    <h5 class="post-title mb-3 font-weight--bold">
-
-                                                        <a class="p-title" href="/tin-tuc/chi-tiet">tiêu đề tin tức sự kiện</a>
-                                                    </h5>
-                                                    <div class="post-excerpt my-3 mb-md-3 ">
-                                                        <p>mô tả tin tức sự kiện</p>
-                                                    </div>
-                                                    <div class="share  mt-2 ">
-                                                        <a target="_blank"
-                                                            href="https://www.facebook.com/"
-                                                            class="icon-share  " title="Chia sẻ Facebook">
-                                                            <i class="fa-brands fa-square-facebook"></i>
-                                                        </a>
-                                                        <a target="_blank"
-                                                            href="https://twitter.com/"
-                                                            class="icon-share">
-                                                            <i class="fa-brands fa-square-x-twitter"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
+                                        <div class="col-lg-12 text-center " *ngIf="paging.totalRecord >0">
+                                            <div class="mt_30 ">
+                                                <pagination-controls previousLabel="<" nextLabel=">" [id]="'post'"
+                                                    (pageChange)="handlePageChange($event)"
+                                                    [maxSize]="paging.totalRecord"></pagination-controls>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 col-sm-6 col-12 mb_30">
-                                            <div class="single-blog-item blog-grid item-news ">
-                                                <div class=" blog-thumbnail">
-                                                    <a class="item-img-news"  href="/tin-tuc/chi-tiet">
-                                                        <img class="img-fluid h-100 w-100 "
-                                                            src="assets/images/room/room-5.jpg">
-                                                    </a>
-                                                </div>
-                                                <div class="post-info lg-blog-post-info">
-                                                    <h5 class="post-title mb-3 font-weight--bold">
-
-                                                        <a class="p-title" href="/tin-tuc/chi-tiet">Qua hơn 10 năm hình thành và phát triển  đang 
-                                                            dần chuyển dịch theo hướng phát triển sâu rộng hơn trong lĩnh vực thế mạnh của mình. </a>
-                                                    </h5>
-                                                    <div class="post-excerpt my-3 mb-md-3 ">
-                                                        <p>Qua hơn 10 năm hình thành và phát triển  đang 
-                                                            dần chuyển dịch theo hướng phát triển sâu rộng hơn trong lĩnh vực thế mạnh của mình. </p>
-                                                    </div>
-                                                    <div class="share text-right mt-2 ">
-                                                        <a target="_blank"
-                                                            href="https://www.facebook.com/"
-                                                            class="icon-share  " title="Chia sẻ Facebook">
-                                                            <i class="fa-brands fa-square-facebook"></i>
-                                                        </a>
-                                                        <a target="_blank"
-                                                            href="https://twitter.com/"
-                                                            class="icon-share">
-                                                            <i class="fa-brands fa-square-x-twitter"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6 col-12 mb_30">
-                                            <div class="single-blog-item blog-grid item-news ">
-                                                <div class="post-feature blog-thumbnail">
-                                                    <a class="item-img-news" href="/tin-tuc/chi-tiet">
-                                                        <img class="img-fluid h-100 w-100 "
-                                                            src="assets/images/utc-uav-ai/uav-logo.jpg">
-                                                    </a>
-                                                </div>
-                                                <div class="post-info lg-blog-post-info">
-                                                    <h5 class="post-title mb-3 font-weight--bold">
-
-                                                        <a class="p-title" href="/tin-tuc/chi-tiet">tiêu đề tin tức sự kiện</a>
-                                                    </h5>
-                                                    <div class="post-excerpt my-3 mb-md-3 ">
-                                                        <p>mô tả tin tức sự kiện</p>
-                                                    </div>
-                                                    <div class="share text-right mt-2 ">
-                                                        <a target="_blank"
-                                                            href="https://www.facebook.com/"
-                                                            class="icon-share  " title="Chia sẻ Facebook">
-                                                            <i class="fa-brands fa-square-facebook"></i>
-                                                        </a>
-                                                        <a target="_blank"
-                                                            href="https://twitter.com/"
-                                                            class="icon-share">
-                                                            <i class="fa-brands fa-square-x-twitter"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="col-lg-12 text-center " *ngIf="paging.totalRecord >0">
-                      <div class="mt-30 row justify-content-center">
-                        <pagination-controls previousLabel="<" nextLabel=">" [id]="'post'"
-                          (pageChange)="handlePageChange($event)"
-                          [maxSize]="paging.totalRecord"></pagination-controls>
-                      </div>
-                    </div> -->
                                     </div>
                                 </div>
                             </div>

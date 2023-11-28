@@ -8,7 +8,7 @@ import { Error404Component } from 'src/app/authentication/error404/error404.comp
 const routes: Routes=[
   //{path:'' ,component:Error404Component},
   {path:'' ,component:ProjectListComponent },
-  {path:'chi-tiet' , component:ProjectDetailComponent}
+  {path:':url' , component:ProjectDetailComponent}
 ]
 
 @NgModule({

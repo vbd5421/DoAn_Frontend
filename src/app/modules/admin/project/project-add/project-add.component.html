@@ -20,7 +20,7 @@
                         <img src="../../../../../assets/images/placeholder.png" alt="">
                       </ng-template>
                     </div>
-                    <input class="p-1 p-md-2 w-100 text-input "  accept="image/png, image/jpeg" type="file"
+                    <input class="p-1 p-md-2 w-100 text-input " accept="image/png, image/jpeg" type="file"
                       value="select" (change)="imageChange($event)">
                   </div>
                 </div>
@@ -32,39 +32,57 @@
                     <label for="flexCheckChecked{{member.id}}">{{member.fullName}}</label>
                   </div>
                   <div>
-                    <span class="mt-2" >Không tìm thấy thành viên mong muốn ?</span><a target="_blank"
-                              href="admin/member/add"><span class="addmember">Thêm mới</span></a>
+                    <span class="mt-2">Không tìm thấy thành viên mong muốn ?</span><a target="_blank"
+                      href="admin/member/add"><span class="addmember">Thêm mới</span></a>
                   </div>
                 </div>
-                
+                <div class="listmember mb-md-0 mb-3 mt-3 mt-md-4 mx-md-0 mx-4 ">
+                  <label class="form-label"><span class="validateText">*</span>chuyên mục dự án</label>
+                  <!-- <select id="chuyenMuc" formControlName="chuyenMuc" name="category"
+                    [class.borderError]="!formProject.controls.chuyenMuc.valid&&!formProject.controls.chuyenMuc.untouched"
+                    [class.text-input]="formProject.controls.chuyenMuc.valid||formProject.controls.chuyenMuc.untouched">
+                    <option value="" disabled selected ></option>
+                    <option *ngFor="let cP of cateProject" value="{{cP.id}}" [innerHTML]="cP.typeName">
+                    </option>
+                  </select>
+                  <p *ngIf="!formProject.controls.chuyenMuc.valid&&!formProject.controls.chuyenMuc.untouched"
+                    class="validateText">Thông tin không thể bỏ trống</p> -->
+                    <select name="cateProject" id="" [(ngModel)]="project.cateProject.id" [ngModelOptions]="{standalone: true}" 
+                    
+                      >
+                      <option value="" disabled selected ></option>
+                    <option *ngFor="let cP of cateProject" value="{{cP.id}}" [innerHTML]="cP.typeName">
+                    </option>
+                    </select>
+                </div>
               </div>
               <div class="col-md-8">
                 <div class="mt_30  mx-md-0 mx-4 ">
-                    <label class="custom-field two w-100">
-                      <input placeholder="&nbsp;" class="w-100 input-field" 
+                  <label class="custom-field two w-100">
+                    <input placeholder="&nbsp;" class="w-100 input-field"
                       [class.borderError]="!formProject.controls.tieuDe.valid&&!formProject.controls.tieuDe.untouched"
                       [class.text-input]="formProject.controls.tieuDe.valid||formProject.controls.tieuDe.untouched"
                       formControlName="tieuDe" name="name" />
-                      <span class="placeholder label-custom lh-base "><span class="validateText">*</span>tên dự án</span>
-                    </label>
+                    <span class="placeholder label-custom lh-base "><span class="validateText">*</span>tên dự án</span>
+                  </label>
                   <p *ngIf="!formProject.controls.tieuDe.valid&&!formProject.controls.tieuDe.untouched"
                     class="validateText">Thông tin không thể bỏ trống</p>
                 </div>
                 <div class="mt_30 mx-md-0 mx-4 ">
-                    <label class="custom-field two w-100 mb-0 ">
-                      <textarea placeholder="&nbsp;" class="w-100 input-field " style="height: 150px;"
+                  <label class="custom-field two w-100 mb-0 ">
+                    <textarea placeholder="&nbsp;" class="w-100 input-field " style="height: 150px;"
                       [class.borderError]="!formProject.controls.moTa.valid&&!formProject.controls.moTa.untouched"
-                    [class.text-input]="formProject.controls.moTa.valid||formProject.controls.moTa.untouched"
-                    formControlName="moTa" name="description" ></textarea>
-                      <span class="placeholder label-custom lh-base "><span class="validateText">*</span>mô tả</span>
-                    </label>
+                      [class.text-input]="formProject.controls.moTa.valid||formProject.controls.moTa.untouched"
+                      formControlName="moTa" name="description"></textarea>
+                    <span class="placeholder label-custom lh-base "><span class="validateText">*</span>mô tả</span>
+                  </label>
                   <p *ngIf="!formProject.controls.moTa.valid&&!formProject.controls.moTa.untouched"
                     class="validateText">Thông tin không thể bỏ trống</p>
                 </div>
                 <div class="mt-3 mt-md-3 mx-md-0 mx-4 editor-quill ">
                   <label class="form-label"><span class="validateText">*</span>nội dung</label>
-                  <quill-editor [(ngModel)]="project.content"  [modules]="quillConfig"
-                    [ngModelOptions]="{standalone: true}" placeholder="Nhập nội dung" ></quill-editor>
+                  <quill-editor [(ngModel)]="project.content" [modules]="quillConfig"
+                    [ngModelOptions]="{standalone: true}" placeholder="Nhập nội dung"></quill-editor>
                 </div>
               </div>
               <div class="col-lg-4 col-md-5 col-8 col-ms-6 mt-4 mb_30 mx-auto">

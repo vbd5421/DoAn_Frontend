@@ -3,7 +3,7 @@ export class Posts {
     image: any;
     title: any;
     content: string;
-    createDate: any;
+    date: any;
     description: any;
     url: string;
     active:boolean;

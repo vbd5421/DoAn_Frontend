@@ -17,7 +17,7 @@ export class LinkWebAddComponent implements OnInit {
 
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('liên kết web')
   }
 
   onSubmit(){}

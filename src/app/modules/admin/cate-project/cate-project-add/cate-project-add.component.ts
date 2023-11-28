@@ -26,8 +26,9 @@ export class CateProjectAddComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     if (this.id) {
-      this.cateProjectService.GetCateByid(this.id).subscribe((res) => {
+      this.cateProjectService.getCateByid(this.id).subscribe(res => {
         this.cateProject = res;
+        console.log(res)
         this.catogaryControl.setValue(res.typeName);
       });
     }
@@ -36,7 +37,7 @@ export class CateProjectAddComponent implements OnInit {
   onSubmit() {
     this.cateProject.typeName = this.catogaryControl.value;
     if (this.id) {
-      this.update(this.id, this.cateProject);
+      this.update();
     } else {
       this.AddCategory();
     }
@@ -46,27 +47,29 @@ export class CateProjectAddComponent implements OnInit {
     window.history.back()
   }
 
-  update(id: number, category: CateProject) {
-    this.cateProjectService.UpdateCate(id, category).subscribe(
+  update() {
+    console.log(this.cateProject)
+    this.cateProjectService.updateCate(this.cateProject).subscribe(
       () => {
         this.toast.showSuccess();
         this.cancel();
       },
-      (error) => {
-        this.toast.showWarning(error.error);
+      error => {
+       console.error(error)
       }
     );
   }
 
   AddCategory() {
-    this.cateProjectService.AddCategory(this.cateProject).subscribe(
+    this.cateProjectService.addCategory(this.cateProject).subscribe(
       () => {
         this.toast.showSuccess();
+        console.log(this.cateProject)
         this.cancel();
       },
-      (error) => {
-        this.toast.showWarning(error.error);
-      }
+      error => {
+        console.error(error)
+       }
     );
   }
 }

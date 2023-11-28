@@ -7,7 +7,7 @@ import { PostsDetailComponent } from '../../posts/posts-detail/posts-detail.comp
 
 const routes: Routes=[
   {path:'' ,component:PostsListComponent },
-  {path:'chi-tiet' , component:PostsDetailComponent}
+  {path:':url' , component:PostsDetailComponent}
 ]
 
 @NgModule({

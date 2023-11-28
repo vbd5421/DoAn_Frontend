@@ -14,24 +14,22 @@ export class CateProjectService {
   listPageSize(params:Params):Observable<any>{
     return this.apiHelper.get( Constant.CATE_PROJECT.LIST_PAGE_SIZE , {params})
   }
-
-  public listAllCategory(): Observable<any>{
-    return this.apiHelper.get(Constant.CATE_PROJECT.LIST);
+  listAllCate():Observable<any>{
+    return this.apiHelper.get(Constant.CATE_PROJECT.LIST_ALL)
   }
-
-  GetCateByid(id:number):Observable<any>{
+  getCateByid(id:number):Observable<any>{
     return this.apiHelper.get( Constant.CATE_PROJECT.GET_BY_ID + `/${id}`)
   }
 
-  AddCategory( category: CateProject ):Observable<Object>{
+  addCategory( category: any ):Observable<any>{
     return this.apiHelper.post(Constant.CATE_PROJECT.CREATE , category)
   }
 
-  DeleteCate(id:number):Observable<Object>{
+  deleteCate(id:number):Observable<any>{
     return this.apiHelper.post( Constant.CATE_PROJECT.DELETE  +`/${id}`)
   }
 
-  UpdateCate(id:number,category:CateProject):Observable<Object>{
-    return this.apiHelper.post( Constant.CATE_PROJECT.UPDATE + `/${id}`,category)
+  updateCate(category:any):Observable<any>{
+    return this.apiHelper.post( Constant.CATE_PROJECT.UPDATE ,category)
   }
 }
