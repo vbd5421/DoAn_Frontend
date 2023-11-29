@@ -1,5 +1,5 @@
-<app-page-size  (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
-[(pageSize)]="paging.size" ></app-page-size>
+<app-page-size (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
+    [(pageSize)]="paging.size"></app-page-size>
 
 
 <div class="card mb-5 mt_30 mx-4">
@@ -9,16 +9,22 @@
         </h3>
         <div class="card-toolbar justify-content-between row">
             <div class="col-lg-2">
-                <form (change)="search()" class="form-search" >
-                    <input class="search input-search" type="text" [(ngModel)]="searchInput.name" name="searchInput.name"
-                      placeholder="Tìm kiếm ">
-                    <div class="input-group-append  icon-search">
-                      <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
+                <form (change)="search()" class="form-search">
+                    <div class=" position-relative me-2">
+                        <input class="search input-search" type="text" [(ngModel)]="searchInput.name"
+                            name="searchInput.name" placeholder="Tìm kiếm ">
+                        <div class="input-group-append  icon-search">
+                            <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
-                    <select [(ngModel)]="searchInput.cate" name="searchInput.cate" class=" searchinput px-2 ">
+                    <select [(ngModel)]="searchInput.cate" name="searchInput.cate" class=" searchinput px-2 me-2  ">
                         <option value="" [selected]="true">Chuyên mục</option>
                         <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
-                      </select>
+                    </select>
+                    <select name="" id="" class="searchinput">
+                        <option  [selected]="true" value="">Thành viên</option>
+                        <option *ngFor="let item of listMember" value="{{item.fullName}}">{{item.fullName}}</option>
+                    </select>
                 </form>
             </div>
             <div class="col-lg-3 text-center text-lg-end">
@@ -35,29 +41,29 @@
                     <th style="width: 20%;" scope="col">Ảnh</th>
                     <th style="width:20%" scope="col">Tên</th>
                     <th scope="col" style="width:15%" class=" text-center">Thành viên</th>
-                    <th style="width: 15%;" >Triển khai</th>
-                    <th style="width: 15%;" >Chuyên mục</th>
+                    <th style="width: 15%;">Triển khai</th>
+                    <th style="width: 15%;">Chuyên mục</th>
                     <th style="width: 15%;" scope="col">Thao tác</th>
                 </tr>
             </thead>
             <tbody class="text-center">
-                <tr  *ngFor="let pro of project | paginate:{
+                <tr *ngFor="let pro of project | paginate:{
                     id:'project',
                     itemsPerPage: paging.size,
                     currentPage: paging.page,
-                    totalItems: paging.totalRecord  } , let i = index"  >
-                    
-                    <th style="width: 15%;" class="image" > 
+                    totalItems: paging.totalRecord  } , let i = index">
+
+                    <th style="width: 15%;" class="image">
                         <img class="w-100" src="{{baseURL}}/{{projectURL}}/image/{{pro.id}}" alt="image">
                     </th>
-                    <th  class="text-center " >
+                    <th class="text-center ">
                         {{pro.name}}
                     </th>
-                    <th  class="text-center ">
+                    <th class="text-center ">
                         <div class="max-3line">
-                            <span *ngFor="let item of pro.members" class="ten-thanh-vien  " >
+                            <span *ngFor="let item of pro.members" class="ten-thanh-vien  ">
                                 {{item.fullName}}
-                          </span>
+                            </span>
                         </div>
                     </th>
                     <th>
@@ -67,8 +73,9 @@
                         {{pro.cateProject.typeName}}
                     </th>
                     <td>
-                        <a placement="top" ngbTooltip="Sửa"  class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"  
-                        (click)="updateProject(pro.id)">
+                        <a placement="top" ngbTooltip="Sửa"
+                            class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
+                            (click)="updateProject(pro.id)">
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +88,9 @@
                                 </svg>
                             </span>
                         </a>
-                        <a placement="top" ngbTooltip="Xóa" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm" (click)="deleteProject(pro.id)" >
+                        <a placement="top" ngbTooltip="Xóa"
+                            class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
+                            (click)="deleteProject(pro.id)">
                             <span class="svg-icon svg-icon-3" ng-reflect-inline-s-v-g="./assets/media/icons/duotune/g">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

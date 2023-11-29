@@ -53,11 +53,18 @@
  .search{
   border-radius: 5px;
   height: 30px;
-  width: 100%;
+  width: 180px ;
   align-items: center;
   background-color: #EAEFF4;
   border: 1px solid rgb(230, 231, 232);
   padding: 15px;
+}
+.searchinput{
+  border-radius: 5px;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+
 }
 
 .input-search:focus{
@@ -69,7 +76,8 @@
 }
 
 .form-search{
-  position: relative;
+  display: flex;
+ 
 }
 .icon-search{
   position: absolute;

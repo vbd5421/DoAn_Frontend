@@ -41,7 +41,7 @@ export class ProjectAddComponent implements OnInit {
     //chuyenMuc: new FormControl('', Validators.required),
     //noiDung: new FormControl('' , Validators.required),
     // ngayHoanThanh: new FormControl('', Validators.required),
-    // ngayKetThuc: new FormControl('', Validators.required),
+    trienkhai: new FormControl('', Validators.required),
   });
   constructor(
     private memberService : MemberService,
@@ -76,7 +76,7 @@ export class ProjectAddComponent implements OnInit {
       //this.formProject.controls['chuyenMuc'].setValue(this.project.cateProject.id.toString());
       //this.formProject.controls['noiDung'].setValue(this.project.content);
       // this.formProject.controls['ngayHoanThanh'].setValue(this.project.startDate);
-      // this.formProject.controls['ngayKetThuc'].setValue(this.project.endDate);
+      this.formProject.controls['trienkhai'].setValue(this.project.createDate);
     })
   }
   quillConfig = {
@@ -111,7 +111,7 @@ export class ProjectAddComponent implements OnInit {
     // this.project.cateProject.typeName = this.formProject.controls['chuyenMuc'].value;
     //this.project.content =this.formProject.controls['noiDung'].value;
     // this.project.startDate = this.formProject.controls['ngayHoanThanh'].value;
-    // this.project.endDate = this.formProject.controls['ngayKetThuc'].value;
+    this.project.createDate = this.formProject.controls['trienkhai'].value;
     if (this.id) {
       this.updateProject(this.id  );
     } else {

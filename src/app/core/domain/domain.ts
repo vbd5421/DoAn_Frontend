@@ -16,4 +16,5 @@ public static SLIDERS = `api/sliders`;
 public static CATE_PROJECT=`api/cate-project`;
 public static LINK_WEB = `api/link`;
 public static CONTACT = `api/contact`;
+public static TYPICAL_IMAGE=`api/tImage`;
 }
