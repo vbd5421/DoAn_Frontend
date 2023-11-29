@@ -8,9 +8,8 @@ export class Project {
     content:any;
     image:any;
     url:any;
-    createDate:any;
-    startDate:any;
-    endDate:any;
+    createDate:any; //ngày triển khai
+    updateDate:any;
     //0, đang triển khai;1 đã hoàn thành
     status:boolean;
     cateProject: CateProject = new CateProject();

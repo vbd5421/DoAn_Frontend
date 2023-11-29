@@ -3,10 +3,12 @@ import { Router } from '@angular/router';
 import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
 import { CateProject } from 'src/app/core/model/cate-project/cate-project';
+import { Member } from 'src/app/core/model/member/member';
 import { Project } from 'src/app/core/model/project/project';
 import { CateProjectService } from 'src/app/service/cate-project/cate-project.service';
 import { ProjectService } from 'src/app/service/project/project.service';
 import { ToastService } from 'src/app/service/toast/toast.service';
+import { MemberService } from '../../../../service/member/member.service';
 
 @Component({
   selector: 'app-project-control',
@@ -16,10 +18,11 @@ import { ToastService } from 'src/app/service/toast/toast.service';
 export class ProjectControlComponent {
   project: Project[] = []
   cateProject: CateProject[]=[];
-
+  listMember:Member[] =[];
   searchInput={
     name : '',
-    cate:''
+    cate:'',
+    member:'',
   }
 
   baseURL = Constant.BASE_URL;
@@ -30,13 +33,14 @@ export class ProjectControlComponent {
     totalRecord: 0
   }
 
-  constructor(private projectService: ProjectService, private cateProjectService:CateProjectService,
+  constructor(private projectService: ProjectService, private cateProjectService:CateProjectService, private memberService:MemberService,
     private router: Router ,
     private toastService: ToastService) {
   }
   ngOnInit(): void {
     this.getAllWithPageProject();
-    this.listAllCateProject()
+    this.listAllCateProject();
+    this.listAllMember()
   }
 
   getRequestParams(page: number, pageSize: number, search: string , cate:any): any {
@@ -73,7 +77,13 @@ export class ProjectControlComponent {
   listAllCateProject(){
     this.cateProjectService.listAllCate().subscribe(res=>{
       this.cateProject = res;
-      console.log(this.cateProject , "dự án")
+      console.log(this.cateProject , "catedự án")
+    })
+  }
+  // list all thành viên
+  listAllMember(){
+    this.memberService.getListAllPage().subscribe(data=>{
+      this.listMember=data.content; //.content
     })
   }
 

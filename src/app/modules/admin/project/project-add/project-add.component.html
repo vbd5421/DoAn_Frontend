@@ -25,16 +25,17 @@
                   </div>
                 </div>
                 <div class="listmember mb-md-0 mb-3 mt-3 mt-md-4 mx-md-0 mx-4 ">
-                  <label class="form-label">Thành viên trong dự án</label>
-                  <div *ngFor="let member of listMember">
-                    <input class="me-md-2 me-1" type="checkbox" [value]="member.selected" [checked]="member.selected"
-                      (change)="onCheckChangeMember($event, member)" id="flexCheckChecked{{member.id}}">
-                    <label for="flexCheckChecked{{member.id}}">{{member.fullName}}</label>
-                  </div>
-                  <div>
-                    <span class="mt-2">Không tìm thấy thành viên mong muốn ?</span><a target="_blank"
-                      href="admin/member/add"><span class="addmember">Thêm mới</span></a>
-                  </div>
+                  <label class="custom-field two w-100">
+                    <input placeholder="&nbsp;" class="w-100 input-field" type="date" 
+                        formControlName="trienkhai" name="createDate"
+                        [class.borderError]="!formProject.controls.trienkhai.valid&&!formProject.controls.trienkhai.untouched"
+                        [class.text-input]="formProject.controls.trienkhai.valid||formProject.controls.trienkhai.untouched" />
+                    <span class="placeholder label-custom lh-base "><span
+                            class="validateText">*</span>năm triển khai</span>
+                </label>
+                <p *ngIf="!formProject.controls.trienkhai.valid&&!formProject.controls.trienkhai.untouched"
+                    class="validateText">
+                    Thông tin không thể bỏ trống</p>
                 </div>
                 <div class="listmember mb-md-0 mb-3 mt-3 mt-md-4 mx-md-0 mx-4 ">
                   <label class="form-label"><span class="validateText">*</span>chuyên mục dự án</label>
@@ -47,13 +48,25 @@
                   </select>
                   <p *ngIf="!formProject.controls.chuyenMuc.valid&&!formProject.controls.chuyenMuc.untouched"
                     class="validateText">Thông tin không thể bỏ trống</p> -->
-                    <select name="cateProject" id="" [(ngModel)]="project.cateProject.id" [ngModelOptions]="{standalone: true}" 
-                    
-                      >
-                      <option value="" disabled selected ></option>
+                  <select name="cateProject" id="" [(ngModel)]="project.cateProject.id"
+                    [ngModelOptions]="{standalone: true}" class="form-select select-custom "
+                    aria-label="Default select example">
+                    <option value="" disabled [selected]="true" selected>Chuyên mục dự án</option>
                     <option *ngFor="let cP of cateProject" value="{{cP.id}}" [innerHTML]="cP.typeName">
                     </option>
-                    </select>
+                  </select>
+                </div>
+                <div class="listmember mb-md-0 mb-3 mt-3 mt-md-4 mx-md-0 mx-4 ">
+                  <label class="form-label">Thành viên trong dự án</label>
+                  <div *ngFor="let member of listMember">
+                    <input class="me-md-2 me-1" type="checkbox" [value]="member.selected" [checked]="member.selected"
+                      (change)="onCheckChangeMember($event, member)" id="flexCheckChecked{{member.id}}">
+                    <label for="flexCheckChecked{{member.id}}">{{member.fullName}}</label>
+                  </div>
+                  <div>
+                    <span class="mt-2">Không tìm thấy thành viên mong muốn ?</span><a target="_blank"
+                      href="admin/member/add"><span class="addmember">Thêm mới</span></a>
+                  </div>
                 </div>
               </div>
               <div class="col-md-8">

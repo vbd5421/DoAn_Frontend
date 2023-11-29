@@ -111,5 +111,15 @@ export class Constant {
         DELETE : `${Domain.ADDRESS}/delete`,
         LIST : `${Domain.ADDRESS}`
     }
-    
+    public static TYPICAL_IMAGE={
+        GET_ALL_LIST_CHANGE_PAGE : `${Domain.TYPICAL_IMAGE}`,
+        GET_LIST_ALL: `${Domain.TYPICAL_IMAGE}/show`,
+        ADD_IMAGE_BY_ID: `${Domain.TYPICAL_IMAGE}/addimage`,
+        GET_FIND_BY_ID: `${Domain.TYPICAL_IMAGE}`,
+        DELETE: `${Domain.TYPICAL_IMAGE}/delete`,
+        UPDATE: `${Domain.TYPICAL_IMAGE}/update`,
+        ADD_TYPICAL_IMAGE: `${Domain.TYPICAL_IMAGE}/add`,
+        HIDE: `${Domain.TYPICAL_IMAGE}/hide`,
+        SHOW: `${Domain.TYPICAL_IMAGE}/show`,
+      }
 }

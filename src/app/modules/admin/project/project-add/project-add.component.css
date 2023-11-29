@@ -35,7 +35,7 @@
 
 .select-custom:focus-visible{
   box-shadow: unset;
-  border: unset;
+  border: 1px solid rgb(126, 126, 126);
 }
 
 select,option{
