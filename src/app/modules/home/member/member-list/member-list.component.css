@@ -30,3 +30,35 @@
 .item-member:not(:last-child){
     margin-bottom: 15px;
 }
+/*  */
+.img-member{
+    width: 100%;
+    /* min-height: 190px;
+    max-height: 197px; */
+}
+
+/* @media (min-width:992px) {
+  .img-member{
+    max-height: 197px;
+  }
+}
+@media screen and (max-width:991.98px) {
+    .img-member{
+        max-height: 230px;
+        width: 75%;
+    }
+}
+
+@media (max-width:576px) {
+    .img-member{
+        max-height: 205px;
+        width: 75%;
+    }
+}
+
+@media (min-width:576.3px) and (max-width:767.98px) {
+    .img-member{
+        max-height: 315px;
+        width: 75%;
+    }
+} */

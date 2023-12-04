@@ -14,10 +14,6 @@ import { ToastService } from 'src/app/service/toast/toast.service';
 })
 export class MemberControlComponent {
   listMember: Member[] = [];
-
-  currentIndex = -1;
-  totalPages: number;
-
   baseURL = Constant.BASE_URL;
   memberURL = Domain.MEMBER;
   paging = {
@@ -27,8 +23,6 @@ export class MemberControlComponent {
   }
   searchInput = {
     name :'',
-    degree:'',
-    position:'',
   }
   constructor(private router: Router,
     private auth: AuthService, 
@@ -38,7 +32,7 @@ export class MemberControlComponent {
   ngOnInit(): void {
     this.getMemberListAllwithPage();
   }
-  getRequestParams(page: number, pageSize: number, name: string ): any {
+  getRequestParams(page: number, pageSize: number, name: any ): any {
     let params: any = {};
 
     if (page) {
@@ -50,16 +44,13 @@ export class MemberControlComponent {
     }
 
     if (name) {
-      params[`name`] = name;
-      // params[`position`] = name;
-      // params[`degree`] = name;
+      params[`search`] = name;
     }
     return params;
   }
   getMemberListAllwithPage(){
     const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput.name  )
     this.memberService.getListAllPage(params).subscribe(data => {
-      console.log(data)
       this.listMember = data.content;
       this.paging.totalRecord = data.totalElements;
       console.log('thành viên' , this.listMember)
@@ -74,14 +65,12 @@ export class MemberControlComponent {
     this.getMemberListAllwithPage();
   }
   handlePageChange(event: number): void {
-    console.log(event);
     this.paging.page = event;
     this.getMemberListAllwithPage();
   }
   handlePageSizeChange(event: any): void {
     this.paging.size = event;
     this.paging.page = 1;
-    console.log(event, this.paging.size)
     this.getMemberListAllwithPage();
   }
   updateMember(id: number) {

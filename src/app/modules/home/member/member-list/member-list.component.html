@@ -3,8 +3,8 @@
 <div class="bg-light mt-header mb-3">
     <nav aria-label="breadcrumb " class="py-3 py-2 container ">
         <ol class="breadcrumb mb-0 text-capitalize ">
-          <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-          <li class="breadcrumb-item active" aria-current="page">đội ngũ nghiên cứu</li>
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">đội ngũ nghiên cứu</li>
         </ol>
     </nav>
 </div>
@@ -14,48 +14,30 @@
         đội ngũ nghiên cứu
     </div>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-lg-9 mb-4 mb-lg-0 ">
             <div class="row">
-                <div class="col-12 col-md-3 item-member ">
+                <div class="col-12 col-md-6 col-lg-3 item-member " *ngFor="let member of listMember | paginate:{
+                    id:'member',
+                    itemsPerPage: paging.size,
+                    currentPage: paging.page,
+                    totalItems: paging.totalRecord  } , ">
                     <div class="team-item bg-white text-center rounded p-2 pt-0">
-                        <img class="img-fluid rounded-circle px-5 px-md-4 pt-3 pb-4" src="/assets/images/team-1.jpg" alt="">
-                        <div class="ps-2  " >
-                            <div class="text-start" ><small class="m-0">Họ & Tên: </small><span class="mb-0 fw-bold text-capitalize ">Boris Johnson</span></div>
-                            <div class="text-start" ><small>Chức vụ: </small><span>Thành viên</span></div>
-                            <div class="text-start"><small>Học Vị: </small><span>Tiến sĩ</span></div>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a href="gioi-thieu/thanh-vien/chi-tiet">
-                                    <button class="btn  m-1 btn-see-more ">xem chi tiết</button>
-                                </a>
+                        <img class="img-fluid img-member rounded-circle px-5 px-md-4 pt-3 pb-4"
+                            src="{{baseURL}}/{{memberURL}}/image/{{member.id}}" alt="img member">
+                        <div class="ps-2  ">
+                            <div class="text-start">
+                                <small class="m-0">Họ & Tên: </small><span
+                                    class="mb-0 fw-bold text-capitalize ">{{member.fullName}}</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 item-member ">
-                    <div class="team-item bg-white text-center rounded p-2 pt-0">
-                        <img class="img-fluid rounded-circle px-5 px-md-4 pt-3 pb-4" src="/assets/images/team-1.jpg" alt="">
-                        <div class="ps-2  " >
-                            <div class="text-start" ><small class="m-0">Họ & Tên: </small><span class="mb-0 fw-bold text-capitalize ">Boris Johnson</span></div>
-                            <div class="text-start" ><small>Chức vụ: </small><span>Thành viên</span></div>
-                            <div class="text-start"><small>Học Vị: </small><span>Tiến sĩ</span></div>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a href="gioi-thieu/thanh-vien/chi-tiet">
-                                    <button class="btn  m-1 btn-see-more ">xem chi tiết</button>
-                                </a>
+                            <div class="text-start">
+                                <small>Chức vụ: </small><span>{{member.position}}</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 item-member ">
-                    <div class="team-item bg-white text-center rounded p-2 pt-0">
-                        <img class="img-fluid rounded-circle px-5 px-md-4 pt-3 pb-4" src="/assets/images/team-1.jpg" alt="">
-                        <div class="ps-2  " >
-                            <div class="text-start" ><small class="m-0">Họ & Tên: </small><span class="mb-0 fw-bold text-capitalize ">Boris Johnson</span></div>
-                            <div class="text-start" ><small>Chức vụ: </small><span>Thành viên</span></div>
-                            <div class="text-start"><small>Học Vị: </small><span>Tiến sĩ</span></div>
+                            <div class="text-start">
+                                <small>Học Vị: </small><span>{{member.degree}}</span>
+                            </div>
                             <div class="d-flex justify-content-center mt-3">
                                 <a href="gioi-thieu/thanh-vien/chi-tiet">
-                                    <button class="btn  m-1 btn-see-more ">xem chi tiết</button>
+                                    <button class="btn m-1 btn-see-more ">xem chi tiết</button>
                                 </a>
                             </div>
                         </div>
@@ -63,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3">
             <app-posts-more></app-posts-more>
             <div class="my-5"></div>
             <app-link-web-home></app-link-web-home>

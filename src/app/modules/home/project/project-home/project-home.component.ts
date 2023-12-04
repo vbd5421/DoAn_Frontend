@@ -31,7 +31,7 @@ export class ProjectHomeComponent {
 onWindowScroll(event: Event) {
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
   // Logic để xác định khi nào để kích hoạt animation, ví dụ:
-  if (scrollPosition > 1110) {
+  if (scrollPosition > 950) {
     this.animationState = 'active';
   } else {
     this.animationState = 'inactive';
@@ -77,7 +77,6 @@ getAllWithPageProject() {
   this.projectService.getListAllPage(params).subscribe(data => {
   this.project = data.content;
   this.paging.totalRecord = data.totalElements;
-   console.log('dự án ' , this.project)
   },
     error => {
       console.error(error)

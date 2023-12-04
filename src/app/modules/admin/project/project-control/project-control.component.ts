@@ -77,7 +77,6 @@ export class ProjectControlComponent {
   listAllCateProject(){
     this.cateProjectService.listAllCate().subscribe(res=>{
       this.cateProject = res;
-      console.log(this.cateProject , "catedự án")
     })
   }
   // list all thành viên

@@ -12,7 +12,6 @@ import { ToastService } from 'src/app/service/toast/toast.service';
 })
 export class CateProjectAddComponent implements OnInit {
   cateProject: CateProject = new CateProject();
-  message = '';
   id: number;
   catogaryControl = new FormControl('', Validators.required);
 
@@ -28,7 +27,6 @@ export class CateProjectAddComponent implements OnInit {
     if (this.id) {
       this.cateProjectService.getCateByid(this.id).subscribe(res => {
         this.cateProject = res;
-        console.log(res)
         this.catogaryControl.setValue(res.typeName);
       });
     }

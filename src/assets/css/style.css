@@ -579,7 +579,9 @@
 }
 
 /* quill editor */
-
+.ql-editor a:hover{
+  color: #2360fa !important;
+}
 @media (min-width:992px) {
   .mt-header {
     margin-top: 172px;

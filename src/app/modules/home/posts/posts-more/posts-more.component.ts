@@ -21,7 +21,6 @@ export class PostsMoreComponent implements OnInit {
     //this.getListAllWithPage() ;
     this.getListAll();
     this.shuffleItems();
-    console.log("aa")
   }
   
   paging = {
@@ -40,7 +39,6 @@ export class PostsMoreComponent implements OnInit {
     if (pageSize) {
       params[`pageSize`] = pageSize;
     }
-
 
     return params;
   }

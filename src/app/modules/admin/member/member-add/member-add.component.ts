@@ -65,7 +65,7 @@ export class MemberAddComponent {
   getMemberById(id:number){
     this.memberService.getId(id).subscribe((data) => {
       this.member = data;
-      console.log(this.member)
+      
       this.url = this.member.image?.pathUrl;
       this.imageURL = `${this.baseURL}/${this.membertURL}/image/${this.id}`;
       this.formMember.controls['ten'].setValue(this.member.fullName);
@@ -91,7 +91,6 @@ export class MemberAddComponent {
     formData.append('memberDTO',
       new Blob([JSON.stringify(member)], { type: 'application/json' })
     );
-    console.log(formData);
    // formData.append('imageFile', this.fileToUpload, this.fileToUpload.name);
    for (let i = 0; i < this.fileToUpload.length; i++) {
     formData.append(
