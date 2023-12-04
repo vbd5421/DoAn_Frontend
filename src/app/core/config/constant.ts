@@ -122,4 +122,15 @@ export class Constant {
         HIDE: `${Domain.TYPICAL_IMAGE}/hide`,
         SHOW: `${Domain.TYPICAL_IMAGE}/show`,
       }
+      public static SLIDERS ={
+        GET_LIST_ALL : `${Domain.SLIDERS}/home` ,
+        GET_SLIDERS: `${Domain.SLIDERS}` ,
+        ADD: `${Domain.SLIDERS}/add` ,
+        GET_BY_ID: `${Domain.SLIDERS}` ,
+        UPDATE: `${Domain.SLIDERS}/update` ,
+        HIDE_SLIDER: `${Domain.SLIDERS}/hide` ,
+        SHOW_SLIDER: `${Domain.SLIDERS}/show` ,
+        DELETE_SLIDER: `${Domain.SLIDERS}/status` ,
+        GET_IMAGE: `${Domain.SLIDERS}/images` ,
+      }
 }

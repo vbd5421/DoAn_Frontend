@@ -22,7 +22,7 @@ export class TypicalNumberHomeComponent implements OnInit {
 onWindowScroll(event: Event) {
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
   // Logic để xác định khi nào để kích hoạt animation, ví dụ:
-  if (scrollPosition > 700) {
+  if (scrollPosition > 520) {
     this.animationState = 'active';
   } else {
     this.animationState = 'inactive';

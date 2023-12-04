@@ -50,6 +50,10 @@
   padding: 10px;
   border-radius: 5px;
 }
+.box-address select:focus{
+  box-shadow: unset;
+  border: 1px solid rgb(161, 161, 161);
+}
 /* input css */
 
 .label-custom{
@@ -89,7 +93,7 @@ overflow: hidden;
 white-space: nowrap;
 text-overflow: ellipsis;
 /* top: 22px; */
-top: -15px;
+top: -20px;
 line-height: 100%;
 transform: translateY(-50%);
 /* color: #aaa; */
@@ -100,14 +104,16 @@ transition:
   font-size 0.3s ease;
 }
 
+/* 
 .custom-field .input-field.dirty + .placeholder,
 .custom-field .input-field:focus + .placeholder,
 .custom-field .input-field:not(:placeholder-shown) + .placeholder  {
-/* top: -10px; */
+
 font-weight: 700;
+line-height: 40px;
 color: #222;
 left: 0px;
-}
+} */
 
 /* TWO */
 .custom-field.two .input-field {

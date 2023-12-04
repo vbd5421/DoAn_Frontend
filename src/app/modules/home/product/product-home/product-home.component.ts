@@ -26,7 +26,7 @@ export class ProductHomeComponent {
 onWindowScroll(event: Event) {
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
   // Logic để xác định khi nào để kích hoạt animation, ví dụ:
-  if (scrollPosition > 1940) {
+  if (scrollPosition > 1760) {
     this.animationState = 'active';
   } else {
     this.animationState = 'inactive';
@@ -72,7 +72,6 @@ getProductListAllwithPage(){
     this.products = data.content;
     this.paging.totalRecord = data.totalElements;
     this.totalPages = data.totalPages;
-    console.log('sản phẩm home' , this.products)
   },
     error => {
       console.log(error);

@@ -56,7 +56,7 @@
   
   select,option{
     width: 100%;
-    font-family: fontAwesome
+    font-family: fontAwesome !important
   }
   .borderError{
     border: 1px solid red;

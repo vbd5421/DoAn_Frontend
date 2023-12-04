@@ -25,7 +25,7 @@ export class AboutusHomeComponent implements OnInit {
   onWindowScroll(event: Event) {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     // Logic để xác định khi nào để kích hoạt animation, ví dụ:
-    if (scrollPosition > 350) {
+    if (scrollPosition > 250) {
       this.animationState = 'active';
     } else {
       this.animationState = 'inactive';

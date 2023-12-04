@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
+import { CateProject } from 'src/app/core/model/cate-project/cate-project';
 import { Project } from 'src/app/core/model/project/project';
+import { CateProjectService } from 'src/app/service/cate-project/cate-project.service';
 import { ProjectService } from 'src/app/service/project/project.service';
 
 
@@ -15,7 +17,11 @@ import { ProjectService } from 'src/app/service/project/project.service';
 export class ProjectListComponent {
 
   project: Project[] = []
-  name = '';
+  cateProject: CateProject[]=[];
+  searchInput={
+    name : '',
+    cate:'',
+  }
   baseURL = Constant.BASE_URL;
   projectURL = Domain.PROJECT;
   paging = {
@@ -25,13 +31,14 @@ export class ProjectListComponent {
   }
 
   constructor(private projectService: ProjectService ,
-        private toast:ToastrService) {
+        private toast:ToastrService , private cateProjectService:CateProjectService ) {
   }
   ngOnInit(): void {
     this.getAllWithPageProject();
+    this.listAllCateProject();
   }
 
-  getRequestParams(page: number, pageSize: number, search: string): any {
+  getRequestParams(page: number, pageSize: number, search: string , cate:any): any {
     let params: any = {};
     if (page) {
       params[`pageNo`] = page;
@@ -44,21 +51,29 @@ export class ProjectListComponent {
     if (search) {
       params[`name`] = search;
     }
+    if(cate){
+      params[`cateId`] = cate
+    }
     return params;
   }
 
   getAllWithPageProject() {
-    const params = this.getRequestParams(this.paging.page, this.paging.size, this.name)
+    const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput.name , this.searchInput.cate)
     this.projectService.getListAllPage(params).subscribe(data => {
     this.project = data.content;
     this.paging.totalRecord = data.totalElements;
-     console.log('dự án ' , this.project)
+     
     },
       error => {
         console.error(error)
       })
   }
-
+  // chuyên mục dự án
+  listAllCateProject(){
+    this.cateProjectService.listAllCate().subscribe(res=>{
+      this.cateProject = res;
+    })
+  }
 
   search(): void {
     this.paging.page = 1;

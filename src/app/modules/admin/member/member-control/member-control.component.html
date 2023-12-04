@@ -13,7 +13,9 @@
                     <input class="search input-search" type="text" [(ngModel)]="searchInput.name" name="searchInput.name"
                         placeholder="Tìm kiếm ">
                     <div class="input-group-append  icon-search">
-                        <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
+                        <button type="submit" class=" border-0 ">
+                            <i class="fa fa-search"></i> 
+                        </button>
                     </div>
                 </form>
             </div>
@@ -43,7 +45,7 @@
                     currentPage: paging.page,
                     totalItems: paging.totalRecord  } , let i = index" >
                     <th class="image">
-                        <img class="w-100" src="{{baseURL}}/{{memberURL}}/image/{{member.id}}"  alt="img product">
+                        <img class="w-100" src="{{baseURL}}/{{memberURL}}/image/{{member.id}}"  alt="img member">
                     </th>
                     <th class="text-center">
                         <p>{{member.fullName}}</p>

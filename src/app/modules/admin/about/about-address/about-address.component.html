@@ -14,8 +14,8 @@
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
                                     <label class="label-custom" for="province">Tỉnh/Thành:</label>
                                     <select id="province" [(ngModel)]="address.citi" name="address.citi" (change)="selectProvince($event)"
-                                        [ngModelOptions]="{standalone: true}"> 
-                                        <option [selected]="true" value="" selected >--Chọn--</option>
+                                        [ngModelOptions]="{standalone: true}" class="form-select" > 
+                                        <option [selected]="true" value="" selected  disabled  >--Chọn--</option>
                                         <option *ngFor="let province of provinces" value="{{province.name}}">
                                             {{province.name}}</option>
                                     </select>
@@ -23,24 +23,21 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
-                                    <form (change)="selectDistricts($event)" #form="ngForm">
                                         <label class="label-custom" for="districts">Quận/Huyện:</label>
                                         <select id="districts" [(ngModel)]="address.districts"  name="address.districts"
-                                             >
-                                            <option [selected]="true" value=""  >--Chọn--</option>
+                                        (change)="selectDistricts($event)" class="form-select"  >
+                                            <option [selected]="true" value=""  disabled  >--Chọn--</option>
                                             <option *ngFor="let district of districts" value="{{district.name}}">
                                                 {{district.name}}</option>
                                         </select>
-                                    </form>
-                                    
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
                                     <label class="label-custom" for="wards">Phường/Xã:</label>
                                     <select id="wards" [(ngModel)]="address.wards"  name="address.wards"
-                                        [ngModelOptions]="{standalone: true}">
-                                        <option [selected]="true" value="" selected>--Chọn--</option>
+                                        [ngModelOptions]="{standalone: true}" class="form-select" >
+                                        <option [selected]="true" value="" selected disabled >--Chọn--</option>
                                         <option *ngFor="let itemwWard of wards" value="{{itemwWard.name }}">
                                             {{itemwWard.name }}</option>
                                     </select>

@@ -6,7 +6,7 @@ import { MemberDetailComponent } from '../../member/member-detail/member-detail.
 
 const routes: Routes=[
   {path:'' ,component:MemberListComponent },
-  {path:'chi-tiet' , component:MemberDetailComponent}
+  {path:':url' , component:MemberDetailComponent}
 ]
 
 @NgModule({

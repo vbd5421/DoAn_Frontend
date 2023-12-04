@@ -1,5 +1,13 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { Constant } from 'src/app/core/config/constant';
+import { Domain } from 'src/app/core/domain/domain';
+import { Member } from 'src/app/core/model/member/member';
+import { AuthService } from 'src/app/service/auth/auth.service';
+import { MemberService } from 'src/app/service/member/member.service';
+import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
   selector: 'app-member-home',
@@ -26,10 +34,59 @@ export class MemberHomeComponent {
 onWindowScroll(event: Event) {
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
   // Logic để xác định khi nào để kích hoạt animation, ví dụ:
-  if (scrollPosition > 3100) {
+  if (scrollPosition > 2430) {
     this.animationState = 'active';
   } else {
     this.animationState = 'inactive';
   }
 }
+
+
+listMember: Member[] = [];
+baseURL = Constant.BASE_URL;
+memberURL = Domain.MEMBER;
+paging = {
+  page: 1,
+  size: 2,
+  totalRecord: 0
+}
+searchInput = {
+  name :'',
+}
+constructor(private router: Router,
+  private auth: AuthService, 
+  private memberService: MemberService,
+  private toast:ToastService) {
+}
+ngOnInit(): void {
+  this.getMemberListAllwithPage();
+}
+getRequestParams(page: number, pageSize: number, name: any ): any {
+  let params: any = {};
+
+  if (page) {
+    params[`pageNo`] = page;
+  }
+
+  if (pageSize) {
+    params[`pageSize`] = pageSize;
+  }
+
+  if (name) {
+    params[`search`] = name;
+  }
+  return params;
+}
+getMemberListAllwithPage(){
+  const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput.name  )
+  this.memberService.getListAllPage(params).subscribe(data => {
+    this.listMember = data.content;
+    this.paging.totalRecord = data.totalElements;
+  },
+    error => {
+      console.log(error);
+    }
+  )
+}
+
 }

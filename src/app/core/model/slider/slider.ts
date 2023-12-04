@@ -3,6 +3,9 @@ export class Slider {
     name: any;
     pathFile: any;
     pathUrl: any;
-   // parentId: any;
     active: any;
+    originalFileName: string;
+    url: any;
+    parentId: any;
+    status:any
 }

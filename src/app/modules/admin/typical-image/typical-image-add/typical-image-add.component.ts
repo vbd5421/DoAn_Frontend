@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
@@ -13,13 +14,14 @@ import { TypicalImageService } from 'src/app/service/typical-image/typical-image
 })
 export class TypicalImageAddComponent {
 
-  gallery : TypicalImage = new TypicalImage();
+  tImage : TypicalImage = new TypicalImage();
   fileToUpload:string [] = [];
   url: any;
   id: any;
   baseURL = Constant.BASE_URL;
-  galleryURL = Domain.TYPICAL_IMAGE;
+  tImageURL = Domain.TYPICAL_IMAGE;
   imageURL: any;
+  tImageControl = new FormControl('', Validators.required);
 constructor(private router: Router ,
           private route: ActivatedRoute ,
           private galleryService: TypicalImageService,
@@ -29,14 +31,16 @@ ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     if(this.id){
       this.galleryService.getfindbyId(this.id).subscribe(data=>{
-        this.gallery = data;
-        this.url = this.gallery.image.pathUrl;
-        this.imageURL =`${this.baseURL}/${this.galleryURL}/image/${this.gallery.image.name}`
+        this.tImage = data;
+        this.tImageControl.setValue(this.tImage.caption)
+        this.url = this.tImage.image.pathUrl;
+        this.imageURL =`${this.baseURL}/${this.tImage}/image/${this.tImage.image.name}`
       })
     }
   }
 
   onSubmit(){
+    this.tImage.caption=this.tImageControl.value
     if(this.id){
       this.update(this.id);
     }else{
@@ -45,7 +49,7 @@ ngOnInit(): void {
   }
 
 addGallery(){
-  const igFormdata = this.prepareFormdata(this.gallery);
+  const igFormdata = this.prepareFormdata(this.tImage);
   this.galleryService.addtypical_image(igFormdata).subscribe(()=>{
       this.toastService.showSuccess();
     this.gotoGalleryControl();
@@ -55,11 +59,11 @@ addGallery(){
 }
 
 gotoGalleryControl(){
-  this.router.navigate(['/admin/tImage'])
+  window.history.back()
 }
 
 update(id:any){
-   const galleryDataForm = this.prepareFormdata(this.gallery);
+   const galleryDataForm = this.prepareFormdata(this.tImage);
     this.galleryService.update(id, galleryDataForm).subscribe(()=>{
       this.toastService.showSuccess();
 
