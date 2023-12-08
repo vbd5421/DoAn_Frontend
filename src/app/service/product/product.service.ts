@@ -28,4 +28,7 @@ export class ProductService {
   deleteProduct(id: number): Observable<any>{
     return this.apiHelper.post( Constant.PRODUCT.DELETE_PRODUCT +`/${id}`);
   }
+  getProductByUrl(url:any):Observable<Product>{
+    return this.apiHelper.get(Constant.PRODUCT.GET_URL + `/${url}`)
+  }
 }

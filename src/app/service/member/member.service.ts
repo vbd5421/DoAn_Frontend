@@ -27,4 +27,7 @@ export class MemberService {
   deleteMember(id: any): Observable<any>{
     return this.apiHelper.post( Constant.MEMBER.DELETE_MEMBER +`/${id}`);
   }
+  getByUrl(url:any):Observable<Member>{
+    return this.apiHelper.get(Constant.MEMBER.GET_URL + `/${url}`);
+  }
 }

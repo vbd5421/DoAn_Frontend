@@ -59,10 +59,7 @@ export class ProjectAddComponent implements OnInit {
     if (this.id) {
       this.getProjectById(this.id)
     }
-    else{
-      
-      
-    }
+
   }
   getProjectById(id:number){
     this.projectService.getId(id).subscribe((data) => {
@@ -118,7 +115,7 @@ export class ProjectAddComponent implements OnInit {
       this.addProject();
     }
   }
-  
+
 
   prepareFormData(project: Project): FormData {
     const formData = new FormData();
@@ -204,13 +201,13 @@ export class ProjectAddComponent implements OnInit {
     memberr.selected = event.currentTarget.checked;
     if (memberr.selected) {
       this.project.members.push(memberr);
-      console.log(this.project.members) 
+      console.log(this.project.members)
     } else {
       this.project.members.forEach((item) => {
         if (item.id === memberr.id) {
           if (this.project.members) {
             this.project.members = this.project.members.filter(
-              (i) => i !== item 
+              (i) => i !== item
             );
           }
         }

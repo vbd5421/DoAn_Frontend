@@ -37,7 +37,6 @@ export class ProductAddComponent {
     if (this.id) {
       this.productService.getProductById(this.id).subscribe((data) => {
         this.products = data;
-        console.log(data," 123")
         this.url = this.products.image?.pathUrl;
         this.imageURL = `${this.baseURL}/${this.productURL}/image/${this.id}`;
         this.formProduct.controls['title'].setValue(this.products.title)

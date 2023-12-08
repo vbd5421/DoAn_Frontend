@@ -32,7 +32,6 @@ export class TypicalNumAddComponent {
     if (this.id) {
       this.numService.getNumberById(this.id).subscribe((data) => {
         this.tNumber = data;
-        console.log(this.tNumber)
         this.formNumber.controls['numberic'].setValue(this.tNumber.num);
         this.formNumber.controls['icons'].setValue(this.tNumber.icon);
         this.formNumber.controls['description'].setValue(
@@ -68,12 +67,11 @@ export class TypicalNumAddComponent {
 
   update(id: number, tNumber: TypicalNumber) {
     this.numService.updateNumber(tNumber, id).subscribe(() => {
-        this.toast.showUpdate()
+        this.toast.showUpdate();
         this.rollbackToList();
       },
       (error) => {
-        // this.toast.showWarning(error.error);
-        console.log(error.error);
+        console.log(error);
       }
     );
   }

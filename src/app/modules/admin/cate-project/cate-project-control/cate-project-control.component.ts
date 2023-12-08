@@ -17,7 +17,7 @@ export class CateProjectControlComponent  implements OnInit{
   listCateProject: CateProject[] = [];
 
   baseURL = Constant.BASE_URL;
-  cateprojectURL = Domain.CATE_PROJECT;
+
   paging = {
     page: 1,
     size: 5,
@@ -27,7 +27,7 @@ export class CateProjectControlComponent  implements OnInit{
     name :'',
   }
   constructor(private router: Router,
-    private auth: AuthService, 
+    private auth: AuthService,
     private cateProjectService: CateProjectService,
     private toast:ToastService) {
   }
@@ -67,14 +67,14 @@ export class CateProjectControlComponent  implements OnInit{
     this.getCateProjectListAllwithPage();
   }
   handlePageChange(event: number): void {
-    console.log(event);
+
     this.paging.page = event;
     this.getCateProjectListAllwithPage();
   }
   handlePageSizeChange(event: any): void {
     this.paging.size = event;
     this.paging.page = 1;
-    console.log(event, this.paging.size)
+
     this.getCateProjectListAllwithPage();
   }
   updateCateProject(id: number) {

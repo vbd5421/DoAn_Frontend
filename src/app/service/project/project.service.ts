@@ -27,4 +27,7 @@ export class ProjectService {
   deleteProject(id: number): Observable<any>{
     return this.apiHelper.post( Constant.PROJECT.DELETE_PROJECT +`/${id}`);
   }
+  getByUrl(url:any):Observable<Project>{
+    return this.apiHelper.get(Constant.PROJECT.GET_URL + `/${url}`)
+  }
 }

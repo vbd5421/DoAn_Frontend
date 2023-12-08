@@ -37,7 +37,7 @@ export class CateProjectAddComponent implements OnInit {
     if (this.id) {
       this.update();
     } else {
-      this.AddCategory();
+      this.addCategory();
     }
   }
 
@@ -46,7 +46,6 @@ export class CateProjectAddComponent implements OnInit {
   }
 
   update() {
-    console.log(this.cateProject)
     this.cateProjectService.updateCate(this.cateProject).subscribe(
       () => {
         this.toast.showSuccess();
@@ -58,7 +57,7 @@ export class CateProjectAddComponent implements OnInit {
     );
   }
 
-  AddCategory() {
+  addCategory() {
     this.cateProjectService.addCategory(this.cateProject).subscribe(
       () => {
         this.toast.showSuccess();
