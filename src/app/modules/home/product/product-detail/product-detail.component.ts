@@ -14,20 +14,25 @@ export class ProductDetailComponent implements OnInit {
 
   baseURL = Constant.BASE_URL;
   url:any;
+  id:any;
   content:any;
   product: Product=new Product()
 
   constructor(private productService:ProductService, 
     private route:ActivatedRoute,
     private router: Router , 
-    private domsanitizer:DomSanitizer){}
+    private sanitizer:DomSanitizer){}
 
   ngOnInit(): void {
     this.getList()
   }
   getList(){
-    // this.url= this.route.snapshot.params['url'];
-    // // this.url = this.route.snapshot.queryParams['url'];
-    // this.productService
+    this.url = this.route.snapshot.params['url'];
+    this.productService.getProductByUrl(this.url).subscribe(data => {
+      this.product = data;
+      // console.log(data)
+      document.title = this.product.title;
+      this.content = this.sanitizer.bypassSecurityTrustHtml(this.product.content);
+    })
   }
 }

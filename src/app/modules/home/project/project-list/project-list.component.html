@@ -26,7 +26,7 @@
         </label>
         <label class="select mb-4 ">
             <select class="w-100" [(ngModel)]="searchInput.cate" name="searchInput.cate" >
-                <option value="" [selected]="true">Chuyên mục</option>
+                <option value="" [selected]="true">Chuyên mục dự án</option>
                 <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
             </select>
             <!-- <select [(ngModel)]="searchInput.cate" name="searchInput.cate" class=" searchinput px-2 me-2  ">
@@ -88,7 +88,7 @@
                 </label>
                 <label class="select mb-4 ">
                     <select class="w-100" [(ngModel)]="searchInput.cate" name="searchInput.cate" >
-                        <option value="" [selected]="true" >Chuyên mục</option>
+                        <option value="" [selected]="true" >Chuyên mục dự án</option>
                         <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
                     </select>
                 </label>

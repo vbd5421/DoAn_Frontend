@@ -24,7 +24,7 @@
                         <div class="post-meta">
                             <div class="post-date">
                                 <i class="fa-regular fa-calendar-days"></i>
-                                {{post.date}}
+                                {{post.date | date:'dd-MM-yyyy'}}
                               </div>
                             <div class="share text-right ">
                                 <a target="_blank"
@@ -33,7 +33,7 @@
                                     <i class="fa-brands fa-square-facebook fb "></i>
                                 </a>
                                 <a target="_blank"
-                                    href="https://twitter.com/"
+                                    href="https://twitter.com/intent/tweet?text={{post.title}}-UAV-AI&url={{baseURL}}/tin-tuc/{{post.url}}"
                                     class="icon-share" title="Chia sẻ Twitter" >
                                     <i class="fa-brands fa-square-x-twitter tw "></i>
                                 </a>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="post-content lh-base mt-1 mt-md-2 ql-editor "  [innerHTML]="content" >              
+                        <div class="post-content lh-base mt-1 mt-md-2 ql-editor "  [innerHTML]="content" >
                         </div>
                     </div>
                 </div>

@@ -15,6 +15,7 @@ export class FooterComponent {
   telephone:any;
   fax:any;
   email:any
+  emailLink:any;
   constructor(private aboutService:AboutUsService,
               private sanitizer: DomSanitizer,
     ){}
@@ -28,6 +29,8 @@ export class FooterComponent {
         this.telephone = this.sanitizer.bypassSecurityTrustHtml(this.about.phone);
         this.fax = this.sanitizer.bypassSecurityTrustHtml(this.about.fax);
         this.email = this.sanitizer.bypassSecurityTrustHtml(this.about.email);
+        this.emailLink  = "mailto:" + encodeURIComponent(this.email);
       })
     }
+    
 }

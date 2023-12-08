@@ -59,6 +59,7 @@
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .5s ease-in-out;
+    object-fit: cover;
   }
   .item-img-news{
     overflow: hidden;
@@ -82,12 +83,14 @@
 }
 @media (max-width:767.8px) {
   .item-img-news img{
-    max-height: 220px;
+    max-height: 150px;
+    min-height: 145px;
   }
 }
 @media screen and (min-width: 768px) {
   .item-img-news img{
     max-height: 220px;
+    min-height: 200px;
   }
   
 }
