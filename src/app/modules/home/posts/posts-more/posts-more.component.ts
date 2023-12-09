@@ -29,34 +29,34 @@ export class PostsMoreComponent implements OnInit {
     totalRecord: 0
   }
  
-  getRequestParams(page: number, pageSize: number,): any {
-    let params: any = {};
+  // getRequestParams(page: number, pageSize: number,): any {
+  //   let params: any = {};
 
-    if (page) {
-      params[`pageNo`] = page;
-    }
+  //   if (page) {
+  //     params[`pageNo`] = page;
+  //   }
 
-    if (pageSize) {
-      params[`pageSize`] = pageSize;
-    }
+  //   if (pageSize) {
+  //     params[`pageSize`] = pageSize;
+  //   }
 
-    return params;
-  }
+  //   return params;
+  // }
 
 
-  getListAllWithPage(){
-    const params = this.getRequestParams(this.paging.page, this.paging.size, );
-    this.postService.getListAllPage(params)
-      .subscribe(
-        data => {
-          this.postList = data.content;
-          this.paging.totalRecord = data.totalElements;
-          console.log(this.postList)
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  // getListAllWithPage(){
+  //   const params = this.getRequestParams(this.paging.page, this.paging.size, );
+  //   this.postService.getListAllPage(params)
+  //     .subscribe(
+  //       data => {
+  //         this.postList = data.content;
+  //         this.paging.totalRecord = data.totalElements;
+  //         console.log(this.postList)
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       });
+  // }
 
   getListAll(){
     this.postService.getListAll().subscribe(data=>{

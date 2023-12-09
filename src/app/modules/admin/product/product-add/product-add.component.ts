@@ -90,7 +90,7 @@ export class ProductAddComponent {
         this.backToProductList();
       },
       (error) => {
-        this.toast.showWarning(error.error);
+        
         console.log(error);
       }
     );
@@ -101,7 +101,7 @@ export class ProductAddComponent {
     this.productService.updateProduct(id, proFormData).subscribe(
       (data) => {
         this.toast.showUpdate();
-        console.log(data);
+        
         this.backToProductList();
       },
       (error) => {

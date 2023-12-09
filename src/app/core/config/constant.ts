@@ -43,12 +43,12 @@ export class Constant {
     ADD_PROJECT: `${Domain.PROJECT}/create`,
     UPDATE_PROJECT: `${Domain.PROJECT}/update`,
     DELETE_PROJECT: `${Domain.PROJECT}/delete`,
-    GET_URL: `${Domain.PROJECT}`,
+    GET_URL: `${Domain.PROJECT}/home`,
   }
   public static PRODUCT = {
     GET_LIST_ALL_WITH_PAGE: `${Domain.PRODUCT}`,
     GET_ID: `${Domain.PRODUCT}`,
-    GET_URL: `${Domain.PRODUCT}`,
+    GET_URL: `${Domain.PRODUCT}/home`,
     ADD_PRODUCT: `${Domain.PRODUCT}/create`,
     UPDATE_PRODUCT: `${Domain.PRODUCT}/update`,
     DELETE_PRODUCT: `${Domain.PRODUCT}/delete`,
@@ -59,7 +59,7 @@ export class Constant {
     ADD_MEMBER: `${Domain.MEMBER}/create`,
     UPDATE_MEMBER: `${Domain.MEMBER}/update`,
     DELETE_MEMBER: `${Domain.MEMBER}/delete`,
-    GET_URL: `${Domain.MEMBER}`,
+    GET_URL: `${Domain.MEMBER}/home`,
   }
   public static POSTS = {
     GET_ID: `${Domain.POSTS}`,
@@ -136,8 +136,7 @@ export class Constant {
     GET_IMAGE: `${Domain.SLIDERS}/images`,
   }
   public static LINK_WEB = {
-    LIST_PAGE_SIZE:`${Domain.LINK_WEB}/page`,
-    GET_LIST_ALL: `${Domain.LINK_WEB}`,
+    LIST_PAGE_SIZE:`${Domain.LINK_WEB}`,
     GET_ID:`${Domain.LINK_WEB}`,
     DELETE: `${Domain.LINK_WEB}/delete`,
     CREATE: `${Domain.LINK_WEB}/create`,

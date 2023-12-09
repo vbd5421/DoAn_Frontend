@@ -60,7 +60,6 @@ export class LinkWebAddComponent implements OnInit {
     this.linkWebService.addLinkWeb(this.linkWeb).subscribe(
       () => {
         this.toast.showSuccess();
-        console.log(this.linkWeb)
         this.cancel();
       },
       error => {

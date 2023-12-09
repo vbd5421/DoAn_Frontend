@@ -30,8 +30,6 @@ export class ProductDetailComponent implements OnInit {
     this.url = this.route.snapshot.params['url'];
     this.productService.getProductByUrl(this.url).subscribe(data => {
       this.product = data;
-      // console.log(data)
-      document.title = this.product.title;
       this.content = this.sanitizer.bypassSecurityTrustHtml(this.product.content);
     })
   }
