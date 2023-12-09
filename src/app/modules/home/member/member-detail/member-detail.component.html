@@ -5,7 +5,7 @@
         <ol class="breadcrumb mb-0 text-capitalize ">
             <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
             <li class="breadcrumb-item"><a href="gioi-thieu/thanh-vien">đội ngũ nghiên cứu</a></li>
-            <li class="breadcrumb-item active" aria-current="page">tên thành viên</li>
+            <li class="breadcrumb-item active" aria-current="page">{{member.fullName}}</li>
         </ol>
     </nav>
 </div>
@@ -14,12 +14,12 @@
     <div class="row">
         <div class="col-md-9">
             <div class="title mb-3 mb-md-4 ">
-                <span >thông tin cơ bản</span>
+                <span>thông tin cơ bản</span>
             </div>
             <div class="row mb_30 ">
                 <div class="col-sm-3">
                     <div class="image">
-                        <img class="w-100 h-100 rounded " src="assets/images/team-1.jpg" alt="">
+                        <img class="w-100 h-100 rounded " src="{{imageURL}}" alt="">
                     </div>
                 </div>
                 <div class="col-sm-9">
@@ -27,54 +27,51 @@
                         <tbody>
                             <tr>
                                 <td class="r-o  title-info ">học và tên</td>
-                                <td>: 30 ft</td>
+                                <td>: {{member.fullName}}</td>
                             </tr>
                             <tr>
                                 <td class="r-o title-info ">năm sinh</td>
-                                <td>: Max persion 5</td>
+                                <td>: {{member.birthDate | date:'dd-MM-yyyy'}}</td>
                             </tr>
                             <tr>
                                 <td class="r-o title-info ">chức vụ</td>
-                                <td>: King Beds</td>
+                                <td>: {{member.position}}</td>
                             </tr>
                             <tr>
                                 <td class="r-o title-info ">học vị</td>
-                                <td>: tiến sĩ</td>
+                                <td>: {{member.degree}}</td>
                             </tr>
                             <tr>
                                 <td class="r-o title-info ">năm tham gia</td>
-                                <td>: tiến sĩ</td>
+                                <td>: {{member.timeJoin | date:'dd-MM-yyyy'}}</td>
                             </tr>
                             <tr>
                                 <td class="r-o title-info ">điện thoại</td>
-                                <td>: tiến sĩ</td>
+                                <td>: {{member.phone}}</td>
                             </tr>
                             <tr>
                                 <td class="r-o title-info ">email liên hệ</td>
-                                <td>: tiến sĩ</td>
+                                <td>: {{member.email}}</td>
                             </tr>
                         </tbody>
                     </table>
-
-                    
                 </div>
             </div>
             <div class="row mb_60 ">
                 <div class="title mb-3 mb-md-4 ">
                     <span>dự án</span>
                 </div>
-                <ul class="ms-1 ms-md-4 " >
-                    <li >dự án 1</li>
-                    <li>Đánh giá, đảm bảo độ tin cậy,
-                        an toàn các hệ thốn• Đánh giá, đảm bảo độ
-                        tin cậy, an toàn các hệ thống điều khiển giao thông.g điều khiển giao thông.</li>
+                <ul class="ms-1 ms-md-4 ">
+                    <li *ngFor="let item of member.projectName">
+                        <div>{{item}}</div>
+                    </li>
                     <li data-bs-toggle="collapse" class="edit-project mt-2 " href="#collapseExample"
-                    aria-expanded="false" aria-controls="collapseExample">thêm dự án</li>
+                        aria-expanded="false" aria-controls="collapseExample">thêm dự án</li>
                 </ul>
                 <div class="collapse" id="collapseExample">
                     <ng-template #login>
                         <div class="card card-body">
-                            <a href="login">Vui lòng đăng nhập để chỉnh sửa !</a>
+                            <a href="login">Vui lòng đăng nhập để chỉnh sửa !</a>  <a href="login">Đăng Nhập</a>
                         </div>
                     </ng-template>
                     <div *ngIf="username;else login">
@@ -83,7 +80,7 @@
                                 <textarea placeholder="Chỉnh sửa dự án của bạn tại đây..." name="project"
                                     class="form-control addproject " rows="3" id="textAreaExample"></textarea>
                             </div>
-                            <div class=" text-center text-md-start mt-1 mt-md-2" >
+                            <div class=" text-center text-md-start mt-1 mt-md-2">
                                 <button type="button" class="btn btn-addproject w-25">Lưu</button>
                             </div>
                         </div>

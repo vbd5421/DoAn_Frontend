@@ -1,0 +1,30 @@
+<div class="news-more">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="title-blog">
+                Các tin tức khác
+            </div>
+            <div class="" *ngFor="let item of productList ; let i=index">
+                <div *ngIf="i<4" class="w-100  item-post " >
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="tin-tuc/{{item.url}}" class="h-100 d-block">
+                                <img class="w-100 img-post" src="{{baseURL}}/{{productUrl}}/image/{{item.id}}" alt="image">
+                            </a>
+                        </div>
+                        <div class="col-8">
+                            <a href="tin-tuc/{{item.url}}">
+                                <p class="title-item-post max-3line ">
+                                    {{item.title}}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" >
+                <button (click)="shuffleItems()" class="btn-shuffle" >xem thêm</button>
+            </div>
+        </div>
+    </div>
+</div>

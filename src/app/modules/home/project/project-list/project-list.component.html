@@ -29,10 +29,6 @@
                 <option value="" [selected]="true">Chuyên mục dự án</option>
                 <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
             </select>
-            <!-- <select [(ngModel)]="searchInput.cate" name="searchInput.cate" class=" searchinput px-2 me-2  ">
-                        <option value="" [selected]="true">Chuyên mục</option>
-                        <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
-                    </select> -->
         </label>
         <label class="select mb-4 ">
             <select class="w-100">
@@ -58,7 +54,7 @@
                             </a>
                         </div>
                         <div class="post-info lg-blog-post-info">
-                            <h5 class="post-title mb-3 font-weight--bold">
+                            <h5 class="post-title mb-3 ">
                                 <a class="p-title" href="du-an/{{pro.url}}">{{pro.name}}</a>
                             </h5>
                             <div class="max-3line mt-3 mb-0 ">

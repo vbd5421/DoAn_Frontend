@@ -48,23 +48,23 @@
                 </div>
             </div>
             <div class="col-lg-7 offset-lg-1">
-                <form action="#" class="contact-form mb_80 ">
+                <form (ngSubmit)="onSubmit()"  enctype="multipart/form-data"  novalidate class="contact-form mb_80 ">
                     <div class="row">
                         <div class="col-md-12">
                             <span>Họ và tên:</span>
-                            <input class="searchinput" type="text" placeholder="Nhập tên" >
+                            <input class="searchinput" type="text" placeholder="Nhập tên" [(ngModel)]="contact.name"  [ngModelOptions]="{standalone: true}"  >
                         </div>
                         <div class="col-md-12">
                             <span>Email:</span>
-                            <input class="searchinput" type="email" placeholder="Nhập email">
+                            <input class="searchinput" type="email" placeholder="Nhập email" [(ngModel)]="contact.email" [ngModelOptions]="{standalone: true}" >
                         </div>
                         <div class="col-md-12">
                             <span>Số điện thoại:</span>
-                            <input class="searchinput" type="tel" placeholder="Nhập số điện thoại">
+                            <input class="searchinput" type="tel" placeholder="Nhập số điện thoại" [(ngModel)]="contact.phone"  (keypress)="numberOnly($event)"  [ngModelOptions]="{standalone: true}" >
                         </div>
                         <div class="col-md-12">
                             <span>Nội dung:</span>
-                            <textarea class="searchinput" placeholder="Nhập nội dung"></textarea>
+                            <textarea class="searchinput" placeholder="Nhập nội dung " [(ngModel)]="contact.content" required="content" [ngModelOptions]="{standalone: true}" ></textarea>
                             <button class="btn-search  w-100" type="submit">Gửi</button>
                         </div>
                     </div>

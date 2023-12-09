@@ -2,8 +2,11 @@ import { Project } from "../project/project";
 
 export class Member {
     id:number;
+    url:any;
     image:any;
     fullName:any;
+    // dự án ngoài
+    externalProject:any;
     description:any;
     //năm tham gia
     timeJoin:any;

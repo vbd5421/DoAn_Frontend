@@ -1,54 +1,62 @@
+.icon-share:not(:last-child) {
+  margin-right: 20px;
+}
 
-.icon-share:not(:last-child){
-    margin-right: 20px;
-  }
-  .icon-share i{
-    font-size: 35px ;
-  }
-  .icon-share .fb{
-    color: #3b5898;
-  }
-  .icon-share .tw{
-   color: black;
-  }
-  .icon-share .email-icon{
-    color: rgb(175, 175, 175);
-  }
-  .icon-share i:hover{
-    color: rgb(66, 113, 255);
-  }
-  .post-meta{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.icon-share i {
+  font-size: 35px;
+}
 
-  .title-news{
-    text-align: start;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.2em;
-    color: #192a56;
-  }
-  .post-date{
-    font-size: 17px;
-  }
-  .post-content{
-    text-align: justify;
-  }
-      /* quill editor */
-      .ql-editor{
-        box-sizing: border-box;
-        cursor: text;
-        line-height: normal;
-        height: 100%;
-        outline: none;
-        overflow: unset !important;
-        padding: unset !important;
-        tab-size: 4;
-        -moz-tab-size: 4;
-        text-align: unset !important;
-        white-space: unset !important;
-        word-wrap: unset !important;
-        height: unset !important;
-      }
+.icon-share .fb {
+  color: #3b5898;
+}
+
+.icon-share .tw {
+  color: black;
+}
+
+.icon-share .email-icon {
+  color: rgb(175, 175, 175);
+}
+
+.icon-share i:hover {
+  color: rgb(66, 113, 255);
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-news {
+  text-align: start;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: #192a56;
+}
+
+.post-date {
+  font-size: 17px;
+}
+
+.post-content {
+  text-align: justify;
+}
+
+/* quill editor */
+.ql-editor {
+  box-sizing: border-box;
+  cursor: text;
+  line-height: normal;
+  height: 100%;
+  outline: none;
+  overflow: unset !important;
+  padding: unset !important;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  text-align: unset !important;
+  white-space: unset !important;
+  word-wrap: unset !important;
+  height: unset !important;
+}

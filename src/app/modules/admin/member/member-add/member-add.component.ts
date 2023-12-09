@@ -17,7 +17,7 @@ export class MemberAddComponent {
   fileToUpload: string[] = [];
   member: Member = new Member();
   baseURL = Constant.BASE_URL;
-  membertURL = Domain.MEMBER;
+  memberURL = Domain.MEMBER;
   imageURL: any;
   formMember = new FormGroup({
     ten: new FormControl('',Validators.required),
@@ -65,9 +65,8 @@ export class MemberAddComponent {
   getMemberById(id:number){
     this.memberService.getId(id).subscribe((data) => {
       this.member = data;
-      
       this.url = this.member.image?.pathUrl;
-      this.imageURL = `${this.baseURL}/${this.membertURL}/image/${this.id}`;
+      this.imageURL = `${this.baseURL}/${this.memberURL}/image/${this.id}`;
       this.formMember.controls['ten'].setValue(this.member.fullName);
       this.formMember.controls['chucVu'].setValue(this.member.position);
       this.formMember.controls['namThamgGia'].setValue(this.member.timeJoin);
@@ -106,7 +105,7 @@ export class MemberAddComponent {
     const memberFormData = this.prepareFormData(this.member);
     this.memberService.updateMember(id, memberFormData).subscribe(
       (data) => {
-        console.log(data)
+     
         this.toastService.showSuccess();
         this.goToBack();
       },

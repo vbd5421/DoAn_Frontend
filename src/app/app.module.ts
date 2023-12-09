@@ -28,7 +28,6 @@ import { RoleControlComponent } from './modules/admin/role/role-control/role-con
 import { RoleAddComponent } from './modules/admin/role/role-add/role-add.component';
 import { AppPageSizeComponent } from './modules/another/app-page-size/app-page-size.component';
 import { WhyChooseComponent } from './modules/home/why-choose/why-choose.component';
-import { QuestionAnswersComponent } from './modules/another/question-answers/question-answers.component';
 import { SliderHomeComponent } from './modules/home/slider/slider-home/slider-home.component';
 import { TypicalNumberHomeComponent } from './modules/home/typical-number/typical-number-home/typical-number-home.component';
 import { AnimationDigitComponent } from './modules/another/animation-digit/animation-digit.component';
@@ -75,7 +74,8 @@ import { ContactControlComponent } from './modules/admin/contact-control/contact
 import BlotFormatter from 'quill-blot-formatter';
 import Quill from 'quill';
 import { SearchComponent } from './modules/another/search/search.component';
-import { PostsHomeComponent } from './modules/home/posts/posts-home/posts-home.component'
+import { PostsHomeComponent } from './modules/home/posts/posts-home/posts-home.component';
+import { ProductMoreComponent } from './modules/home/product/product-more/product-more.component'
 Quill.register('modules/blotFormatter', BlotFormatter);
 @NgModule({
   declarations: [
@@ -100,7 +100,6 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     RoleAddComponent,
     AppPageSizeComponent,
     WhyChooseComponent,
-    QuestionAnswersComponent,
     SliderHomeComponent,
     TypicalNumberHomeComponent,
     AnimationDigitComponent,
@@ -142,6 +141,7 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     ContactControlComponent,
     SearchComponent,
     PostsHomeComponent,
+    ProductMoreComponent,
 
   ],
   imports: [

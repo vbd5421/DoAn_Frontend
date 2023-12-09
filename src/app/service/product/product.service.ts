@@ -10,10 +10,10 @@ import { ApiHelper } from 'src/app/core/rest-api/api-helper';
 })
 export class ProductService {
   constructor( private apiHelper:ApiHelper) { }
-  getListAllPage(params:Params):Observable<any>{
+  getListAllPage(params?:Params):Observable<any>{
     return this.apiHelper.get( Constant.PRODUCT.GET_LIST_ALL_WITH_PAGE , {params})
   }
-  
+
   addProduct(product: any): Observable<any>{
     return this.apiHelper.post(Constant.PRODUCT.ADD_PRODUCT, product);
   }
