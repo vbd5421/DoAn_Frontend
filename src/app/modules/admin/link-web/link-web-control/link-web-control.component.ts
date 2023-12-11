@@ -51,7 +51,6 @@ export class LinkWebControlComponent implements OnInit {
     this.linkWebService.listPageWithSize(params).subscribe(data => {
         this.listLinkWeb = data.content;
         this.paging.totalRecord = data.totalElements;
-        console.log('liên kết web', this.listLinkWeb)
       },
       error => {
         console.log(error);
@@ -78,5 +77,22 @@ export class LinkWebControlComponent implements OnInit {
 
   updateLinkWeb(id: number) {
     return this.router.navigate(['admin/link-web/edit', id]);
+  }
+  deleteLinkWeb(id:number){
+    // let option = confirm("Dữ liệu sẽ bị xóa . Bạn có mốn tiếp tục");
+    // if (option) {
+    //   this.cateProjectService.deleteCate(id).subscribe(() => {
+    //     this.getCateProjectListAllwithPage();
+    //     this.toast.showDelete()
+    //   })
+    // }
+    let cf = confirm("Dữ liệu sẽ bị xóa . Bạn có mốn tiếp tục");
+    if(cf){
+
+      this.linkWebService.deleteLinkWeb(id).subscribe(data=>{
+        this.getLinkWebListAllWithPage()
+        this.toast.showDelete()
+      })
+    }
   }
 }

@@ -1,0 +1,47 @@
+<div class="toolbar">
+    <div class="container">
+      <div class="d-flex  justify-content-between header-menu ">
+        <div class="">
+        </div>
+        <div class="right-d-flex d-none d-md-block">
+          <div class="d-flex me-2 align-items-center ">
+            <span class="me-1">Số mục mỗi trang:</span>
+            <div class="page-size-box">
+              <div class="box-middle">
+                <select class="form-control  " name="pageSize" (change)="changePageSize()" #pageSizeModel="ngModel"
+                  [(ngModel)]="pageSize">
+                  <option *ngFor="let item of pageSizeOptions" [value]="item">{{item}}</option>
+                  <!-- <option *ngIf="totalRecords" [value]="totalRecords">Tất cả</option> -->
+                  <option [value]="totalRecords">Tất cả</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- mobile -->
+        <div class="d-md-none d-block">
+          <div class="btn-group dropstart">
+            <div class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <ul class="dropdown-menu p-0">
+              <li class="p-2 border ">
+                <p class="mb-0">Số mục mỗi trang:</p>
+                <div class="page-size-box">
+                  <div class="box-middle">
+                    <select class="form-control  " name="pageSize" (change)="changePageSize()" #pageSizeModel="ngModel"
+                      [(ngModel)]="pageSize">
+                      <option *ngFor="let item of pageSizeOptions" [value]="item">{{item}}</option>
+                      <!-- <option *ngIf="totalRecords" [value]="totalRecords">Tất cả</option> -->
+                      <option [value]="totalRecords">Tất cả</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

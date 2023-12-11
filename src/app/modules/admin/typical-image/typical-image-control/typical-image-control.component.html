@@ -1,4 +1,8 @@
-<app-page-size></app-page-size>
+<!-- <app-page-size (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
+[(pageSize)]="paging.size" ></app-page-size> -->
+
+<app-app-page-size-img (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
+[(pageSize)]="paging.size"  ></app-app-page-size-img>
 
 
 <div class=" mt_30">
@@ -8,7 +12,7 @@
                 <span class="card-label fw-bolder fs-6 mb-1">ẢNH HOẠT ĐỘNG</span>
             </h3>
             <div class="card-toolbar text-end ">
-                <a href="" class="btn-add btn2 btn-sm "  routerLink="add"  >
+                <a href="" class="btn-add  btn-sm "  routerLink="add"  >
                     <span>
                         " Thêm Ảnh nổi bật "
                     </span>
@@ -19,32 +23,16 @@
             <div class="row" style="margin-left: 0px; margin-right: 0px;">
                 <div class="col-lg-8">
                     <div class="row">
-                        <!-- <div class="col-6 col-lg-3 col-sm-4  " *ngFor="let img of typicalimageList | paginate:{
-                                                    id:'gallery',
-                                                    itemsPerPage: paging.size,
-                                                    currentPage: paging.page,
-                                                    totalItems: paging.totalRecord }">
-                            <div class="item-image" (click)="pick(img)">
-                                <img src="{{baseURL}}/{{tImageURL}}/image/{{img.image.name}}" alt=""
+                        <div class="col-6 col-lg-3 col-sm-4 " *ngFor="let img of typicalimageList | paginate:{
+                            id:'gallery',
+                            itemsPerPage: paging.size,
+                            currentPage: paging.page,
+                            totalItems: paging.totalRecord }" >
+                            <div class="item-image " (click)="pick(img)" >
+                                <img [ngClass]="{'opacity':!img.active}"
+                                     src="{{baseURL}}/{{tImageURL}}/image/{{img.image.name}}" alt="{{img.caption}}"
                                     style="height: 100%; width: 100%; border-radius: inherit;">
-                            </div>
-                        </div> -->
-                        <div class="col-6 col-lg-3 col-sm-4 ">
-                            <div class="item-image" >
-                                <img src="../../../../../assets/images/placeholder.png" alt=""
-                                    style="height: 100%; width: 100%; border-radius: inherit;">
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-sm-4  ">
-                            <div class="item-image" >
-                                <img src="../../../../../assets/images/placeholder.png" alt=""
-                                    style="height: 100%; width: 100%; border-radius: inherit;">
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-sm-4  ">
-                            <div class="item-image" >
-                                <img src="../../../../../assets/images/placeholder.png" alt=""
-                                    style="height: 100%; width: 100%; border-radius: inherit;">
+                                <img class="hide-img" [ngClass]="{'d-block':!img.active}"  src="../../../../../assets/images/eye.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -59,20 +47,19 @@
                 <div class="col-lg-4  info-img">
                     <div class="box border">
                         <div class="img-box">
-                            <img class="img-fluid" src="{{target.url}}" alt="Images">
+                            <img class="img-fluid  w-100 " src="{{target.url}}" alt="Image">
                         </div>
                         <div class="content-box">
                             <span><strong>Tên: </strong></span>
                             <span class="text-break">{{target.name}} </span>
-
                         </div>
                         <div class="content-box">
                             <span><strong>Đầu đề: </strong></span>
                             <span>{{target.caption}} </span>
                         </div>
                         <div class="content-box">
-                            <span><strong>Url: </strong></span>
-                            <span style="word-break: break-all;">{{target.url}}</span>
+                            <span><strong>Mô tả: </strong></span>
+                            <span >{{target.description}}</span>
                         </div>
                         <div class="content-box">
                             <span><strong>Trạng thái: </strong></span>
@@ -83,27 +70,27 @@
                                 <span style="margin-left: 5px;">Hoạt động</span>
                             </span>
                             <ng-template #hide>
-                                <span style="color: #adb848">
+                                <span style="color: #ffc107">
                                     <i class="fa fa-dot-circle fa-xs"></i>
                                 </span>
                                 <span style="margin-left: 5px;">Tạm ẩn</span>
                             </ng-template>
                         </div>
-                        <div class="content-btn action-box row w-100 mx-auto mt-3 mt-md-5 ">
-                            <button class="btn bg-success col-12 col-md-3 mr-0 mr-md-2 " (click)="hideimg(target.id)"
+                        <div class=" action-box row w-100 mx-auto mt-3 mt-md-5 ">
+                            <button class="btn bg-success col-12 col-md-3 mr-0 mr-md-2 text-white " (click)="hideImg(target.id)"
                                 *ngIf="target.active; else elseButton">
                                 Ẩn
                             </button>
                             <ng-template #elseButton>
-                                <button class="btn bg-warning col-12 col-md-3 mr-0 mr-md-2 "
-                                    (click)="showimg(target.id)">
+                                <button class="btn bg-warning col-12 col-md-3 mr-0 mr-md-2 text-white "
+                                    (click)="showImg(target.id)">
                                     Hiện
                                 </button>
                             </ng-template>
                             <button class="btn btn-primary col-12 col-md-3 mr-0 mr-md-2 mt-2 mt-md-0 "
-                                (click)="updatetypicalimage(target.id)">Sửa</button>
+                                (click)="updateTimage(target.id)">Sửa</button>
                             <button class="btn btn-primary col-12 col-md-3 mt-2 mt-md-0 "
-                                (click)="deleteimg(target.id)">Xóa</button>
+                                (click)="deleteImg(target.id)">Xóa</button>
                         </div>
                     </div>
                 </div>

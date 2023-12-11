@@ -75,7 +75,8 @@ import BlotFormatter from 'quill-blot-formatter';
 import Quill from 'quill';
 import { SearchComponent } from './modules/another/search/search.component';
 import { PostsHomeComponent } from './modules/home/posts/posts-home/posts-home.component';
-import { ProductMoreComponent } from './modules/home/product/product-more/product-more.component'
+import { ProductMoreComponent } from './modules/home/product/product-more/product-more.component';
+import { AppPageSizeImgComponent } from './modules/another/app-page-size-img/app-page-size-img.component'
 Quill.register('modules/blotFormatter', BlotFormatter);
 @NgModule({
   declarations: [
@@ -142,6 +143,7 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     SearchComponent,
     PostsHomeComponent,
     ProductMoreComponent,
+    AppPageSizeImgComponent,
 
   ],
   imports: [

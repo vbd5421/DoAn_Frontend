@@ -18,7 +18,7 @@ export class SliderAddComponent {
   slider: Slider = new Slider();
   url: any;
   fileToUpload:string [] = [];
-  action = "";
+  
   imageURL: any;
   sliderURL = Domain.SLIDERS;
 
@@ -30,17 +30,13 @@ export class SliderAddComponent {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     if(this.id){
-      this.getById(this.id);
-      this.action = "Chỉnh sửa";
-    }else{
-      this.action = "Thêm mới";
+      this.getById(this.id);    
     }
   }
 
   getById(id: any) {
     this.sliderService.getById(id).subscribe(data => {
       this.slider = data;
-      console.log(data)
       this.url = this.slider.pathUrl;
       this.imageURL = `${this.baseURL}/${this.sliderURL}/image/${this.slider.name}`
     });
@@ -54,11 +50,11 @@ export class SliderAddComponent {
     )
     this.sliderService.addNew(formData).subscribe(data =>{
       this.toast.showSuccess();
-      console.log(data)
+      
       this.goToSliderList();
     },
       error=>{
-        this.toast.showWarning(error.error)
+        //this.toast.showWarning(error.error)
         console.log(error)
       }
     );
@@ -68,11 +64,11 @@ export class SliderAddComponent {
     const productFormData = this.prepareFormData(this.slider);
     this.sliderService.update(id, productFormData).subscribe(data =>{
       this.toast.showSuccess();
-      console.log(data)
+      
       this.goToSliderList();
     },
     error=>{
-      this.toast.showWarning(error.error)
+      
         console.log(error)
     });
   }

@@ -18,7 +18,7 @@ export class SliderService {
     return this.apiHelper.get(Constant.SLIDERS.GET_SLIDERS);
   }
 
-  addNew(slider: FormData): Observable<Object>{
+  addNew(slider: any): Observable<Object>{
     return this.apiHelper.post(Constant.SLIDERS.ADD, slider);
   }
 

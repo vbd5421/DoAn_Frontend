@@ -13,14 +13,13 @@ import { TypicalImageService } from 'src/app/service/typical-image/typical-image
   styleUrls: ['./typical-image-add.component.css']
 })
 export class TypicalImageAddComponent {
-
   tImage : TypicalImage = new TypicalImage();
   fileToUpload:string [] = [];
-  url: any;
   id: any;
   baseURL = Constant.BASE_URL;
   tImageURL = Domain.TYPICAL_IMAGE;
   imageURL: any;
+  disabled=false;
   tImageControl = new FormControl('', Validators.required);
 constructor(private router: Router ,
           private route: ActivatedRoute ,
@@ -33,8 +32,8 @@ ngOnInit(): void {
       this.galleryService.getfindbyId(this.id).subscribe(data=>{
         this.tImage = data;
         this.tImageControl.setValue(this.tImage.caption)
-        this.url = this.tImage.image.pathUrl;
-        this.imageURL =`${this.baseURL}/${this.tImage}/image/${this.tImage.image.name}`
+        //this.url = this.tImage.image.pathUrl;
+        this.imageURL =`${this.baseURL}/${this.tImageURL}/image/${this.tImage.image.name}`
       })
     }
   }
@@ -97,6 +96,7 @@ imageChange(e: any){
   reader.onload = (_event) =>{
     this.imageURL= reader.result;
   }
+  this.disabled=true
 }
 
 }

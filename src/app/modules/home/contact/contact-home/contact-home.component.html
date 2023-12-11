@@ -48,24 +48,39 @@
                 </div>
             </div>
             <div class="col-lg-7 offset-lg-1">
-                <form (ngSubmit)="onSubmit()"  enctype="multipart/form-data"  novalidate class="contact-form mb_80 ">
+                <form (ngSubmit)="onSubmit()" [formGroup]="formContact"  enctype="multipart/form-data"  novalidate class="contact-form mb_80 ">
                     <div class="row">
                         <div class="col-md-12">
-                            <span>Họ và tên:</span>
-                            <input class="searchinput" type="text" placeholder="Nhập tên" [(ngModel)]="contact.name"  [ngModelOptions]="{standalone: true}"  >
+                            <span><span class="text-danger">*</span> Họ và tên:</span>
+                            <input class="searchinput" type="text" placeholder="Nhập tên" 
+                                    formControlName="nameUser" 
+                                    [class.error-input]="!formContact.controls.nameUser.valid&&!formContact.controls.nameUser.untouched"
+                                    [class.valid-input]="formContact.controls.nameUser.valid||formContact.controls.nameUser.untouched"
+                                    >
+                                <p class="text-valid_error " *ngIf="!formContact.controls.nameUser.valid&&!formContact.controls.nameUser.untouched">Thông tin không thể bỏ trống</p>
                         </div>
                         <div class="col-md-12">
-                            <span>Email:</span>
-                            <input class="searchinput" type="email" placeholder="Nhập email" [(ngModel)]="contact.email" [ngModelOptions]="{standalone: true}" >
+                            <span><span class="text-danger">*</span>Email:</span>
+                            <input class="searchinput" type="email" placeholder="Nhập email" 
+                            formControlName="emailUser" 
+                            [class.error-input]="!formContact.controls.emailUser.valid&&!formContact.controls.emailUser.untouched"
+                            [class.valid-input]="formContact.controls.emailUser.valid||formContact.controls.emailUser.untouched"
+                            >
+                            <p class="text-valid_error " *ngIf="!formContact.controls.emailUser.valid&&!formContact.controls.emailUser.untouched">Thông tin không thể bỏ trống</p>
                         </div>
                         <div class="col-md-12">
                             <span>Số điện thoại:</span>
-                            <input class="searchinput" type="tel" placeholder="Nhập số điện thoại" [(ngModel)]="contact.phone"  (keypress)="numberOnly($event)"  [ngModelOptions]="{standalone: true}" >
+                            <input class="searchinput mb-2 " type="tel" placeholder="Nhập số điện thoại" [(ngModel)]="contact.phone"  (keypress)="numberOnly($event)"  [ngModelOptions]="{standalone: true}" >
                         </div>
                         <div class="col-md-12">
-                            <span>Nội dung:</span>
-                            <textarea class="searchinput" placeholder="Nhập nội dung " [(ngModel)]="contact.content" required="content" [ngModelOptions]="{standalone: true}" ></textarea>
-                            <button class="btn-search  w-100" type="submit">Gửi</button>
+                            <span><span class="text-danger" >*</span> Nội dung:</span>
+                            <textarea class="searchinput" placeholder="Nhập nội dung " 
+                            formControlName="contentUser" 
+                            [class.error-input]="!formContact.controls.contentUser.valid&&!formContact.controls.contentUser.untouched"
+                            [class.valid-input]="formContact.controls.contentUser.valid||formContact.controls.contentUser.untouched"
+                             ></textarea>
+                            <p class="text-valid_error " *ngIf="!formContact.controls.contentUser.valid&&!formContact.controls.contentUser.untouched">Thông tin không thể bỏ trống</p>
+                            <button class="btn-search  w-100" type="submit" [disabled]="!formContact.valid" >Gửi</button>
                         </div>
                     </div>
                 </form>

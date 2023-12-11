@@ -1,62 +1,3 @@
-<!-- <form (ngSubmit)="onSubmit() " enctype="multipart/form-data" novalidate class="mt_30" >
-  <div class="container mb_60">
-    <div class="boder">
-      <div class="title">
-        <p class="text-title fs-5">hình ảnh nổi bật</p>
-      </div>
-      <div class="mt_80">
-        <div class="row" style="justify-content: center">
-          <div class="col-md-10">
-            <div class="contact-inner">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="box update_box ">
-                    <label class="form-label">hình ảnh</label>
-                    <div class="w-100">
-                      <div class="image borderInput p-0">
-                        <img src="{{imageURL}}" alt="" appHideMissing *ngIf="imageURL ; else elseBlock ">
-                        <ng-template #elseBlock>
-                          <img src="../../../../../assets/images/placeholder.png" alt="">
-                        </ng-template>
-                      </div>
-                      <input class="p-1 p-md-2 w-100 text-input " accept="image/png, image/jpeg" type="file"
-                        value="select" (change)="imageChange($event)">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-8">
-                  <div class="" style="margin-bottom: 20px;">
-                    <label class="custom-field two w-100">
-                      <input placeholder="&nbsp;" class="w-100 input-field" type="text" name="caption"
-                        [(ngModel)]="gallery.caption" />
-                      <span class="placeholder label-custom lh-base ">Tiêu đề
-                      </span>
-                    </label>
-                  </div>
-                  <div>
-                    <label class="custom-field two w-100">
-                      <textarea placeholder="&nbsp;" class="w-100 input-field" style="height: 120px" name="description "
-                        [(ngModel)]="gallery.description"></textarea>
-                      <span class="placeholder label-custom lh-base ">mô tả ảnh
-                      </span>
-                    </label>
-
-                  </div>
-                  <div class="submit-button">
-                    <button type="submit" class="btn btn-primary btn-lg btnn">Lưu</button>
-                    <button type="button" class="btn btn-secondary btn-lg btnn cancel"
-                      (click)="gotoGalleryControl()">Hủy</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</form> -->
-
 
 <div class="toolbar"></div>
 <form (ngSubmit)="onSubmit() " enctype="multipart/form-data" novalidate class="mt_30">
@@ -87,19 +28,12 @@
                             </div>
                             <div class="col-md-7">
                                 <div class=" mt_30 mx-md-0 mx-4 box-input ">
-                                  <!-- <label class="custom-field two w-100">
-                                    <input placeholder="&nbsp;" class="w-100 input-field" type="text" name="caption"
-                                      [(ngModel)]="tImage.caption" />
-                                    <span class="placeholder label-custom lh-base ">Tiêu đề
-                                    </span>
-                                  </label> -->
                                   <label class="custom-field two w-100">
                                     <input placeholder="&nbsp;" class=" input-field" type="text" name="typeName"
                                         [formControl]="tImageControl"
                                         [class.borderError]="!tImageControl.valid&&!tImageControl.untouched"
                                         [class.text-input]="tImageControl.valid||tImageControl.untouched" required />
-                                    <span class="placeholder label-custom lh-base "><span class="validateText">*</span>tên
-                                        chuyên mục dự án</span>
+                                    <span class="placeholder label-custom lh-base "><span class="validateText">*</span>tiêu đề ảnh</span>
                                 </label>
                                 <p *ngIf="!tImageControl.valid&&!tImageControl.untouched" class="validateText">Thông tin không thể
                                     bỏ trống</p>
@@ -115,7 +49,7 @@
                             </div>
                             <div class="col-lg-4 col-md-5 col-8 col-ms-6 mt-5 mb_30 mx-auto text-center d-flex justify-content-around">
                               <button type="submit" class="btn btn-primary btn-lg btn-cus" 
-                               [disabled]="!tImageControl.valid">Lưu</button>
+                               [disabled]="!tImageControl.valid && !disabled ">Lưu</button>
                               <button type="button" class="btn btn-secondary btn-lg btn-cus cancel"
                                 (click)="gotoGalleryControl()">Hủy</button>
                             </div>
