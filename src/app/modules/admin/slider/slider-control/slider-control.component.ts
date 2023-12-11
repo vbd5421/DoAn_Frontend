@@ -17,8 +17,6 @@ export class SliderControlComponent {
   sliders: Slider[] = [];
   slider2: Slider[] = [];
   flex = '';
-  ishienthiten=true
-
   target = {
     url: '',
     originalFileName:'',
@@ -71,7 +69,6 @@ export class SliderControlComponent {
     this.target.link = e?.url;
     this.target.id = e?.id;
     this.target.active = e?.active;
-
     //get image by target name
     this.imageURL = `${this.baseURL}/${this.sliderURL}/image/${this.target.name}`;
   }
@@ -84,7 +81,7 @@ export class SliderControlComponent {
     }
   }
   updateSlider(id: number) {
-    return this.router.navigate(['admin/sliders/update', id]);
+    return this.router.navigate(['admin/slider/edit', id]);
   }
 
   hideImage(id: number) {
@@ -101,14 +98,11 @@ export class SliderControlComponent {
 
   deleteImage(id: number) {
     let option = confirm('Dữ liệu sẽ bị xóa . Bạn có mốn tiếp tục ');
-
     if (option) {
       this.sliderService.deleteSlider(id).subscribe(() => {
         this.getSlider();
       });
     }
   }
-  hienThiten(){
-    this.ishienthiten=!this.ishienthiten
-  }
+
 }

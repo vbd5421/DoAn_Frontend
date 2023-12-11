@@ -11,6 +11,9 @@
 	color: #19191a;
 	margin-bottom: 24px;
 }
+.contact-form textarea{
+	height: 150px
+}
 .contact-text p {
 	color: #707079;
 }
@@ -24,15 +27,7 @@
 	color: #707079;
 	width: 75px;
 }
-.contact-form input {
-	width: 100%;
-	height: 50px;
-	border: 1px solid #e1e1e1;
-	font-size: 16px;
-	color: #aaaab3;
-	padding-left: 25px;
-	margin-bottom: 28px;
-}
+
 .contact-form input::-webkit-input-placeholder {
 	color: #aaaab3;
 }
@@ -48,17 +43,7 @@
 .contact-form input::placeholder {
 	color: #aaaab3;
 }
-.contact-form textarea {
-	width: 100%;
-	height: 150px;
-	border: 1px solid #e1e1e1;
-	font-size: 16px;
-	color: #aaaab3;
-	padding-left: 25px;
-	padding-top: 12px;
-	margin-bottom: 33px;
-	resize: none;
-}
+
 .contact-form textarea::-webkit-input-placeholder {
 	color: #aaaab3;
 }
@@ -88,19 +73,29 @@
 .searchinput{
     border-radius: 5px;
     background-color: #ffffff;
-    border: 1px solid #F6F9FC;
+    border: 1px solid #838383;
     height: 30px;
     width: 100%;
     padding: 20px;
     outline: none;
     color: #19191a !important;
-    margin-bottom: 10px !important;
    } 
+   .valid-input{
+	border: 1px solid #838383;
+	margin-bottom: 10px ;
+   }
    /* input */
 .searchinput:focus{
     border: 1px solid #192a56 !important;
 }
-
+.text-valid_error{
+	color: #dc3545;
+	margin-bottom: 5px;
+}
+.error-input{
+	border: 1px solid red !important ;
+	margin-bottom: 0;
+}
 .btn-search{
     border: 1px solid #192a56;
     padding: 10px 20px;
@@ -113,9 +108,7 @@
     background: rgb(255, 255, 255);
     color: #192a56;
    }
-
    @media (min-width:992px) {
-	
 }
 .address{
 	list-style: none;

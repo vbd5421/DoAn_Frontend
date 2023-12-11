@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
 import { AboutUs } from 'src/app/core/model/about-us/about-us';
@@ -17,6 +18,11 @@ export class ContactHomeComponent {
   fax:any;
   email:any;
   contact: Contact=new Contact();
+  formContact = new FormGroup({
+    nameUser: new FormControl('',[Validators.required]),
+    emailUser: new FormControl('',[Validators.required]),
+    contentUser:new FormControl('',[Validators.required]),
+  });
   constructor(private aboutService:AboutUsService,
               private sanitizer: DomSanitizer,
               private contactService: ContactService,
@@ -24,6 +30,7 @@ export class ContactHomeComponent {
     ){}
     ngOnInit(): void {
       this.getInformation()
+      
     }
 
     getInformation(){
@@ -35,15 +42,17 @@ export class ContactHomeComponent {
       })
     }
     onSubmit(){
+      this.contact.name = this.formContact.controls['nameUser'].value;
+      this.contact.email= this.formContact.controls['emailUser'].value;
+      this.contact.content = this.formContact.controls['contentUser'].value;
       this.SendContact()
      }
   SendContact(){
-    this.contactService.AddContact(this.contact).subscribe(()=>{
+    this.contactService.AddContact(this.contact).subscribe(data=>{
       this.toastService.success('Bạn đã gửi thành công',);
       setTimeout(() => {
         location.reload()
       }, 1000);
-
     },
     err=>{
       console.log(err)

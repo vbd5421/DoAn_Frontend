@@ -64,7 +64,7 @@ export class ProjectAddComponent implements OnInit {
   getProjectById(id:number){
     this.projectService.getId(id).subscribe((data) => {
       this.project = data;
-      console.log(this.project);
+      
       this.url = this.project.image?.pathUrl;
       this.imageURL = `${this.baseURL}/${this.projectURL}/image/${this.project.id}`;
       this.memberUpdate(this.project)
@@ -191,9 +191,8 @@ export class ProjectAddComponent implements OnInit {
   }
   listAllMember(){
     this.memberService.getListAllPage().subscribe(data=>{
-      console.log(data)
       this.listMember=data.content; //.content
-      console.log(this.listMember , 'member')
+      
     })
   }
 
@@ -201,7 +200,7 @@ export class ProjectAddComponent implements OnInit {
     memberr.selected = event.currentTarget.checked;
     if (memberr.selected) {
       this.project.members.push(memberr);
-      console.log(this.project.members)
+      
     } else {
       this.project.members.forEach((item) => {
         if (item.id === memberr.id) {
@@ -219,7 +218,7 @@ export class ProjectAddComponent implements OnInit {
   listAllCateProject(){
     this.cateProjectService.listAllCate().subscribe(res=>{
       this.cateProject = res;
-      console.log(this.cateProject , "dự án")
+      
     })
   }
 

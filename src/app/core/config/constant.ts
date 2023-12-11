@@ -7,6 +7,11 @@ export class Constant {
     5, 10, 15
   ]
 
+    public static PAGE_SIZE_IMAGE =[
+      16,32,48
+    ]
+
+
 
   // config api from controller backend
   public static AUTH = {
@@ -103,8 +108,6 @@ export class Constant {
     DELETE: `${Domain.CONTACT}/delete`,
     CONTACTED: `${Domain.CONTACT}/show`,
     NOTCONTACT: `${Domain.CONTACT}/hide`,
-    GET_PENDING: `${Domain.CONTACT}/pending`,
-    GET_PROCESS: `${Domain.CONTACT}/process`,
   }
 
   public static ADDRESS = {

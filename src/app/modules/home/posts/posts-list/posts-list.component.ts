@@ -54,7 +54,7 @@ export class PostsListComponent {
         data => {
           this.postList = data.content;
           this.paging.totalRecord = data.totalElements;
-          console.log(this.postList)
+         
         },
         error => {
           console.log(error);
