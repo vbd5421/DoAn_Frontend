@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -76,7 +76,8 @@ import Quill from 'quill';
 import { SearchComponent } from './modules/another/search/search.component';
 import { PostsHomeComponent } from './modules/home/posts/posts-home/posts-home.component';
 import { ProductMoreComponent } from './modules/home/product/product-more/product-more.component';
-import { AppPageSizeImgComponent } from './modules/another/app-page-size-img/app-page-size-img.component'
+import { AppPageSizeImgComponent } from './modules/another/app-page-size-img/app-page-size-img.component';
+
 Quill.register('modules/blotFormatter', BlotFormatter);
 @NgModule({
   declarations: [
@@ -163,10 +164,11 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     BrowserAnimationsModule,
     QuillModule.forRoot() ,
     NgbTooltipModule ,
-    NgxSummernoteModule,
+    NgxSummernoteModule, //editor
     
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

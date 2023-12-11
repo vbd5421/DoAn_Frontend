@@ -7,9 +7,9 @@
       <div id="carouselExampleFade" class="carousel slide carousel-fade w-100" data-bs-ride="carousel" [@myAnimation]="animationState"  >
         <div class="carousel-inner w-100">
           <div class="carousel-item w-100 item-slide " [class]="i == 0 ? 'active' : '' " data-bs-interval="1500"
-            *ngFor="let item of imgTypical ; let i = index ">
-            <img src="{{item.src}}" class="d-block w-100 h-100" alt="ảnh nổi bật">
-            <p class="title-img translate-middle ">{{item.title}}</p>
+            *ngFor="let img of imgTypical ; let i = index ">
+            <img src="{{baseURL}}/{{tImageURL}}/image/{{img.image.name}}" class="d-block w-100 h-100" alt="ảnh nổi bật">
+            <p class="title-img translate-middle ">{{img.caption}}</p>
             <div class="bg"></div>
           </div>
         </div>
@@ -34,9 +34,9 @@
       <div id="carouselExampleFade" class="carousel slide carousel-fade w-100" data-bs-ride="carousel"  >
         <div class="carousel-inner w-100">
           <div class="carousel-item w-100 item-slide " [class]="i == 0 ? 'active' : '' " data-bs-interval="1500"
-            *ngFor="let item of imgTypical ; let i = index ">
-            <img src="{{item.src}}" class="d-block w-100 h-100" alt="ảnh nổi bật">
-            <p class="title-img translate-middle ">{{item.title}}</p>
+            *ngFor="let img of imgTypical ; let i = index ">
+            <img src="{{baseURL}}/{{tImageURL}}/image/{{img.image.name}}" class="d-block w-100 h-100" alt="ảnh nổi bật">
+            <p class="title-img translate-middle ">{{img.caption}}</p>
             <div class="bg"></div>
           </div>
         </div>

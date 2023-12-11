@@ -1,14 +1,8 @@
 <div class="slide-home">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="1000">
-            <img src="/assets/images/hero/hero-1.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="1500">
-            <img src="/assets/images/hero/hero-2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="1500">
-            <img src="/assets/images/hero/hero-3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-item " [class]=" i==0 ? 'active ' : '' "  *ngFor="let item of sliders ; let i = index " data-bs-interval="2000">
+            <img src="{{baseURL}}/{{sliderURL}}/image/{{item.name}}"  class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">

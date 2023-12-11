@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Constant } from 'src/app/core/config/constant';
@@ -12,7 +12,7 @@ import { ToastService } from 'src/app/service/toast/toast.service';
   templateUrl: './slider-control.component.html',
   styleUrls: ['./slider-control.component.css']
 })
-export class SliderControlComponent {
+export class SliderControlComponent implements OnInit{
   isslider: boolean = true;
   sliders: Slider[] = [];
   slider2: Slider[] = [];
