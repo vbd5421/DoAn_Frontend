@@ -1,5 +1,9 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Constant } from 'src/app/core/config/constant';
+import { Domain } from 'src/app/core/domain/domain';
+import { TypicalImage } from 'src/app/core/model/typical-image/typical-image';
+import { TypicalImageService } from 'src/app/service/typical-image/typical-image.service';
 
 @Component({
   selector: 'app-typical-image-home',
@@ -26,33 +30,23 @@ onWindowScroll(event: Event) {
     this.animationState = 'inactive';
   }
 }
+   
+constructor(
+  private typicalimageService: TypicalImageService,
+) { }
+
+  ngOnInit(): void {
+    this.getListAll()
+  }
+
+  imgTypical: TypicalImage[] = [];
+  tImageURL = Domain.TYPICAL_IMAGE;
+  baseURL = Constant.BASE_URL;
   
-  constructor() {}
-  ngOnInit(): void {}
-  imgTypical=[
-    {
-      src:'assets/images/blog/blog-1.jpg',
-      title:'tiêu đề tiêu đề'
-    },
-    {
-      src:'assets/images/blog/blog-2.jpg',
-      title:'tiêu đề 1'
-    },
-    {
-      src:'assets/images/blog/blog-3.jpg',
-      title:'tiêu đề 14'
-    },
-    {
-      src:'assets/images/utc-uav-ai/andreas-rasmussen-C8UjCsWp3Go-unsplash.jpg',
-      title:'tiêu đề 13'
-    },
-    {
-      src:'assets/images/blog/blog-5.jpg',
-      title:'tiêu đề 12'
-    },
-    {
-      src:'assets/images/utc-uav-ai/img-uav.jpg',
-      title:'tiêu đề 11'
-    }
-  ]
+ getListAll(){
+  this.typicalimageService.getListAll().subscribe(data=>{
+    this.imgTypical = data
+  })
+ }
+  
 }

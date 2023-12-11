@@ -16,18 +16,19 @@ export class AboutUsService {
       return this.apiHelper.post(Constant.ABOUT.CREATE , about)
   }
 
-  getByIdAbout(id: number):Observable<AboutUs[]>{
+  getByIdAbout(id: number):Observable<any>{
       return this.apiHelper.get(Constant.ABOUT.GETID+`/${id}`)
   }
 
- getAllInformation():Observable<AboutUs>{
+ getAllInformation():Observable<any>{
     return this.apiHelper.get(Constant.ABOUT.LIST)
  }
 
- getAllInforHome():Observable<AboutUs[]>{
-  return this.apiHelper.get(Constant.ABOUT.LIST).pipe(
-    tap(res=> console.log('about' + JSON.stringify(res) )),
-    catchError( () => of([]) )
-  )
+ getAllInforHome():Observable<any>{
+  return this.apiHelper.get(Constant.ABOUT.LIST)
+  // .pipe(
+  //   tap(res=> console.log('about' + JSON.stringify(res) )),
+  //   catchError( () => of([]) )
+  // )
  }
 }

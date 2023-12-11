@@ -34,8 +34,7 @@ onWindowScroll(event: Event) {
 }
 
 products: Product[] = [];
-totalPages: number;
-searchInput = '';
+
 baseURL = Constant.BASE_URL;
 productURL = Domain.PRODUCT;
 paging = {
@@ -43,14 +42,13 @@ paging = {
   size: 5,
   totalRecord: 0
 }
-constructor(private router: Router,
-  private auth: AuthService, 
+constructor( 
   private productService: ProductService) {
 }
 ngOnInit(): void {
   this.getProductListAllwithPage();
 }
-getRequestParams(page: number, pageSize: number, search: string): any {
+getRequestParams(page: number, pageSize: number): any {
   let params: any = {};
 
   if (page) {
@@ -61,17 +59,14 @@ getRequestParams(page: number, pageSize: number, search: string): any {
     params[`pageSize`] = pageSize;
   }
 
-  if (search) {
-    params[`name`] = search;
-  }
+
   return params;
 }
 getProductListAllwithPage(){
-  const params = this.getRequestParams(this.paging.page, this.paging.size, this.searchInput)
+  const params = this.getRequestParams(this.paging.page, this.paging.size,)
   this.productService.getListAllPage(params).subscribe(data => {
     this.products = data.content;
     this.paging.totalRecord = data.totalElements;
-    this.totalPages = data.totalPages;
   },
     error => {
       console.log(error);
