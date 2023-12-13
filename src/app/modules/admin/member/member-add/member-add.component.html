@@ -74,6 +74,7 @@
                                                         class="validateText">*</span>năm tham
                                                     gia</span>
                                             </label>
+                                            <input type="text"  [ngModelOptions]="{standalone: true}" [(ngModel)]="member.timeJoin" disabled="true" >
                                             <p *ngIf="!formMember.controls.namThamgGia.valid&&!formMember.controls.namThamgGia.untouched"
                                                 class="validateText">
                                                 Thông tin không thể bỏ trống</p>
