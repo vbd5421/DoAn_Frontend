@@ -47,7 +47,7 @@ export class UserControlComponent {
     this.userS.getListAllwithpageUser(params).subscribe(data => {
         this.users = data;
         // this.paging.totalRecord = data.totalElements;
-        console.log(this.userS + 'tk')
+        
       },
       error => {
         console.log(error);

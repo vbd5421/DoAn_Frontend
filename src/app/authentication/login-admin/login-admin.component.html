@@ -4,7 +4,7 @@
       <div class="login p-lg-5 p-md-4 p-3 ">
         <p class="text"> Đăng nhập </p>
         <form (ngSubmit)="onSubmit()" ngNativeValidate>
-          <div *ngIf="isLoginFailed" class="error-mess mb-4">{{errorMessage}}</div>
+          <div *ngIf="isLoginFailed" class="text-danger mb-2">{{errorMessage}}</div>
           <div class="form-outline mb-3 mb-md-4 ">
             <label for="username" class="label-username" >Tên đăng nhập</label>
             <input type="text" name="username" autocomplete="username" [(ngModel)]="form.username"
@@ -23,7 +23,7 @@
           </div>
           <div class="save-pass mb-3 mb-md-4 ">
             <span (click)="goback()" class="back d-none d-sm-block "> <i class=" icon-back fa-solid fa-arrow-left"></i> Quay lại</span>
-            <label class="save-pass-container">Nhớ mật khẩu?
+            <label  class="save-pass-container">Nhớ mật khẩu?
               <input type="checkbox" name="remember-me" [(ngModel)]="form.remember">
               <span class="checkmark"></span>
             </label>
@@ -35,4 +35,9 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div id="nav-home-mobile" >
+  <div id="navbar-header-home"></div>
 </div>

@@ -46,6 +46,10 @@
           </div>
         </div>
       </div>
+      <div *ngIf="paging.totalRecord>0" class="col-12 my-1 text-center">
+        <pagination-controls [id]="'member'" previousLabel="<" nextLabel=">" (pageChange)="handlePageChange($event)"
+            [maxSize]="paging.totalRecord"></pagination-controls>
+    </div>
     </div>
     <div class="col-lg-3">
       <app-posts-more></app-posts-more>

@@ -4,26 +4,13 @@
             <div class="title-blog">
                 liên kết trang web
             </div>
-            <div class="item-post">
-                <a href="">
-                    sâsasasasas
+            <div class="item-post" *ngFor="let item of listLinkWeb" >
+                
+                <a href="https://www.google.com/search?q={{item.url}}" target="_blank" >
+                    {{item.name}}
                 </a>
             </div>
-            <div class="item-post">
-                <a href="">
-                    sâs a asasasas
-                </a>
-            </div>
-            <div class="item-post">
-                <a href="">
-                    sâsasasasas
-                </a>
-            </div>
-            <div class="item-post">
-                <a href="">
-                    sâs a asasasas
-                </a>
-            </div>
+            
         </div>
     </div>
 </div>

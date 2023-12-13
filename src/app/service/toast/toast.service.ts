@@ -21,13 +21,13 @@ export class ToastService {
       this.toast.warning('error')
   }
   chuyenslide() {
-    this.toast.info('bạn đã chuyển sang chế độ slide', 'Thông báo', {
+    this.toast.info('Bạn đã chuyển sang chế độ slide'), {
       timeOut: 2000,
-    });
+    };
   }
   chuyenchedoIMG() {
-    this.toast.info('bạn đã chuyển sang chế độ hình ảnh', 'Thông báo', {
+    this.toast.info('Bạn đã chuyển sang chế độ hình ảnh'),{
       timeOut: 2000,
-    });
+    };
   }
 }
