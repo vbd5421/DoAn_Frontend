@@ -26,7 +26,7 @@ export class ProjectListComponent {
   projectURL = Domain.PROJECT;
   paging = {
     page: 1,
-    size: 5,
+    size: 6,
     totalRecord: 0
   }
 

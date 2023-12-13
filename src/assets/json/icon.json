@@ -1,8 +1,13 @@
 [
     {
-        "name":"Hãy chọn biểu tượng",
-        "class":"",
-        "code":""
+        "name": "Hãy chọn biểu tượng",
+        "class": "",
+        "code": ""
+    },
+    {
+        "name": "&#xf099;",
+        "class": "fa-brands fa-twitter",
+        "code": "&#xf099;"
     },
     {
         "name": "user",
@@ -38,10 +43,7 @@
         "name": "amazon",
         "class": " fa fa-amazon",
         "code": "&#xf270;"
-    }
-
-
-    ,
+    },
     {
         "name": "glass",
         "class": " fa fa-glass",
@@ -117,7 +119,6 @@
         "class": " fa fa-search-minus",
         "code": "&#xf010;"
     },
-    
     {
         "name": "signal",
         "class": " fa fa-signal",
@@ -268,7 +269,6 @@
         "class": " fa fa-text-width",
         "code": "&#xf035;"
     },
-
     {
         "name": "list",
         "class": " fa fa-list",
@@ -1119,7 +1119,6 @@
         "class": " fa fa-plus-square",
         "code": "&#xf0fe;"
     },
-
     {
         "name": "angle-left",
         "class": " fa fa-angle-left",
@@ -1599,6 +1598,11 @@
         "name": "dropbox",
         "class": " fa fa-dropbox",
         "code": "&#xf16b;"
+    },
+    {
+        "name":"box",
+        "class":"fas fa-box",
+        "code":"&#xf466"
     },
     {
         "name": "stack-overflow",
@@ -3131,8 +3135,8 @@
         "code": "&#xf2b8;"
     },
     {
-        "name": "address-book-o",
-        "class": " fa fa-address-book-o",
+        "name": "address-book",
+        "class": "fas fa-address-book",
         "code": "&#xf2ba;"
     },
     {
@@ -3292,7 +3296,7 @@
     },
     {
         "name": "snowflake-o",
-        "class": " fa fa-snowflake-o",
+        "class": " fa fa-snowflake",
         "code": "&#xf2dc;"
     },
     {
@@ -3311,3 +3315,4 @@
         "code": "&#xf2e0;"
     }
 ]
+

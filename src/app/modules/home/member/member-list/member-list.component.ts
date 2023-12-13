@@ -18,7 +18,7 @@ export class MemberListComponent {
   memberURL = Domain.MEMBER;
   paging = {
     page: 1,
-    size: 12,
+    size: 6,
     totalRecord: 0
   }
   searchInput = {

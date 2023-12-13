@@ -9,12 +9,7 @@
 
   .post-excerpt{
     font-size: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 25px;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+
   }
   .post-excerpt p{
     margin-bottom: 0;
@@ -106,7 +101,7 @@
 .single-blog-item.blog-grid .post-info {
     -webkit-box-flex: 1;
     flex-grow: 1;
-    padding: 0px 28px 25px;
+    padding: 0px 28px 10px;
     position: relative;
 }
 

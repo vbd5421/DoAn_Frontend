@@ -14,7 +14,6 @@ import {error} from "@angular/compiler-cli/src/transformers/util";
 })
 export class LinkWebControlComponent implements OnInit {
   listLinkWeb: LinkWeb[] = []
-  baseURL = Constant.BASE_URL;
   searchInput = '';
   paging = {
     page: 1,
