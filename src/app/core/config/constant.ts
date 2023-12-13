@@ -23,7 +23,6 @@ export class Constant {
     GET_LIST_ALL_WITH_PAGE_USER: `${Domain.USER}`,
     GET_USER_BY_ID: `${Domain.USER}`,
     UPDATE_USER: `${Domain.USER}/update`,
-    UPDATE_USER1: `${Domain.USER}/update1`,
     DELETE_USER: `${Domain.USER}/delete`,
     CHANGE_PASSWORD: `${Domain.USER}/changePassword`,
   }
