@@ -8,7 +8,7 @@ import { UserAddComponent } from '../../user/user-add/user-add.component';
 const routes: Routes = [
   {path:'' , component: UserControlComponent},
   {path: 'add', component: UserAddComponent},
-  {path: 'update/:id', component: UserAddComponent},
+  {path: 'edit/:id', component: UserAddComponent},
 
 ]
 @NgModule({

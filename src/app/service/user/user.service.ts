@@ -17,12 +17,12 @@ export class UserService {
     return this.apiHelper.get( Constant.USER.GET_LIST_ALL_WITH_PAGE_USER , {params})
   }
 
-  public getUserById(id:number):Observable<any>{
+   getUserById(id:number):Observable<any>{
     return this.apiHelper.get( Constant.USER.GET_USER_BY_ID +`/${id}`);
   }
 
 
-  public deleteUser(id: number): Observable<any> {
+   deleteUser(id: number): Observable<any> {
     return this.apiHelper.post(Constant.USER.DELETE_USER + `/${id}`);
   }
   updateUser(id: number, user:User):Observable<Object>{

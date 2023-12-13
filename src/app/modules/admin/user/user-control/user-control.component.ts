@@ -11,7 +11,6 @@ import { UserService } from 'src/app/service/user/user.service';
 })
 export class UserControlComponent {
   users: User[] = [];
-
   searchInput = '';
   paging = {
     page: 1,
@@ -19,7 +18,7 @@ export class UserControlComponent {
     totalRecord: 0,
   };
 
-  constructor(private userS: UserService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     this.getAllUser();
@@ -44,16 +43,17 @@ export class UserControlComponent {
 
   getAllUser() {
     const params = this.getrequestparams( this.searchInput);
-    this.userS.getListAllwithpageUser(params).subscribe(data => {
+    this.userService.getListAllwithpageUser(params).subscribe(data => {
         this.users = data;
         // this.paging.totalRecord = data.totalElements;
-        
+        console.log(data)
       },
       error => {
         console.log(error);
       }
     );
   }
+
 
   search(): void {
     this.paging.page = 1;
@@ -73,15 +73,14 @@ export class UserControlComponent {
   //   console.log(this.paging.size);
   // }
   updateUser(id: number) {
-    return this.router.navigate([`admin/user/update/${id}`]);
+    return this.router.navigate([`admin/user/edit/${id}`]);
   }
 
 
   deleteUser(id: number) {
     let option = confirm('Bạn có chắc chắn xóa người dùng này?');
-
     if (option) {
-      this.userS.deleteUser(id).subscribe(() => {
+      this.userService.deleteUser(id).subscribe(() => {
         this.getAllUser();
       });
     }
