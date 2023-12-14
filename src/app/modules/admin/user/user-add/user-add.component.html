@@ -1,1 +1,140 @@
-<p>user-add works!</p>
+<div class="toolbar">
+
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class=" mt_30">
+  <div class="container  mb_60">
+    <div class="boder">
+      <div class="title2">
+        <p class="title-add fs-5"> TÀI KHOẢN</p>
+      </div>
+      <div class="row">
+        <div class="user-content col-lg-12 col-12 ">
+          <div class="row " style="justify-content: center;">
+            <div class="col-12" *ngIf="id ; else add">
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <div class="options">
+                    <div class="title">Họ</div>
+                    <input type="text" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}" name="firstName" disabled>
+                    <!-- <input type="text" formControlName="firstName" name="firstName" placeholder="Họ"> -->
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="options">
+                    <div class="title">Tên</div>
+                    <input type="text" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}"  name="lastName" disabled>
+                    <!-- <input type="text" formControlName="lastName" name="lastName" placeholder="Tên"> -->
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="options">
+                    <div class="title">Tài khoản</div>
+                    <input type="text" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}" name="username" disabled>
+                    <!-- <input type="text" formControlName="userName" name="username" placeholder="Tài khoản"> -->
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="options">
+                    <div class="title">Email</div>
+                    <input type="email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" name="email" disabled>
+                    <!-- <input type="email" formControlName="email" name="email" placeholder="Email"> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ng-template #add>
+              <div class="col-md-4">
+                <div class="options">
+                  <div class="title">Họ</div>
+                  <input type="text" formControlName="firstName" name="firstName" placeholder="Họ">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="options">
+                  <div class="title">Tên</div>
+                  <input type="text" formControlName="lastName" name="lastName" placeholder="Tên">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="options">
+                  <div class="title">Tài khoản</div>
+                  <input type="text" formControlName="userName" name="username" placeholder="Tài khoản">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <!-- Email input  -->
+                <div class="options">
+                  <div class="title">Email</div>
+                  <input type="email" formControlName="email" name="email" placeholder="Email">
+                </div>
+              </div>
+            </ng-template>
+
+            <div class="col-md-8" *ngIf="id; else elseBlock">
+              <div class="col-md-6">
+                <div class="reset-pass mb-2 mb-md-3">
+                  <div class="title me-2">Đặt lại mật khẩu</div>
+                  <button type="button" (click)="changePassword(user.id)" class="btn btn-secondary px-1 py-0 "><i
+                      class="fas fa-history"></i></button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input type="checkbox" name="active" formControlName="active" [checked]="user.active"
+                        (change)="onCheckChange($event, user)">
+                      <strong> Trạng Thái hoạt động</strong>
+                    </div>
+                    <!--            </li>-->
+                    <!--            <li class="list-group-item" *ngFor="let u of user">-->
+                    <!--              <div class="form-check">-->
+                    <!--                <input type="checkbox" [value]="u.selected" [checked]="u.selected" (change)="onCheckChange($event, u)" class="custom-control-input" id="customCheck{{u.id}}">-->
+                    <!--                <label class="cursor-pointer font-italic d-block custom-control-label" for="customCheck{{u.id}}"></label>-->
+                    <!--              </div>-->
+                    <!--            </li>-->
+                </ul>
+              </div>
+              <div class="col-md-12">
+                <div class="title">Vai trò</div>
+                <div class="d-flex flex-column  ">
+                  <select id="" class="w-25 border mb-5" formControlName="role" name="role" (change)="selectRole()">
+                    <option *ngFor="let r of roles" [value]="r.id">{{r.roleName}}</option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="col-md-12">
+              <ul class="list-group">
+                <h3>Quyền truy cập</h3>
+                <li class="list-group-item" *ngFor="let module of modules ;">
+                  <div class="form-check">
+                    <label class="cursor-pointer font-italic d-block">
+                      {{module.name}}</label>
+                  </div>
+                </li>
+              </ul>
+            </div> -->
+            </div>
+
+            <div class="col-md-8">
+              <ng-template #elseBlock>
+                <div class="options col-md-8">
+                  <div class="title">Mật khẩu</div>
+                  <input type="password" formControlName="password" name="password" placeholder="Mật khẩu" required>
+                  <!-- <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" name="password" > -->
+                </div>
+              </ng-template>
+            </div>
+            <div>{{errorMessage}}</div>
+            <div class="col-md-8  text-center pt-3 mb-4">
+              <button class="save-btn me-3 btn btn-primary btn-lg " type="submit"><i
+                  class=" me-1 fas fa-save"></i>Lưu</button>
+              <button (click)="goToBack()" class="btn btn-secondary btn-lg ">Hủy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

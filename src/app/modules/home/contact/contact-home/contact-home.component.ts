@@ -3,8 +3,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
 import { AboutUs } from 'src/app/core/model/about-us/about-us';
+import { Address } from 'src/app/core/model/address/address';
 import { Contact } from 'src/app/core/model/contact/contact';
 import { AboutUsService } from 'src/app/service/about-us/about-us.service';
+import { AddressService } from 'src/app/service/address/address.service';
 import { ContactService } from 'src/app/service/contact/contact.service';
 
 @Component({
@@ -14,6 +16,7 @@ import { ContactService } from 'src/app/service/contact/contact.service';
 })
 export class ContactHomeComponent {
   about : AboutUs= new AboutUs();
+  addressList : Address[]=[]
   telephone:any;
   fax:any;
   email:any;
@@ -27,10 +30,11 @@ export class ContactHomeComponent {
               private sanitizer: DomSanitizer,
               private contactService: ContactService,
               private toastService:ToastrService,
+              private addressService: AddressService
     ){}
     ngOnInit(): void {
       this.getInformation()
-      
+      this.getListAddress()
     }
 
     getInformation(){
@@ -58,6 +62,13 @@ export class ContactHomeComponent {
       console.log(err)
     }
     )
+}
+
+getListAddress() {
+  this.addressService.ListAll().subscribe((res) => {
+    this.addressList = res;
+    console.log(res)
+  });
 }
  //mã ACII
  numberOnly(event:any): boolean {

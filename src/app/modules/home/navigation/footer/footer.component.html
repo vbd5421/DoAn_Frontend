@@ -48,8 +48,8 @@
                             <span><i class="fas fa-envelope" ></i></span> <span [innerHTML]="email" ></span>
                         </a>
                     </p>
-                    <p>
-                       <span><i class="fa-solid fa-location-dot"></i></span>  856 Cordia Extension Apt. 356, Lake, United State
+                    <p *ngFor="let item of addressList" >
+                       <span><i class="fa-solid fa-location-dot"></i></span><span>{{item.address}},{{item.wards}},{{item.district}},{{item.city}}</span>
                     </p>
                 </div>
             </div>

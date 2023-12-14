@@ -27,11 +27,8 @@ export class Constant {
     CHANGE_PASSWORD: `${Domain.USER}/changePassword`,
   }
   public static ROLE = {
-    GET_ROLE_BY_ID: `role`,
-    LIST_ROLE: `role`,
-    ADD_ROLE: `${Domain.ROLE}/addRole`,
-    DELETE_ROLE: `${Domain.ROLE}/delete`,
-    UPDATE_ROLE: `${Domain.ROLE}/updateRole`
+    GET_ROLE_BY_ID: `${Domain.ROLE}`,
+    LIST_ROLE: `${Domain.ROLE}`,
   }
   public static TYPICAL_NUMBER = {
     GET_LIST_ALL_PAGE: `${Domain.TYPICAL_NUMBER}`,
@@ -110,10 +107,11 @@ export class Constant {
   }
 
   public static ADDRESS = {
-    CREATE: `${Domain.ADDRESS}/create`,
+    CREATE: `${Domain.ADDRESS}/add`,
     UPDATE: `${Domain.ADDRESS}/update`,
     DELETE: `${Domain.ADDRESS}/delete`,
-    LIST: `${Domain.ADDRESS}`
+    LIST: `${Domain.ADDRESS}`,
+    GET_ID:`${Domain.ADDRESS}`
   }
   public static TYPICAL_IMAGE = {
     GET_ALL_LIST_CHANGE_PAGE: `${Domain.TYPICAL_IMAGE}`,

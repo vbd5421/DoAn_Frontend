@@ -1,7 +1,7 @@
 <div class="toolbar"></div>
 
 <div class="container">
-    <form (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate class="form-cate-add mt_30">
+    <form (ngSubmit)="onSubmit()"  novalidate class="form-cate-add mt_30">
         <div class=" mb_60">
             <div class="title">
                 <p class="cate-name fs-5">địa chỉ</p>
@@ -13,7 +13,7 @@
                             <div class="col-sm-4">
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
                                     <label class="label-custom" for="province">Tỉnh/Thành:</label>
-                                    <select id="province" [(ngModel)]="address.citi" name="address.citi" (change)="selectProvince($event)"
+                                    <select id="province" [(ngModel)]="address.city" name="address.city" (change)="selectProvince($event)"
                                         [ngModelOptions]="{standalone: true}" class="form-select" > 
                                         <option [selected]="true" value="" selected  disabled  >--Chọn--</option>
                                         <option *ngFor="let province of provinces" value="{{province.name}}">
@@ -23,9 +23,9 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
-                                        <label class="label-custom" for="districts">Quận/Huyện:</label>
-                                        <select id="districts" [(ngModel)]="address.districts"  name="address.districts"
-                                        (change)="selectDistricts($event)" class="form-select"  >
+                                        <label class="label-custom" for="district">Quận/Huyện:</label>
+                                        <select id="district" [(ngModel)]="address.district"  name="address.district"
+                                        (change)="selectDistricts($event)" class="form-select" [ngModelOptions]="{standalone: true}"  >
                                             <option [selected]="true" value=""  disabled  >--Chọn--</option>
                                             <option *ngFor="let district of districts" value="{{district.name}}">
                                                 {{district.name}}</option>
@@ -52,10 +52,13 @@
                                     </label>
                                 </div>
                             </div>
+                            <div>
+                                <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="address.district" disabled="true">
+                            </div>
                         </div>
                         <div class="submit-button" class="mt_15 mb-4">
                             <button type="submit" class="btn btn-primary btn-lg me-3 ">Lưu</button>
-                            <button type="button" class="btn btn-secondary btn-lg  cancel">Hủy</button>
+                            <button type="button" (click)="backAbout()" class="btn btn-secondary btn-lg  cancel">Hủy</button>
                         </div>
                     </div>
                 </div>
