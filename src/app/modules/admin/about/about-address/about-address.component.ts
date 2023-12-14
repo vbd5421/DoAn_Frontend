@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Address } from 'src/app/core/model/address/address';
 import { AddressService } from 'src/app/service/address/address.service';
+import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
   selector: 'app-about-address',
@@ -13,9 +14,9 @@ export class AboutAddressComponent {
   provinces:any[]
   districts: any[];
   wards: any[];
-
   id:number;
   constructor( private router: Router ,
+                private toast: ToastService,
                 private addressService : AddressService ,
                 private route : ActivatedRoute, 
                 private locationService: AddressService) { }
@@ -29,23 +30,20 @@ export class AboutAddressComponent {
     }
   }
 
-  rollbackToList(){
-    this.router.navigate(['/admin/about-us']);
-  }
-
   backAbout(){
     window.history.back()
   }
 
-  AddAddress(addr: Address):void{
-   this.addressService.createAddress(addr).subscribe(()=>{
-    alert("Thêm thành công!");
+  AddAddress():void{
+   this.addressService.createAddress(this.address).subscribe(data=>{
+    console.log(data)
+    this.toast.showSuccess()
     this.backAbout()
    })
   }
-  updateAdress(id: number , addr : Address){
+  updateAdress(id: number , addr: any ){
    this.addressService.updateAddress(id,addr).subscribe(data=>{
-    this.rollbackToList()
+    this.backAbout()
    });
   }
 
@@ -53,7 +51,7 @@ export class AboutAddressComponent {
     if(this.id){
       this.updateAdress(this.id , this.address);
     }else{
-      this.AddAddress(this.address);
+      this.AddAddress();
     }
   }
 // location

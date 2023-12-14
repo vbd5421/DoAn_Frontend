@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AboutUs } from 'src/app/core/model/about-us/about-us';
 import { Address } from 'src/app/core/model/address/address';
 import { AboutUsService } from 'src/app/service/about-us/about-us.service';
+import { AddressService } from 'src/app/service/address/address.service';
 import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class AboutControlComponent {
   
   constructor(
     private aboutService: AboutUsService,
-    // private addressService: AddressService,
+    private addressService: AddressService,
     private router: Router,
     private toastService: ToastService
   ) {}
@@ -71,27 +72,28 @@ export class AboutControlComponent {
   }
 
   getListAddress() {
-    // this.addressService.ListAll().subscribe((res) => {
-    //   this.addressList = res;
-    // });
+    this.addressService.ListAll().subscribe((res) => {
+      this.addressList = res;
+      console.log(res)
+    });
   }
   // xóa address
   deleteAddress(id: number) {
-    // let cf = confirm('Bạn có muốn xóa địa chỉ này?');
-    // if (cf) {
-    //   this.addressService.delete(id).subscribe(
-    //     () => {
-    //       this.getListAddress();
-    //     },
-    //     (error) => {
-    //       console.log(error);
-    //     }
-    //   );
-    // }
+    let cf = confirm('Bạn có muốn xóa địa chỉ này?');
+    if (cf) {
+      this.addressService.deleteAddress(id).subscribe(
+        () => {
+          this.getListAddress();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }
   }
 
   updateAddress(id: number) {
-    // this.router.navigate([`admin/about/address-update/${id}`]);
+    this.router.navigate([`admin/about-us/address-edit/${id}`]);
   }
 
   onSubmit() {

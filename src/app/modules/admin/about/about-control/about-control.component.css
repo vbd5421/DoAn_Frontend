@@ -14,6 +14,7 @@
 }
 .button:hover{
  background-color: rgb(53, 149, 200);
+ color: white;
 }
 .btn-address:hover{
     background-color: rgb(53, 124, 200);

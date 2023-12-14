@@ -13,7 +13,7 @@ export class AddressService {
 
   constructor(  private apiHelper: ApiHelper , private httpClient: HttpClient) { }
 
-  createAddress( address : Address ):Observable<any>{
+  createAddress( address : any ):Observable<any>{
     return this.apiHelper.post(Constant.ADDRESS.CREATE,address);
   }
 
@@ -21,14 +21,14 @@ export class AddressService {
     return this.apiHelper.get(Constant.ADDRESS.LIST);
   }
 
-  updateAddress( id:number,  address: Address): Observable<Object>{
+  updateAddress( id:number,  address: any): Observable<Object>{
     return this.apiHelper.post(Constant.ADDRESS.UPDATE +`/${id}`, address);
   }
   getById(id: number): Observable<any>{
-    return this.apiHelper.get(Constant.ADDRESS.LIST+`/${id}`)
+    return this.apiHelper.get(Constant.ADDRESS.GET_ID+`/${id}`)
   }
 
-  delete(id:number):Observable<Object>{
+  deleteAddress(id:number):Observable<Object>{
     return this.apiHelper.post(Constant.ADDRESS.DELETE+`/${id}`)
   }
 

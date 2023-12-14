@@ -12,7 +12,7 @@
 <section class="contact-section spad ">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <div class="contact-text">
                     <p class="mb-2 pb-2 border-bottom fs-3 fw-bold text-capitalize text-dark">Thông tin liên hệ</p>
                     <p>Vui lòng điền thông tin theo mẫu form bên cạnh để bộ phận tư
@@ -22,7 +22,7 @@
                             <tr>
                                 <td class="c-o">Địa chỉ:</td>
                                 <td>
-                                    <li class="address" >ddadad</li>
+                                    <li class="address" *ngFor="let item of addressList" ><i class="fa-solid fa-location-dot me-1" ></i>{{item.address}},{{item.wards}},{{item.district}},{{item.city}}</li>
                                 </td>
                             </tr>
                             <tr>
@@ -47,7 +47,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col-lg-7 offset-lg-1">
+            <div class="col-lg-7 ">
                 <form (ngSubmit)="onSubmit()" [formGroup]="formContact"  enctype="multipart/form-data"  novalidate class="contact-form mb_80 ">
                     <div class="row">
                         <div class="col-md-12">

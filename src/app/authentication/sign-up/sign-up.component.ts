@@ -22,7 +22,6 @@ export class SignUpComponent implements OnInit {
 
   onSubmit() {
     this.authService.register(this.form).subscribe(data => {
-      console.log(this.form);
       this.isSuccessful = true;
       this.isSignUpFailed = false;
       this.errorMessage = "Đăng ký thành công!!"
