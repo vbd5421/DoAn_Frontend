@@ -3,22 +3,18 @@
     justify-content: center;
     align-content: center;
   }
-  
-  .spann{
-    height: 30px;
-    font-size: 20px;
-  
-  }
+
+
   .control{
     margin-top:7px;
     color: black;
-  
+
   }
   .ht-btn-custom{
     font-size: 16px;
     color: #121213;
   }
-  
+
   .form-control{
     padding-left: 20px;
     width: 100px;
@@ -27,43 +23,38 @@
     margin-top:7px;
     margin-left: 10px;
   }
-  
+
   a:hover{
     text-decoration: none;
   }
-  
+
   .item{
     padding: 5px;
     border: 0.5px solid gainsboro;
   }
-  
-  
+
+
   /*  */
   .text-title{
     color: #212529;
     font-weight: bold;
     text-align: center;
   }
-  
-  
+
+
   .header-menu {
     padding: 10px 15px 0px 12px;
     text-align: center;
     justify-content: center;
     align-content: center;
   }
-  
-  .spann {
-    height: 30px;
-    font-size: 20px;
-  
-  }
-  
+
+
   .ht-btn-custom {
     margin-top: 2px;
     color: #1a1a1a;
   }
-  
+
   .menu-item {
     margin-left: 15px;
     margin-top: 8px;
@@ -71,8 +62,8 @@
   .max-h{
     max-height: 370px;
   }
-  
-  
+
+
   .hienthi-right {
     border: 1px solid rgb(57, 63, 58);
   }
@@ -89,12 +80,12 @@
     margin: 10px 0;
     padding-top: 10px;
   }
-  
+
   .action-box .btn {
     width: 100%;
     height: 40px;
   }
-  
+
   .image-url-name {
     white-space: nowrap;
     overflow: hidden;
@@ -115,26 +106,26 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .img-target-box {
     height: 100%;
     padding-bottom: 20px;
     border-bottom: 1px solid gainsboro;
   }
-  
+
   .control {
     margin-top: 7px;
     color: black;
-  
+
   }
-  
+
   .custom-select {
     width: 60px;
     text-align: center;
     justify-content: center;
     align-items: center;
   }
-  
+
   .form-control {
     padding-left: 20px;
     width: 100px;
@@ -143,24 +134,24 @@
     margin-top: 7px;
     margin-left: 10px;
   }
-  
+
   .inputt {
     margin-left: 0px;
     height: 30px;
     margin-top: 7px;
   }
-  
+
   .slideitem {
     max-height: 190px;
     display: flex;
     position: absolute;
   }
-  
+
   .slideitem::-webkit-scrollbar {
     width: 0 !important;
     display: none;
   }
-  
+
   .listslide {
     width: 180px;
     height: 100px;
@@ -168,8 +159,8 @@
     object-fit: cover;
     gap: 10px;
   }
-  
-  
+
+
   .img-fluid {
     height: 100%;
     display: flex;
@@ -192,7 +183,7 @@
     inline-size: cover;
     height: 100%;
   }
-  
+
   .nav {
     overflow: auto;
     height: 165px;
@@ -203,10 +194,10 @@
     width: 180px;
     height: fit-content;
     box-shadow: 0 4px 6px -6px #222;
-    
+
   }
   .team-image {
-   
+
     height: 110px;
     position: relative;
   }
@@ -247,7 +238,7 @@
     .team-image {
       height: 80px;
     }
-    
+
     .max-h{
       max-height: 240px;
     }
@@ -268,5 +259,5 @@
     .team-image {
       height: 50px;
     }
-    
+
   }

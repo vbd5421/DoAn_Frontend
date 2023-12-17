@@ -5,9 +5,14 @@
         "code": ""
     },
     {
-        "name": "&#xf099;",
-        "class": "fa-brands fa-twitter",
-        "code": "&#xf099;"
+      "name": "khach hang",
+      "class": "fa-regular fa-handshake",
+      "code": "&#xf2b5"
+    },
+    {
+        "name": "twitter",
+        "class": "fab fa-x-twitter",
+        "code": "&#xe61b;"
     },
     {
         "name": "user",
