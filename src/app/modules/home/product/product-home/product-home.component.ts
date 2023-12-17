@@ -37,36 +37,18 @@ products: Product[] = [];
 
 baseURL = Constant.BASE_URL;
 productURL = Domain.PRODUCT;
-paging = {
-  page: 1,
-  size: 5,
-  totalRecord: 0
-}
+
 constructor( 
   private productService: ProductService) {
 }
 ngOnInit(): void {
   this.getProductListAllwithPage();
 }
-getRequestParams(page: number, pageSize: number): any {
-  let params: any = {};
 
-  if (page) {
-    params[`pageNo`] = page;
-  }
-
-  if (pageSize) {
-    params[`pageSize`] = pageSize;
-  }
-
-
-  return params;
-}
 getProductListAllwithPage(){
-  const params = this.getRequestParams(this.paging.page, this.paging.size,)
-  this.productService.getListAllPage(params).subscribe(data => {
+  this.productService.getListAllPage().subscribe(data => {
     this.products = data.content;
-    this.paging.totalRecord = data.totalElements;
+    
   },
     error => {
       console.log(error);

@@ -8,6 +8,11 @@ import { Member } from 'src/app/core/model/member/member';
 import { AuthService } from 'src/app/service/auth/auth.service';
 import { MemberService } from 'src/app/service/member/member.service';
 import { ToastService } from 'src/app/service/toast/toast.service';
+import {AboutUs} from "../../../../core/model/about-us/about-us";
+import {Address} from "../../../../core/model/address/address";
+import {AboutUsService} from "../../../../service/about-us/about-us.service";
+import {DomSanitizer} from "@angular/platform-browser";
+import {AddressService} from "../../../../service/address/address.service";
 
 @Component({
   selector: 'app-member-home',
@@ -41,7 +46,8 @@ onWindowScroll(event: Event) {
   }
 }
 
-
+about : AboutUs= new AboutUs();
+memberIntro:any
 listMember: Member[] = [];
 baseURL = Constant.BASE_URL;
 memberURL = Domain.MEMBER;
@@ -54,12 +60,13 @@ searchInput = {
   name :'',
 }
 constructor(private router: Router,
-  private auth: AuthService, 
   private memberService: MemberService,
-  private toast:ToastService) {
+  private sanitizer: DomSanitizer,
+  private aboutService:AboutUsService,) {
 }
 ngOnInit(): void {
   this.getMemberListAllwithPage();
+  this.getInformation()
 }
 getRequestParams(page: number, pageSize: number, name: any ): any {
   let params: any = {};
@@ -88,5 +95,11 @@ getMemberListAllwithPage(){
     }
   )
 }
+getInformation(){
+    this.aboutService.getAllInformation().subscribe(res=>{
+      this.about = res ;
+      this.memberIntro = this.sanitizer.bypassSecurityTrustHtml(this.about.member);
 
+    })
+  }
 }

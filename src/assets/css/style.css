@@ -550,7 +550,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.max-5line {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.max-4line {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .max-2line {
   display: -webkit-box;
   -webkit-line-clamp: 2;

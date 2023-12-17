@@ -17,7 +17,8 @@ export class FooterComponent {
   addressList : Address[]=[]
   telephone:any;
   fax:any;
-  email:any
+  email:any;
+  des:any;
   emailLink:any;
   constructor(private aboutService:AboutUsService,
               private sanitizer: DomSanitizer,
@@ -31,6 +32,7 @@ export class FooterComponent {
     getInformation(){
       this.aboutService.getAllInformation().subscribe(res=>{
         this.about = res ;
+        this.des = this.sanitizer.bypassSecurityTrustHtml(this.about.description)
         this.telephone = this.sanitizer.bypassSecurityTrustHtml(this.about.phone);
         this.fax = this.sanitizer.bypassSecurityTrustHtml(this.about.fax);
         this.email = this.sanitizer.bypassSecurityTrustHtml(this.about.email);
@@ -44,5 +46,5 @@ export class FooterComponent {
         console.log(res)
       });
     }
-    
+
 }

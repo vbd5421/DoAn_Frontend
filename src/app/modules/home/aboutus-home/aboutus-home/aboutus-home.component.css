@@ -1,20 +1,4 @@
 
-.about-img {
-    position: relative;
-    max-height: 500px;
-}
-
-.about-img::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url('/assets/images/utc-uav-ai/bg-about-img.png') top left no-repeat;
-    background-size: cover;
-}
-
 .img-about{
     max-height: 500px;
     height: 100%;
