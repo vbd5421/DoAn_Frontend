@@ -4,9 +4,7 @@
         <div class="row align-items-center">
             <div class="col-lg-5  order-lg-last " [@myAnimation]="animationState" >
                 <div class=" border-bottom  mb-3 title-service text-center text-lg-start">đội ngũ nghiên cứu</div>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                    amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                    clita duo justo et tempor eirmod magna dolore erat amet</p>
+                <p class="mb-4 member-intro" [innerHTML]="memberIntro" ></p>
                     <div class="text-center  mt_30 " >
                         <a class=" see-more " href="gioi-thieu/thanh-vien">xem thêm</a>
                     </div>
@@ -48,9 +46,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5  order-lg-last ">
                     <div class=" border-bottom  mb-3 title-service text-center text-lg-start">đội ngũ nghiên cứu</div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <p [innerHTML]="memberIntro"  class="mb-4 member-intro "></p>
                         <div class="text-center  mt_30 " >
                             <a class=" see-more " href="gioi-thieu/thanh-vien">xem thêm</a>
                         </div>

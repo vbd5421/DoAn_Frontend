@@ -30,6 +30,6 @@ export class UserService {
   }
 
   changePassword(id: number):Observable<any>{
-    return this.apiHelper.post( Constant.USER.CHANGE_PASSWORD ,id);
+    return this.apiHelper.post( Constant.USER.CHANGE_PASSWORD+ `/${id}`);
   }
 }

@@ -105,3 +105,11 @@
 	font-size: 18px;
 	color: #4c7fff !important;
 }
+.project-intro{
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

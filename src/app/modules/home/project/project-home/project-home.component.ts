@@ -1,9 +1,12 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, HostListener } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
+import { AboutUs } from 'src/app/core/model/about-us/about-us';
 import { Project } from 'src/app/core/model/project/project';
+import { AboutUsService } from 'src/app/service/about-us/about-us.service';
 import { ProjectService } from 'src/app/service/project/project.service';
 
 @Component({
@@ -38,7 +41,8 @@ onWindowScroll(event: Event) {
   }
 }
 
-
+about : AboutUs= new AboutUs();
+projectIntro:any
 project: Project[] = []
 name = '';
 baseURL = Constant.BASE_URL;
@@ -50,10 +54,13 @@ paging = {
 }
 
 constructor(private projectService: ProjectService,
-  private router: Router) {
+  private router: Router ,
+  private sanitizer: DomSanitizer,
+  private aboutService:AboutUsService,) {
 }
 ngOnInit(): void {
   this.getAllWithPageProject();
+  this.getInformation()
 }
 
 getRequestParams(page: number, pageSize: number, search: string): any {
@@ -82,5 +89,11 @@ getAllWithPageProject() {
       console.error(error)
     })
 }
+getInformation(){
+  this.aboutService.getAllInformation().subscribe(res=>{
+    this.about = res ;
+    this.projectIntro = this.sanitizer.bypassSecurityTrustHtml(this.about.project);
 
+  })
+}
 }

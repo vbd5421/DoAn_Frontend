@@ -14,7 +14,7 @@ export class UserControlComponent {
   searchInput = '';
   paging = {
     page: 1,
-    size: 5,
+    size: 9,
     totalRecord: 0,
   };
 
