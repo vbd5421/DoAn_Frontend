@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Role } from 'src/app/core/model/role/role';
 import { User } from 'src/app/core/model/user/user';
 import { AuthService } from 'src/app/service/auth/auth.service';
+import { RoleService } from 'src/app/service/role/role.service';
 import { ToastService } from 'src/app/service/toast/toast.service';
 import { UserService } from 'src/app/service/user/user.service';
 
@@ -16,7 +17,7 @@ export class UserAddComponent {
 
   user : User = new User();
   roles :Role[] = [];
-  roleById = new Role()
+  roleById : Role = new Role()
   id: any;
   roll: any;
   isSuccessful = false;
@@ -38,7 +39,8 @@ export class UserAddComponent {
 
   constructor(private authService: AuthService,private userService: UserService,
               private router: Router,private route:ActivatedRoute ,
-              private toastService: ToastService ) {
+              private toastService: ToastService ,
+              private roleService: RoleService) {
 
   }
 
@@ -48,6 +50,8 @@ export class UserAddComponent {
     if(this.id){
       this.getUserById(this.id)
       // this.getRoleUpdate(this.user);
+      this.getRoleUpdate();
+      
     }
 
   }
@@ -63,6 +67,7 @@ export class UserAddComponent {
     })
   }
   getValueForm() {
+    this.user.role.id =  this.userForm.controls['role'].value
     this.user.firstName = this.userForm.controls['firstName'].value
     this.user.lastName = this.userForm.controls['lastName'].value
     this.user.username = this.userForm.controls['userName'].value
@@ -81,57 +86,24 @@ export class UserAddComponent {
   }
 
   getRoleUpdate(){
-    // this.roleService.listRole().subscribe(data => {
-    //   this.roles = data;
-    //   })
-
-      // if(user.role != null){
-      //   const sid = user.role.map(item => item.id);
-      //   for (let i=0; i<sid.length; i++){
-      //     this.roles.find( e => {
-      //       if(e.id === sid[i]) e.selected = true;
-      //     })
-      //   }
-      // }
-      // console.log(this.roles)
+    this.roleService.listRole().subscribe(data => {
+      this.roles = data;
+      console.log(data)
+      })
   }
-  // getRolebyId(id:any){
-  //   this.roleService.getRolebyId(id).subscribe(data=>{
-  //     this.user.role = data
-  //   })
-  //   }
+  getRolebyId(id:any){
+    this.roleService.getRolebyId(id).subscribe(data=>{
+      this.user.role = data
+    })
+    }
 
-  // onRoleChange(event: any, role: Role){
-  //   role.selected = event.currentTarget.checked;
-  //   if(role.selected){
-  //     this.user.role.push(role);
-  //   }else{
-  //     this.user.role.forEach(item => {
-  //       if(item.id === role.id){
-  //         this.user.role = this.user.role.filter(i => i !== item);
-  //       }
-  //     })
-  //   }
-  // }
-  onModulechange(event:any){
-    // module.status=event.currentTarget.checked;
-    // if(module.status){
-    //   this.module.push(role);
-    // }else{
-    //   this.roles.module.forEach(item => {
-    //     if(item.id === aside.id){
-    //       this.role.module = this.user.module.filter(i => i !== item);
-    //     }
-    //   })
-    // }
-  }
 
   goToUserList(){
     return this.router.navigate([`admin/user`])
   }
 
   updateUser(id: number){
-    this.getValueForm()
+     //this.getValueForm()
     console.log(this.user)
     this.userService.updateUser(id,this.user).subscribe( data =>{
       this.toastService.showSuccess();
@@ -163,33 +135,27 @@ export class UserAddComponent {
           this.isSignUpFailed = false;
           this.goToBack()
           this.toastService.showSuccess()
-          // this.errorMessage = "Đăng ký thành công!!"
+         
         },
         error =>{
-          // this.toastService.showWarning(error.error)
+         
           this.errorMessage = "Đăng ký thất bại!!";
           this.isSignUpFailed = true;
           console.log(error);
         })
-        // this.authService.register(this.form).subscribe(data => {
-        //   console.log(this.form);
-        //   this.isSuccessful = true;
-        //   this.isSignUpFailed = false;
-        //   this.errorMessage = "Đăng ký thành công!!"
-        // },
-        //   err => {
-        //     this.errorMessage = err.error.message;
-        //     this.isSignUpFailed = true;
-        //     this.errorMessage = "Đăng ký thất bại!!"
-        //   })
+        
     }
   }
 
   changePassword(id:number) {
-    this.userService.changePassword(id);
+    this.userService.changePassword(id).subscribe(dt=>{
+      this.user =dt
+      this.toastService.showSuccess()
+      this.goToUserList();
+    });
     
   }
   selectRole(){
-    //this.getRolebyId(this.userForm.controls['role'].value);
+    this.getRolebyId(this.userForm.controls['role'].value);
   }
 }

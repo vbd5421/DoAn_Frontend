@@ -39,15 +39,6 @@
                 </div>
                 <div class="listmember mb-md-0 mb-3 mt-3 mt-md-4 mx-md-0 mx-4 ">
                   <label class="form-label"><span class="validateText">*</span>chuyên mục dự án</label>
-                  <!-- <select id="chuyenMuc" formControlName="chuyenMuc" name="category"
-                    [class.borderError]="!formProject.controls.chuyenMuc.valid&&!formProject.controls.chuyenMuc.untouched"
-                    [class.text-input]="formProject.controls.chuyenMuc.valid||formProject.controls.chuyenMuc.untouched">
-                    <option value="" disabled selected ></option>
-                    <option *ngFor="let cP of cateProject" value="{{cP.id}}" [innerHTML]="cP.typeName">
-                    </option>
-                  </select>
-                  <p *ngIf="!formProject.controls.chuyenMuc.valid&&!formProject.controls.chuyenMuc.untouched"
-                    class="validateText">Thông tin không thể bỏ trống</p> -->
                   <select name="cateProject" id="" [(ngModel)]="project.cateProject.id"
                     [ngModelOptions]="{standalone: true}" class="form-select select-custom "
                     aria-label="Default select example">

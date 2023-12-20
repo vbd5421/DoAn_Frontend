@@ -9,4 +9,6 @@ export class AboutUs {
     phone: any;
     fax: any;
     email: any;
+    project:any;
+    member:any;
 }
