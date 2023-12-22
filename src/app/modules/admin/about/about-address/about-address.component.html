@@ -10,7 +10,7 @@
                 <div class="row justify-content-center ">
                     <div class="col-sm-10 text-center ">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 text-start">
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
                                     <label class="label-custom" for="province">Tỉnh/Thành:</label>
                                     <select id="province" [(ngModel)]="address.city" name="address.city" (change)="selectProvince($event)"
@@ -19,9 +19,10 @@
                                         <option *ngFor="let province of provinces" value="{{province.name}}">
                                             {{province.name}}</option>
                                     </select>
+                                    <input class="w-100" type="text" *ngIf="id" [ngModelOptions]="{standalone: true}" [(ngModel)]="address.city" disabled="true" >
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 text-start ">
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
                                         <label class="label-custom" for="district">Quận/Huyện:</label>
                                         <select id="district" [(ngModel)]="address.district"  name="address.district"
@@ -30,9 +31,10 @@
                                             <option *ngFor="let district of districts" value="{{district.name}}">
                                                 {{district.name}}</option>
                                         </select>
+                                        <input class="w-100" *ngIf="id" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="address.district" disabled="true">
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 text-start ">
                                 <div class="box-address mx-4 mx-sm-0 mt_30 ">
                                     <label class="label-custom" for="wards">Phường/Xã:</label>
                                     <select id="wards" [(ngModel)]="address.wards"  name="address.wards"
@@ -41,6 +43,7 @@
                                         <option *ngFor="let itemwWard of wards" value="{{itemwWard.name }}">
                                             {{itemwWard.name }}</option>
                                     </select>
+                                    <input class="w-100" *ngIf="id" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="address.wards" disabled="true">
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -51,9 +54,6 @@
                                         <span class="placeholder label-custom lh-base ">địa chỉ</span>
                                     </label>
                                 </div>
-                            </div>
-                            <div>
-                                <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="address.district" disabled="true">
                             </div>
                         </div>
                         <div class="submit-button" class="mt_15 mb-4">

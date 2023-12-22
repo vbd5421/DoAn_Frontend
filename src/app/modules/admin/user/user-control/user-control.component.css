@@ -126,3 +126,34 @@
  .btn-icon:hover{
     background-color: rgb(160, 160, 160);
  }
+ /* tìm kiếm */
+ .search{
+  border-radius: 5px;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+  background-color: #EAEFF4;
+  border: 1px solid rgb(230, 231, 232);
+  padding: 15px;
+}
+
+.input-search:focus{
+  color: black;
+  border: 1px solid rgb(164, 164, 164);
+}
+.input-search:focus-visible{
+  border: 1px solid rgb(164, 164, 164) !important;
+}
+
+.form-search{
+  position: relative;
+}
+.icon-search{
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  transform: translateY(-50%);
+}
+.icon-search button{
+  background-color: unset;
+}

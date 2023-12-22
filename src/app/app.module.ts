@@ -79,6 +79,8 @@ import { ProductMoreComponent } from './modules/home/product/product-more/produc
 import { AppPageSizeImgComponent } from './modules/another/app-page-size-img/app-page-size-img.component';
 
 Quill.register('modules/blotFormatter', BlotFormatter);
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -165,7 +167,7 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     QuillModule.forRoot() ,
     NgbTooltipModule ,
     NgxSummernoteModule, //editor
-    
+    //Ng2SearchPipeModule,
 
   ],
   providers: [],

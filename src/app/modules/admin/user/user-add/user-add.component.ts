@@ -19,11 +19,11 @@ export class UserAddComponent {
   roles :Role[] = [];
   roleById : Role = new Role()
   id: any;
-  roll: any;
+
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = "";
-  type: any;
+
   submitFail = false;
   roleId= new FormControl()
   userForm = new FormGroup({
@@ -67,7 +67,6 @@ export class UserAddComponent {
     })
   }
   getValueForm() {
-    this.user.role.id =  this.userForm.controls['role'].value
     this.user.firstName = this.userForm.controls['firstName'].value
     this.user.lastName = this.userForm.controls['lastName'].value
     this.user.username = this.userForm.controls['userName'].value
@@ -129,16 +128,13 @@ export class UserAddComponent {
     }else{
       this.getValueForm()
       this.authService.register(this.user).subscribe(data =>{
-          
           console.log(this.user)
           this.isSuccessful = true;
           this.isSignUpFailed = false;
           this.goToBack()
           this.toastService.showSuccess()
-         
         },
         error =>{
-         
           this.errorMessage = "Đăng ký thất bại!!";
           this.isSignUpFailed = true;
           console.log(error);

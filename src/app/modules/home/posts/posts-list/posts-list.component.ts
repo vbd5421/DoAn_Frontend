@@ -19,7 +19,7 @@ export class PostsListComponent {
 
   paging = {
     page: 1,
-    size: 9,
+    size: 6,
     totalRecord: 0
   }
   constructor(private router: Router,

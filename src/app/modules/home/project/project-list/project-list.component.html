@@ -14,30 +14,30 @@
         dự án
     </div>
     <div class="d-md-none d-block ">
-        <form action="" (change)="search()" >
-        <label class="custom-field one w-100">
-            
+        <form action="" (change)="search()">
+            <label class="custom-field one w-100">
+
                 <input type="text" placeholder=" " [(ngModel)]="searchInput.name" name="searchInput.name" />
                 <span class="placeholder">Tìm kiếm dự án</span>
-                <button type="submit" class="btn-icon-search" >
+                <button type="submit" class="btn-icon-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            
-        </label>
-        <label class="select mb-4 ">
-            <select class="w-100" [(ngModel)]="searchInput.cate" name="searchInput.cate" >
-                <option value="" [selected]="true">Chuyên mục dự án</option>
-                <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
-            </select>
-        </label>
-        <label class="select mb-4 ">
-            <select class="w-100">
-                <option value="1">Năm triển khai</option>
-                <option value="2">With wrapper</option>
-                <option value="3">No JS!</option>
-            </select>
-        </label>
-    </form>
+
+            </label>
+            <label class="select mb-4 ">
+                <select class="w-100" [(ngModel)]="searchInput.cate" name="searchInput.cate">
+                    <option value="" [selected]="true">Chuyên mục dự án</option>
+                    <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
+                </select>
+            </label>
+            <label class="select mb-4 ">
+                <select class="w-100">
+                    <option value="1">Năm triển khai</option>
+                    <option value="2">With wrapper</option>
+                    <option value="3">No JS!</option>
+                </select>
+            </label>
+        </form>
     </div>
     <div class="row mb_60 ">
         <div class="col-md-8">
@@ -46,7 +46,7 @@
                     id:'project',
                     itemsPerPage: paging.size,
                     currentPage: paging.page,
-                    totalItems: paging.totalRecord  }  ">
+                    totalItems: paging.totalRecord  }   ">
                     <div class="single-blog-item blog-grid item-news  ">
                         <div class="post-feature blog-thumbnail">
                             <a class="item-img-news" href="du-an/{{pro.url}}">
@@ -74,28 +74,28 @@
         </div>
         <div class="col-md-4">
             <div class="d-none d-md-block ">
-                <form action="" (change)="search()" >
-                <label class="custom-field one w-100">
+                <form action="" (change)="search()">
+                    <label class="custom-field one w-100">
                         <input type="text" placeholder=" " [(ngModel)]="searchInput.name" name="searchInput.name" />
                         <span class="placeholder">Tìm kiếm dự án</span>
-                        <button type="submit" class="btn-icon-search" >
+                        <button type="submit" class="btn-icon-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                </label>
-                <label class="select mb-4 ">
-                    <select class="w-100" [(ngModel)]="searchInput.cate" name="searchInput.cate" >
-                        <option value="" [selected]="true" >Chuyên mục dự án</option>
-                        <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
-                    </select>
-                </label>
-                <label class="select mb-4 ">
-                    <select class="w-100">
-                        <option value="1">Năm triển khai</option>
-                        <option value="2">With wrapper</option>
-                        <option value="3">No JS!</option>
-                    </select>
-                </label>
-            </form>
+                    </label>
+                    <label class="select mb-4 ">
+                        <select class="w-100" [(ngModel)]="searchInput.cate" name="searchInput.cate">
+                            <option value="" [selected]="true">Chuyên mục dự án</option>
+                            <option *ngFor="let ct of cateProject" value="{{ct.id}}">{{ct.typeName}}</option>
+                        </select>
+                    </label>
+                    <label class="select mb-4 ">
+                        <select class="w-100">
+                            <option value="1">Năm triển khai</option>
+                            <option value="2">With wrapper</option>
+                            <option value="3">No JS!</option>
+                        </select>
+                    </label>
+                </form>
             </div>
 
             <app-link-web-home></app-link-web-home>

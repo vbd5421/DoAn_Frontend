@@ -4,11 +4,22 @@
     <h3 class="card-title align-items-start flex-column">
       <span class="card-label fw-bolder fs-6 mb-1">NGƯỜI DÙNG</span>
     </h3>
-    <div class="card-toolbar text-end ">
-      <a routerLink="add" class="btn2 btn-sm btn-light-primary fs-6">
-        <span class="svg-icon2 svg-icon-3 " ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
-          <span>&#43;</span>
-        </span>" Thêm Người Dùng "</a>
+    <div class="card-toolbar justify-content-between row ">
+      <div class="col-lg-3">
+        <form (ngSubmit)="search()" class="form-search">
+          <input class="search input-search" type="text" [(ngModel)]="searchInput" name="searchInput"
+            placeholder="Tìm kiếm ">
+          <div class="input-group-append  icon-search">
+            <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
+          </div>
+      </form>
+      </div>
+      <div class="col-lg-3 text-end">
+        <a routerLink="add" class="btn2 btn-sm btn-light-primary fs-6">
+          <span class="svg-icon2 svg-icon-3 " ng-reflect-inline-s-v-g="./assets/media/icons/duotune/a">
+            <span>&#43;</span>
+          </span>" Thêm Người Dùng "</a>
+      </div>
     </div>
   </div>
   <div class="card-body py-3">
@@ -24,7 +35,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users  | paginate:{
+        <tr *ngFor="let user of users | paginate:{
         id:'user',
         itemsPerPage: paging.size,
         currentPage: paging.page,
@@ -58,10 +69,6 @@
               <div *ngFor="let item of user.roles" >
                 {{item.roleName}}
               </div>
-              <!-- <span>
-                <app-tag-role [codeRole]="user.role.roleName" [roleName]="user.role.roleName"></app-tag-role>
-              </span> -->
-              
             </div>
           </td>
           <td>
@@ -95,10 +102,5 @@
       </tbody>
     </table>
   </div>
-  <!-- <div class="row" style="margin-top: 10px;" *ngIf="paging.totalRecord>0">
-      <div class="col-md-3">
-        <pagination-controls [id]="'user'" previousLabel="<" nextLabel=">" (pageChange)="handlepagechange($event)"
-          [maxSize]="paging.totalRecord"></pagination-controls>
-      </div>
-    </div> -->
+  
 </div>

@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
   productList:Product[]=[];
   paging = {
     page: 1,
-    size: 9,
+    size: 6,
     totalRecord: 0
   }
   constructor(private router:Router,
