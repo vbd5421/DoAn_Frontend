@@ -41,16 +41,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <i class="icon-search fa-solid fa-magnifying-glass cur " id="dropdownMenuButton1"
+                            <i (click)="goToSearch(searchForm.searchInput)" class="icon-search fa-solid fa-magnifying-glass cur " id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false"></i>
-                            <div class="dropdown-menu py-0 drop-custom " aria-labelledby="dropdownMenuButton1">
-                                <form action="" (ngSubmit)="goToSearch(searchInput)" class="box-input-custom">
-                                    <input type="text" class="custom-input " placeholder="Tìm kiếm...">
+                            <!-- <div class="dropdown-menu py-0 drop-custom " aria-labelledby="dropdownMenuButton1">
+                                <form action="" (ngSubmit)="goToSearch(searchForm.searchInput)" class="box-input-custom">
+                                    <input type="text" class="custom-input " name="searchForm.searchInput" placeholder="Tìm kiếm...">
                                     <button class="" type="submit">
                                         <i class=" fa-solid fa-magnifying-glass fa-fade"></i>
                                     </button>
                                 </form>
-                            </div>
+                            </div> -->
                         </div>
                     </nav>
                 </div>
@@ -111,5 +111,13 @@
                 </div>
             </div>
         </div>
+        <label class="custom-field two ">
+            <input type="text" placeholder="Tìm kiếm..." class=" input-field " 
+            name="searchInput" [(ngModel)]="searchForm.searchInput"  />
+            <button class="btn-search" (click)="goToSearch(searchForm.searchInput) " >
+                <i class="fs-4 fa-solid fa-magnifying-glass fa-fade" ></i>
+            </button>
+            
+        </label>
     </ul>
 </div>
