@@ -12,13 +12,17 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn = false;
   roles: string[] = [];
-  searchInput = ""
+  searchForm = {
+    searchInput: '',
+    cate:'',
+    endTime:'',
+    startTime:''
+  }
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router: Router) { }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getToken().roles;
-
     }
   }
   logout() {
@@ -26,10 +30,9 @@ export class HeaderComponent implements OnInit {
     window.location.reload();
   }
   goToSearch(input: any) {
-    this.router.navigate(['/tim-kiem'])
-    // const queryParams  = {input : input}
-    //   this.router.navigate(['/tim-kiem'],{queryParams});
-    //   console.log(this.searchInput);
+    const queryParams  = {input : input}
+    this.router.navigate(['/tim-kiem'],{queryParams});
+    console.log(this.searchForm.searchInput);
   }
 // navigation
   nav = [
