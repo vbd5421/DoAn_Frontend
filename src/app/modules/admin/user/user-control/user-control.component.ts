@@ -11,7 +11,7 @@ import { UserService } from 'src/app/service/user/user.service';
 })
 export class UserControlComponent {
   users: User[] = [];
-  searchInput = '';
+  searchInput : any;
   paging = {
     page: 1,
     size: 9,
@@ -60,18 +60,12 @@ export class UserControlComponent {
     this.getAllUser();
   }
 
-  // handlepagechange(event: number): void {
-  //   console.log(event);
-  //   this.paging.page = event;
-  //   this.getAllUser();
-  // }
+  handlepagechange(event: number): void {
+    console.log(event);
+    this.paging.page = event;
+    this.getAllUser();
+  }
 
-  // handlepagesizechange(event: any): void {
-  //   this.paging.size = event;
-  //   this.paging.page = 1;
-  //   this.getAllUser();
-  //   console.log(this.paging.size);
-  // }
   updateUser(id: number) {
     return this.router.navigate([`admin/user/edit/${id}`]);
   }

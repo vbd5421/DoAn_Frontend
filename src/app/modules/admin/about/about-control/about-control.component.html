@@ -59,7 +59,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="address-group   box-input ">
+                                    <div class="address-group mb-5 box-input ">
                                         <span ><strong>ĐỊA CHỈ</strong></span>
                                         <div class="address my-2 p-3  ">
                                             <div *ngFor="let item of addressList ">
@@ -85,11 +85,37 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="box-input ">
+                                        <label class="custom-field two w-100">
+                                            <textarea name="description" placeholder="&nbsp;" class="w-100 input-field " 
+                                            [(ngModel)]="about.project" [ngModelOptions]="{standalone: true}" required 
+                                              rows="8">
+                                            </textarea>
+                                            <span class="placeholder label-custom "> mô tả dự án ở trang chủ</span>
+                                        </label>
+                                </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="box-input ">
+                                        <label class="custom-field two w-100">
+                                            <textarea name="description" placeholder="&nbsp;" class="w-100 input-field " 
+                                            [(ngModel)]="about.member" [ngModelOptions]="{standalone: true}" required 
+                                              rows="8">
+                                            </textarea>
+                                            <span class="placeholder label-custom "> mô tả thành viên ở trang chủ</span>
+                                        </label>
+                                </div>
+                                </div>
                                 <div class="col-md-12">
-                                    <div class="box-input   ">
-                                        <p class="label-custom"> mô tả ở trang chủ</p>
-                                        <quill-editor placeholder="&nbsp;" class="border" [modules]="quillConfig"
-                                            [(ngModel)]="about.description" [ngModelOptions]="{standalone: true}"></quill-editor>
+                                    <div class="box-input ">
+                                            <label class="custom-field two w-100">
+                                                <textarea name="description" placeholder="&nbsp;" class="w-100 input-field " 
+                                                [(ngModel)]="about.description" [ngModelOptions]="{standalone: true}" required 
+                                                  rows="8">
+                                                </textarea>
+                                                <span class="placeholder label-custom "> mô tả giới thiệu ở trang chủ</span>
+                                            </label>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
