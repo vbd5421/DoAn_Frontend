@@ -18,6 +18,7 @@ export class MemberDetailComponent {
   baseURL = Constant.BASE_URL;
   memberURL = Domain.MEMBER;
   member :Member = new Member();
+  externalMember:Member = new Member();
   url: string;
   imageURL:any
 
@@ -42,6 +43,8 @@ constructor(private route:ActivatedRoute ,
     })
   }
 
-
+  addExternalProject(){
+    
+  }
  
 }
