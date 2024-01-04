@@ -22,7 +22,7 @@ const routes: Routes=[
        {path:'lien-he' , component:ContactHomeComponent},
        {path:'admin/login', title:'Admin-Login' , component: LoginAdminComponent },
        {path: 'login', component: LoginUserComponent},
-       {path: 'register', component:SignUpComponent},
+       //{path: 'register', component:SignUpComponent},
       ]
   }
 ]
