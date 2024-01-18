@@ -43,7 +43,7 @@ export class FooterComponent {
     getListAddress() {
       this.addressService.ListAll().subscribe((res) => {
         this.addressList = res;
-        console.log(res)
+        // console.log(res)
       });
     }
 

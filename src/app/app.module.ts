@@ -77,6 +77,9 @@ import { SearchComponent } from './modules/another/search/search.component';
 import { PostsHomeComponent } from './modules/home/posts/posts-home/posts-home.component';
 import { ProductMoreComponent } from './modules/home/product/product-more/product-more.component';
 import { AppPageSizeImgComponent } from './modules/another/app-page-size-img/app-page-size-img.component';
+import { CommentControlComponent } from './modules/admin/comment/comment-control/comment-control.component';
+import { CommentFormComponent } from './modules/home/comment/comment-form/comment-form.component';
+import { CommentListComponent } from './modules/home/comment/comment-list/comment-list.component';
 
 Quill.register('modules/blotFormatter', BlotFormatter);
 
@@ -147,6 +150,9 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     PostsHomeComponent,
     ProductMoreComponent,
     AppPageSizeImgComponent,
+    CommentControlComponent,
+    CommentFormComponent,
+    CommentListComponent,
 
   ],
   imports: [

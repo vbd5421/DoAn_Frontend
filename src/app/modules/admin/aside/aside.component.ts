@@ -30,12 +30,12 @@ export class AsideComponent {
       url: "project",
       icon:"fa-brands fa-wpforms"
     },
-    {
-      id:3,
-      name:"sản phẩm",
-      url: "product",
-      icon:"fa fa-box"
-    },
+    // {
+    //   id:3,
+    //   name:"sản phẩm",
+    //   url: "product",
+    //   icon:"fa fa-box"
+    // },
     {
       id:4,
       name:"thành viên",
@@ -44,9 +44,15 @@ export class AsideComponent {
     },
     {
       id:5,
-      name:"tin tức",
+      name:"bài viết",
       url: "posts",
       icon:"fa-solid fa-newspaper"
+    },
+     {
+      id:3,
+      name:"blog",
+      url: "product",
+      icon:"fa fa-box"
     },
     {
       id:5,

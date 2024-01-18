@@ -36,7 +36,7 @@ export class AboutAddressComponent {
 
   AddAddress():void{
    this.addressService.createAddress(this.address).subscribe(data=>{
-    console.log(data)
+    
     this.toast.showSuccess()
     this.backAbout()
    })
@@ -59,13 +59,13 @@ export class AboutAddressComponent {
   getProvinces(): void {
     this.locationService.getLocation().subscribe((data: any[]) => {
       this.provinces = data;
-      console.log(this.provinces)
+      
     });
   }
 
   selectProvince(e:any){
     const city = e.target.value
-    console.log( 'tp',city)
+   
     if(!city){
       return;
     }
