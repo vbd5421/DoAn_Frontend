@@ -8,7 +8,7 @@ import { AboutUsUavComponent } from '../../aboutus-home/about-us-uav/about-us-ua
 const routes: Routes=[
   {path:'' ,component:Error404Component},
   {path:'gioi-thieu-chung' , component:AboutUsComponent},
-  {path:'uav' , component:AboutUsUavComponent},
+  {path:'iot' , component:AboutUsUavComponent},
   {path:'thanh-vien',loadChildren:()=>import('../member/member.module').then(m=>m.MemberModule)},
 ]
 

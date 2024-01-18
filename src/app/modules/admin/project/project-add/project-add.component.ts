@@ -12,11 +12,14 @@ import { Constant } from 'src/app/core/config/constant';
 import { Domain } from 'src/app/core/domain/domain';
 import { CateProject } from 'src/app/core/model/cate-project/cate-project';
 import { Member } from 'src/app/core/model/member/member';
+import { Product } from 'src/app/core/model/product/product';
 import { Project } from 'src/app/core/model/project/project';
 import { CateProjectService } from 'src/app/service/cate-project/cate-project.service';
 import { MemberService } from 'src/app/service/member/member.service';
+import { ProductService } from 'src/app/service/product/product.service';
 import { ProjectService } from 'src/app/service/project/project.service';
 import { ToastService } from 'src/app/service/toast/toast.service';
+import { ContactHomeComponent } from '../../../home/contact/contact-home/contact-home.component';
 @Component({
   selector: 'app-project-add',
   templateUrl: './project-add.component.html',
@@ -26,6 +29,7 @@ export class ProjectAddComponent implements OnInit {
   project: Project = new Project();
   listMember: Member[] = [];
   cateProject: CateProject[]=[];
+  listPorduct: Product[]=[]
   id: any;
   url: any;
   baseURL = Constant.BASE_URL;
@@ -45,6 +49,7 @@ export class ProjectAddComponent implements OnInit {
   });
   constructor(
     private memberService : MemberService,
+    private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute,
     private projectService: ProjectService,
@@ -55,6 +60,7 @@ export class ProjectAddComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.listAllMember()
+    // this.listAllProdct()
     this.listAllCateProject()
     if (this.id) {
       this.getProjectById(this.id)
@@ -67,7 +73,8 @@ export class ProjectAddComponent implements OnInit {
       
       this.url = this.project.image?.pathUrl;
       this.imageURL = `${this.baseURL}/${this.projectURL}/image/${this.project.id}`;
-      this.memberUpdate(this.project)
+      this.memberUpdate(this.project);
+      // this.productUpdate(this.project);
       this.formProject.controls['moTa'].setValue(this.project.description);
       this.formProject.controls['tieuDe'].setValue(this.project.name);
       //this.formProject.controls['chuyenMuc'].setValue(this.project.cateProject.id.toString());
@@ -207,12 +214,49 @@ export class ProjectAddComponent implements OnInit {
           if (this.project.members) {
             this.project.members = this.project.members.filter(
               (i) => i !== item
-            );
+            );console.log(item)
           }
         }
       });
     }
   }
+  // sản phẩm 
+  // listAllProdct(){
+  //   this.productService.getListAllPage().subscribe(res=>{
+  //     this.listPorduct = res.content
+  //     console.log(this.listPorduct , 'sarn pham duw an')
+  //   })
+  // }
+  // onCheckChangeProduct(e:any , product:Product ){
+  //   product.selected = e.currentTarget.checked;
+  //   if(product.selected){
+  //     this.project.product.push(product)
+      
+  //   }else{
+  //     this.project.product.forEach((item)=>{
+  //       if(item.id === product.id){
+  //         this.project.product = this.project.product.filter(
+  //           i => i !== item
+  //         )
+  //       }
+  //     })
+  //   }
+  // }
+  // productUpdate(p : Project){
+  //     this.productService.getListAllPage().subscribe(data=>{
+  //       this.listPorduct  = data.content 
+  //       if( p.product != null){
+  //         const idProduct = p.product.map(item=> item.id);
+  //         for( let i=0 ; i<idProduct.length ; i++){
+  //           this.listPorduct.find(e=>{
+  //             if(e.id === idProduct[i]) e.selected = true;
+              
+  //           })
+  //         }
+  //       }
+  //     })
+  // }
+
 
   // chuyên mục dự án
   listAllCateProject(){

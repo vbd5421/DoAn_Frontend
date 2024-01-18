@@ -10,13 +10,13 @@ import { HomeComponent } from "../home/home.component";
 
 
 const routes: Routes=[
-    {path:'' , title:'UAV-AI',
+    {path:'' , title:'IOT',
     children:[
       {path:'' , redirectTo:'trang-chu', pathMatch:'full'},
       {path:'trang-chu' , component:HomeComponent },
       {path:'tin-tuc' , loadChildren:()=>import('./news/news.module').then(m=>m.NewsModule)},
       {path:'gioi-thieu' , loadChildren:()=>import('./about/about.module').then(m=>m.AboutModule)},
-      {path:'san-pham' , loadChildren:()=>import('./product/product.module').then(m=>m.ProductModule)},
+      {path:'blog' , loadChildren:()=>import('./product/product.module').then(m=>m.ProductModule)},
       {path:'du-an' , loadChildren:()=>import('./project/project.module').then(m=>m.ProjectModule)},
       {path:'tim-kiem' , component:SearchComponent },
        {path:'lien-he' , component:ContactHomeComponent},

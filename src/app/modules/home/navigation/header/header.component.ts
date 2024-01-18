@@ -65,12 +65,12 @@ export class HeaderComponent implements OnInit {
         // },
       ]
     },
-    {
-      id: 2,
-      name: "sản phẩm",
-      url: "san-pham",
-      navChild:[]
-    },
+    // {
+    //   id: 2,
+    //   name: "blog", // sản phẩm
+    //   url: "san-pham",
+    //   navChild:[]
+    // },
     {
       id: 3,
       name: "giới thiệu",
@@ -81,8 +81,8 @@ export class HeaderComponent implements OnInit {
           url: "gioi-thieu-chung",
         },
         {
-          name: "công nghệ UAV",
-          url: "uav",
+          name: "giới thiệu IoT",
+          url: "iot",
         },
         {
           name: "đội ngũ nghiên cứu",
@@ -94,6 +94,12 @@ export class HeaderComponent implements OnInit {
       id: 4,
       name: "Tin tức và sự kiện",
       url: "tin-tuc",
+      navChild:[]
+    },
+    {
+      id: 2,
+      name: "blog", // sản phẩm
+      url: "blog",
       navChild:[]
     },
     {

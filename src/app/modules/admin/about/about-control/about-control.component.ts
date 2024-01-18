@@ -67,14 +67,14 @@ export class AboutControlComponent {
       if (res != null) {
         this.about = res;
       }
-      console.log(res)
+      
     });
   }
 
   getListAddress() {
     this.addressService.ListAll().subscribe((res) => {
       this.addressList = res;
-      console.log(res)
+     
     });
   }
   // xóa address

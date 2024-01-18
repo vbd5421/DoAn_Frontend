@@ -17,11 +17,10 @@ window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar-header-home").style.top = "0";
-        document.getElementById("nav-home-mobile").style.position= "unset";
+        document.getElementById("nav-home-mobile").style.top = "0";
     } else {
         document.getElementById("navbar-header-home").style.top = "-115px";
-        document.getElementById("nav-home-mobile").style.position= "fixed";
-        document.getElementById("nav-home-mobile").style.zIndex="20";
+        document.getElementById("nav-home-mobile").style.top = "-200px";
         document.getElementById("nav-home-mobile").style.width="100%"
     }
     prevScrollpos = currentScrollPos;

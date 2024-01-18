@@ -100,7 +100,14 @@
      padding-bottom: 25px;
     }
     .item-news{
-     max-height: 400px;
+     max-height: 450px;
+   }
+   .p-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
    }
  }
  @media screen and (min-width: 768px) {

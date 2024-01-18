@@ -238,6 +238,12 @@ nav a.active {
 }
 #nav-home-mobile{
    background-color: #192a56;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   display: block;
+   transition: top 0.3s;
+   z-index: 50;
 }
 
 /* search */

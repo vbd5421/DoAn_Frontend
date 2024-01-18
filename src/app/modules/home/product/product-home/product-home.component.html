@@ -1,7 +1,7 @@
 <div class="d-none d-xl-block ">
   <div class="product mt_60">
     <div class="container">
-      <div class=" title-about-us mb_30 text-center mt-md-0  "><span class="border-bottom pb-2">sản phẩm</span></div>
+      <div class=" title-about-us mb_30 text-center mt-md-0  "><span class="border-bottom pb-2">blog</span></div>
       <!-- <div class="row justify-content-center " [@myAnimation]="animationState">
         <div class="col2 " *ngFor="let itempro of products , let i = index" >
           <div *ngIf="i<5" >
@@ -22,7 +22,7 @@
           <div class="item-img">
             <img class="img-fluid image " src="{{baseURL}}/{{productURL}}/image/{{itempro.id}}" alt="" />
             <div class="overlay">
-              <div class="text">{{itempro.title}}</div>
+              <div class="text max-2line ">{{itempro.title}}</div>
               <div class="see-more">
                 <a href="san-pham/{{itempro.url}}">xem thêm</a>
               </div>
@@ -37,7 +37,7 @@
 <div class="d-xl-none d-block ">
   <div class="product mt_60">
     <div class="container">
-      <div class=" title-about-us mb_30 text-center mt-md-0  "><span class="border-bottom pb-2">sản phẩm</span></div>
+      <div class=" title-about-us mb_30 text-center mt-md-0  "><span class="border-bottom pb-2">blog</span></div>
       <div class=" "  >
         <!-- row  justify-content-center -->
         <!-- <div class="col2 mb-lg-0 mb-4 " *ngFor="let itempro of products | paginate:{
@@ -67,28 +67,7 @@
             </div>
           </div>
         </marquee>
-        <!-- <section class="wrapper  ">
-          <div class="row">
-            <div id="slider" style="display: inline-block;" class="slider item ">
-              <div class="item slide col-2" *ngFor="let itempro of products ;let i = index">
-                <div class=" " >
-                  <img class="img-fluid" src="{{baseURL}}/{{productURL}}/image/{{itempro.id}}"
-                    alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> 
-        <script>
-          $('#slider').slick({
-            dots: true,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            speed: 300,
-            slidesToShow: 6,
-          });
-        </script> -->
+        
       </div>
     </div>
   </div>

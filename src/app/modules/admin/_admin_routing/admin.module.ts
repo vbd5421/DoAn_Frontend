@@ -6,7 +6,7 @@ import { ContactControlComponent } from "../contact-control/contact-control.comp
 
 const routes: Routes =[
 
-  {path:'' , title:'Admin - Phòng thí nghiệm UAV-AI' , component: AdminControlComponent,
+  {path:'' , title:'Admin - IOT' , component: AdminControlComponent,
 
   children:[
     {path:'user' , loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)},

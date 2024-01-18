@@ -585,9 +585,6 @@
 }
 
 /*  */
-.mt-header {
-  margin-top: auto;
-}
 
 /* quill editor */
 .ql-editor a:hover{
@@ -606,6 +603,9 @@
 @media (max-width:991.98px) {
   .ql-editor {
     height: 300px !important;
+  }
+  .mt-header {
+    margin-top: 96px;
   }
 }
 
