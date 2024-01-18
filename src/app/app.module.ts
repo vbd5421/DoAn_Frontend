@@ -80,6 +80,7 @@ import { AppPageSizeImgComponent } from './modules/another/app-page-size-img/app
 import { CommentControlComponent } from './modules/admin/comment/comment-control/comment-control.component';
 import { CommentFormComponent } from './modules/home/comment/comment-form/comment-form.component';
 import { CommentListComponent } from './modules/home/comment/comment-list/comment-list.component';
+import { ProjectMoreComponent } from './modules/home/project/project-more/project-more.component';
 
 Quill.register('modules/blotFormatter', BlotFormatter);
 
@@ -153,6 +154,7 @@ Quill.register('modules/blotFormatter', BlotFormatter);
     CommentControlComponent,
     CommentFormComponent,
     CommentListComponent,
+    ProjectMoreComponent,
 
   ],
   imports: [

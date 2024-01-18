@@ -17,4 +17,5 @@ public static CATE_PROJECT=`api/cate-project`;
 public static LINK_WEB = `api/link-website`;
 public static CONTACT = `api/contact`;
 public static TYPICAL_IMAGE=`api/tImage`;
+public static COMMENT = `api/comment`;
 }

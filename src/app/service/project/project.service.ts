@@ -10,7 +10,7 @@ import { ApiHelper } from 'src/app/core/rest-api/api-helper';
 export class ProjectService {
 
   constructor( private apiHelper:ApiHelper) { }
-  getListAllPage(params:any):Observable<any>{
+  getListAllPage(params?:any):Observable<any>{
     return this.apiHelper.get( Constant.PROJECT.GET_LIST_ALL_WITH_PAGE , {params})
   }
 

@@ -1,7 +1,7 @@
 
- .bg{
+ /* .bg{
     background-image: linear-gradient(to right , #443e22 , #827340 , #998c4d, #827340, #443d22);
-  }
+  } */
   h4{
     color: white;
     font-weight: bolder;
@@ -29,7 +29,7 @@
   
   .text{
     text-align: center;
-    color: #dfa974;
+    color: #004a90;
     font-weight: bolder;
     margin-bottom: 20px;
   }
@@ -75,16 +75,16 @@
   margin-bottom: 5px;
 }
 .btn-sign-up{
-  background: #dfa974;
-  border: 1px solid #dfa974;
+  background: #192a56;
+  border: 1px solid #192a56;
   color: #fff;
-  background: -moz-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -webkit-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -o-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -ms-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -webkit-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: -o-linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
-  background: linear-gradient(126deg, rgba(230,180,92,1) 0%, rgba(161,112,49,1) 100%);
+  background: -moz-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -webkit-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -o-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -ms-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -webkit-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: -o-linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
+  background: linear-gradient(135deg, rgba(141, 211, 236, 0.9) 0%, rgb(30 147 245 / 98%) 22%, rgba(38, 129, 212,0.9) 33%, #192a56 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f75959', endColorstr='#f35587', GradientType=1 );
   cursor: pointer;
   -webkit-box-shadow: none !important;
@@ -94,11 +94,11 @@
   border-radius: 50px; 
 }
 .btn-sign-up:hover{
-  color: #dfa974;
+  color: #192a56;
   background: white;
 }
 .text-home a{
-  color: #9d793e; 
+  color: #192a56; 
   font-size: 16px;
 }
 .text-home a:hover{
