@@ -142,4 +142,19 @@ export class Constant {
     CREATE: `${Domain.LINK_WEB}/create`,
     UPDATE: `${Domain.LINK_WEB}/update`
   }
+  public static COMMENT = {
+    GET_LIST_COMMENT_WITH_PAGE_ADMIN: `${Domain.COMMENT}/search`,
+    GET_COMMENT_CHILD_BY_PARENT : `${Domain.COMMENT}/get`,
+    GET_COMMENT_CHILD_BY_PARENT_ADMIN : `${Domain.COMMENT}/child`,
+    GET_PARENT_COMMENT_ACTIVE: `${Domain.COMMENT}/parent`,
+    GET_PARENTCMT_ADMIN: `${Domain.COMMENT}/show`,
+    GET_LIST_COMMENT_HOME: `${Domain.COMMENT}/home`,
+    GET_LIST_ALL: `${Domain.COMMENT}/all`,
+    DISABLE_COMMENT: `${Domain.COMMENT}/disable`,
+    ENABLE_COMMENT: `${Domain.COMMENT}/enable`,
+    CREAT_COMMENT: `${Domain.COMMENT}/create`,
+    UPDATE_COMMENT: `${Domain.COMMENT}/update`,
+    GET_COMMENT_BY_POST_ID: `${Domain.COMMENT}`,
+    DELETE_COMMENT: `${Domain.COMMENT}/delete`,
+  }
 }

@@ -51,3 +51,18 @@
 .list-member:not(:last-child)::after  {
   content: " , ";
 }
+
+
+.edit-project{
+ 
+  color: #284dac;
+  text-transform: capitalize;
+  list-style: none;
+  font-weight: 800;
+}
+.edit-project:hover{
+  text-decoration: underline;
+  color: #192a56;
+  text-decoration: none;
+  cursor: pointer;
+}

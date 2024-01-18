@@ -47,11 +47,30 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- <div data-bs-toggle="collapse" class="edit-project mt-2 mb-3 " href="#collapseExample"
+                        aria-expanded="false" aria-controls="collapseExample">Bình luận</div>
+                        <div class="collapse" id="collapseExample">
+                           
+                        </div> -->
+                        <div class="edit-project mt-2 mb-3 ">Bình luận </div>
+                        <ng-template #login>
+                            <div class="card card-body">
+                                <a href="login">Vui lòng đăng nhập để bình luận !</a><a target="_blank" href="login">Đăng Nhập</a>
+                            </div>
+                        </ng-template>
+                        <div *ngIf="username;else login">
+                            <app-comment-list></app-comment-list>
+                            <app-comment-form></app-comment-form>
+                        </div>
+                
             </div>
             <div class="col-sm-4">
-                <app-link-web-home></app-link-web-home>
+                <app-project-more></app-project-more>
                 <div class="my-5"></div>
-                <img class="w-100" src="assets/images/utc-uav-ai/img-project2.jpg" alt="">
+                <app-link-web-home></app-link-web-home>
+                
+                
             </div>
         </div>
     </div>

@@ -1,1 +1,207 @@
-<p>comment-control works!</p>
+<app-page-size (pageSizeChange)="handlePageSizeChange($event)" [totalRecords]="paging.totalRecord"
+[(pageSize)]="paging.size"  ></app-page-size>
+
+  
+  <div class="card mb-5 mb-xl-8 mt_30 mx-4">
+    <div class="card-header border-0 pt-3">
+      <h3 class="card-title align-items-start flex-column">
+        <span class="card-label text-uppercase fw-bolder fs-6 mb-1">danh sách liên hệ</span>
+      </h3>
+      <div class="card-toolbar justify-content-between ">
+        <div class="d-flex">
+            <form (ngSubmit)="search()" class="form-search me-1 ">
+                <input class="search input-search w-100" type="text" [(ngModel)]="paging.search" name="searchInput"
+                    placeholder="Tìm kiếm ">
+                <div class="input-group-append  icon-search">
+                    <button type="submit" class=" border-0 "><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="table-cmt py-3">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-comment py-3 ">
+            <div class="row">
+              <div class="col-md-3 col-3">
+                <p>Tên tác giả</p>
+              </div>
+              <div class="col-md-3 col-3">
+                <p>Nội dung bình luận</p>
+              </div>
+              <div class="col-md-2 col-2">
+                <p>Tên dự án</p>
+              </div>
+              <div class="col-md-2 col-2">
+                <p>Thời gian đăng</p>
+              </div>
+              <div class="col-md-2 col-2">
+                <p>Chức năng</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bodytable -->
+      <div class=" list-cmt ">
+        <div class="row">
+          <div class="col-md-12" style=" border-bottom: 1px dashed;" *ngFor="let cmt of commentList | paginate:{
+                                      id:'cmt',
+                                      itemsPerPage: paging.size,
+                                      currentPage: paging.page,
+                                      totalItems: paging.totalRecord  } ">
+            <div class="py-md-2 boder py-1 ">
+              <div class="row h-100">
+                <div class="col-md-3  col-3 m-auto">
+                  <div class="d-flex justify-content-center ml-1 ml-lg-3 ml-md-2 ">
+                    <img class="mr-1 mr-md-2 w-20 my-auto " src="./assets/images/avt.jpg" alt="">
+                    <div class="text-left my-auto pos-title ">
+                      <!-- <span> <b> {{cmt.user.username}}</b></span>
+                        <p>{{cmt.user.email}}</p> -->
+                      <span class="ms-1" > <b> {{cmt.userName}}</b></span>
+  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-3 m-auto">
+                  <p class="cmt-content">{{cmt.content}}</p>
+                </div>
+                <div class="col-md-2 col-2 m-auto">
+                  <a href="" class="pos-title">{{cmt.project.name}}</a>
+                </div>
+                <div class="col-md-2 col-2 m-auto">
+                  <p>{{cmt.date}}</p>
+                </div>
+                <div class="col-md-2 col-2 m-auto">
+                  <div class="btn-group dropstart">
+                    <button style="border-radius: 5px;" type="button" class="btn btn-secondary h-50 "
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i title="Chức năng" class='icon-more fa fa-ellipsis-h ' style='font-size:24px'></i>
+                    </button>
+                    <ul class="dropdown-menu m-0 p-0 ">
+                      <li class="w-100 text-center border p-1 icon-item ">
+                        <a class=" w-100 d-block text-dark " aria-expanded="false" data-bs-toggle="collapse" href="#reply{{cmt.id}}">
+                          Xem chi tiết
+                        </a>
+                      </li>
+                      <li class="text-center border p-1 icon-item ">
+                        <a *ngIf="cmt.status ; else hien" class=" w-100 d-block " (click)="Disable(cmt.id)">
+                          Ẩn </a>
+                        <ng-template #hien>
+                          <a class=" w-100 d-block " (click)="Enable(cmt.id)">Hiện</a>
+                        </ng-template>
+                      </li>
+                      <li class="text-center border p-1 icon-item ">
+                        <a class=" w-100 d-block " (click)="Delete(cmt.id)"> Xóa
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div id="reply{{cmt.id}}" class="collapse" >
+                <div class="row  py-md-2 py-1  ">
+                  <div class="col-md-2 col-2">
+                    <div class="info-comment mx-auto">
+                      <div class="img-comment d-flex flex-column">
+                        <img class=" w-50  " src="./assets/images/avt.jpg" alt="">
+                        <span class="pos-title">
+                          <!-- {{cmt.user.username}} -->
+                          {{cmt.userName}}
+                        </span>
+                        <span class="pos-title">{{cmt.date}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-10 col-10 ">
+                    <div class="content-comment ">
+                      <span>{{cmt.content}}</span>
+                      <div>
+                        <a class="btn-link edit-child me-2 me-md-3 " (click)="addParentId(cmt.id,cmt.project.id)"
+                          data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseExample"
+                          href="#parent{{cmt.id}}"> Trả lời</a>
+                        <a class="btn-link me-2 me-md-3 edit-child " data-bs-toggle="collapse"
+                          href="#reply{{cmt.id}}">Ẩn</a>
+                        <!-- <span *ngIf="userId == cmt.user.id "> -->
+                        <!-- <div > -->
+                          <a  *ngIf="username == cmt.userName " class="edit-child   "  aria-expanded="false" data-bs-toggle="collapse" href="#editparent{{cmt.id}}">Chỉnh sửa</a>
+                        <!-- </div> -->
+                      </div>
+                      <form (ngSubmit)="updateComment(cmt.id,cmt)">
+                        <div id="editparent{{cmt.id}}" class="collapse " data-parent="#accordion" >
+                          <div class="reply-submit d-flex">
+                            <textarea name="content" id="" [(ngModel)]="cmt.content"
+                              placeholder="Bạn nhập bình luận tại đây" cols="60" rows="3"></textarea>
+                            <button class="btn-success btn-edit" type="submit">Cập nhật </button>
+                          </div>
+                        </div>
+                      </form>
+                      <div *ngFor="let cmtChild of commentListChild">
+                        <div class="mb-2">
+                          <div class=" container me-2 " *ngIf="cmt.id == cmtChild.parentId">
+                            <div class="row reply-content tab me-1 me-md-2 ">
+                              <div class="col-md-3 col-3 ">
+                                <div class="info-comment">
+                                  <div class="img-comment d-flex " style="margin: 0px;">
+                                    <img src="./assets/images/avt.jpg" class="w-25" alt="">
+                                    <div class="text-left my-auto ml-1">
+                                      <!-- <span> <b> {{cmtChild.user.username}}</b></span> -->
+                                      <span> <b> {{cmtChild.userName}}</b></span>
+                                      <p>{{cmtChild.date}}</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-7 col-7 ">
+                                <p class="child-content">{{cmtChild.content}}</p>
+                              </div>
+                              <div class="col-md-2 col-2 d-flex flex-column">
+                                <!-- <div *ngIf="userId == cmtChild.user.id "> -->
+                                <div *ngIf="username == cmtChild.userName ">
+                                  <a data-bs-toggle="collapse" href="#editChild{{cmtChild.id}}"><span
+                                      class="edit-child">Chỉnh sửa</span></a>
+                                </div>
+                                <a *ngIf="cmtChild.status ; else hien" class="dis-enable" (click)="DisableChild(cmtChild.id)">Ẩn </a>
+                                <ng-template #hien>
+                                  <a (click)="EnableChild(cmtChild.id)"> <span class="dis-enable">Hiện</span> </a>
+                                </ng-template>
+                                <a (click)="DeleteChild(cmtChild.id)"><span class="delete-cmt">Xóa</span></a>
+                              </div>
+                            </div>
+                            <form (ngSubmit)="updateComment(cmtChild.id,cmtChild)">
+                              <div id="editChild{{cmtChild.id}}" class="collapse " data-parent="#accordion">
+                                <div class="text-left  d-flex tab">
+                                  <textarea name="contentChild" [(ngModel)]="cmtChild.content" id="content" cols="60"
+                                    rows="3"></textarea>
+                                  <button class="btn" type="submit" style="height: 65px;">Cập nhật</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <form (ngSubmit)="RepComment()">
+                        <div id="parent{{cmt.id}}" class="collapse " data-parent="#accordion">
+                          <div class="reply-submit d-flex ">
+                            <textarea name="content" [(ngModel)]="comment.content" id="" cols="60" rows="3"></textarea>
+                            <button class="btn btn-primary btn-reply-parent " type="submit">Gửi</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-4 " *ngIf="paging.totalRecord >0">
+            <pagination-controls previousLabel="<" nextLabel=">" [id]="'cmt'" (pageChange)="handPageChange($event)"
+              [maxSize]="paging.totalRecord "></pagination-controls>
+          </div>
+        </div>
+      </div>

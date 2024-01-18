@@ -85,6 +85,12 @@ export class AsideComponent {
       icon:"fa-regular fa-rectangle-list"
     },
     {
+      id:11,
+      name:"danh sách bình luận",
+      url:"comment",
+      icon:"fa-solid fa-comments"
+    },
+    {
       id:12,
       name: "Tài khoản",
       url: "user",
