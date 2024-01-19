@@ -29,8 +29,7 @@
                     <input placeholder="&nbsp;" class="w-100 input-field" formControlName="title" name="title"
                       [class.borderError]="!formProduct.controls.title.valid&&!formProduct.controls.title.untouched"
                       [class.text-input]="formProduct.controls.title.valid||formProduct.controls.title.untouched" />
-                    <span class="placeholder label-custom lh-base "><span class="validateText">*</span>tên sản
-                      phẩm</span>
+                    <span class="placeholder label-custom lh-base "><span class="validateText">*</span>Tiêu đề</span>
                   </label>
                   <p *ngIf="!formProduct.controls.title.valid&&!formProduct.controls.title.untouched"
                     class="validateText">
